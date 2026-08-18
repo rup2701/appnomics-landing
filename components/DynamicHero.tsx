@@ -1,6 +1,9 @@
+'use client';
+
 // DynamicHero.jsx
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import styles from './DynamicHero.module.scss';
 
 
@@ -10,6 +13,8 @@ const DynamicHero = () => {
   const [userInput, setUserInput] = useState('');
   const [isInteractive, setIsInteractive] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  
+  const router = useRouter();
   
   // A mix of simple launches and larger product ideas
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -28,6 +33,10 @@ const DynamicHero = () => {
   // Find the longest prompt for consistent width
   const longestPrompt = prompts.reduce((a, b) => a.length > b.length ? a : b, '');
   
+  const handleEnter = () => {
+    router.push('/auth');
+  };
+
   useEffect(() => {
     if (isInteractive) return; // Stop animation when user is typing
     
@@ -98,12 +107,13 @@ const DynamicHero = () => {
                 </span>
               </div>
             ) : (
-              <div className={styles.interactivePrompt}>
+                
+                  <div className={styles.interactivePrompt}>
                   <span
                     className={styles.promptPrefix}
-                    
                   >Build
                   </span>
+                  
                   
                 <input
                   ref={inputRef}
@@ -118,10 +128,19 @@ const DynamicHero = () => {
                       handleStartBuilding();
                     }
                   }}
-                />
-              </div>
+                  />
+
+                  <button
+                    onClick={handleEnter}
+                    className="absolute bottom-3 right-3 text-xs text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 rounded-md px-3 py-1 transition"
+                    >
+                  Let&apos;s go →
+                  </button>
+                </div>
             )}
           </div>
+
+          <p className={styles.promptHint}>Start by entering your idea</p>
           
           {/* Action Buttons */}
           <div className={styles.actionButtons}>

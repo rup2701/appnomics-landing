@@ -199,6 +199,16 @@
   }
 }
 
+.promptHint {
+  margin: -0.5rem auto $spacing-md;
+  padding-left: 12px;
+  max-width: 800px;
+  color: $text-muted;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
 @media (max-width: $breakpoint-sm) {
   .promptBox {
     border-radius: 12px;
@@ -227,7 +237,7 @@
 
 // Action Buttons
 .actionButtons {
-  display: flex;
+  display: none;
   gap: $spacing-md;
   justify-content: center;
   align-items: center;
