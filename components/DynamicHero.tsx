@@ -99,12 +99,17 @@ const DynamicHero = () => {
               </div>
             ) : (
               <div className={styles.interactivePrompt}>
-                <span className={styles.promptPrefix}>Build </span>
+                  <span
+                    className={styles.promptPrefix}
+                    
+                  >Build
+                  </span>
                   
                 <input
                   ref={inputRef}
                   type="text"
-                  className={styles.userInput}
+                    className={styles.userInput}
+                    
                   placeholder="your idea here..."
                   value={userInput}
                   onChange={(e) => setUserInput(e.target.value)}

@@ -71,9 +71,9 @@ export default function Home() {
           </div> */}
 
           {/* Capability Grid */}
-          <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl opacity-[0.5]  ">
+          {/* <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl opacity-[0.5]  ">
            Everything needed to run your idea autonomously
-          </h2>
+          </h2> */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-300 mb-10 py-6 md:py-8">
             {[
               'Strategy & Roadmap',
