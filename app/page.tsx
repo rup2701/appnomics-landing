@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import DynamicHero from '@/components/DynamicHero';
 
 export default function Home() {
   const [idea, setIdea] = useState('');
@@ -36,21 +37,23 @@ export default function Home() {
         </button>
       </nav>
 
+      <DynamicHero />
+
       {/* Main content — flex column, pushes footer down */}
-      <div className="flex-grow flex flex-col items-center justify-center px-6 py-12">
+      <div className="flex-grow flex flex-col items-center justify-center px-6 py-6 md:py-8">
         <div className="max-w-3xl w-full text-center">
 
           {/* Hero */}
-          <div className="mb-10">
+          {/* <div className="mb-10">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
               Your AI cofounder —<br />
               <span className="text-gray-400">without the equity split.</span>
             </h1>
             <div className="w-12 h-0.5 bg-gray-700 mx-auto mt-4" />
-          </div>
+          </div> */}
 
           {/* Textarea with Enter button */}
-          <div className="relative mb-10">
+          {/* <div className="relative mb-10">
             <textarea
               placeholder="Describe your idea..."
               value={idea}
@@ -65,10 +68,13 @@ export default function Home() {
             >
               Let&apos;s go →
             </button>
-          </div>
+          </div> */}
 
           {/* Capability Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-300 mb-12">
+          <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl opacity-[0.5]  ">
+           Everything needed to run your idea autonomously
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-300 mb-10 py-6 md:py-8">
             {[
               'Strategy & Roadmap',
               'Build & Deploy',
@@ -87,7 +93,7 @@ export default function Home() {
           </div>
 
           {/* CTA Block */}
-          <div>
+          <div className="py-6 md:py-8">
             <p className="text-lg text-gray-300 max-w-xl mx-auto leading-relaxed">
               Launch your idea in 48 hours<br />
               and run your business with confidence.

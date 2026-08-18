@@ -1,0 +1,461 @@
+// DynamicHero.module.scss
+@use '../styles/variables' as *;
+
+.heroSection {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 1rem;
+  // background: $bg-primary;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: $spacing-xl $spacing-lg;
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto;
+  // @include container;
+
+
+}
+
+@media (max-width: $breakpoint-md) {
+  .heroSection {
+    min-height: auto;
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .heroContent {
+    padding: 0;
+  }
+}
+
+// .container {
+//   width: 100%;
+// }
+
+// Hero Title Animation (your existing styles)
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  margin-bottom: $spacing-2xl;
+  color: #eee;
+  .line1, .line2, .line3 {
+    display: block;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .line1 {
+    animation-delay: 0s;
+  }
+  
+  .line2 {
+    animation-delay: 0.2s;
+  }
+  
+  .line3 {
+    animation-delay: 0.4s;
+    background: linear-gradient(135deg, $accent-green 0%, $accent-mint 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: $spacing-xl;
+  }
+}
+
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Prompt Container
+.promptContainer {
+  margin-bottom: $spacing-xl;
+  animation: fadeIn 1s ease-out 0.8s both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.promptBox {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: $spacing-lg $spacing-xl;
+  margin: 0 auto $spacing-md;
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: text;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(78, 205, 196, 0.3);
+    box-shadow: 0 10px 40px rgba(78, 205, 196, 0.1);
+  }
+  
+  @media (max-width: $breakpoint-md) {
+    padding: $spacing-sm;
+  }
+}
+
+.typewriterText {
+  font-size: 1.5rem;
+  color: $text-primary;
+  text-align: left;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.125rem;
+  }
+}
+
+.promptPrefix {
+  color: $text-secondary;
+  opacity: 0.7;
+  padding-right: 4px;
+}
+
+.dynamicText {
+  color: $text-primary;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.textWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hiddenText {
+  visibility: hidden;
+  // This maintains the width of the longest prompt
+}
+
+.visibleText {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: wrap;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  animation: blink 1s infinite;
+  color: $accent-green;
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+// Interactive Input
+.interactivePrompt {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  
+  @media (max-width: $breakpoint-md) {
+    font-size: 1.125rem;
+  }
+}
+
+.userInput {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  color: $text-primary;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  outline: none;
+  
+  &::placeholder {
+    color: $text-muted;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .promptBox {
+    border-radius: 12px;
+  }
+
+  .typewriterText,
+  .interactivePrompt {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hiddenText {
+    display: none;
+  }
+
+  .textWrapper,
+  .dynamicText {
+    max-width: 100%;
+  }
+
+  .visibleText {
+    position: static;
+    overflow-wrap: anywhere;
+  }
+}
+
+// Action Buttons
+.actionButtons {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column;
+    width: 100%;
+    
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.suggestionBtn {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: $text-secondary;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: $text-primary;
+    
+    .shuffleIcon {
+      transform: rotate(180deg);
+    }
+  }
+  
+  .shuffleIcon {
+    transition: transform 0.5s ease;
+  }
+}
+
+.ctaBtn {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: 12px 32px;
+  background: $accent-green;
+  border: none;
+  border-radius: 8px;
+  color: $bg-primary;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  &:hover {
+    background: $accent-mint;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
+    
+    .arrow {
+      transform: translateX(4px);
+    }
+    
+    .sparkle {
+      animation: sparkleRotate 1s ease;
+    }
+  }
+  
+  .sparkle {
+    font-size: 1.2rem;
+  }
+  
+  .arrow {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes sparkleRotate {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+}
+
+// Trust Bar
+.trustBar {
+  display: flex;
+  margin-top: 3rem;
+  
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-lg;
+  margin: $spacing-3xl 0;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 1.2s both;
+  
+  @media (max-width: $breakpoint-md) {
+    flex-wrap: wrap;
+    gap: $spacing-md;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trustItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  .trustNumber {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, $accent-green 0%, $accent-mint 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    
+    @media (max-width: $breakpoint-md) {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .trustLabel {
+    font-size: 0.875rem;
+    color: $text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+}
+
+.trustDivider {
+  color: $text-muted;
+  opacity: 0.3;
+  
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+// Scroll Hint
+.scrollHint {
+  position: absolute;
+  bottom: $spacing-xl;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xs;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1.5s both;
+  
+  span {
+    font-size: 0.875rem;
+    color: $text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .scrollArrow {
+    animation: bounce 2s ease-in-out infinite;
+    color: $accent-green;
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+// Background Elements
+.backgroundElements {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gradientOrb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle at center,
+    rgba(78, 205, 196, 0.03) 0%,
+    transparent 60%
+  );
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: translate(-50%, -50%) scale(1); 
+    opacity: 0.5;
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1.1); 
+    opacity: 0.8;
+  }
+}
+
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(78, 205, 196, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(78, 205, 196, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+}
