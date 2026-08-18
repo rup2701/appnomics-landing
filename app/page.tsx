@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Home() {
   const [idea, setIdea] = useState('');
@@ -29,7 +30,9 @@ export default function Home() {
           appnomics
         </span>
         <button className="text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 rounded-full px-4 py-1.5 transition">
-          Sign in
+          <Link href="/auth">
+            Sign in
+          </Link>
         </button>
       </nav>
 
@@ -91,7 +94,9 @@ export default function Home() {
             </p>
             <div className="mt-6">
               <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition">
-                Start building
+                <Link href="/auth">
+                  Start building
+                </Link>
               </button>
             </div>
             <p className="mt-4 text-sm text-gray-500">
