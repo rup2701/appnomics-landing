@@ -1,10 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 export default function AuthPage() {
-  const router = useRouter();
+
+  return (
+    <Suspense fallback={null}>
+      <AuthPageInner />
+    </Suspense> 
+  )
+}
+
+function AuthPageInner() {
+
+  // const router = useRouter();
   const searchParams = useSearchParams();
   const [idea, setIdea] = useState('');
   const [email, setEmail] = useState('');
