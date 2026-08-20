@@ -77,11 +77,11 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-300 mb-10 py-6 md:py-8">
             {[
               'Strategy & Roadmap',
-              'Build & Deploy',
-              'GTM & Ads',
-              'Billing & Support',
               'Infra & Security',
-              'Revenue & Analytics',
+              'Build & Deploy',
+              // 'GTM & Ads',
+              // 'Billing & Support',
+              // 'Revenue & Analytics',
             ].map((label) => (
               <div
                 key={label}
@@ -95,8 +95,7 @@ export default function Home() {
           {/* CTA Block */}
           <div className="py-6 md:py-8">
             <p className="text-lg text-gray-300 max-w-xl mx-auto leading-relaxed">
-              Launch your idea in 48 hours<br />
-              and run your business with confidence.
+              Products that scale, launch your idea without the technical debt.
             </p>
             <div className="mt-6">
               <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition">
