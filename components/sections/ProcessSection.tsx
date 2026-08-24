@@ -61,7 +61,7 @@ export default function ProcessSection() {
           <br />
           <span className="text-[#6e6e6e]">You see progress every 7 days.</span>
         </h2>
-        <p className="text-sm text-[#777] mb-[60px] font-mono">
+        <p className="text-sm text-[#999] mb-[60px] font-mono">
           No month-long sprints before you see anything. Each epic is a deployable slice.
         </p>
 
@@ -101,17 +101,17 @@ export default function ProcessSection() {
                     }`}
                   >
                     <div className="flex items-baseline flex-wrap gap-3 mb-1">
-                      <span className="text-[10px] text-[#333] tracking-[0.1em] font-mono">
+                      <span className="text-[13px] text-[#666] tracking-[0.1em] font-mono">
                         {step.n}
                       </span>
                       <span
-                        className={`text-[15px] font-bold font-mono ${
+                        className={`text-[18px] font-bold font-mono ${
                           isLast ? "text-[#00ff9d] shadow-[0_0_10px_#00ff9d55]" : "text-[#c0c0c0]"
                         }`}
                       >
                         {step.label}
                       </span>
-                      <span className="text-[11px] text-[#444] font-mono">
+                      <span className="text-[14px] text-[#666] font-mono">
                         {step.sub}
                       </span>
                       {isLast && (
@@ -120,7 +120,7 @@ export default function ProcessSection() {
                         </span>
                       )}
                     </div>
-                    <p className="text-xs text-[#777] leading-[1.6] font-mono max-w-[600px]">
+                    <p className="text-md text-[#999] leading-[1.6] font-mono max-w-[600px]">
                       {step.detail}
                     </p>
                   </div>
@@ -132,7 +132,7 @@ export default function ProcessSection() {
 
         {/* callout bar */}
         <div className="mt-12 border border-[#1f1f1f] border-l-2 border-l-[#00ff9d] p-4 pl-6 bg-[#00ff9d08] rounded-r-[2px]">
-          <p className="text-xs text-[#888] font-mono leading-[1.7]">
+          <p className="text-md text-[#888] font-mono leading-[1.7]">
             Most MVPs are <span className="text-[#e0e0e0]">5–6 epics</span> — that's{" "}
             <span className="text-[#e0e0e0]">5–6 weeks</span> from intake to production. Larger platforms may run
             8–10 epics. We&apos;ll scope it in Discovery before you commit a cent.
