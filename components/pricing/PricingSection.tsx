@@ -30,7 +30,7 @@ export default function PricingSection() {
 
   return (
     <section style={{ padding: "96px 0", borderTop: "1px solid #1a1a1a" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px" }}>
+      <div style={{  margin: "0 auto", padding: "0 40px", display:'block' }}>
         <SectionLabel>// PRICING</SectionLabel>
         <h2
           style={{
@@ -46,8 +46,8 @@ export default function PricingSection() {
           <br />
           <span style={{ color: "#6e6e6e" }}>No retainers. No surprises.</span>
         </h2>
-        <p style={{ fontSize: 14, color: "#777", marginBottom: 56, fontFamily: "'JetBrains Mono', monospace" }}>
-          Most apps are 5–6 epics → <span style={{ color: "#888" }}>$25K–$30K total.</span>
+        <p style={{ fontSize: 14, color: "#ddd", marginBottom: 56, fontFamily: "'JetBrains Mono', monospace" }}>
+          Most apps are 5–6 epics → <span style={{ color: "#ddd" }}>$25K–$30K total.</span>
         </p>
 
         <div
@@ -56,6 +56,7 @@ export default function PricingSection() {
             gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
             gap: 20,
             maxWidth: 860,
+            margin: "0 auto"
           }}
         >
           {/* Build Only */}
@@ -77,9 +78,10 @@ export default function PricingSection() {
                   style={{
                     fontSize: 10,
                     letterSpacing: "0.15em",
-                    color: "#444",
+                    color: "#fafafa",
                     marginBottom: 6,
                     fontFamily: "'JetBrains Mono', monospace",
+                    textAlign: 'left'
                   }}
                 >
                   PLAN 01
@@ -90,6 +92,7 @@ export default function PricingSection() {
                     fontWeight: 700,
                     color: "#e0e0e0",
                     fontFamily: "'JetBrains Mono', monospace",
+                    textAlign: 'left'
                   }}
                 >
                   Build Only
@@ -108,7 +111,7 @@ export default function PricingSection() {
                 >
                   $5K
                 </p>
-                <p style={{ fontSize: 11, color: "#444", fontFamily: "'JetBrains Mono', monospace" }}>
+                <p style={{ fontSize: 11, color: "#fafafa", fontFamily: "'JetBrains Mono', monospace" }}>
                   per epic
                 </p>
               </div>
@@ -180,9 +183,10 @@ export default function PricingSection() {
                   style={{
                     fontSize: 10,
                     letterSpacing: "0.15em",
-                    color: "#444",
+                    color: "#fafafa",
                     marginBottom: 6,
                     fontFamily: "'JetBrains Mono', monospace",
+                    textAlign: 'left'
                   }}
                 >
                   PLAN 02
@@ -211,7 +215,7 @@ export default function PricingSection() {
                 >
                   $5K
                 </p>
-                <p style={{ fontSize: 11, color: "#444", fontFamily: "'JetBrains Mono', monospace" }}>
+                <p style={{ fontSize: 11, color: "#fafafa", fontFamily: "'JetBrains Mono', monospace" }}>
                   per epic + 15% rev
                 </p>
               </div>
@@ -250,7 +254,7 @@ export default function PricingSection() {
         {/* Fine print */}
         <p style={{ marginTop: 28, fontSize: 11, color: "#333", fontFamily: "'JetBrains Mono', monospace" }}>
           No credit card required to start · Discovery is free ·{" "}
-          <span style={{ color: "#444" }}>We scope before you commit.</span>
+          <span style={{ color: "#fafafa" }}>We scope before you commit.</span>
         </p>
       </div>
     </section>

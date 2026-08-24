@@ -44,7 +44,7 @@ export default function Home() {
 
       {/* Main content — flex column, pushes footer down */}
       <div className="flex-grow flex flex-col items-center justify-center px-6 py-6 md:py-8">
-        <div className="max-w-3xl w-full text-center">
+        <div className="max-w-5xl w-full text-center">
 
           {/* Hero */}
           {/* <div className="mb-10">
