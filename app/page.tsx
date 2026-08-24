@@ -4,6 +4,9 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import DynamicHero from '@/components/DynamicHero';
+import PricingSection from '@/components/pricing/PricingSection';
+
+
 
 export default function Home() {
   const [idea, setIdea] = useState('');
@@ -92,6 +95,8 @@ export default function Home() {
             ))}
           </div>
 
+          
+          <PricingSection />
           {/* CTA Block */}
           <div className="py-6 md:py-8">
             <p className="text-lg text-gray-300 max-w-xl mx-auto leading-relaxed">
