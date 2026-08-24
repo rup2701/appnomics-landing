@@ -31,15 +31,15 @@ export default function PricingSection() {
   return (
     <section className="py-24 border-t border-[#1a1a1a]">
       <div className="max-w-7xl mx-auto block">
-        <SectionLabel>// PRICING</SectionLabel>
+        <SectionLabel centerAlign={true}>// PRICING</SectionLabel>
         <h2
-          className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono"
+          className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono text-center" 
         >
           Transparent pricing.
           <br />
           <span className="text-[#6e6e6e]">No retainers. No surprises.</span>
         </h2>
-        <p className="text-sm text-[#ddd] mb-14 font-mono">
+        <p className="text-sm text-[#ddd] mb-14 font-mono text-center">
           Most apps are 5–6 epics → <span className="text-[#ddd]">$25K–$30K total.</span>
         </p>
 
@@ -80,7 +80,7 @@ export default function PricingSection() {
               </div>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 text-[#fff]">
               {BUILD_FEATURES.map((f) => (
                 <CheckLine key={f} text={f} />
               ))}

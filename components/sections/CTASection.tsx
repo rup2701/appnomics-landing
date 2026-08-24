@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SectionLabel from "../SectionLabel";
 
 export default function CTASection() {
   const [hovered, setHovered] = useState(false);
@@ -17,9 +18,9 @@ export default function CTASection() {
       />
 
       <div className="relative max-w-[640px] mx-auto px-10">
-        <p className="text-[10px] tracking-[0.22em] text-[#444] mb-5 font-mono">
+        <SectionLabel centerAlign={true}>
           // GET STARTED
-        </p>
+        </SectionLabel>
 
         <h2 className="text-[clamp(28px,4vw,44px)] font-bold text-[#e0e0e0] mb-4 leading-[1.1] font-mono">
           Ready to build
@@ -29,8 +30,8 @@ export default function CTASection() {
           </span>
         </h2>
 
-        <p className="text-[13px] text-[#777] mb-12 leading-[1.7] font-mono">
-          Fill out the intake form. We'll scope your project in 24 hours —
+        <p className="text-lg text-[#777] mb-12 leading-[1.7] font-mono">
+          Tell us about your idead. We&apos;ll scope your project in 24 hours —
           no agency bloat, no hidden fees, no lock-in.
         </p>
 

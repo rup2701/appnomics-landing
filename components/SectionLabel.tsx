@@ -1,13 +1,17 @@
 
-export default function SectionLabel({ children }: { children: string }) {
+export default function SectionLabel({ children, centerAlign }: { children: string, centerAlign?: boolean }) {
+
+  const textAlign = !!centerAlign ? 'center' : 'left';
+  
   return (
     <p
       style={{
-        fontSize: 10,
+        fontSize: 12,
         letterSpacing: "0.22em",
-        color: "#444",
+        color: "#fff",
         fontFamily: "'JetBrains Mono', monospace",
         marginBottom: 12,
+        textAlign: textAlign
       }}
     >
       {children}

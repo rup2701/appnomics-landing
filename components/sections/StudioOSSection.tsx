@@ -5,7 +5,7 @@ export default function StudioOSSection() {
   return (
     <section className="py-24 border-t border-[#1a1a1a] bg-[#0d0d0d]">
       <div className="max-w-[1100px] mx-auto px-10">
-        <SectionLabel>// STUDIO OS</SectionLabel>
+        <SectionLabel centerAlign={true}>// STUDIO OS</SectionLabel>
         
         {/* Centered headline section */}
         <div className="text-center">

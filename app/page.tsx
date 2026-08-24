@@ -48,39 +48,7 @@ export default function Home() {
 
       {/* Main content — flex column, pushes footer down */}
       <div className="flex-grow flex flex-col items-center justify-center px-6 py-6 md:py-8">
-        <div className="max-w-5xl w-full text-center">
-
-          {/* Hero */}
-          {/* <div className="mb-10">
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-              Your AI cofounder —<br />
-              <span className="text-gray-400">without the equity split.</span>
-            </h1>
-            <div className="w-12 h-0.5 bg-gray-700 mx-auto mt-4" />
-          </div> */}
-
-          {/* Textarea with Enter button */}
-          {/* <div className="relative mb-10">
-            <textarea
-              placeholder="Describe your idea..."
-              value={idea}
-              onChange={(e) => setIdea(e.target.value)}
-              onKeyDown={handleKeyDown}
-              className="w-full bg-gray-900 border border-gray-700 rounded-xl p-4 pr-14 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 resize-none"
-              rows={2}
-            />
-            <button
-              onClick={handleEnter}
-              className="absolute bottom-3 right-3 text-xs text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 rounded-md px-3 py-1 transition"
-            >
-              Let&apos;s go →
-            </button>
-          </div> */}
-
-          {/* Capability Grid */}
-          {/* <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl opacity-[0.5]  ">
-           Everything needed to run your idea autonomously
-          </h2> */}
+        <div className="max-w-3xl w-full text-center">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-300 mb-10 py-6 md:py-8">
             {[
               'Strategy & Roadmap',
@@ -98,14 +66,12 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          <PortfolioSection />
-          <ProcessSection />
-          <PricingSection />
-          <StudioOSSection />
-          <CTASection />
-          
         </div>
+        <PortfolioSection />
+        <ProcessSection />
+        <PricingSection />
+        <StudioOSSection />
+        <CTASection />
       </div>
 
       {/* Footer */}

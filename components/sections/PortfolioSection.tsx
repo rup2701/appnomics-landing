@@ -5,10 +5,10 @@ import SectionLabel from "../SectionLabel";
 const PROJECTS = [
   {
     name: "InstaRoom",
-    domain: "instaroom.io",
+    domain: "getinstaroom.com",
     industry: "TELEHEALTH",
     description: "On-demand virtual appointment booking for independent practitioners. Auth, scheduling, Stripe paywall, calendar sync — shipped in 6 weeks.",
-    epics: 6,
+    epics: 8,
     stack: ["Next.js", "Neon", "Stripe", "Resend"],
     color: "#00ff9d",
     status: "LIVE",
@@ -16,7 +16,7 @@ const PROJECTS = [
   },
   {
     name: "Gunner Picks",
-    domain: "gunnerpicks.com",
+    domain: "gunnerwins.com",
     industry: "SPORTS / ANALYTICS",
     description: "AI-powered sports prediction platform with subscription tiers, live feed ingestion, and a picks leaderboard.",
     epics: 5,
@@ -30,7 +30,7 @@ const PROJECTS = [
     domain: "mediadance.io",
     industry: "INFRASTRUCTURE",
     description: "Media processing pipeline with background job queue, S3-compatible storage, and a client-facing usage dashboard.",
-    epics: 4,
+    epics: 6,
     stack: ["Node.js", "Cloudflare R2", "Redis", "Railway"],
     color: "#a855f7",
     status: "BETA",
@@ -75,7 +75,7 @@ export default function PortfolioSection() {
         <h2 className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
           Built. Shipped. Handed over.
         </h2>
-        <p className="text-sm text-[#777] mb-14 font-mono">
+        <p className="text-lg text-[#999] mb-14 font-mono">
           A sample of MVPs we've taken from intake to production.
         </p>
 
@@ -135,7 +135,7 @@ export default function PortfolioSection() {
                 </div>
               </div>
 
-              <p className="text-[#777] text-xs leading-[1.65] mb-5 font-mono">
+              <p className="text-[#aaa] text-md leading-[1.65] mb-5 font-mono">
                 {p.description}
               </p>
 
@@ -144,13 +144,13 @@ export default function PortfolioSection() {
                   {p.stack.map((s) => (
                     <span
                       key={s}
-                      className="text-[10px] text-[#444] border border-[#1f1f1f] px-1.5 py-0.5 rounded-[2px] font-mono"
+                      className="text-[12px] text-[#999] border border-[#1f1f1f] px-1.5 py-0.5 rounded-[2px] font-mono"
                     >
                       {s}
                     </span>
                   ))}
                 </div>
-                <span className="text-[11px] text-[#333] font-mono whitespace-nowrap ml-3">
+                <span className="text-[11px] text-[#999] font-mono whitespace-nowrap ml-3">
                   {p.epics} epics
                 </span>
               </div>
