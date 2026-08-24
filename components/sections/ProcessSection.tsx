@@ -54,7 +54,7 @@ export default function ProcessSection() {
 
   return (
     <section className="py-24 border-t border-[#1a1a1a] bg-[#0d0d0d]">
-      <div className="max-w-[1100px] mx-auto px-10">
+      <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PROCESS</SectionLabel>
         <h2 className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
           One epic per week.
@@ -100,7 +100,7 @@ export default function ProcessSection() {
                       i < PROCESS_STEPS.length - 1 ? "border-b border-[#141414]" : ""
                     }`}
                   >
-                    <div className="flex items-baseline gap-3 mb-1">
+                    <div className="flex items-baseline flex-wrap gap-3 mb-1">
                       <span className="text-[10px] text-[#333] tracking-[0.1em] font-mono">
                         {step.n}
                       </span>

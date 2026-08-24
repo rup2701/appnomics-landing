@@ -70,7 +70,7 @@ export default function PortfolioSection() {
 
   return (
     <section className="py-24 border-t border-[#1a1a1a]">
-      <div className="max-w-[1100px] mx-auto px-10">
+      <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PORTFOLIO</SectionLabel>
         <h2 className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
           Built. Shipped. Handed over.
