@@ -29,95 +29,58 @@ export default function PricingSection() {
   const [selectedPlan, setSelectedPlan] = useState<"build" | "build_run">("build");
 
   return (
-    <section style={{ padding: "96px 0", borderTop: "1px solid #1a1a1a" }}>
-      <div style={{  margin: "0 auto", padding: "0 40px", display:'block' }}>
+    <section className="py-24 border-t border-[#1a1a1a]">
+      <div className="max-w-7xl mx-auto block">
         <SectionLabel>// PRICING</SectionLabel>
         <h2
-          style={{
-            fontSize: "clamp(24px, 3vw, 36px)",
-            fontWeight: 700,
-            color: "#e0e0e0",
-            marginBottom: 8,
-            lineHeight: 1.15,
-            fontFamily: "'JetBrains Mono', monospace",
-          }}
+          className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono"
         >
           Transparent pricing.
           <br />
-          <span style={{ color: "#6e6e6e" }}>No retainers. No surprises.</span>
+          <span className="text-[#6e6e6e]">No retainers. No surprises.</span>
         </h2>
-        <p style={{ fontSize: 14, color: "#ddd", marginBottom: 56, fontFamily: "'JetBrains Mono', monospace" }}>
-          Most apps are 5–6 epics → <span style={{ color: "#ddd" }}>$25K–$30K total.</span>
+        <p className="text-sm text-[#ddd] mb-14 font-mono">
+          Most apps are 5–6 epics → <span className="text-[#ddd]">$25K–$30K total.</span>
         </p>
 
         <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 20,
-            maxWidth: 860,
-            margin: "0 auto"
-          }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[860px] mx-auto"
         >
           {/* Build Only */}
           <div
             onClick={() => setSelectedPlan("build")}
-            style={{
-              border: `1px solid ${selectedPlan === "build" ? "#00ff9d44" : "#1f1f1f"}`,
-              borderRadius: 2,
-              background: selectedPlan === "build" ? "#00ff9d08" : "#0d0d0d",
-              padding: 32,
-              cursor: "pointer",
-              transition: "all 0.15s",
-              position: "relative",
-            }}
+            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
+              selectedPlan === "build"
+                ? "border-[#00ff9d44] bg-[#00ff9d08]"
+                : "border-[#1f1f1f] bg-[#0d0d0d]"
+            }`}
           >
             <div className="flex items-start justify-between mb-6">
               <div>
-                <p
-                  style={{
-                    fontSize: 10,
-                    letterSpacing: "0.15em",
-                    color: "#fafafa",
-                    marginBottom: 6,
-                    fontFamily: "'JetBrains Mono', monospace",
-                    textAlign: 'left'
-                  }}
-                >
+                <p className="text-[10px] tracking-[0.15em] text-[#fafafa] mb-1.5 font-mono text-left">
                   PLAN 01
                 </p>
-                <h3
-                  style={{
-                    fontSize: 20,
-                    fontWeight: 700,
-                    color: "#e0e0e0",
-                    fontFamily: "'JetBrains Mono', monospace",
-                    textAlign: 'left'
-                  }}
-                >
+                <h3 className="text-xl font-bold text-[#e0e0e0] font-mono text-left">
                   Build Only
                 </h3>
               </div>
-              <div style={{ textAlign: "right" }}>
+              <div className="text-right">
                 <p
-                  style={{
-                    fontSize: 28,
-                    fontWeight: 700,
-                    color: "#00ff9d",
-                    fontFamily: "'JetBrains Mono', monospace",
-                    lineHeight: 1,
-                    textShadow: selectedPlan === "build" ? "0 0 16px #00ff9d66" : "none",
-                  }}
+                  className={`text-[28px] font-bold font-mono leading-none ${
+                    selectedPlan === "build"
+                      ? "text-[#00ff9d] shadow-[0_0_16px_#00ff9d66]"
+                      : "text-[#00ff9d]"
+                  }`}
                 >
                   $5K
                 </p>
-                <p style={{ fontSize: 11, color: "#fafafa", fontFamily: "'JetBrains Mono', monospace" }}>
+                <p className="text-[11px] text-[#fafafa] font-mono">
                   per epic
                 </p>
               </div>
             </div>
 
-            <div style={{ marginBottom: 24 }}>
+            <div className="mb-6">
               {BUILD_FEATURES.map((f) => (
                 <CheckLine key={f} text={f} />
               ))}
@@ -126,21 +89,11 @@ export default function PricingSection() {
             <a
               href="#intake"
               onClick={(e) => e.stopPropagation()}
-              style={{
-                display: "block",
-                textAlign: "center",
-                padding: "11px 0",
-                border: `1px solid ${selectedPlan === "build" ? "#00ff9d44" : "#2a2a2a"}`,
-                color: selectedPlan === "build" ? "#00ff9d" : "#555",
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.12em",
-                fontFamily: "'JetBrains Mono', monospace",
-                textDecoration: "none",
-                borderRadius: 2,
-                background: selectedPlan === "build" ? "#00ff9d0d" : "transparent",
-                transition: "all 0.15s",
-              }}
+              className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-mono no-underline transition-all duration-150 ${
+                selectedPlan === "build"
+                  ? "border-[#00ff9d44] text-[#00ff9d] bg-[#00ff9d0d]"
+                  : "border-[#2a2a2a] text-[#555] bg-transparent"
+              }`}
             >
               START BUILDING →
             </a>
@@ -149,79 +102,43 @@ export default function PricingSection() {
           {/* Build + Run */}
           <div
             onClick={() => setSelectedPlan("build_run")}
-            style={{
-              border: `1px solid ${selectedPlan === "build_run" ? "#00d4ff44" : "#1f1f1f"}`,
-              borderRadius: 2,
-              background: selectedPlan === "build_run" ? "#00d4ff08" : "#0d0d0d",
-              padding: 32,
-              cursor: "pointer",
-              transition: "all 0.15s",
-              position: "relative",
-            }}
+            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
+              selectedPlan === "build_run"
+                ? "border-[#00d4ff44] bg-[#00d4ff08]"
+                : "border-[#1f1f1f] bg-[#0d0d0d]"
+            }`}
           >
             {/* Recommended badge */}
-            <div
-              style={{
-                position: "absolute",
-                top: -1,
-                right: 20,
-                background: "#00d4ff",
-                color: "#0a0a0a",
-                fontSize: 9,
-                fontWeight: 700,
-                letterSpacing: "0.15em",
-                padding: "3px 10px",
-                fontFamily: "'JetBrains Mono', monospace",
-              }}
-            >
+            <div className="absolute -top-px right-5 bg-[#00d4ff] text-[#0a0a0a] text-[9px] font-bold tracking-[0.15em] py-[3px] px-2.5 font-mono">
               POPULAR
             </div>
 
             <div className="flex items-start justify-between mb-6">
               <div>
-                <p
-                  style={{
-                    fontSize: 10,
-                    letterSpacing: "0.15em",
-                    color: "#fafafa",
-                    marginBottom: 6,
-                    fontFamily: "'JetBrains Mono', monospace",
-                    textAlign: 'left'
-                  }}
-                >
+                <p className="text-[10px] tracking-[0.15em] text-[#fafafa] mb-1.5 font-mono text-left">
                   PLAN 02
                 </p>
-                <h3
-                  style={{
-                    fontSize: 20,
-                    fontWeight: 700,
-                    color: "#e0e0e0",
-                    fontFamily: "'JetBrains Mono', monospace",
-                  }}
-                >
+                <h3 className="text-xl font-bold text-[#e0e0e0] font-mono">
                   Build + Run
                 </h3>
               </div>
-              <div style={{ textAlign: "right" }}>
+              <div className="text-right">
                 <p
-                  style={{
-                    fontSize: 28,
-                    fontWeight: 700,
-                    color: "#00d4ff",
-                    fontFamily: "'JetBrains Mono', monospace",
-                    lineHeight: 1,
-                    textShadow: selectedPlan === "build_run" ? "0 0 16px #00d4ff66" : "none",
-                  }}
+                  className={`text-[28px] font-bold font-mono leading-none ${
+                    selectedPlan === "build_run"
+                      ? "text-[#00d4ff] shadow-[0_0_16px_#00d4ff66]"
+                      : "text-[#00d4ff]"
+                  }`}
                 >
                   $5K
                 </p>
-                <p style={{ fontSize: 11, color: "#fafafa", fontFamily: "'JetBrains Mono', monospace" }}>
+                <p className="text-[11px] text-[#fafafa] font-mono">
                   per epic + 15% rev
                 </p>
               </div>
             </div>
 
-            <div style={{ marginBottom: 24 }}>
+            <div className="mb-6">
               {BUILD_RUN_FEATURES.map((f) => (
                 <CheckLine key={f} text={f} />
               ))}
@@ -230,21 +147,11 @@ export default function PricingSection() {
             <a
               href="#intake"
               onClick={(e) => e.stopPropagation()}
-              style={{
-                display: "block",
-                textAlign: "center",
-                padding: "11px 0",
-                border: `1px solid ${selectedPlan === "build_run" ? "#00d4ff44" : "#2a2a2a"}`,
-                color: selectedPlan === "build_run" ? "#00d4ff" : "#555",
-                fontSize: 12,
-                fontWeight: 700,
-                letterSpacing: "0.12em",
-                fontFamily: "'JetBrains Mono', monospace",
-                textDecoration: "none",
-                borderRadius: 2,
-                background: selectedPlan === "build_run" ? "#00d4ff0d" : "transparent",
-                transition: "all 0.15s",
-              }}
+              className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-mono no-underline transition-all duration-150 ${
+                selectedPlan === "build_run"
+                  ? "border-[#00d4ff44] text-[#00d4ff] bg-[#00d4ff0d]"
+                  : "border-[#2a2a2a] text-[#555] bg-transparent"
+              }`}
             >
               START BUILDING →
             </a>
@@ -252,9 +159,9 @@ export default function PricingSection() {
         </div>
 
         {/* Fine print */}
-        <p style={{ marginTop: 28, fontSize: 11, color: "#333", fontFamily: "'JetBrains Mono', monospace" }}>
+        <p className="mt-7 text-[11px] text-[#333] font-mono">
           No credit card required to start · Discovery is free ·{" "}
-          <span style={{ color: "#fafafa" }}>We scope before you commit.</span>
+          <span className="text-[#fafafa]">We scope before you commit.</span>
         </p>
       </div>
     </section>
