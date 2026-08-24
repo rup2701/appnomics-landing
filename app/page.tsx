@@ -7,6 +7,7 @@ import DynamicHero from '@/components/DynamicHero';
 import PricingSection from '@/components/sections/PricingSection';
 import ProcessSection from '@/components/sections/ProcessSection';
 import PortfolioSection from '@/components/sections/PortfolioSection';
+import CTASection from '@/components/sections/CTASection';
 
 
 
@@ -100,22 +101,8 @@ export default function Home() {
           <PortfolioSection />
           <ProcessSection />
           <PricingSection />
-          {/* CTA Block */}
-          <div className="py-6 md:py-8">
-            <p className="text-lg text-gray-300 max-w-xl mx-auto leading-relaxed">
-              Products that scale, launch your idea without the technical debt.
-            </p>
-            <div className="mt-6">
-              <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition">
-                <Link href="/auth">
-                  Start building
-                </Link>
-              </button>
-            </div>
-            <p className="mt-4 text-sm text-gray-500">
-              No credit card required · Free to start
-            </p>
-          </div>
+          <CTASection />
+          
         </div>
       </div>
 
