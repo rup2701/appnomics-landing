@@ -4,7 +4,9 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import DynamicHero from '@/components/DynamicHero';
-import PricingSection from '@/components/pricing/PricingSection';
+import PricingSection from '@/components/sections/PricingSection';
+import ProcessSection from '@/components/sections/ProcessSection';
+import PortfolioSection from '@/components/sections/PortfolioSection';
 
 
 
@@ -95,7 +97,8 @@ export default function Home() {
             ))}
           </div>
 
-          
+          <PortfolioSection />
+          <ProcessSection />
           <PricingSection />
           {/* CTA Block */}
           <div className="py-6 md:py-8">
