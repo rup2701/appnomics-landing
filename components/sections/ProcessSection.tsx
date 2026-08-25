@@ -59,7 +59,7 @@ export default function ProcessSection() {
         <h2 className="text-[clamp(24px,3vw,42px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
           One epic per week.
           <br />
-          <span className="text-[#6e6e6e]">Guarenteed launch.</span>
+          <span className="text-[#6e6e6e]">Guaranteed launch.</span>
         </h2>
         <p className="text-lg text-[#999] mb-[60px] font-mono max-w-[560px]">
           No month-long sprints. No running out of AI tokens. Each epic is a deployable slice.
@@ -133,6 +133,7 @@ export default function ProcessSection() {
         {/* callout bar */}
         <div className="mt-12 border border-[#1f1f1f] border-l-2 border-l-[#00ff9d] p-4 pl-6 bg-[#00ff9d08] rounded-r-[2px] bg-[#2a2a2a]">
           <p className="text-md text-[#888] font-mono leading-[1.7]">
+            An epic is a single, fully functional feature block delivered every week. <br/>
             Most MVPs are <span className="text-[#e0e0e0]">5&mdash;6 epics</span> — that&apos;s{" "}
             <span className="text-[#e0e0e0]">5&mdash;6 weeks</span> from intake to production. Larger platforms may run
             8&mdash;10 epics. We&apos;ll scope it in Discovery before you commit a cent.
