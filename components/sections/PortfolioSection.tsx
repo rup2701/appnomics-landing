@@ -15,7 +15,7 @@ const PROJECTS = [
     char: "IR",
   },
   {
-    name: "Gunner Picks",
+    name: "Gunner Wins",
     domain: "gunnerwins.com",
     industry: "SPORTS / ANALYTICS",
     description: "AI-powered sports prediction platform with subscription tiers, live feed ingestion, and a picks leaderboard.",
@@ -85,10 +85,10 @@ export default function PortfolioSection() {
               key={p.name}
               onMouseEnter={() => setHovered(p.name)}
               onMouseLeave={() => setHovered(null)}
-              className="border rounded-[2px] p-7 cursor-default transition-all duration-200 relative overflow-hidden"
+              className="bg-[#2a2a2a] border rounded-[2px] p-7 cursor-default transition-all duration-200 relative overflow-hidden"
               style={{
                 borderColor: hovered === p.name ? p.color + "44" : "#1f1f1f",
-                background: hovered === p.name ? "#111" : "#0d0d0d",
+                background: hovered === p.name ? "#2a2a2a80" : "#2a2a2a",
               }}
             >
               {/* Subtle corner glow on hover */}

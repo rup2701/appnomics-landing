@@ -10,16 +10,16 @@ export default function StudioOSSection() {
         {/* Centered headline section */}
         <div className="text-center">
           <h2
-            className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono"
+            className="text-[clamp(24px,3vw,42px)] font-extrabold text-[#e0e0e0] mb-2 leading-[1.15] font-mono"
           >
             The Handover —
             <br />
-            <span className="text-[#00ff9d]">
+            <span className="text-[#00ff9d] font-extrabold">
               built into every project.
             </span>
           </h2>
           <p
-            className="text-sm text-[#777] mb-4 font-mono mx-auto max-w-[600px]"
+            className="text-md text-[#777] mb-4 font-mono mx-auto max-w-[600px]"
           >
             Environment variables, artifacts, epic timeline, and a complete handover package — all in one dashboard,
             from Day 1.
@@ -38,7 +38,7 @@ export default function StudioOSSection() {
           ].map((f) => (
             <div key={f.label} className="flex items-center gap-2">
               <span style={{ color: f.color, fontSize: 14 }}>{f.icon}</span>
-              <span className="text-[#666] text-xs font-mono">
+              <span className="text-[#fff] text-xs font-mono">
                 {f.label}
               </span>
             </div>

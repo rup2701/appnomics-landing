@@ -25,7 +25,7 @@ export default function CTASection() {
         <h2 className="text-[clamp(28px,4vw,44px)] font-bold text-[#e0e0e0] mb-4 leading-[1.1] font-mono">
           Ready to build
           <br />
-          <span className="text-[#00ff9d] shadow-[0_0_24px_#00ff9d55]">
+          <span className="text-[#00ff9d]">
             your MVP?
           </span>
         </h2>

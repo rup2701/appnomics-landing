@@ -85,7 +85,7 @@ const DynamicHero = () => {
         {/* Animated headline using your existing animation */}
         <h1 className={styles.heroTitle}>
               Your AI cofounder —<br />
-              <span className="text-gray-400">without the equity split.</span>
+              <span className="text-[#00ff9d]">without the equity split.</span>
         </h1>
         
         {/* Dynamic Prompt Section */}

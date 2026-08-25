@@ -57,18 +57,18 @@ const NAV = ["Dashboard", "Epics & Timeline", "Artifacts", "Deploys & Envs", "En
 export default function StudioOSMockup() {
   return (
     <div
-      className="w-full h-full bg-[#0a0a0a] flex flex-col font-mono overflow-hidden select-none text-[11px]"
+      className="w-full h-full bg-[#0a0a0a] flex flex-col font-mono overflow-hidden select-none text-[14px]"
     >
       {/* Top bar */}
       <div
-        className="h-9 bg-[#0d0d0d] border-b border-[#1f1f1f] flex items-center justify-between px-4 flex-shrink-0"
+        className="h-9 bg-[#2a2a2a] border-b border-[#1f1f1f] flex items-center justify-between px-4 flex-shrink-0"
       >
         <div className="flex items-center gap-2.5">
-          <span className="text-[10px] font-bold tracking-[0.18em] text-[#00ff9d] shadow-[0_0_8px_#00ff9d88]">
+          <span className="text-[10px] font-bold tracking-[0.18em] text-[#00ff9d] hadow-[0_0_8px_#00ff9d88]">
             STUDIO OS
           </span>
-          <span className="text-[#222]">|</span>
-          <span className="text-[#444] text-[10px]">instaroom</span>
+          <span className="text-[#fff]">|</span>
+          <span className="text-[#fff] text-[13px]">instaroom</span>
           <span className="text-[#2a2a2a] text-[9px] border border-[#1f1f1f] px-[5px] py-px rounded-[2px]">MVP</span>
         </div>
         <div className="flex items-center gap-2">

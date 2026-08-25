@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import DynamicHero from '@/components/DynamicHero';
 import PricingSection from '@/components/sections/PricingSection';
 import ProcessSection from '@/components/sections/ProcessSection';
@@ -22,20 +23,25 @@ export default function Home() {
     router.push('/auth');
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleEnter();
-    }
-  };
+  // const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+  //   if (e.key === 'Enter' && !e.shiftKey) {
+  //     e.preventDefault();
+  //     handleEnter();
+  //   }
+  // };
 
   return (
     <main className="min-h-screen bg-black text-white font-mono flex flex-col">
 
       {/* Navbar */}
       <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-800">
-        <span className="text-sm font-bold tracking-widest text-gray-300">
-          appnomics
+        <span>
+          <Image
+            src='/appnomics-logo-white.svg'
+            alt='appnomics logo'
+            height={32}
+            width={120}
+          />
         </span>
         <button className="text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 rounded-full px-4 py-1.5 transition">
           <Link href="/auth">

@@ -61,8 +61,8 @@ export default function ProcessSection() {
           <br />
           <span className="text-[#6e6e6e]">You see progress every 7 days.</span>
         </h2>
-        <p className="text-sm text-[#999] mb-[60px] font-mono">
-          No month-long sprints before you see anything. Each epic is a deployable slice.
+        <p className="text-lg text-[#999] mb-[60px] font-mono max-w-[560px]">
+          No month-long sprints. No running out of AI tokens. Each epic is a deployable slice.
         </p>
 
         {/* Timeline */}
@@ -133,9 +133,9 @@ export default function ProcessSection() {
         {/* callout bar */}
         <div className="mt-12 border border-[#1f1f1f] border-l-2 border-l-[#00ff9d] p-4 pl-6 bg-[#00ff9d08] rounded-r-[2px]">
           <p className="text-md text-[#888] font-mono leading-[1.7]">
-            Most MVPs are <span className="text-[#e0e0e0]">5–6 epics</span> — that's{" "}
-            <span className="text-[#e0e0e0]">5–6 weeks</span> from intake to production. Larger platforms may run
-            8–10 epics. We&apos;ll scope it in Discovery before you commit a cent.
+            Most MVPs are <span className="text-[#e0e0e0]">5&mdash;6 epics</span> — that&apos;s{" "}
+            <span className="text-[#e0e0e0]">5mdash;6 weeks</span> from intake to production. Larger platforms may run
+            8&mdash;10 epics. We&apos;ll scope it in Discovery before you commit a cent.
           </p>
         </div>
       </div>

@@ -33,14 +33,14 @@ export default function PricingSection() {
       <div className="max-w-7xl mx-auto block">
         <SectionLabel centerAlign={true}>// PRICING</SectionLabel>
         <h2
-          className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono text-center" 
+          className="text-[clamp(24px,3vw,42px)] font-extrabold text-[#e0e0e0] mb-2 leading-[1.15] font-mono text-center" 
         >
           Transparent pricing.
           <br />
-          <span className="text-[#6e6e6e]">No retainers. No surprises.</span>
+          <span className="text-[#6e6e6e] font-extrabold">Fixed pricing. No pauses.</span>
         </h2>
-        <p className="text-sm text-[#ddd] mb-14 font-mono text-center">
-          Most apps are 5–6 epics → <span className="text-[#ddd]">$25K–$30K total.</span>
+        <p className="text-lg text-[#999] mb-14 font-mono text-center">
+          Most apps are 5&mdash;6 epics. 6 weeks to deploy.
         </p>
 
         <div
@@ -49,7 +49,7 @@ export default function PricingSection() {
           {/* Build Only */}
           <div
             onClick={() => setSelectedPlan("build")}
-            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
+            className={`bg-[#2a2a2a] border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
               selectedPlan === "build"
                 ? "border-[#00ff9d44] bg-[#00ff9d08]"
                 : "border-[#1f1f1f] bg-[#0d0d0d]"
@@ -68,7 +68,7 @@ export default function PricingSection() {
                 <p
                   className={`text-[28px] font-bold font-mono leading-none ${
                     selectedPlan === "build"
-                      ? "text-[#00ff9d] shadow-[0_0_16px_#00ff9d66]"
+                      ? "text-[#00ff9d] "
                       : "text-[#00ff9d]"
                   }`}
                 >
@@ -102,7 +102,7 @@ export default function PricingSection() {
           {/* Build + Run */}
           <div
             onClick={() => setSelectedPlan("build_run")}
-            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
+            className={`bg-[#2a2a2a] border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
               selectedPlan === "build_run"
                 ? "border-[#00d4ff44] bg-[#00d4ff08]"
                 : "border-[#1f1f1f] bg-[#0d0d0d]"
@@ -124,9 +124,9 @@ export default function PricingSection() {
               </div>
               <div className="text-right">
                 <p
-                  className={`text-[28px] font-bold font-mono leading-none ${
+                  className={`text-[32px] font-bold font-mono leading-none ${
                     selectedPlan === "build_run"
-                      ? "text-[#00d4ff] shadow-[0_0_16px_#00d4ff66]"
+                      ? "text-[#00d4ff]"
                       : "text-[#00d4ff]"
                   }`}
                 >
@@ -159,7 +159,7 @@ export default function PricingSection() {
         </div>
 
         {/* Fine print */}
-        <p className="mt-7 text-[11px] text-[#333] font-mono">
+        <p className="mt-7 text-[11px] text-[#999] font-mono text-center">
           No credit card required to start · Discovery is free ·{" "}
           <span className="text-[#fafafa]">We scope before you commit.</span>
         </p>
