@@ -32,7 +32,7 @@ function AuthPageInner() {
     e.preventDefault();
     // TODO: wire to your backend (Supabase, etc.)
     console.log({
-      type: isSignUp ? 'create_company' : 'sign_in',
+      type: isSignUp ? '' : 'sign_in',
       email,
       password,
       idea, // preserve the idea for onboarding
@@ -57,7 +57,7 @@ function AuthPageInner() {
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-2xl font-bold tracking-tight">
-              {isSignUp ? 'Create your company' : 'Sign in'}
+              {isSignUp ? 'Sign up' : 'Sign in'}
             </h1>
             <p className="text-sm text-gray-400 mt-1">
               {isSignUp
@@ -100,7 +100,7 @@ function AuthPageInner() {
               type="submit"
               className="w-full bg-white text-black rounded-full py-3 font-medium hover:bg-gray-200 transition"
             >
-              {isSignUp ? 'Create company →' : 'Sign in →'}
+              {isSignUp ? 'Let\'s go →' : 'Sign in →'}
             </button>
           </form>
 
@@ -123,7 +123,7 @@ function AuthPageInner() {
                   onClick={() => setIsSignUp(true)}
                   className="text-white hover:underline"
                 >
-                  Create your company
+                  Create Account
                 </button>
               </>
             )}
