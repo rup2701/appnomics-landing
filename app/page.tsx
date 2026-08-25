@@ -11,6 +11,7 @@ import PortfolioSection from '@/components/sections/PortfolioSection';
 import CTASection from '@/components/sections/CTASection';
 import StudioOSSection from '@/components/sections/StudioOSSection';
 import FAQSection from '@/components/sections/FAQSection';
+import Footer from '@/components/sections/Footer';
 
 
 
@@ -81,14 +82,7 @@ export default function Home() {
         <FAQSection />
         <CTASection />
       </div>
-
-      {/* Footer */}
-      <footer className="text-xs text-gray-600 flex flex-wrap justify-center gap-6 border-t border-gray-800 py-4 px-6">
-        <a href="#" className="hover:text-gray-400 transition">About</a>
-        <a href="#" className="hover:text-gray-400 transition">Terms</a>
-        <a href="#" className="hover:text-gray-400 transition">Privacy</a>
-        <a href="#" className="hover:text-gray-400 transition">Contact</a>
-      </footer>
+      <Footer />
     </main>
   );
 }
