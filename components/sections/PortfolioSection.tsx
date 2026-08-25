@@ -37,12 +37,12 @@ const PROJECTS = [
     char: "MD",
   },
   {
-    name: "FinFare",
-    domain: "finfare.app",
-    industry: "FINTECH",
-    description: "Personal finance tracker with Plaid bank sync, recurring transaction detection, and a natural language query interface.",
-    epics: 5,
-    stack: ["Next.js", "Plaid", "Neon", "Vercel"],
+    name: "PlaySquares",
+    domain: "playsquares.webflow.io",
+    industry: "SPORTSECH",
+    description: "PlaySquares is a mobile app that modernizes the classic pen-and-paper squares game with automated live scoring, instant winner notifications, and custom leaderboards.",
+    epics: 16,
+    stack: ["Swift", "Node.js", "Postgres", "Firebase", 'Google Cloud'],
     color: "#ffb800",
     status: "LIVE",
     char: "FF",
@@ -76,7 +76,7 @@ export default function PortfolioSection() {
           Built. Shipped. Handed over.
         </h2>
         <p className="text-lg text-[#999] mb-14 font-mono">
-          A sample of MVPs we've taken from intake to production.
+          A sample of MVPs we&apos;ve taken from intake to production.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

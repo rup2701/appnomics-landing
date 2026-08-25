@@ -37,15 +37,15 @@ export default function FAQSection() {
   return (
     <section className="py-24 border-t border-[#1a1a1a]">
       <div className="max-w-[860px] mx-auto px-10">
-        <SectionLabel centerAlign={true}>// FAQ</SectionLabel>
+        {/* <SectionLabel centerAlign={true}>// FAQ</SectionLabel> */}
         
         <div className="text-center">
           <h2 className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
-            Questions?
+            FAQ
             <br />
-            <span className="text-[#6e6e6e]">We&apos;ve got answers.</span>
-          </h2>
-          <p className="text-md text-[#777] mb-14 font-mono">
+            {/* <span className="text-[#6e6e6e]">We&apos;ve got answers.</span> */}
+          </h2> 
+          <p className="text-lg text-[#999] mb-14 font-mono">
             Everything you need to know before getting started.
           </p>
         </div>

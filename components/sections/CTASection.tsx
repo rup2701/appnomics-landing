@@ -31,8 +31,7 @@ export default function CTASection() {
         </h2>
 
         <p className="text-lg text-[#777] mb-12 leading-[1.7] font-mono">
-          Tell us about your idead. We&apos;ll scope your project in 24 hours —
-          no agency bloat, no hidden fees, no lock-in.
+          Start with your idea. Get your 6-week epic breakdown in 24 hours — zero risk, zero lock-in.
         </p>
 
         <a

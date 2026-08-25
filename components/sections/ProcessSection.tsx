@@ -6,35 +6,40 @@ const PROCESS_STEPS = [
   {
     n: "00",
     label: "Discovery",
-    sub: "1–2 days",
-    detail: "You fill out an intake form. We map your core user flow, define epic scope, and agree on stack. No slides, no fluff.",
+    sub: "1\-2 days",
+    detail: "You submit your idea. Within 48 hours, your entire product is mapped out, sliced into epics,\
+    and provisioned live inside your dedicated Studio OS dashboard. No slides, no fluff—you see the complete\
+    blueprint before you commit a single cent.",
     icon: "◈",
   },
   {
     n: "01",
     label: "Epic 1",
     sub: "~1 week",
-    detail: "Auth, database schema, and the first slice of core functionality. Deployed to staging. You see it working.",
+    detail: "Auth, database schema, and the first slice of core functionality. Deployed to staging.\
+    You see it working.",
     icon: "▸",
   },
   {
     n: "02",
     label: "Epic 2",
     sub: "~1 week",
-    detail: "Core feature loop: the thing your users actually pay for. Integrations, business logic, API contracts.",
+    detail: "Core feature loop: the thing your users actually pay for.\
+    Integrations, business logic, API contracts.",
     icon: "▸",
   },
   {
     n: "03",
     label: "Epic 3–N",
     sub: "~1 week each",
-    detail: "Billing, notifications, admin tools, analytics — each epic ships a vertical slice. Progress every 7 days.",
+    detail: "Billing, notifications, admin tools, analytics — each epic ships\
+    a vertical slice. Progress every 7 days.",
     icon: "▸",
   },
   {
     n: "04",
     label: "QA & Polish",
-    sub: "3–5 days",
+    sub: "3\-5 days",
     detail: "Full QA pass, production deploy, DNS, monitoring setup, Sentry wired. Everything production-grade.",
     icon: "◉",
   },
@@ -59,10 +64,10 @@ export default function ProcessSection() {
         <h2 className="text-[clamp(24px,3vw,42px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
           One epic per week.
           <br />
-          <span className="text-[#6e6e6e]">Guaranteed launch.</span>
+          <span className="text-[#fff]">Guaranteed launch.</span>
         </h2>
         <p className="text-lg text-[#999] mb-[60px] font-mono max-w-[560px]">
-          No month-long sprints. No running out of AI tokens. Each epic is a deployable slice.
+          No month-long sprints. <span className={'text-[#fff] text-extrabold'}>No running out of AI tokens.</span>
         </p>
 
         {/* Timeline */}
@@ -135,8 +140,7 @@ export default function ProcessSection() {
           <p className="text-md text-[#888] font-mono leading-[1.7]">
             An epic is a single, fully functional feature block delivered every week. <br/>
             Most MVPs are <span className="text-[#e0e0e0]">5&mdash;6 epics</span> — that&apos;s{" "}
-            <span className="text-[#e0e0e0]">5&mdash;6 weeks</span> from intake to production. Larger platforms may run
-            8&mdash;10 epics. We&apos;ll scope it in Discovery before you commit a cent.
+            <span className="text-[#e0e0e0]">5&mdash;6 weeks</span> from intake to production. Every epic is fully laid out and mapped during your free discovery session — so you see the exact roadmap before you commit a cent.
           </p>
         </div>
       </div>
