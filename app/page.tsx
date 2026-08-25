@@ -10,6 +10,7 @@ import ProcessSection from '@/components/sections/ProcessSection';
 import PortfolioSection from '@/components/sections/PortfolioSection';
 import CTASection from '@/components/sections/CTASection';
 import StudioOSSection from '@/components/sections/StudioOSSection';
+import FAQSection from '@/components/sections/FAQSection';
 
 
 
@@ -77,6 +78,7 @@ export default function Home() {
         <ProcessSection />
         <PricingSection />
         <StudioOSSection />
+        <FAQSection />
         <CTASection />
       </div>
 
