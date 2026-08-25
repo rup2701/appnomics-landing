@@ -18,6 +18,7 @@ import Footer from '@/components/sections/Footer';
 export default function Home() {
   const [idea, setIdea] = useState('');
   const router = useRouter();
+  const [hovered, setHovered] = useState(false);
 
   const handleEnter = () => {
     if (!idea.trim()) return;
@@ -45,7 +46,15 @@ export default function Home() {
             width={120}
           />
         </span>
-        <button className="text-sm text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 rounded-full px-4 py-1.5 transition">
+        <button
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          className="text-sm text-gray-400 hover:text-white border-1 border border-[#00ff9d] font-bold rounded-[2px] hover:border-gray-500  px-4 py-1.5  transition-all duration-150"
+          style={{
+            background: hovered ? "#00ff9d" : "transparent",
+            color: hovered ? "#0a0a0a" : "#00ff9d",
+            boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
+          }}>
           <Link href="/auth">
             Sign in
           </Link>
