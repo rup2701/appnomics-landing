@@ -72,7 +72,7 @@ export default function PortfolioSection() {
     <section className="py-24 border-t border-[#1a1a1a]">
       <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PORTFOLIO</SectionLabel>
-        <h2 className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
+        <h2 className="text-[clamp(24px,3vw,42px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
           Built. Shipped. Handed over.
         </h2>
         <p className="text-lg text-[#999] mb-14 font-mono">

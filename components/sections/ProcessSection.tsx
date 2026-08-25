@@ -53,13 +53,13 @@ export default function ProcessSection() {
   const [activeStep, setActiveStep] = useState<string | null>(null);
 
   return (
-    <section className="py-24 border-t border-[#1a1a1a] bg-[#0d0d0d]">
+    <section className="py-24 border-t border-[#1a1a1a]">
       <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PROCESS</SectionLabel>
-        <h2 className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
+        <h2 className="text-[clamp(24px,3vw,42px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
           One epic per week.
           <br />
-          <span className="text-[#6e6e6e]">You see progress every 7 days.</span>
+          <span className="text-[#6e6e6e]">Guarenteed launch.</span>
         </h2>
         <p className="text-lg text-[#999] mb-[60px] font-mono max-w-[560px]">
           No month-long sprints. No running out of AI tokens. Each epic is a deployable slice.
@@ -131,10 +131,10 @@ export default function ProcessSection() {
         </div>
 
         {/* callout bar */}
-        <div className="mt-12 border border-[#1f1f1f] border-l-2 border-l-[#00ff9d] p-4 pl-6 bg-[#00ff9d08] rounded-r-[2px]">
+        <div className="mt-12 border border-[#1f1f1f] border-l-2 border-l-[#00ff9d] p-4 pl-6 bg-[#00ff9d08] rounded-r-[2px] bg-[#2a2a2a]">
           <p className="text-md text-[#888] font-mono leading-[1.7]">
             Most MVPs are <span className="text-[#e0e0e0]">5&mdash;6 epics</span> — that&apos;s{" "}
-            <span className="text-[#e0e0e0]">5mdash;6 weeks</span> from intake to production. Larger platforms may run
+            <span className="text-[#e0e0e0]">5&mdash;6 weeks</span> from intake to production. Larger platforms may run
             8&mdash;10 epics. We&apos;ll scope it in Discovery before you commit a cent.
           </p>
         </div>
