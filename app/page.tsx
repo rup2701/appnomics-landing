@@ -40,10 +40,10 @@ export default function Home() {
       <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-800">
         <span>
           <Image
-            src='/appnomics-logo-white.svg'
+            src='/appnomics-1.svg'
             alt='appnomics logo'
-            height={32}
-            width={120}
+            height={24}
+            width={110}
           />
         </span>
         <button

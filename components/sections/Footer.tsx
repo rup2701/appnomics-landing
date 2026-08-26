@@ -1,4 +1,4 @@
-import SectionLabel from "../SectionLabel";
+
 
 import Image from "next/image";
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-span-1 lg:col-span-1">
             <div className="mb-4">
               <Image
-                src="/appnomics-logo-white.svg"
+                src="/appnomics-1.svg"
                 alt="Appnomics"
                 className="h-8 w-auto"
                 height={44}
