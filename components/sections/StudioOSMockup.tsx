@@ -81,7 +81,7 @@ export default function StudioOSMockup() {
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
         <div
-          className="w-[180px] flex-shrink-0 bg-[#0d0d0d] border-r border-[#1f1f1f] py-2.5 overflow-hidden"
+          className="w-[180px] flex-shrink-0 bg-[#0d0d0d] border-2 border-[#1f1f1f] py-2.5 overflow-hidden"
         >
           {NAV.map((item, i) => {
             const isActive = i === 4;

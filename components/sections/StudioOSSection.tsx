@@ -3,7 +3,7 @@ import StudioOSMockup from "./StudioOSMockup";
 
 export default function StudioOSSection() {
   return (
-    <section className="hidden md:block py-24 border-t border-[#1a1a1a]">
+    <section id="studio" className="hidden md:block py-24 border-t border-[#1a1a1a]">
       <div className="max-w-[1100px] mx-auto px-10">
         <SectionLabel centerAlign={true}>// STUDIO OS</SectionLabel>
         

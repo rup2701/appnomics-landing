@@ -48,7 +48,7 @@ export default function CTASection() {
           START BUILDING →
         </a>
 
-        <p className="text-[11px] text-[#333] font-mono">
+        <p className="text-[11px] text-[#888] font-mono">
           No credit card required · Free to start
         </p>
       </div>

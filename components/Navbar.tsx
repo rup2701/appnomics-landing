@@ -8,7 +8,8 @@ const NAV_ITEMS = [
   { label: "Why Us", href: "#why-appnomics" },
   { label: "Pricing", href: "#pricing" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Studio OS", href: "#studio" },
+  // { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {

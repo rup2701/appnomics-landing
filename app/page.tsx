@@ -13,6 +13,7 @@ import StudioOSSection from '@/components/sections/StudioOSSection';
 import FAQSection from '@/components/sections/FAQSection';
 import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/Navbar';
+import WhyAppnomicsSection from '@/components/sections/WhyUs';
 
 
 
@@ -87,9 +88,10 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <PortfolioSection />
           <ProcessSection />
+          <WhyAppnomicsSection />
           <PricingSection />
+          <PortfolioSection />
           <StudioOSSection />
           <FAQSection />
           <CTASection />
