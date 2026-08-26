@@ -35,7 +35,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-24 border-t border-[#1a1a1a]">
+    <section id='faq' className="py-24 border-t border-[#1a1a1a]">
       <div className="max-w-[860px] mx-auto px-10">
         {/* <SectionLabel centerAlign={true}>// FAQ</SectionLabel> */}
         

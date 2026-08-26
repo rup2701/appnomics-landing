@@ -58,7 +58,7 @@ export default function ProcessSection() {
   const [activeStep, setActiveStep] = useState<string | null>(null);
 
   return (
-    <section className="py-24 border-t border-[#1a1a1a]">
+    <section id='process' className="py-24 border-t border-[#1a1a1a]">
       <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PROCESS</SectionLabel>
         <h2 className="text-[clamp(24px,3vw,42px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">

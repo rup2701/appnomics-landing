@@ -29,7 +29,7 @@ export default function PricingSection() {
   const [selectedPlan, setSelectedPlan] = useState<"build" | "build_run">("build");
 
   return (
-    <section className="py-24 border-t border-[#1a1a1a]">
+    <section id='pricing' className="py-24 border-t border-[#1a1a1a]">
       <div className="max-w-7xl mx-auto block">
         <SectionLabel centerAlign={true}>// PRICING</SectionLabel>
         <h2
