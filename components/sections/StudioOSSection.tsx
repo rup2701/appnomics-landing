@@ -13,10 +13,10 @@ export default function StudioOSSection() {
           <h2
             className="text-[clamp(24px,3vw,42px)] font-extrabold text-[#e0e0e0] mb-2 leading-[1.15] font-mono"
           >
-            The Handover —
+            Studio OS —
             <br />
             <span className="text-[#00ff9d] font-extrabold">
-              built into every project.
+              Your startup&apos;s operating system.
             </span>
           </h2>
           <p

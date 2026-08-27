@@ -1,6 +1,7 @@
 
 
 import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="border-t border-[#1a1a1a] bg-[#0d0d0d]">
@@ -29,7 +30,7 @@ export default function Footer() {
               Product
             </h4>
             <ul className="space-y-2">
-              {["Process", "Pricing", "Portfolio", "Studio OS"].map((item) => (
+              {["Process", "Pricing", "Portfolio", "Studio"].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
@@ -48,7 +49,7 @@ export default function Footer() {
               Company
             </h4>
             <ul className="space-y-2">
-              {["About", "Contact", "Handover"].map((item) => (
+              {["About", "Contact", "FAQ"].map((item) => (
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}

@@ -35,7 +35,7 @@ export default function CTASection() {
         </p>
 
         <a
-          href="#intake"
+          href="mailto:rupesh@appnomics.dev"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           className="inline-block px-12 py-4 border border-[#00ff9d] rounded-[2px] text-[13px] font-bold tracking-[0.15em] font-mono no-underline transition-all duration-150 mb-5"

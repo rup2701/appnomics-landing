@@ -48,10 +48,10 @@ export default function Home() {
         */}
         <div className="w-full max-w-[1220px] mx-auto">
           <ProcessSection />
+          <StudioOSSection />
           <WhyAppnomicsSection />
           <PricingSection />
           <PortfolioSection />
-          <StudioOSSection />
           <FAQSection />
           <CTASection />
         </div>

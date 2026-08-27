@@ -5,10 +5,10 @@ import Link from "next/link";
 // ── Navigation ─────────────────────────────────────────────────────────────
 const NAV_ITEMS = [
   { label: "Process", href: "#process" },
+  { label: "Studio OS", href: "#studio" },
   { label: "Why Us", href: "#why-appnomics" },
   { label: "Pricing", href: "#pricing" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "Studio OS", href: "#studio" },
   // { label: "FAQ", href: "#faq" },
 ];
 
@@ -86,7 +86,7 @@ export default function Navbar() {
               color: hovered ? "#0a0a0a" : "#00ff9d",
               boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
             }}>
-            <Link href="/auth" className="font-mono">
+            <Link href="mailto:rupesh@appnomics.dev" className="font-mono">
               GET STARTED
             </Link>
           </button>
@@ -142,8 +142,8 @@ export default function Navbar() {
               color: hovered ? "#0a0a0a" : "#00ff9d",
               boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
             }}>
-            <Link href="/auth">
-              Sign in
+            <Link href="mailto:rupesh@appnomics.dev">
+              Get Started
             </Link>
           </button>
         </div>
