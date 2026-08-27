@@ -15,6 +15,7 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,13 +77,19 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
-          <a
-            href="#intake"
-            onClick={(e) => handleNavClick(e, "#intake")}
-            className="text-[11px] font-bold font-mono text-[#0a0a0a] bg-[#00ff9d] px-4 py-1.5 rounded-[2px] hover:bg-[#00ff9dcc] transition-colors duration-200 no-underline tracking-[0.04em]"
-          >
-            Get Started
-          </a>
+           <button
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            className="text-sm text-gray-400 hover:text-white border-1 border border-[#00ff9d] font-bold rounded-[2px] hover:border-gray-500  px-4 py-1.5  transition-all duration-150"
+            style={{
+              background: hovered ? "#00ff9d" : "transparent",
+              color: hovered ? "#0a0a0a" : "#00ff9d",
+              boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
+            }}>
+            <Link href="/auth" className="font-mono">
+              GET STARTED
+            </Link>
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -126,13 +133,19 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
-          <a
-            href="#intake"
-            onClick={(e) => handleNavClick(e, "#intake")}
-            className="text-[13px] font-bold font-mono text-[#0a0a0a] bg-[#00ff9d] px-4 py-2 rounded-[2px] hover:bg-[#00ff9dcc] transition-colors duration-200 no-underline text-center mt-2"
-          >
-            Get Started
-          </a>
+            <button
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            className="text-sm text-gray-400 hover:text-white border-1 border border-[#00ff9d] font-bold rounded-[2px] hover:border-gray-500  px-4 py-1.5  transition-all duration-150"
+            style={{
+              background: hovered ? "#00ff9d" : "transparent",
+              color: hovered ? "#0a0a0a" : "#00ff9d",
+              boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
+            }}>
+            <Link href="/auth">
+              Sign in
+            </Link>
+          </button>
         </div>
       </div>
     </nav>

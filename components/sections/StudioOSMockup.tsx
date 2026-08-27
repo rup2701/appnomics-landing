@@ -88,7 +88,7 @@ export default function StudioOSMockup() {
             return (
               <div
                 key={item}
-                className="py-[7px] px-[14px] text-[10px] flex items-center justify-between"
+                className="py-[7px] px-[14px] text-[12px] flex items-center justify-between"
                 style={{
                   borderLeft: `2px solid ${isActive ? "#00ff9d" : "transparent"}`,
                   background: isActive ? "#00ff9d0d" : "transparent",
@@ -98,7 +98,7 @@ export default function StudioOSMockup() {
               >
                 <span>{item}</span>
                 {i === 4 && (
-                  <span className="text-[8px] text-[#00ff9d55] border border-[#00ff9d22] px-[4px] py-px rounded-[1px]">
+                  <span className="text-[12px] text-[#00ff9d55] border border-[#00ff9d22] px-[4px] py-px rounded-[1px]">
                     KEY
                   </span>
                 )}
