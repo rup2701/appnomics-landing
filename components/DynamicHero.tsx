@@ -169,7 +169,7 @@ const DynamicHero = () => {
           </div>
         </div>
         
-        {/* Trust Indicators
+        {/* Trust Indicators */}
         <div className={styles.trustBar}>
           <div className={styles.trustItem}>
             <span className={styles.trustNumber}>20+</span>
@@ -185,7 +185,7 @@ const DynamicHero = () => {
             <span className={styles.trustNumber}>80%</span>
             <span className={styles.trustLabel}>Still Operating</span>
           </div>
-        </div> */}
+        </div>
         
        
       </div>

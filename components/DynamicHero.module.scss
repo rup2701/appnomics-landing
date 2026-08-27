@@ -8,7 +8,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 6rem 1rem 0;
+  padding: 16rem 1rem 8rem;
   // background: $bg-primary;
 }
 
@@ -17,7 +17,7 @@
   z-index: 2;
   text-align: center;
   padding: $spacing-sm $spacing-lg;
-  max-width: 840px;
+  // max-width: 840px;
   width: 100%;
   margin: 0 auto;
   // @include container;
@@ -31,48 +31,36 @@
   }
 
   .heroContent {
-    padding: 0;
+    // padding: 0;
+    padding: 4rem 0 0;
   }
 }
 
-// .container {
-//   width: 100%;
-// }
+@media (max-width: $breakpoint-sm) {
+  .heroSection {
+    min-height: auto;
+    padding: 4rem 24px;
+  }
+
+  .heroContent {
+    // padding: 0;
+    padding: 4rem 0 0;
+  }
+}
 
 // Hero Title Animation (your existing styles)
 .heroTitle {
-  font-size: clamp(2.5rem, 5vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1;
   letter-spacing: -0.03em;
   margin-bottom: $spacing-2xl;
-  color: #eee;
-  .line1, .line2, .line3 {
-    display: block;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
   
-  .line1 {
-    animation-delay: 0s;
-  }
-  
-  .line2 {
-    animation-delay: 0.2s;
-  }
-  
-  .line3 {
-    animation-delay: 0.4s;
-    background: linear-gradient(135deg, $accent-green 0%, $accent-mint 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  
-  @media (max-width: $breakpoint-md) {
-    font-size: clamp(2rem, 4vw, 3rem);
+  @media (max-width: $breakpoint-sm) {
+    font-size: clamp(1.8rem, 4vw, 3rem);
     margin-bottom: $spacing-xl;
+    font-weight: 600;
+    text-align: left;
   }
 }
 
@@ -331,15 +319,17 @@
 .trustBar {
   display: flex;
   margin-top: 3rem;
-  
+  max-width: 740px;  
   justify-content: center;
+
   align-items: center;
   gap: $spacing-lg;
-  margin: $spacing-3xl 0;
+  margin: $spacing-3xl auto 0;
   opacity: 0;
   animation: fadeInUp 0.8s ease-out 1.2s both;
+
   
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: $breakpoint-sm) {
     flex-wrap: wrap;
     gap: $spacing-md;
   }
@@ -360,18 +350,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
   
   .trustNumber {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, $accent-green 0%, $accent-mint 100%);
+    // background: linear-gradient(135deg, $accent-green 0%, $accent-mint 100%);
+    background: #00ff9d;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
     
     @media (max-width: $breakpoint-md) {
-      font-size: 1.5rem;
+      font-size: 1.15rem;
     }
   }
   
@@ -381,6 +373,9 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-top: 4px;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 12px;
+    }
   }
 }
 

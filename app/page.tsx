@@ -69,7 +69,7 @@ export default function Home() {
 
         {/* Main content — flex column, pushes footer down */}
         <div className="flex-grow flex flex-col items-center justify-center px-6 py-6 md:py-8">
-          <div className="max-w-3xl w-full text-center">
+          {/* <div className="max-w-3xl w-full text-center">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-gray-300 mb-10 py-6 md:py-8">
               {[
                 'Strategy & Roadmap',
@@ -87,7 +87,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
           <ProcessSection />
           <WhyAppnomicsSection />
           <PricingSection />
