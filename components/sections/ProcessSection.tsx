@@ -67,7 +67,7 @@ export default function ProcessSection() {
           <span className="text-[#fff]">Guaranteed launch.</span>
         </h2>
         <p className="text-lg text-[#999] mb-[60px] font-mono max-w-[560px]">
-          No month-long sprints. <span className={'text-[#fff] text-extrabold'}>No running out of AI tokens.</span>
+          No month-long sprints. <span className={'text-[#fff] text-extrabold'}>No token limits holding your launch back.</span>
         </p>
 
         {/* Timeline */}
@@ -85,7 +85,7 @@ export default function ProcessSection() {
                 <div
                   key={step.n}
                   onClick={() => setActiveStep(isActive ? null : step.n)}
-                  className="flex gap-6 cursor-pointer"
+                  className="flex gap-1 cursor-pointer"
                 >
                   {/* Dot */}
                   <div className="flex-shrink-0 w-[54px] pt-[18px]">
