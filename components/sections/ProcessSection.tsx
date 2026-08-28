@@ -116,7 +116,7 @@ export default function ProcessSection() {
                       >
                         {step.label}
                       </span>
-                      <span className="text-[14px] text-[#666] font-mono">
+                      <span className="text-[10px] md:text-[14px] text-[#666] font-mono">
                         {step.sub}
                       </span>
                       {isLast && (
@@ -125,7 +125,7 @@ export default function ProcessSection() {
                         </span>
                       )}
                     </div>
-                    <p className="text-md text-[#999] leading-[1.6] font-mono max-w-[600px]">
+                    <p className="text-sm text-[#999] leading-[1.6] font-mono max-w-[600px]">
                       {step.detail}
                     </p>
                   </div>
@@ -137,7 +137,7 @@ export default function ProcessSection() {
 
         {/* callout bar */}
         <div className="mt-12 border border-[#1f1f1f] border-l-2 border-l-[#00ff9d] p-4 pl-6 bg-[#00ff9d08] rounded-r-[2px] bg-[#2a2a2a]">
-          <p className="text-md text-[#888] font-mono leading-[1.7]">
+          <p className="text-sm md:text-[16px] text-[#888] font-mono leading-[1.7]">
             An epic is a single, fully functional feature block delivered every week. <br/>
             Most MVPs are <span className="text-[#e0e0e0]">5&mdash;6 epics</span> — that&apos;s{" "}
             <span className="text-[#e0e0e0]">5&mdash;6 weeks</span> from intake to production. Every epic is fully laid out and mapped during your free discovery session — so you see the exact roadmap before you commit a cent.

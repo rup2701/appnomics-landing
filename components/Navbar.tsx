@@ -54,11 +54,11 @@ export default function Navbar() {
           }}
         >
           <Image
-            src="/appnomics-1.svg"
+            src="/appnomics.svg"
             alt="Appnomics"
-            height={32}
-            width={122}
-            className="h-7 w-auto"
+            height={22}
+            width={102}
+            className="h-5 w-auto"
           />
           <span className="text-[10px] text-[#00ff9d] font-mono font-bold tracking-[0.12em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             / STUDIO

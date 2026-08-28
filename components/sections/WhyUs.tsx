@@ -3,7 +3,7 @@ import SectionLabel from "../SectionLabel";
 export default function WhyAppnomicsSection() {
   return (
     <section id='why-appnomics' className="py-24 border-t border-[#1a1a1a] ">
-      <div className="max-w-[1100px] mx-auto px-10">
+      <div className="max-w-[1100px] mx-auto px-2">
         <SectionLabel centerAlign={true}>// WHY APPNOMICS</SectionLabel>
 
         <div className="text-center mb-14">
@@ -33,13 +33,13 @@ export default function WhyAppnomicsSection() {
         <div className="border border-[#1f1f1f] rounded-[2px] overflow-hidden bg-[#2a2a2a]">
           {/* Header */}
           <div className="grid grid-cols-3 gap-4 px-6 py-4 bg-[#0a0a0a] border-b border-[#1f1f1f] bg-[#222]">
-            <div className="text-[14px] text-[#999] font-mono tracking-[0.12em] uppercase ">
+            <div className="text-[10px] md:text-[14px] text-[#999] font-mono tracking-[0.12em] uppercase ">
               Capability
             </div>
-            <div className="text-[14px] text-[#999] font-mono tracking-[0.12em] uppercase text-center">
+            <div className="text-[10px] md:text-[14px] text-[#999] font-mono tracking-[0.12em] uppercase text-center">
               AI Tools <span className="text-[#999] font-normal">(Base44/Lovable)</span>
             </div>
-            <div className="text-[14px] text-[#00ff9d] font-mono tracking-[0.12em] uppercase text-center">
+            <div className="text-[10px] md:text-[14px] text-[#00ff9d] font-mono tracking-[0.12em] uppercase text-center">
               Appnomics
             </div>
           </div>

@@ -17,7 +17,7 @@ export default function CTASection() {
         }}
       />
 
-      <div className="relative max-w-[640px] mx-auto px-10">
+      <div className="relative max-w-[640px] mx-auto px-2">
         <SectionLabel centerAlign={true}>
           // GET STARTED
         </SectionLabel>

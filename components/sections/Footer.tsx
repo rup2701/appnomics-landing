@@ -11,11 +11,11 @@ export default function Footer() {
           <div className="col-span-1 lg:col-span-1">
             <div className="mb-4">
               <Image
-                src="/appnomics-1.svg"
+                src="/appnomics.svg"
                 alt="Appnomics"
-                className="h-8 w-auto"
-                height={44}
-                width={149}
+                className="h-6 w-auto mt-1"
+                height={32}
+                width={132}
               />
             </div>
             <p className="text-[11px] text-[#999] font-mono leading-[1.6] max-w-[200px]">
