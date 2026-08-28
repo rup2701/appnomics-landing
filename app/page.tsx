@@ -14,6 +14,7 @@ import FAQSection from '@/components/sections/FAQSection';
 import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/Navbar';
 import WhyAppnomicsSection from '@/components/sections/WhyUs';
+import WhoThisIsFor from '@/components/sections/WhoIsThisFor';
 
 
 
@@ -47,6 +48,7 @@ export default function Home() {
           inside their own files, or wrap them like this if you can't edit them:
         */}
         <div className="w-full max-w-[1220px] mx-auto">
+          <WhoThisIsFor />   
           <ProcessSection />
           <StudioOSSection />
           <WhyAppnomicsSection />
