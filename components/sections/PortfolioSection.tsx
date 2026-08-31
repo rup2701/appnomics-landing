@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SectionLabel from "../SectionLabel";
+import Link from "next/link";
 
 // ── Portfolio data ─────────────────────────────────────────────────────────
 const PROJECTS = [
@@ -13,6 +14,7 @@ const PROJECTS = [
     color: "#00ff9d",
     status: "LIVE",
     char: "IR",
+    caseStudy: "/"
   },
   {
     name: "Gunner Wins",
@@ -24,6 +26,7 @@ const PROJECTS = [
     color: "#00d4ff",
     status: "LIVE",
     char: "GP",
+    caseStudy: "/gunner-wins-case"
   },
   {
     name: "MediaDance",
@@ -35,6 +38,7 @@ const PROJECTS = [
     color: "#a855f7",
     status: "BETA",
     char: "MD",
+    caseStudy: "/"
   },
   {
     name: "PlaySquares",
@@ -46,6 +50,7 @@ const PROJECTS = [
     color: "#ffb800",
     status: "LIVE",
     char: "FF",
+    caseStudy: "/"
   },
 ];
 
@@ -139,7 +144,7 @@ export default function PortfolioSection() {
                 {p.description}
               </p>
 
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between mb-5">
                 <div className="flex gap-2 flex-wrap">
                   {p.stack.map((s) => (
                     <span
@@ -154,6 +159,14 @@ export default function PortfolioSection() {
                   {p.epics} epics
                 </span>
               </div>
+
+              <Link
+                href={p.caseStudy}
+                className="text-[12px] text-[#999] font-mono font-bold hover:text-[#666] text-sm uppercase underline"
+              >
+                Case Study
+              </Link>
+
             </div>
           ))}
         </div>
