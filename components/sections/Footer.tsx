@@ -31,10 +31,10 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { label: "Overview", href: "#" },
-                { label: "The 6-Week Epic", href: "#process" },
-                { label: "Flat-Fee Pricing ($5K)", href: "#pricing" },
-                { label: "Studio OS Handover", href: "#studio-os" },
-                { label: "Book a Discovery Call", href: "#intake" },
+                { label: "The 6-Week Epic", href: "/#process" },
+                { label: "Pricing", href: "/#pricing" },
+                { label: "Studio OS", href: "/#studio" },
+                { label: "Book a Discovery Call", href: "/#intake" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
@@ -129,9 +129,12 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3">
                 {[
-                  { label: "About the Studio", href: "#" },
-                  { label: "Founders & Network", href: "#" },
-                  { label: "Privacy Policy", href: "#" },
+                  { label: "About", href: "#" },
+                  // { label: "Founders & Network", href: "#" },
+                  { label: "Support", href: "#" },
+                  { label: "FQA", href: "/#faq" },
+                  { label: "Terms of Service", href: "#" },
+                  { label: "Terms of Service", href: "#" },
                   { label: "Terms of Service", href: "#" },
                 ].map((item) => (
                   <li key={item.label}>
