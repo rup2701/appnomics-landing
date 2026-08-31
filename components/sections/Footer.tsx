@@ -26,7 +26,7 @@ export default function Footer() {
           {/* Row 1: Studio & Core */}
           <div>
             <h4 className="text-[14px] text-[#fff] uppercase font-mono font-medium mb-4">
-              Studio & Core
+              Core
             </h4>
             <ul className="space-y-3">
               {[
@@ -51,7 +51,7 @@ export default function Footer() {
           {/* Row 2: Compare Appnomics */}
           <div>
             <h4 className="text-[14px] text-[#fff] font-mono uppercase font-medium mb-4">
-              Compare Appnomics
+              Appnomics
             </h4>
             <ul className="space-y-3">
               {[
@@ -125,7 +125,7 @@ export default function Footer() {
 
             <div>
               <h4 className="text-[14px] text-[#fff] uppercase font-mono font-medium mb-4">
-                Company & Legal
+                Company
               </h4>
               <ul className="space-y-3">
                 {[
