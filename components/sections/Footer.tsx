@@ -132,9 +132,8 @@ export default function Footer() {
                   { label: "About", href: "#" },
                   // { label: "Founders & Network", href: "#" },
                   { label: "Support", href: "#" },
-                  { label: "FQA", href: "/#faq" },
-                  { label: "Terms of Service", href: "#" },
-                  { label: "Terms of Service", href: "#" },
+                  { label: "FAQ", href: "/#faq" },
+                  { label: "Privacy Policy", href: "#" },          
                   { label: "Terms of Service", href: "#" },
                 ].map((item) => (
                   <li key={item.label}>
