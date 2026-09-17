@@ -62,12 +62,12 @@ export default function ProcessSection() {
     <section id='process' className="py-24 border-t border-[#1a1a1a]">
       <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PROCESS</SectionLabel>
-        <h2 className="text-[clamp(24px,3vw,42px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
+        <h2 className="text-[clamp(30px,4vw,52px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-sans">
           One epic per week.
           <br />
           <span className="text-[#fff]">Guaranteed launch.</span>
         </h2>
-        <p className="text-lg text-[#999] mb-[60px] font-mono max-w-[560px]">
+        <p className="text-lg text-[#999] mb-[60px] font-sans max-w-[560px]">
           No month-long sprints. <span className={'text-[#fff] text-extrabold'}>No token limits holding your launch back.</span>
         </p>
 
@@ -107,26 +107,26 @@ export default function ProcessSection() {
                     }`}
                   >
                     <div className="flex items-baseline flex-wrap gap-3 mb-1">
-                      <span className="text-[13px] text-[#666] tracking-[0.1em] font-mono">
+                      <span className="text-[13px] text-[#666] tracking-[0.1em] font-sans">
                         {step.n}
                       </span>
                       <span
-                        className={`text-[18px] font-bold font-mono ${
+                        className={`text-[18px] font-bold font-sans ${
                           isLast ? "text-[#00ff9d] shadow-[0_0_10px_#00ff9d55]" : "text-[#c0c0c0]"
                         }`}
                       >
                         {step.label}
                       </span>
-                      <span className="text-[10px] md:text-[14px] text-[#666] font-mono">
+                      <span className="text-[10px] md:text-[14px] text-[#666] font-sans">
                         {step.sub}
                       </span>
                       {isLast && (
-                        <span className="text-[9px] text-[#00ff9d] border border-[#00ff9d33] bg-[#00ff9d0d] px-2 py-0.5 rounded-[2px] tracking-[0.12em] font-mono">
+                        <span className="text-[9px] text-[#00ff9d] border border-[#00ff9d33] bg-[#00ff9d0d] px-2 py-0.5 rounded-[2px] tracking-[0.12em] font-sans">
                           INCLUDED FREE
                         </span>
                       )}
                     </div>
-                    <p className="text-sm text-[#999] leading-[1.6] font-mono max-w-[600px]">
+                    <p className="text-sm text-[#999] leading-[1.6] font-sans max-w-[600px]">
                       {step.detail}
                     </p>
                   </div>
@@ -153,7 +153,7 @@ export default function ProcessSection() {
 
         {/* callout bar */}
         <div className="mt-12 border border-[#1f1f1f] border-l-2 border-l-[#00ff9d] p-4 pl-6 bg-[#00ff9d08] rounded-r-[2px] bg-[#2a2a2a]">
-          <p className="text-sm md:text-[16px] text-[#888] font-mono leading-[1.7]">
+          <p className="text-sm md:text-[16px] text-[#888] font-sans leading-[1.7]">
             An epic is a single, fully functional feature block delivered every week. <br/>
             Most MVPs are <span className="text-[#e0e0e0]">5&mdash;6 epics</span> — that&apos;s{" "}
             <span className="text-[#e0e0e0]">5&mdash;6 weeks</span> from intake to production. Every epic is fully laid out and mapped during your free discovery session — so you see the exact roadmap before you commit a cent.

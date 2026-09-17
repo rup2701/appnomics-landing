@@ -193,10 +193,10 @@ export default function ImageCarousel() {
                             {image.label === "Admin" && "⚙️"}
                             {image.label === "Mobile" && "📱"}
                           </span>
-                          <p className="text-[11px] text-[#444] font-mono mt-2">
+                          <p className="text-[11px] text-[#444] font-sans mt-2">
                             {image.alt}
                           </p>
-                          <p className="text-[9px] text-[#333] font-mono">
+                          <p className="text-[9px] text-[#333] font-sans">
                             Replace with actual screenshot
                           </p>
                         </div>
@@ -206,7 +206,7 @@ export default function ImageCarousel() {
                     {/* Status indicator */}
                     <div className="absolute top-3 right-3 flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#00ff9d]" />
-                      <span className="text-[8px] text-[#00ff9d] font-mono tracking-[0.08em]">
+                      <span className="text-[8px] text-[#00ff9d] font-sans tracking-[0.08em]">
                         LIVE
                       </span>
                     </div>
@@ -214,7 +214,7 @@ export default function ImageCarousel() {
                     {/* Label overlay */}
                     <div className="absolute bottom-3 left-3">
                       <span
-                        className="text-[9px] font-mono tracking-[0.1em] px-2 py-1 rounded-[2px]"
+                        className="text-[9px] font-sans tracking-[0.1em] px-2 py-1 rounded-[2px]"
                         style={{
                           color: image.color,
                           background: `${image.color}11`,
@@ -284,14 +284,14 @@ export default function ImageCarousel() {
           <button
             onClick={() => scroll("left")}
             disabled={scrollPosition === 0}
-            className="px-6 py-2 border border-[#1f1f1f] rounded-[2px] text-[11px] text-[#444] font-mono hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            className="px-6 py-2 border border-[#1f1f1f] rounded-[2px] text-[11px] text-[#444] font-sans hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
           >
             ← Previous
           </button>
           <button
             onClick={() => scroll("right")}
             disabled={scrollPosition >= maxScroll - 10}
-            className="px-6 py-2 border border-[#1f1f1f] rounded-[2px] text-[11px] text-[#444] font-mono hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            className="px-6 py-2 border border-[#1f1f1f] rounded-[2px] text-[11px] text-[#444] font-sans hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
           >
             Next →
           </button>
@@ -299,7 +299,7 @@ export default function ImageCarousel() {
 
         {/* Counter */}
         <div className="text-center mt-4">
-          <span className="text-[9px] text-[#333] font-mono tracking-[0.1em]">
+          <span className="text-[9px] text-[#333] font-sans tracking-[0.1em]">
             {CAROUSEL_IMAGES.length} screens · scroll to explore
           </span>
         </div>

@@ -72,7 +72,7 @@ export default function Navbar() {
               key={item.label}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-[15px] text-[#fff9] font-bold font-mono hover:text-[#e0e0e0] transition-colors duration-200 no-underline tracking-[0.04em]"
+              className="text-[15px] text-[#fff9] font-bold font-sans hover:text-[#e0e0e0] transition-colors duration-200 no-underline tracking-[0.04em]"
             >
               {item.label}
             </a>
@@ -86,7 +86,7 @@ export default function Navbar() {
               color: hovered ? "#0a0a0a" : "#00ff9d",
               boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
             }}>
-            <Link href="mailto:rupesh@appnomics.dev" className="font-mono">
+            <Link href="mailto:rupesh@appnomics.dev" className="font-sans">
               GET STARTED
             </Link>
           </button>
@@ -128,7 +128,7 @@ export default function Navbar() {
               key={item.label}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-[13px] text-[#999] font-mono hover:text-[#e0e0e0] transition-colors duration-200 no-underline py-1"
+              className="text-[13px] text-[#999] font-sans hover:text-[#e0e0e0] transition-colors duration-200 no-underline py-1"
             >
               {item.label}
             </a>

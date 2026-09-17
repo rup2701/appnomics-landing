@@ -39,7 +39,7 @@ export default function Home() {
   return (
   <>
     <Navbar />
-    <main className="min-h-screen bg-black text-white font-mono flex flex-col">
+    <main className="min-h-screen bg-black text-white font-sans flex flex-col">
       <DynamicHero />
       
       <div className="flex-grow flex flex-col justify-center px-6 py-6 md:py-8 w-full">  

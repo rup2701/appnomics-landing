@@ -5,11 +5,11 @@ export default function WhoThisIsFor() {
     <section className="py-4 md: py-24 border-t border-[#1a1a1a] ">
       <div className="max-w-[1100px] mx-auto px-1 md:px-0">
         {/* <SectionLabel>// WHO THIS IS FOR</SectionLabel> */}
-        <h2 className="text-[clamp(28px,3.5vw,42px)] font-bold text-[#e0e0e0] leading-[1.1] font-mono mb-8">
+        <h2 className="text-[clamp(30px,4.5vw,52px)] font-bold text-[#e0e0e0] leading-[1.1] font-sans mb-8">
           Who is this for.
         </h2>
 
-        <p className="text-md md:text-lg text-[#fff9] font-mono  mb-8 max-w-[540px]">
+        <p className="text-md md:text-lg text-[#fff9] font-sans  mb-8 max-w-[540px]">
           For founders and builders stuck in the muck of AI wrappers and brittle prototypes. Real engineering velocity—without the co-founder drama.
         </p>
 
@@ -41,10 +41,10 @@ export default function WhoThisIsFor() {
                 >
                   <span className="text-xl flex-shrink-0">{item.icon}</span>
                   <div>
-                    <h4 className="text-lg font-bold text-[#e0e0e0] font-mono">
+                    <h4 className="text-lg font-bold text-[#e0e0e0] font-sans">
                       {item.title}
                     </h4>
-                    <p className="text-md text-[#fff9] font-mono leading-[1.5]">
+                    <p className="text-md text-[#fff9] font-sans leading-[1.5]">
                       {item.desc}
                     </p>
                   </div>
@@ -55,7 +55,7 @@ export default function WhoThisIsFor() {
 
           {/* Right Column */}
           <div className="flex flex-col justify-center align-center rounded-[2px] p-8 ">
-            <p className="text-sm text-[#00ff9d] font-extrabold font-mono tracking-[0.12em] uppercase mb-2">
+            <p className="text-sm text-[#00ff9d] font-extrabold font-sans tracking-[0.12em] uppercase mb-2">
               What you get
             </p>
             <ul className="space-y-3">
@@ -69,7 +69,7 @@ export default function WhoThisIsFor() {
               ].map((item) => (
                 <li
                   key={item}
-                  className="text-md text-[#c0c0c0] font-mono flex items-center gap-3"
+                  className="text-md text-[#c0c0c0] font-sans flex items-center gap-3"
                 >
                   <span className="text-[#00ff9d]">✓</span>
                   {item}
@@ -80,7 +80,7 @@ export default function WhoThisIsFor() {
             {/* <div className="mt-8 pt-6 border-t border-[#1f1f1f]">
               <a
                 href="#process"
-                className="inline-block w-full text-center py-3 border border-[#00ff9d] rounded-[2px] text-sm font-bold text-[#00ff9d] font-mono hover:bg-[#00ff9d] hover:text-[#0a0a0a] transition-all duration-200"
+                className="inline-block w-full text-center py-3 border border-[#00ff9d] rounded-[2px] text-sm font-bold text-[#00ff9d] font-sans hover:bg-[#00ff9d] hover:text-[#0a0a0a] transition-all duration-200"
               >
                 Learn More
               </a>

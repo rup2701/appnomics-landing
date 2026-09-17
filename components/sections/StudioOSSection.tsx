@@ -11,7 +11,7 @@ export default function StudioOSSection() {
         {/* Centered headline section */}
         <div className="text-center">
           <h2
-            className="text-[clamp(24px,3vw,42px)] font-extrabold text-[#e0e0e0] mb-2 leading-[1.15] font-mono"
+            className="text-[clamp(30px,4vw,52px)] font-extrabold text-[#e0e0e0] mb-2 leading-[1.15] font-sans"
           >
             Studio OS —
             <br />
@@ -20,7 +20,7 @@ export default function StudioOSSection() {
             </span>
           </h2>
           <p
-            className="text-lg text-[#999] mb-4 font-mono mx-auto max-w-[600px]"
+            className="text-lg text-[#999] mb-4 font-sans mx-auto max-w-[600px]"
           >
             Environment variables, artifacts, epic timeline, and a complete handover package — all in one dashboard,
             from Day 1.
@@ -46,7 +46,7 @@ export default function StudioOSSection() {
           ].map((f) => (
             <div key={f.label} className="flex items-center gap-2">
               <span style={{ color: f.color, fontSize: 13 }}>{f.icon}</span>
-              <span className="text-[#fff] text-xs font-mono">
+              <span className="text-[#fff] text-xs font-sans">
                 {f.label}
               </span>
             </div>

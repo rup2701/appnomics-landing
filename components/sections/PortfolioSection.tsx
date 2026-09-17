@@ -58,7 +58,7 @@ const PROJECTS = [
 function Tag({ label, color }: { label: string; color: string }) {
   return (
     <span
-      className="text-[10px] font-bold tracking-[0.12em] px-[7px] py-0.5 rounded-[2px] font-mono whitespace-nowrap"
+      className="text-[10px] font-bold tracking-[0.12em] px-[7px] py-0.5 rounded-[2px] font-sans whitespace-nowrap"
       style={{
         color,
         border: `1px solid ${color}33`,
@@ -77,10 +77,10 @@ export default function PortfolioSection() {
     <section id='portfolio' className="py-24 border-t border-[#1a1a1a]">
       <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PORTFOLIO</SectionLabel>
-        <h2 className="text-[clamp(24px,3vw,42px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
+        <h2 className="text-[clamp(30px,4vw,52px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-sans">
           Built. Shipped. Handed over.
         </h2>
-        <p className="text-lg text-[#999] mb-14 font-mono">
+        <p className="text-lg text-[#999] mb-14 font-sans">
           A sample of MVPs we&apos;ve taken from intake to production.
         </p>
 
@@ -109,7 +109,7 @@ export default function PortfolioSection() {
               <div className="flex items-start justify-between gap-4 mb-4">
                 {/* Avatar */}
                 <div
-                  className="w-11 h-11 rounded-[2px] flex items-center justify-center text-[13px] font-bold flex-shrink-0 font-mono transition-shadow duration-200"
+                  className="w-11 h-11 rounded-[2px] flex items-center justify-center text-[13px] font-bold flex-shrink-0 font-sans transition-shadow duration-200"
                   style={{
                     background: `${p.color}14`,
                     border: `1px solid ${p.color}33`,
@@ -122,7 +122,7 @@ export default function PortfolioSection() {
 
                 <div className="flex-1">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
-                    <span className="text-[15px] font-bold text-[#e0e0e0] font-mono">
+                    <span className="text-[15px] font-bold text-[#e0e0e0] font-sans">
                       {p.name}
                     </span>
                     <Tag label={p.status} color={p.status === "LIVE" ? "#00ff9d" : "#ffb800"} />
@@ -132,7 +132,7 @@ export default function PortfolioSection() {
                     href={`https://${p.domain}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#444] text-[11px] no-underline font-mono hover:text-[#666] transition-colors"
+                    className="text-[#444] text-[11px] no-underline font-sans hover:text-[#666] transition-colors"
                     onClick={(e) => e.stopPropagation()}
                   >
                     {p.domain} ↗
@@ -140,7 +140,7 @@ export default function PortfolioSection() {
                 </div>
               </div>
 
-              <p className="text-[#aaa] text-md leading-[1.65] mb-5 font-mono">
+              <p className="text-[#aaa] text-md leading-[1.65] mb-5 font-sans">
                 {p.description}
               </p>
 
@@ -149,20 +149,20 @@ export default function PortfolioSection() {
                   {p.stack.map((s) => (
                     <span
                       key={s}
-                      className="text-[12px] text-[#999] border border-[#1f1f1f] px-1.5 py-0.5 rounded-[2px] font-mono"
+                      className="text-[12px] text-[#999] border border-[#1f1f1f] px-1.5 py-0.5 rounded-[2px] font-sans"
                     >
                       {s}
                     </span>
                   ))}
                 </div>
-                <span className="text-[11px] text-[#999] font-mono whitespace-nowrap ml-3">
+                <span className="text-[11px] text-[#999] font-sans whitespace-nowrap ml-3">
                   {p.epics} epics
                 </span>
               </div>
 
               <Link
                 href={p.caseStudy}
-                className="text-[12px] text-[#999] font-mono font-bold hover:text-[#666] text-sm uppercase underline"
+                className="text-[12px] text-[#999] font-sans font-bold hover:text-[#666] text-sm uppercase underline"
               >
                 Case Study
               </Link>

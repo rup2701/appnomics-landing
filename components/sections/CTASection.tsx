@@ -22,7 +22,7 @@ export default function CTASection() {
           // GET STARTED
         </SectionLabel>
 
-        <h2 className="text-[clamp(28px,4vw,44px)] font-bold text-[#e0e0e0] mb-4 leading-[1.1] font-mono">
+        <h2 className="text-[clamp(32px,4.5vw,56px)] font-bold text-[#e0e0e0] mb-4 leading-[1.1] font-sans">
           Ready to build
           <br />
           <span className="text-[#00ff9d]">
@@ -30,7 +30,7 @@ export default function CTASection() {
           </span>
         </h2>
 
-        <p className="text-lg text-[#777] mb-12 leading-[1.7] font-mono">
+        <p className="text-lg text-[#777] mb-12 leading-[1.7] font-sans">
           Start with your idea. Get your 6-week epic breakdown in 24 hours — zero risk, zero lock-in.
         </p>
 
@@ -38,7 +38,7 @@ export default function CTASection() {
           href="mailto:rupesh@appnomics.dev"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="inline-block px-12 py-4 border border-[#00ff9d] rounded-[2px] text-[13px] font-bold tracking-[0.15em] font-mono no-underline transition-all duration-150 mb-5"
+          className="inline-block px-12 py-4 border border-[#00ff9d] rounded-[2px] text-[13px] font-bold tracking-[0.15em] font-sans no-underline transition-all duration-150 mb-5"
           style={{
             background: hovered ? "#00ff9d" : "transparent",
             color: hovered ? "#0a0a0a" : "#00ff9d",
@@ -48,7 +48,7 @@ export default function CTASection() {
           START BUILDING →
         </a>
 
-        <p className="text-[11px] text-[#888] font-mono">
+        <p className="text-[11px] text-[#888] font-sans">
           No credit card required · Free to start
         </p>
       </div>

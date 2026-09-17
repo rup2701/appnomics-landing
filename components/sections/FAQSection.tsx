@@ -40,12 +40,12 @@ export default function FAQSection() {
         {/* <SectionLabel centerAlign={true}>// FAQ</SectionLabel> */}
         
         <div className="text-center">
-          <h2 className="text-[clamp(24px,3vw,36px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-mono">
+          <h2 className="text-[clamp(28px,3.5vw,44px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-sans">
             FAQ
             <br />
             {/* <span className="text-[#6e6e6e]">We&apos;ve got answers.</span> */}
           </h2> 
-          <p className="text-lg text-[#999] mb-14 font-mono">
+          <p className="text-lg text-[#999] mb-14 font-sans">
             Everything you need to know before getting started.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function FAQSection() {
                   onClick={() => toggleItem(index)}
                   className="w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer transition-colors duration-200 hover:bg-[#ffffff04]"
                 >
-                  <span className="text-[16px] font-mono text-[#e0e0e0] font-medium">
+                  <span className="text-[16px] font-sans text-[#e0e0e0] font-medium">
                     {item.question}
                   </span>
                   <span
@@ -92,11 +92,11 @@ export default function FAQSection() {
                   <div className="px-6 pb-5 pt-0">
                     <div className="border-t border-[#1f1f1f] pt-4">
                       {isLast ? (
-                        <div className="text-md text-[#777] font-mono leading-[1.8] whitespace-pre-line">
+                        <div className="text-md text-[#777] font-sans leading-[1.8] whitespace-pre-line">
                           {item.answer}
                         </div>
                       ) : (
-                        <p className="text-md text-[#777] font-mono leading-[1.7]">
+                        <p className="text-md text-[#777] font-sans leading-[1.7]">
                           {item.answer}
                         </p>
                       )}
@@ -110,7 +110,7 @@ export default function FAQSection() {
 
         {/* Bottom CTA */}
         <div className="mt-12 text-center border border-[#1f1f1f] rounded-[2px] p-6 bg-[#00ff9d08]">
-          <p className="text-xs text-[#666] font-mono leading-[1.7]">
+          <p className="text-xs text-[#666] font-sans leading-[1.7]">
             Still have questions?{" "}
             <a
               href="#intake"
