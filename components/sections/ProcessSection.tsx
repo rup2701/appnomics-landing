@@ -136,7 +136,7 @@ export default function ProcessSection() {
           </div>
         </div>
 
-        <Image
+        {/* <Image
           src="/capabilities-timeline.png"
           alt="capability blocks and timeline"
           height={650}
@@ -149,7 +149,7 @@ export default function ProcessSection() {
             filter: 'invert(4)',
             border: "1px solid #ddd"
           }}
-        />
+        /> */}
 
         {/* callout bar */}
         <div className="mt-12 border border-[#1f1f1f] border-l-2 border-l-[#00ff9d] p-4 pl-6 bg-[#00ff9d08] rounded-r-[2px] bg-[#2a2a2a]">
