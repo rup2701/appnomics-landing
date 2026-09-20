@@ -57,11 +57,11 @@ const NAV = ["Dashboard", "Epics & Timeline", "Artifacts", "Deploys & Envs", "En
 export default function StudioOSMockup() {
   return (
     <div
-      className="w-full h-full bg-[#0a0a0a] flex flex-col font-mono overflow-hidden select-none text-[14px]"
+      className="w-full h-full bg-[#161616] flex flex-col font-mono overflow-hidden select-none text-[14px]"
     >
       {/* Top bar */}
       <div
-        className="h-9 bg-[#2a2a2a] border-b border-[#1f1f1f] flex items-center justify-between px-4 flex-shrink-0"
+        className="h-9 bg-[#1f1f1f] border-b border-[#2b2b2b] flex items-center justify-between px-4 flex-shrink-0"
       >
         <div className="flex items-center gap-2.5">
           <span className="text-[10px] font-bold tracking-[0.18em] text-[#00ff9d] hadow-[0_0_8px_#00ff9d88]">
@@ -69,7 +69,7 @@ export default function StudioOSMockup() {
           </span>
           <span className="text-[#fff]">|</span>
           <span className="text-[#fff] text-[13px]">instaroom</span>
-          <span className="text-[#2a2a2a] text-[9px] border border-[#1f1f1f] px-[5px] py-px rounded-[2px]">MVP</span>
+          <span className="text-[#666] text-[9px] border border-[#2b2b2b] px-[5px] py-px rounded-[2px]">MVP</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="w-[5px] h-[5px] rounded-full bg-[#00ff9d] shadow-[0_0_5px_#00ff9d] inline-block" />
@@ -81,7 +81,7 @@ export default function StudioOSMockup() {
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
         <div
-          className="w-[180px] flex-shrink-0 bg-[#0d0d0d] border-2 border-[#1f1f1f] py-2.5 overflow-hidden"
+          className="w-[180px] flex-shrink-0 bg-[#1a1a1a] border-2 border-[#262626] py-2.5 overflow-hidden"
         >
           {NAV.map((item, i) => {
             const isActive = i === 4;
@@ -127,7 +127,7 @@ export default function StudioOSMockup() {
               </div>
             </div>
             <button
-              className="bg-transparent border border-[#2a2a2a] text-[#555] text-[9px] px-3 py-[5px] rounded-[2px] font-mono cursor-default tracking-[0.1em]"
+              className="bg-transparent border border-[#333] text-[#555] text-[9px] px-3 py-[5px] rounded-[2px] font-mono cursor-default tracking-[0.1em]"
             >
               ↓ EXPORT ALL
             </button>
@@ -142,7 +142,7 @@ export default function StudioOSMockup() {
             ].map((s) => (
               <div
                 key={s.label}
-                className="border border-[#1f1f1f] p-2 px-2.5 rounded-[2px]"
+                className="border border-[#2b2b2b] p-2 px-2.5 rounded-[2px]"
               >
                 <p className="text-[8px] text-[#444] tracking-[0.08em] mb-0.5">{s.label}</p>
                 <p 
@@ -156,10 +156,10 @@ export default function StudioOSMockup() {
           </div>
 
           {/* Table */}
-          <div className="border border-[#1f1f1f] rounded-[2px] overflow-hidden">
+          <div className="border border-[#2b2b2b] rounded-[2px] overflow-hidden">
             {/* Header row */}
             <div
-              className="grid grid-cols-[80px_160px_1fr_100px_80px] px-3 py-1.5 bg-[#111] border-b border-[#1a1a1a]"
+              className="grid grid-cols-[80px_160px_1fr_100px_80px] px-3 py-1.5 bg-[#1f1f1f] border-b border-[#262626]"
             >
               {["SERVICE", "VARIABLE", "VALUE", "STATUS", "ROTATED"].map((h) => (
                 <span key={h} className="text-[8px] text-[#333] tracking-[0.1em]">{h}</span>
@@ -171,7 +171,7 @@ export default function StudioOSMockup() {
                 key={v.name}
                 className="grid grid-cols-[80px_160px_1fr_100px_80px] px-3 py-[7px] items-center"
                 style={{
-                  borderBottom: i < SAMPLE_VARS.length - 1 ? "1px solid #141414" : "none",
+                  borderBottom: i < SAMPLE_VARS.length - 1 ? "1px solid #242424" : "none",
                   background:
                     v.status === "missing"
                       ? "#ff44440a"

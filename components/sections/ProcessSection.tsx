@@ -7,7 +7,7 @@ const PROCESS_STEPS = [
   {
     n: "00",
     label: "Discovery",
-    sub: "1\-2 days",
+    sub: "1–2 days",
     detail: "You submit your idea. Within 48 hours, your entire product is mapped out, sliced into epics,\
     and provisioned live inside your dedicated Studio OS dashboard. No slides, no fluff—you see the complete\
     blueprint before you commit a single cent.",
@@ -40,7 +40,7 @@ const PROCESS_STEPS = [
   {
     n: "04",
     label: "QA & Polish",
-    sub: "3\-5 days",
+    sub: "3–5 days",
     detail: "Full QA pass, production deploy, DNS, monitoring setup, Sentry wired. Everything production-grade.",
     icon: "◉",
   },
@@ -56,10 +56,10 @@ const PROCESS_STEPS = [
 
 // ── Process Section ────────────────────────────────────────────────────────
 export default function ProcessSection() {
-  const [activeStep, setActiveStep] = useState<string | null>(null);
+  const [activeStep, setActiveStep] = useState<string | null>("00");
 
   return (
-    <section id='process' className="py-24 border-t border-[#1a1a1a]">
+    <section id='process' className="py-24 border-t border-[#262626]">
       <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PROCESS</SectionLabel>
         <h2 className="text-[clamp(30px,4vw,52px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-sans">
@@ -67,57 +67,58 @@ export default function ProcessSection() {
           <br />
           <span className="text-[#fff]">Guaranteed launch.</span>
         </h2>
-        <p className="text-lg text-[#999] mb-[60px] font-sans max-w-[560px]">
-          No month-long sprints. <span className={'text-[#fff] text-extrabold'}>No token limits holding your launch back.</span>
+        <p className="text-lg text-[#999] mb-14 font-sans max-w-[560px]">
+          No month-long sprints. <span className="text-[#fff] font-semibold">No token limits holding your launch back.</span>
         </p>
 
         {/* Timeline */}
         <div className="relative">
           {/* Connector line */}
-          <div className="absolute left-[27px] top-7 bottom-7 w-px bg-gradient-to-b from-[#00ff9d44] to-[#1a1a1a]" />
+          <div className="absolute left-[19px] top-9 bottom-9 w-px bg-gradient-to-b from-[#00ff9d55] via-[#2b2b2b] to-transparent" />
 
-          <div className="flex flex-col gap-0">
-            {PROCESS_STEPS.map((step, i) => {
+          <div className="flex flex-col gap-3">
+            {PROCESS_STEPS.map((step) => {
               const isActive = activeStep === step.n;
-              const isLast = step.accent;
-              const dotColor = isLast ? "#00ff9d" : isActive ? "#e0e0e0" : "#333";
+              const isLast = !!step.accent;
 
               return (
                 <div
                   key={step.n}
                   onClick={() => setActiveStep(isActive ? null : step.n)}
-                  className="flex gap-1 cursor-pointer"
+                  className="group relative flex gap-4 md:gap-5 cursor-pointer"
                 >
-                  {/* Dot */}
-                  <div className="flex-shrink-0 w-[54px] pt-[18px]">
+                  {/* Node */}
+                  <div className="relative z-10 flex-shrink-0 w-10 pt-4">
                     <div
-                      className="w-[14px] h-[14px] rounded-full border transition-all duration-200 ml-0"
-                      style={{
-                        borderColor: dotColor,
-                        background: isLast ? "#00ff9d22" : isActive ? "#1f1f1f" : "#0a0a0a",
-                        boxShadow: isLast ? "0 0 10px #00ff9d66" : isActive ? "0 0 6px #e0e0e022" : "none",
-                      }}
-                    />
+                      className={`w-10 h-10 rounded-full border flex items-center justify-center text-[12px] font-mono transition-all duration-200 ${
+                        isLast
+                          ? "border-[#00ff9d] bg-[#00ff9d14] text-[#00ff9d] shadow-[0_0_14px_#00ff9d44]"
+                          : isActive
+                            ? "border-[#00ff9d] bg-[#00ff9d11] text-[#00ff9d] shadow-[0_0_10px_#00ff9d33]"
+                            : "border-[#333] bg-[#161616] text-[#666] group-hover:border-[#555] group-hover:text-[#999]"
+                      }`}
+                    >
+                      {step.n}
+                    </div>
                   </div>
 
                   {/* Content */}
                   <div
-                    className={`flex-1 pt-4 pb-5 ${
-                      i < PROCESS_STEPS.length - 1 ? "border-b border-[#141414]" : ""
+                    className={`flex-1 border rounded-[4px] px-5 py-4 transition-all duration-200 ${
+                      isActive
+                        ? "border-[#00ff9d55] bg-[#1d1d1d]"
+                        : "border-transparent group-hover:border-[#2b2b2b] group-hover:bg-[#1b1b1b]"
                     }`}
                   >
-                    <div className="flex items-baseline flex-wrap gap-3 mb-1">
-                      <span className="text-[13px] text-[#666] tracking-[0.1em] font-sans">
-                        {step.n}
-                      </span>
+                    <div className="flex items-center flex-wrap gap-x-3 gap-y-2 mb-1.5">
                       <span
                         className={`text-[18px] font-bold font-sans ${
-                          isLast ? "text-[#00ff9d] shadow-[0_0_10px_#00ff9d55]" : "text-[#c0c0c0]"
+                          isLast ? "text-[#00ff9d]" : isActive ? "text-[#fff]" : "text-[#c0c0c0]"
                         }`}
                       >
                         {step.label}
                       </span>
-                      <span className="text-[10px] md:text-[14px] text-[#666] font-sans">
+                      <span className="text-[11px] text-[#888] font-sans border border-[#2b2b2b] bg-[#161616] px-2 py-0.5 rounded-full">
                         {step.sub}
                       </span>
                       {isLast && (
@@ -126,7 +127,7 @@ export default function ProcessSection() {
                         </span>
                       )}
                     </div>
-                    <p className="text-sm text-[#999] leading-[1.6] font-sans max-w-[600px]">
+                    <p className="text-sm text-[#999] leading-[1.65] font-sans max-w-[640px]">
                       {step.detail}
                     </p>
                   </div>
@@ -152,8 +153,8 @@ export default function ProcessSection() {
         /> */}
 
         {/* callout bar */}
-        <div className="mt-12 border border-[#1f1f1f] border-l-2 border-l-[#00ff9d] p-4 pl-6 bg-[#00ff9d08] rounded-r-[2px] bg-[#2a2a2a]">
-          <p className="text-sm md:text-[16px] text-[#888] font-sans leading-[1.7]">
+        <div className="mt-12 border border-[#2b2b2b] border-l-2 border-l-[#00ff9d] p-5 pl-6 rounded-r-[4px] bg-[#1d1d1d]">
+          <p className="text-sm md:text-[15px] text-[#999] font-sans leading-[1.7]">
             An epic is a single, fully functional feature block delivered every week. <br/>
             Most MVPs are <span className="text-[#e0e0e0]">5&mdash;6 epics</span> — that&apos;s{" "}
             <span className="text-[#e0e0e0]">5&mdash;6 weeks</span> from intake to production. Every epic is fully laid out and mapped during your free discovery session — so you see the exact roadmap before you commit a cent.

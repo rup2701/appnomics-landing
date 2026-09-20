@@ -2,7 +2,7 @@ import SectionLabel from "../SectionLabel";
 
 export default function WhyAppnomicsSection() {
   return (
-    <section id='why-appnomics' className="py-24 border-t border-[#1a1a1a] ">
+    <section id='why-appnomics' className="py-24 border-t border-[#262626] ">
       <div className="max-w-[1100px] mx-auto px-2">
         <SectionLabel centerAlign={true}>// WHY APPNOMICS</SectionLabel>
 
@@ -30,9 +30,9 @@ export default function WhyAppnomicsSection() {
         </div>
 
         {/* Comparison Table */}
-        <div className="border border-[#1f1f1f] rounded-[2px] overflow-hidden bg-[#2a2a2a]">
+        <div className="border border-[#2b2b2b] rounded-[2px] overflow-hidden bg-[#1b1b1b]">
           {/* Header */}
-          <div className="grid grid-cols-3 gap-4 px-6 py-4 bg-[#0a0a0a] border-b border-[#1f1f1f] bg-[#222]">
+          <div className="grid grid-cols-3 gap-4 px-6 py-4 bg-[#1f1f1f] border-b border-[#2b2b2b]">
             <div className="text-[10px] md:text-[14px] text-[#999] font-sans tracking-[0.12em] uppercase ">
               Capability
             </div>
@@ -95,7 +95,7 @@ export default function WhyAppnomicsSection() {
             <div
               key={row.label}
               className={`grid grid-cols-3 gap-4 px-6 py-3.5 ${
-                i < 8 ? "border-b border-[#141414]" : ""
+                i < 8 ? "border-b border-[#242424]" : ""
               } hover:bg-[#ffffff02] transition-colors`}
             >
               <div className="text-sm text-[#c0c0c0] font-sans">
@@ -140,7 +140,7 @@ export default function WhyAppnomicsSection() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="border border-[#1f1f1f] rounded-[2px] p-4 text-center bg-[#0a0a0a]"
+              className="border border-[#2b2b2b] rounded-[2px] p-4 text-center bg-[#161616]"
             >
               <p
                 className="text-[24px] font-bold font-sans"

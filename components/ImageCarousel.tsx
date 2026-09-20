@@ -112,7 +112,7 @@ export default function ImageCarousel() {
   // const totalImagess = 1
 
   return (
-    <section className="py-12 border-t border-[#1a1a1a] bg-[#0d0d0d] overflow-hidden">
+    <section className="py-12 border-t border-[#262626] bg-[#161616] overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-2">
     
 
@@ -122,7 +122,7 @@ export default function ImageCarousel() {
             <button
               onClick={() => scroll("left")}
               disabled={scrollPosition === 0}
-              className="w-10 h-10 border border-[#1f1f1f] rounded-[2px] flex items-center justify-center text-[#fff] hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-[#1f1f1f] disabled:hover:text-[#444]"
+              className="w-10 h-10 border border-[#2b2b2b] rounded-[2px] flex items-center justify-center text-[#fff] hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-[#2b2b2b] disabled:hover:text-[#444]"
               aria-label="Scroll left"
             >
               ←
@@ -130,7 +130,7 @@ export default function ImageCarousel() {
             <button
               onClick={() => scroll("right")}
               disabled={scrollPosition >= maxScroll - 10}
-              className="w-10 h-10 border border-[#1f1f1f] rounded-[2px] flex items-center justify-center text-[#fff] hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-[#1f1f1f] disabled:hover:text-[#444]"
+              className="w-10 h-10 border border-[#2b2b2b] rounded-[2px] flex items-center justify-center text-[#fff] hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-[#2b2b2b] disabled:hover:text-[#444]"
               aria-label="Scroll right"
             >
               →
@@ -156,11 +156,11 @@ export default function ImageCarousel() {
                 key={image.id}
                 className="flex-shrink-0 w-[280px] md:w-[380px] lg:w-[1200px]"
               >
-                <div className="border border-[#1f1f1f] rounded-[2px] overflow-hidden bg-[#0a0a0a]">
+                <div className="border border-[#2b2b2b] rounded-[2px] overflow-hidden bg-[#161616]">
                   <div
-                    className="w-full aspect-[16/10] bg-[#0a0a0a] flex items-center justify-center relative"
+                    className="w-full aspect-[16/10] bg-[#161616] flex items-center justify-center relative"
                     style={{
-                      background: `linear-gradient(135deg, #0a0a0a 0%, #111 100%)`,
+                      background: `linear-gradient(135deg, #161616 0%, #1f1f1f 100%)`,
                     }}
                   >
                     <Image
@@ -234,7 +234,7 @@ export default function ImageCarousel() {
           <div
             className="absolute top-0 left-0 w-12 h-full pointer-events-none"
             style={{
-              background: "linear-gradient(to right, #0d0d0d, transparent)",
+              background: "linear-gradient(to right, #161616, transparent)",
               opacity: scrollPosition > 10 ? 0 : 1,
               transition: "opacity 0.3s",
             }}
@@ -242,7 +242,7 @@ export default function ImageCarousel() {
           <div
             className="absolute top-0 right-0 w-12 h-full pointer-events-none"
             style={{
-              background: "linear-gradient(to left, #0d0d0d, transparent)",
+              background: "linear-gradient(to left, #161616, transparent)",
               opacity: scrollPosition < maxScroll - 10 ? 0 : 1,
               transition: "opacity 0.3s",
             }}
@@ -271,7 +271,7 @@ export default function ImageCarousel() {
                 style={{
                   width: isActive ? 20 : 6,
                   height: 4,
-                  background: isActive ? "#00d4ff" : "#1f1f1f",
+                  background: isActive ? "#00d4ff" : "#333",
                 }}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -284,14 +284,14 @@ export default function ImageCarousel() {
           <button
             onClick={() => scroll("left")}
             disabled={scrollPosition === 0}
-            className="px-6 py-2 border border-[#1f1f1f] rounded-[2px] text-[11px] text-[#444] font-sans hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            className="px-6 py-2 border border-[#2b2b2b] rounded-[2px] text-[11px] text-[#444] font-sans hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
           >
             ← Previous
           </button>
           <button
             onClick={() => scroll("right")}
             disabled={scrollPosition >= maxScroll - 10}
-            className="px-6 py-2 border border-[#1f1f1f] rounded-[2px] text-[11px] text-[#444] font-sans hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            className="px-6 py-2 border border-[#2b2b2b] rounded-[2px] text-[11px] text-[#444] font-sans hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
           >
             Next →
           </button>

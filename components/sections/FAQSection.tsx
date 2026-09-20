@@ -35,7 +35,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id='faq' className="py-24 border-t border-[#1a1a1a]">
+    <section id='faq' className="py-24 border-t border-[#262626]">
       <div className="max-w-[860px] mx-auto px-2">
         {/* <SectionLabel centerAlign={true}>// FAQ</SectionLabel> */}
         
@@ -58,10 +58,10 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className="border border-[#1f1f1f] rounded-[2px] overflow-hidden transition-all duration-200"
+                className="border border-[#2b2b2b] rounded-[2px] overflow-hidden transition-all duration-200"
                 style={{
-                  background: isOpen ? "#00ff9d08" : "#2a2a2a",
-                  borderColor: isOpen ? "#00ff9d44" : "#1f1f1f",
+                  background: isOpen ? "#00ff9d08" : "#1b1b1b",
+                  borderColor: isOpen ? "#00ff9d44" : "#2b2b2b",
                 }}
               >
                 <button
@@ -90,7 +90,7 @@ export default function FAQSection() {
                   }}
                 >
                   <div className="px-6 pb-5 pt-0">
-                    <div className="border-t border-[#1f1f1f] pt-4">
+                    <div className="border-t border-[#2b2b2b] pt-4">
                       {isLast ? (
                         <div className="text-md text-[#777] font-sans leading-[1.8] whitespace-pre-line">
                           {item.answer}
@@ -109,7 +109,7 @@ export default function FAQSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 text-center border border-[#1f1f1f] rounded-[2px] p-6 bg-[#00ff9d08]">
+        <div className="mt-12 text-center border border-[#2b2b2b] rounded-[2px] p-6 bg-[#00ff9d08]">
           <p className="text-xs text-[#666] font-sans leading-[1.7]">
             Still have questions?{" "}
             <a

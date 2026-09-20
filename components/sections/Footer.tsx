@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#1a1a1a] bg-[#0d0d0d] pt-16 pb-6">
+    <footer className="border-t border-[#262626] bg-[#161616] pt-16 pb-6">
       <div className="max-w-[1340px] mx-auto px-6 md:px-10">
         {/* Logo + Tagline Row */}
-        <div className="pb-12 border-b border-[#1a1a1a]">
+        <div className="pb-12 border-b border-[#262626]">
           <Image
             src="/appnomics.svg"
             alt="Appnomics"
@@ -151,16 +151,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 pt-6 border-t border-[#1a1a1a] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-8 pt-6 border-t border-[#262626] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[13px] text-[#666] font-sans">
             © 2026 Appnomics. Built in San Francisco. Made with ☕.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-[8px] text-[#2a2a2a] tracking-[0.12em] font-sans uppercase">
+            <span className="text-[8px] text-[#444] tracking-[0.12em] font-sans uppercase">
               ✦ v1.0
             </span>
-            <span className="w-px h-3 bg-[#1f1f1f]" />
-            <span className="text-[8px] text-[#2a2a2a] font-sans">
+            <span className="w-px h-3 bg-[#333]" />
+            <span className="text-[8px] text-[#444] font-sans">
               Ship. Scale. Own.
             </span>
           </div>

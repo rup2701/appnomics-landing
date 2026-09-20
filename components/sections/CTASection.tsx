@@ -7,7 +7,7 @@ export default function CTASection() {
   return (
     <section
       id="intake"
-      className="py-[120px] pb-[100px] border-t border-[#1a1a1a] text-center relative overflow-hidden"
+      className="py-[120px] pb-[100px] border-t border-[#262626] text-center relative overflow-hidden"
     >
       {/* Background glow */}
       <div

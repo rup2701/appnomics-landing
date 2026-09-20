@@ -83,8 +83,8 @@
 }
 
 .promptBox {
-  background: lab(8.11897% 0.811279 -12.254);
-  border: 1px solid rgba(214, 245, 239, 0.16);
+  background: rgba(27, 27, 27, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: $spacing-lg $spacing-xl;
   margin: 0 auto $spacing-md;
@@ -96,9 +96,9 @@
   backdrop-filter: blur(10px);
   
   &:hover {
-    background: rgba(39, 61, 59, 0.82);
-    border-color: rgba(167, 243, 208, 0.65);
-    box-shadow: 0 10px 40px rgba(78, 205, 196, 0.1);
+    background: rgba(30, 30, 30, 0.9);
+    border-color: rgba(0, 255, 157, 0.35);
+    box-shadow: 0 10px 40px rgba(0, 255, 157, 0.08);
   }
   
   @media (max-width: $breakpoint-md) {

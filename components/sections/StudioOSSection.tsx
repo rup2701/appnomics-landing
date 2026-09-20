@@ -3,7 +3,7 @@ import StudioOSMockup from "./StudioOSMockup";
 
 export default function StudioOSSection() {
   return (
-    <section id="studio" className="hidden md:block py-24 border-t border-[#1a1a1a]">
+    <section id="studio" className="hidden md:block py-24 border-t border-[#262626]">
       <div className="max-w-[1100px] mx-auto px-10">
 
         <SectionLabel centerAlign={true}>// STUDIO OS</SectionLabel>
@@ -29,7 +29,7 @@ export default function StudioOSSection() {
 
         {/* Studio OS Dashboard mockup */}
         <div
-          className="border border-[#2a2a2a] rounded-[4px] overflow-hidden h-[560px] shadow-[0_0_60px_#00ff9d0a,0_40px_80px_#00000088] mt-14"
+          className="border border-[#2b2b2b] rounded-[4px] overflow-hidden h-[560px] shadow-[0_0_60px_#00ff9d0a,0_40px_80px_#00000088] mt-14"
         >
           <StudioOSMockup />
         </div>

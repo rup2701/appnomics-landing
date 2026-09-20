@@ -42,7 +42,7 @@ function AuthPageInner() {
   };
 
   return (
-    <main className="min-h-screen bg-black text-white font-sans flex flex-col">
+    <main className="min-h-screen bg-[#161616] text-white font-sans flex flex-col">
       {/* Navbar */}
       <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-800">
         <span className="text-sm font-bold tracking-widest text-gray-300">

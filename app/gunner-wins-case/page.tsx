@@ -9,7 +9,7 @@ export default function GunnerPicksCaseStudy() {
   return (
     <>
       <Navbar/>
-      <section className="py-24 border-t border-[#1a1a1a] bg-[#0d0d0d]">
+      <section className="py-24 border-t border-[#262626] bg-[#161616]">
         <div className="max-w-[1340px] mx-auto px-10">
           {/* Back link */}
           <Link
@@ -45,11 +45,11 @@ export default function GunnerPicksCaseStudy() {
               >
                 gunnerpicks.com ↗
               </a>
-              <span className="w-px h-4 bg-[#1f1f1f]" />
+              <span className="w-px h-4 bg-[#333]" />
               <span className="text-[11px] text-[#444] font-sans">5 epics</span>
-              <span className="w-px h-4 bg-[#1f1f1f]" />
+              <span className="w-px h-4 bg-[#333]" />
               <span className="text-[11px] text-[#444] font-sans">5 weeks</span>
-              <span className="w-px h-4 bg-[#1f1f1f]" />
+              <span className="w-px h-4 bg-[#333]" />
               <span className="text-[11px] text-[#00ff9d] font-sans">● PAUSED</span>
             </div>
           </div>
@@ -107,15 +107,15 @@ export default function GunnerPicksCaseStudy() {
 
           {/* Results */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
-            <div className="border border-[#1f1f1f] rounded-[2px] p-6 text-center bg-[#00d4ff08]">
+            <div className="border border-[#2b2b2b] rounded-[2px] p-6 text-center bg-[#00d4ff08]">
               <p className="text-[28px] font-bold text-[#00d4ff] font-sans">5</p>
               <p className="text-[10px] text-[#444] font-sans tracking-[0.1em] mt-1">EPICS</p>
             </div>
-            <div className="border border-[#1f1f1f] rounded-[2px] p-6 text-center bg-[#00d4ff08]">
+            <div className="border border-[#2b2b2b] rounded-[2px] p-6 text-center bg-[#00d4ff08]">
               <p className="text-[28px] font-bold text-[#00d4ff] font-sans">5</p>
               <p className="text-[10px] text-[#444] font-sans tracking-[0.1em] mt-1">WEEKS TO LAUNCH</p>
             </div>
-            <div className="border border-[#1f1f1f] rounded-[2px] p-6 text-center bg-[#00d4ff08]">
+            <div className="border border-[#2b2b2b] rounded-[2px] p-6 text-center bg-[#00d4ff08]">
               <p className="text-[28px] font-bold text-[#00d4ff] font-sans">100%</p>
               <p className="text-[10px] text-[#444] font-sans tracking-[0.1em] mt-1">CODE OWNERSHIP</p>
             </div>
@@ -130,7 +130,7 @@ export default function GunnerPicksCaseStudy() {
               {["Next.js", "Railway", "OpenAI", "Loops", "Stripe", "Tailwind"].map((tech) => (
                 <span
                   key={tech}
-                  className="text-[11px] text-[#666] font-sans border border-[#1f1f1f] px-3 py-1.5 rounded-[2px]"
+                  className="text-[11px] text-[#666] font-sans border border-[#2b2b2b] px-3 py-1.5 rounded-[2px]"
                 >
                   {tech}
                 </span>
@@ -149,7 +149,7 @@ export default function GunnerPicksCaseStudy() {
           </div>
 
           {/* CTA */}
-          <div className="border border-[#1f1f1f] rounded-[2px] p-8 text-center bg-[#0d0d0d]">
+          <div className="border border-[#2b2b2b] rounded-[2px] p-8 text-center bg-[#1a1a1a]">
             <h4 className="text-[18px] font-bold text-[#e0e0e0] font-sans mb-2">
               Ready to build your MVP?
             </h4>

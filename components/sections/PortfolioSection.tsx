@@ -74,7 +74,7 @@ export default function PortfolioSection() {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <section id='portfolio' className="py-24 border-t border-[#1a1a1a]">
+    <section id='portfolio' className="py-24 border-t border-[#262626]">
       <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PORTFOLIO</SectionLabel>
         <h2 className="text-[clamp(30px,4vw,52px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-sans">
@@ -90,10 +90,10 @@ export default function PortfolioSection() {
               key={p.name}
               onMouseEnter={() => setHovered(p.name)}
               onMouseLeave={() => setHovered(null)}
-              className="bg-[#2a2a2a] border rounded-[2px] p-7 cursor-default transition-all duration-200 relative overflow-hidden"
+              className="bg-[#1b1b1b] border rounded-[2px] p-7 cursor-default transition-all duration-200 relative overflow-hidden"
               style={{
-                borderColor: hovered === p.name ? p.color + "44" : "#1f1f1f",
-                background: hovered === p.name ? "#2a2a2a80" : "#2a2a2a",
+                borderColor: hovered === p.name ? p.color + "44" : "#2b2b2b",
+                background: hovered === p.name ? "#1e1e1e" : "#1b1b1b",
               }}
             >
               {/* Subtle corner glow on hover */}
@@ -149,7 +149,7 @@ export default function PortfolioSection() {
                   {p.stack.map((s) => (
                     <span
                       key={s}
-                      className="text-[12px] text-[#999] border border-[#1f1f1f] px-1.5 py-0.5 rounded-[2px] font-sans"
+                      className="text-[12px] text-[#999] border border-[#2b2b2b] px-1.5 py-0.5 rounded-[2px] font-sans"
                     >
                       {s}
                     </span>

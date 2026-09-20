@@ -39,7 +39,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 overflow-x-clip transition-all duration-300 ${
         isScrolled
-          ? "bg-[#0d0d0d]/95 backdrop-blur-md border-b border-[#1a1a1a]"
+          ? "bg-[#161616]/95 backdrop-blur-md border-b border-[#262626]"
           : "bg-transparent"
       }`}
     >
@@ -122,7 +122,7 @@ export default function Navbar() {
           isMobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-[#0d0d0d] border-t border-[#1a1a1a] px-4 sm:px-6 md:px-10 py-6 flex flex-col gap-4">
+        <div className="bg-[#161616] border-t border-[#262626] px-4 sm:px-6 md:px-10 py-6 flex flex-col gap-4">
           {NAV_ITEMS.map((item) => (
             <a
               key={item.label}

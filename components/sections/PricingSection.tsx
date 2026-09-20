@@ -29,7 +29,7 @@ export default function PricingSection() {
   const [selectedPlan, setSelectedPlan] = useState<"build" | "build_run">("build");
 
   return (
-    <section id='pricing' className="py-24 border-t border-[#1a1a1a]">
+    <section id='pricing' className="py-24 border-t border-[#262626]">
       <div className="max-w-7xl mx-auto block">
         <SectionLabel centerAlign={true}>// PRICING</SectionLabel>
         <h2
@@ -49,10 +49,10 @@ export default function PricingSection() {
           {/* Build Only */}
           <div
             onClick={() => setSelectedPlan("build")}
-            className={`bg-[#2a2a2a] border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
+            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
               selectedPlan === "build"
                 ? "border-[#00ff9d44] bg-[#00ff9d08]"
-                : "border-[#1f1f1f] bg-[#0d0d0d]"
+                : "border-[#2b2b2b] bg-[#1b1b1b]"
             }`}
           >
             <div className="flex items-start justify-between mb-6">
@@ -92,7 +92,7 @@ export default function PricingSection() {
               className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "build"
                   ? "border-[#00ff9d44] text-[#00ff9d] bg-[#00ff9d0d]"
-                  : "border-[#2a2a2a] text-[#555] bg-transparent"
+                  : "border-[#333] text-[#555] bg-transparent"
               }`}
             >
               START BUILDING →
@@ -102,10 +102,10 @@ export default function PricingSection() {
           {/* Build + Run */}
           <div
             onClick={() => setSelectedPlan("build_run")}
-            className={`bg-[#2a2a2a] border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
+            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
               selectedPlan === "build_run"
                 ? "border-[#00d4ff44] bg-[#00d4ff08]"
-                : "border-[#1f1f1f] bg-[#0d0d0d]"
+                : "border-[#2b2b2b] bg-[#1b1b1b]"
             }`}
           >
             {/* Recommended badge */}
@@ -150,7 +150,7 @@ export default function PricingSection() {
               className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "build_run"
                   ? "border-[#00d4ff44] text-[#00d4ff] bg-[#00d4ff0d]"
-                  : "border-[#2a2a2a] text-[#555] bg-transparent"
+                  : "border-[#333] text-[#555] bg-transparent"
               }`}
             >
               START BUILDING →
