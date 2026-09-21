@@ -6,18 +6,18 @@ export default function StudioOSSection() {
     <section id="studio" className="hidden md:block py-24 border-t border-[#262626]">
       <div className="max-w-[1100px] mx-auto px-10">
 
-        <SectionLabel centerAlign={true}>// STUDIO OS</SectionLabel>
+        <SectionLabel centerAlign={true}>// HANDOVER</SectionLabel>
         
         {/* Centered headline section */}
         <div className="text-center">
           <h2
             className="text-[clamp(30px,4vw,52px)] font-extrabold text-[#e0e0e0] mb-2 leading-[1.15] font-sans"
           >
-            Studio OS —
+            Studio OS 
             <br />
-            <span className="text-[#00ff9d] font-extrabold">
+            {/* <span className="text-[#00ff9d] font-extrabold">
               Your startup&apos;s operating system.
-            </span>
+            </span> */}
           </h2>
           <p
             className="text-lg text-[#999] mb-4 font-sans mx-auto max-w-[600px]"

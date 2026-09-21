@@ -127,7 +127,7 @@ export default function ProcessSection() {
                         </span>
                       )}
                     </div>
-                    <p className="text-sm text-[#999] leading-[1.65] font-sans max-w-[640px]">
+                    <p className="text-md text-[#999] leading-[1.65] font-sans max-w-[640px]">
                       {step.detail}
                     </p>
                   </div>
