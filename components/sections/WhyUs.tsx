@@ -30,7 +30,7 @@ export default function WhyAppnomicsSection() {
         </div>
 
         {/* Comparison Table */}
-        <div className="border border-[#d8d8d8] rounded-[2px] overflow-hidden bg-white">
+        <div className="border border-[#d8d8d8] rounded-[2px] overflow-hidden ">
           {/* Header */}
           <div className="grid grid-cols-3 gap-4 px-6 py-4 bg-[#e8e8e8] border-b border-[#d8d8d8]">
             <div className="text-[10px] md:text-[14px] text-[#555] font-sans tracking-[0.12em] uppercase ">

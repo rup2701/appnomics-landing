@@ -72,8 +72,8 @@ export default function WhoThisIsFor() {
           </div>
 
           {/* What you get */}
-          <div className="border border-[#c6c6c6] rounded-[4px] bg-[#d8d8d8] overflow-hidden flex flex-col">
-            <div className="flex items-center justify-between px-6 py-4 border-b border-[#c6c6c6] bg-[#d8d8d8]">
+          <div className="border border-[#c6c6c6] rounded-[4px]  overflow-hidden flex flex-col">
+            <div className="flex items-center bg-[#d8d8d8] justify-between px-6 py-4 border-b border-[#c6c6c6] bg-[#d8d8d8]">
               <p className="text-xs text-[#087a50] font-bold font-sans tracking-[0.18em] uppercase">
                 What you get
               </p>

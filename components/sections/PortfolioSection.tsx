@@ -17,16 +17,16 @@ const PROJECTS = [
     caseStudy: "/"
   },
   {
-    name: "Gunner Wins",
-    domain: "gunnerwins.com",
-    industry: "SPORTS / ANALYTICS",
-    description: "AI-powered sports prediction platform with subscription tiers, live feed ingestion, and a picks leaderboard.",
+    name: "DispatchOS",
+    domain: "dispatchos.dev",
+    industry: "GENAI / MARKETING",
+    description: "DispatchOS turns the work you are already doing into a coherent story your market can understand.",
     epics: 5,
-    stack: ["Next.js", "Railway", "OpenAI", "Loops"],
+    stack: ["Next.js", "Railway", "Gemini AI", "Vercel"],
     color: "#006987",
     status: "LIVE",
-    char: "GP",
-    caseStudy: "/gunner-wins-case"
+    char: "DI",
+    caseStudy: "/dispatchos-case"
   },
   {
     name: "MediaDance",
