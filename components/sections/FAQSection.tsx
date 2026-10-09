@@ -35,17 +35,17 @@ export default function FAQSection() {
   };
 
   return (
-    <section id='faq' className="py-24 border-t border-[#262626]">
+    <section id='faq' className="py-24">
       <div className="max-w-[860px] mx-auto px-2">
         {/* <SectionLabel centerAlign={true}>// FAQ</SectionLabel> */}
         
         <div className="text-center">
-          <h2 className="text-[clamp(28px,3.5vw,44px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-sans">
+          <h2 className="text-[clamp(28px,3.5vw,44px)] font-normal text-[#171717] mb-2 leading-[1.15] font-sans">
             FAQ
             <br />
             {/* <span className="text-[#6e6e6e]">We&apos;ve got answers.</span> */}
           </h2> 
-          <p className="text-lg text-[#999] mb-14 font-sans">
+          <p className="text-lg text-[#555] mb-14 font-sans">
             Everything you need to know before getting started.
           </p>
         </div>
@@ -58,21 +58,21 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className="border border-[#2b2b2b] rounded-[2px] overflow-hidden transition-all duration-200"
+                className="border border-[#d8d8d8] rounded-[2px] overflow-hidden transition-all duration-200"
                 style={{
-                  background: isOpen ? "#00ff9d08" : "#1b1b1b",
-                  borderColor: isOpen ? "#00ff9d44" : "#2b2b2b",
+                  background: isOpen ? "#eaf5ef" : "#ffffff",
+                  borderColor: isOpen ? "#00a76b66" : "#d8d8d8",
                 }}
               >
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer transition-colors duration-200 hover:bg-[#ffffff04]"
+                  className="w-full flex items-center justify-between px-6 py-4 text-left cursor-pointer transition-colors duration-200 hover:bg-[#eeeeee]"
                 >
-                  <span className="text-[16px] font-sans text-[#e0e0e0] font-medium">
+                  <span className="text-[16px] font-sans text-[#171717] font-medium">
                     {item.question}
                   </span>
                   <span
-                    className="text-[#999] text-lg transition-transform duration-200 flex-shrink-0 ml-4"
+                    className="text-[#555] text-lg transition-transform duration-200 flex-shrink-0 ml-4"
                     style={{
                       transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
                       color: isOpen ? "#00ff9d" : "#444",
@@ -90,13 +90,13 @@ export default function FAQSection() {
                   }}
                 >
                   <div className="px-6 pb-5 pt-0">
-                    <div className="border-t border-[#2b2b2b] pt-4">
+                    <div className="border-t border-[#d8d8d8] pt-4">
                       {isLast ? (
-                        <div className="text-md text-[#777] font-sans leading-[1.8] whitespace-pre-line">
+                        <div className="text-md text-[#444] font-sans leading-[1.8] whitespace-pre-line">
                           {item.answer}
                         </div>
                       ) : (
-                        <p className="text-md text-[#777] font-sans leading-[1.7]">
+                        <p className="text-md text-[#444] font-sans leading-[1.7]">
                           {item.answer}
                         </p>
                       )}
@@ -109,12 +109,12 @@ export default function FAQSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 text-center border border-[#2b2b2b] rounded-[2px] p-6 bg-[#00ff9d08]">
-          <p className="text-xs text-[#666] font-sans leading-[1.7]">
+        <div className="mt-12 text-center border border-[#d8d8d8] rounded-[2px] p-6 bg-[#eaf5ef]">
+          <p className="text-xs text-[#444] font-sans leading-[1.7]">
             Still have questions?{" "}
             <a
               href="#intake"
-              className="text-[#00ff9d] hover:text-[#00ff9d] no-underline border-b border-[#00ff9d33] hover:border-[#00ff9d] transition-colors"
+              className="text-[#087a50] hover:text-[#065f3e] no-underline border-b border-[#087a5066] hover:border-[#087a50] transition-colors"
             >
               Reach out to us
             </a>

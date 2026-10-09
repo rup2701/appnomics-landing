@@ -2,44 +2,44 @@ import SectionLabel from "../SectionLabel";
 
 export default function WhyAppnomicsSection() {
   return (
-    <section id='why-appnomics' className="py-24 border-t border-[#262626] ">
+    <section id='why-appnomics' className="py-24">
       <div className="max-w-[1100px] mx-auto px-2">
         <SectionLabel centerAlign={true}>// WHY APPNOMICS</SectionLabel>
 
         <div className="text-center mb-14">
-          <h2 className="text-[clamp(30px,4vw,52px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-sans">
+          <h2 className="text-[clamp(30px,4vw,52px)] font-normal text-[#171717] mb-2 leading-[1.15] font-sans">
             Experience you can&apos;t prompt.
           </h2>
-          <p className="text-lg text-[#fff9] font-sans max-w-[600px] mx-auto">
+          <p className="text-lg text-[#555] font-sans max-w-[600px] mx-auto">
             AI writes code. We ship products. Here&apos;s what that actually means.
           </p>
         </div>
 
         {/* Hero quote */}
-        <div className="border border-[#00ff9d33] rounded-[2px] p-6 bg-[#00ff9d08] mb-12">
-          <p className="text-sm text-[#fff9] font-sans leading-[1.8] text-center">
-            <span className="text-[#00ff9d] text-xl">"</span>
-            We&apos;ve built <span className="text-[#e0e0e0]">20+ MVPs and Startups</span> from zero to launch.
+        <div className="border border-[#00a76b33] rounded-[2px] p-6 bg-[#eaf5ef] mb-12">
+          <p className="text-sm text-[#333] font-sans leading-[1.8] text-center">
+            <span className="text-[#087a50] text-xl">&ldquo;</span>
+            We&apos;ve built <span className="text-[#171717]">20+ MVPs and Startups</span> from zero to launch.
             Every startup has hidden traps — we know where they are
             because we&apos;ve stepped in every single one.
-            <span className="text-[#00ff9d] text-xl">"</span>
+            <span className="text-[#087a50] text-xl">&rdquo;</span>
           </p>
-          <p className="text-[13px] text-[#777] font-sans text-center mt-2">
+          <p className="text-[13px] text-[#666] font-sans text-center mt-2">
             — 10 years of 0-to-1 product experience
           </p>
         </div>
 
         {/* Comparison Table */}
-        <div className="border border-[#2b2b2b] rounded-[2px] overflow-hidden bg-[#1b1b1b]">
+        <div className="border border-[#d8d8d8] rounded-[2px] overflow-hidden bg-white">
           {/* Header */}
-          <div className="grid grid-cols-3 gap-4 px-6 py-4 bg-[#1f1f1f] border-b border-[#2b2b2b]">
-            <div className="text-[10px] md:text-[14px] text-[#999] font-sans tracking-[0.12em] uppercase ">
+          <div className="grid grid-cols-3 gap-4 px-6 py-4 bg-[#e8e8e8] border-b border-[#d8d8d8]">
+            <div className="text-[10px] md:text-[14px] text-[#555] font-sans tracking-[0.12em] uppercase ">
               Capability
             </div>
-            <div className="text-[10px] md:text-[14px] text-[#999] font-sans tracking-[0.12em] uppercase text-center">
-              AI Tools <span className="text-[#999] font-normal">(Base44/Lovable)</span>
+            <div className="text-[10px] md:text-[14px] text-[#555] font-sans tracking-[0.12em] uppercase text-center">
+              AI Tools <span className="text-[#666] font-normal">(Base44/Lovable)</span>
             </div>
-            <div className="text-[10px] md:text-[14px] text-[#00ff9d] font-sans tracking-[0.12em] uppercase text-center">
+            <div className="text-[10px] md:text-[14px] text-[#087a50] font-sans tracking-[0.12em] uppercase text-center">
               Appnomics
             </div>
           </div>
@@ -95,10 +95,10 @@ export default function WhyAppnomicsSection() {
             <div
               key={row.label}
               className={`grid grid-cols-3 gap-4 px-6 py-3.5 ${
-                i < 8 ? "border-b border-[#242424]" : ""
+                i < 8 ? "border-b border-[#e5e5e5]" : ""
               } hover:bg-[#ffffff02] transition-colors`}
             >
-              <div className="text-sm text-[#c0c0c0] font-sans">
+              <div className="text-sm text-[#333] font-sans">
                 {row.label}
               </div>
               <div
@@ -109,7 +109,7 @@ export default function WhyAppnomicsSection() {
               </div>
               <div
                 className="text-[12px] font-sans text-center"
-                style={{ color: row.us.color }}
+                style={{ color: row.us.color === "#00ff9d" ? "#087a50" : row.us.color }}
               >
                 {row.us.value}
               </div>
@@ -121,11 +121,11 @@ export default function WhyAppnomicsSection() {
         <div className="mt-12 text-center">
           <a
             href="#intake"
-            className="inline-block px-8 py-3.5 border border-[#00ff9d] rounded-[2px] text-sm font-bold text-[#00ff9d] font-sans no-underline hover:bg-[#00ff9d] hover:text-[#0a0a0a] transition-all duration-200"
+            className="inline-block px-8 py-3.5 border border-[#087a50] rounded-[2px] text-sm font-bold text-[#087a50] font-sans no-underline hover:bg-[#087a50] hover:text-white transition-all duration-200"
           >
             EXPERIENCE MATTERS → START BUILDING
           </a>
-          <p className="text-[12px] text-[#888] font-sans mt-3">
+          <p className="text-[12px] text-[#666] font-sans mt-3">
             No credit card · Free discovery · Real experience
           </p>
         </div>
@@ -133,14 +133,14 @@ export default function WhyAppnomicsSection() {
         {/* Experience badges */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { number: "20+", label: "MVPs Built", color: "#00ff9d" },
-            { number: "10", label: "Years Experience", color: "#00d4ff" },
-            { number: "100%", label: "Code Ownership", color: "#a855f7" },
-            { number: "0", label: "Lock-in", color: "#ffb800" },
+            { number: "20+", label: "MVPs Built", color: "#087a50" },
+            { number: "10", label: "Years Experience", color: "#006987" },
+            { number: "100%", label: "Code Ownership", color: "#7e22ce" },
+            { number: "0", label: "Lock-in", color: "#a16207" },
           ].map((stat) => (
             <div
               key={stat.label}
-              className="border border-[#2b2b2b] rounded-[2px] p-4 text-center bg-[#161616]"
+              className="border border-[#d8d8d8] rounded-[2px] p-4 text-center bg-[#d8d8d8]"
             >
               <p
                 className="text-[24px] font-bold font-sans"
@@ -148,7 +148,7 @@ export default function WhyAppnomicsSection() {
               >
                 {stat.number}
               </p>
-              <p className="text-[9px] text-[#888] font-sans tracking-[0.08em] uppercase">
+              <p className="text-[9px] text-[#555] font-sans tracking-[0.08em] uppercase">
                 {stat.label}
               </p>
             </div>

@@ -51,15 +51,15 @@
 // Hero Title Animation (your existing styles)
 .heroTitle {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.07rem;
   margin-bottom: $spacing-2xl;
   
   @media (max-width: $breakpoint-sm) {
     font-size: clamp(1.8rem, 4vw, 3rem);
     margin-bottom: $spacing-xl;
-    font-weight: 600;
+    font-weight: 400;
     text-align: left;
   }
 }
@@ -83,8 +83,8 @@
 }
 
 .promptBox {
-  background: rgba(27, 27, 27, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(23, 23, 23, 0.16);
   border-radius: 16px;
   padding: $spacing-lg $spacing-xl;
   margin: 0 auto $spacing-md;
@@ -96,9 +96,9 @@
   backdrop-filter: blur(10px);
   
   &:hover {
-    background: rgba(30, 30, 30, 0.9);
-    border-color: rgba(0, 255, 157, 0.35);
-    box-shadow: 0 10px 40px rgba(0, 255, 157, 0.08);
+    background: #ffffff;
+    border-color: rgba(0, 167, 107, 0.45);
+    box-shadow: 0 10px 40px rgba(0, 167, 107, 0.1);
   }
   
   @media (max-width: $breakpoint-md) {
@@ -247,7 +247,7 @@
   gap: $spacing-xs;
   padding: 12px 24px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(23, 23, 23, 0.2);
   border-radius: 999px;
   color: $text-secondary;
   font-size: 0.95rem;
@@ -256,8 +256,8 @@
   transition: all 0.3s ease;
   
   &:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(23, 23, 23, 0.04);
+    border-color: rgba(23, 23, 23, 0.3);
     color: $text-primary;
     
     .shuffleIcon {
@@ -278,7 +278,7 @@
   background: $accent-green;
   border: none;
   border-radius: 999px;
-  color: $bg-primary;
+  color: #171717;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -356,7 +356,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     // background: linear-gradient(135deg, $accent-green 0%, $accent-mint 100%);
-    background: #00ff9d;
+    background: #087a50;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

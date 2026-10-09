@@ -3,7 +3,7 @@ import StudioOSMockup from "./StudioOSMockup";
 
 export default function StudioOSSection() {
   return (
-    <section id="studio" className="hidden md:block py-24 border-t border-[#262626]">
+    <section id="studio" className="hidden md:block py-24">
       <div className="max-w-[1100px] mx-auto px-10">
 
         <SectionLabel centerAlign={true}>// HANDOVER</SectionLabel>
@@ -11,7 +11,7 @@ export default function StudioOSSection() {
         {/* Centered headline section */}
         <div className="text-center">
           <h2
-            className="text-[clamp(30px,4vw,52px)] font-extrabold text-[#e0e0e0] mb-2 leading-[1.15] font-sans"
+            className="text-[clamp(30px,4vw,52px)] font-normal text-[#171717] mb-2 leading-[1.15] font-sans"
           >
             Studio OS 
             <br />
@@ -20,7 +20,7 @@ export default function StudioOSSection() {
             </span> */}
           </h2>
           <p
-            className="text-lg text-[#999] mb-4 font-sans mx-auto max-w-[600px]"
+            className="text-lg text-[#555] mb-4 font-sans mx-auto max-w-[600px]"
           >
             Environment variables, artifacts, epic timeline, and a complete handover package — all in one dashboard,
             from Day 1.
@@ -29,7 +29,7 @@ export default function StudioOSSection() {
 
         {/* Studio OS Dashboard mockup */}
         <div
-          className="border border-[#2b2b2b] rounded-[4px] overflow-hidden h-[560px] shadow-[0_0_60px_#00ff9d0a,0_40px_80px_#00000088] mt-14"
+          className="border border-[#c6c6c6] rounded-[4px] overflow-hidden h-[560px] shadow-[0_0_60px_#00ff9d0a,0_24px_48px_#00000022] mt-14"
         >
           <StudioOSMockup />
         </div>
@@ -46,7 +46,7 @@ export default function StudioOSSection() {
           ].map((f) => (
             <div key={f.label} className="flex items-center gap-2">
               <span style={{ color: f.color, fontSize: 13 }}>{f.icon}</span>
-              <span className="text-[#fff] text-xs font-sans">
+              <span className="text-[#333] text-xs font-sans">
                 {f.label}
               </span>
             </div>

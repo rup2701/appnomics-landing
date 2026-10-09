@@ -11,19 +11,19 @@ const SAMPLE_VARS = [
 ];
 
 const SERVICE_COLORS: Record<string, string> = {
-  Neon: "#00d4ff",
-  Railway: "#a855f7",
-  Vercel: "#e0e0e0",
-  Resend: "#00ff9d",
-  Twilio: "#f97316",
-  Stripe: "#818cf8",
-  Cloudflare: "#f97316",
+  Neon: "#006987",
+  Railway: "#7e22ce",
+  Vercel: "#171717",
+  Resend: "#087a50",
+  Twilio: "#c2410c",
+  Stripe: "#6d28d9",
+  Cloudflare: "#c2410c",
 };
 
 type Status = "connected" | "needs_setup" | "missing";
 
 function StatusDot({ status }: { status: Status }) {
-  const c = status === "connected" ? "#00ff9d" : status === "needs_setup" ? "#ffb800" : "#ff4444";
+  const c = status === "connected" ? "#087a50" : status === "needs_setup" ? "#a16207" : "#b91c1c";
   const label = status === "connected" ? "CONNECTED" : status === "needs_setup" ? "NEEDS SETUP" : "MISSING";
   return (
     <span className="inline-flex items-center gap-[5px] text-[9px] font-mono" style={{ color: c }}>
@@ -57,23 +57,23 @@ const NAV = ["Dashboard", "Epics & Timeline", "Artifacts", "Deploys & Envs", "En
 export default function StudioOSMockup() {
   return (
     <div
-      className="w-full h-full bg-[#161616] flex flex-col font-mono overflow-hidden select-none text-[14px]"
+      className="w-full h-full bg-[#f5f5f5] text-[#171717] flex flex-col font-mono overflow-hidden select-none text-[14px]"
     >
       {/* Top bar */}
       <div
-        className="h-9 bg-[#1f1f1f] border-b border-[#2b2b2b] flex items-center justify-between px-4 flex-shrink-0"
+        className="h-9 bg-[#d8d8d8] border-b border-[#c6c6c6] flex items-center justify-between px-4 flex-shrink-0"
       >
         <div className="flex items-center gap-2.5">
-          <span className="text-[10px] font-bold tracking-[0.18em] text-[#00ff9d] hadow-[0_0_8px_#00ff9d88]">
+          <span className="text-[10px] font-bold tracking-[0.18em] text-[#087a50]">
             STUDIO OS
           </span>
-          <span className="text-[#fff]">|</span>
-          <span className="text-[#fff] text-[13px]">instaroom</span>
-          <span className="text-[#666] text-[9px] border border-[#2b2b2b] px-[5px] py-px rounded-[2px]">MVP</span>
+          <span className="text-[#777]">|</span>
+          <span className="text-[#171717] text-[13px]">instaroom</span>
+          <span className="text-[#555] text-[9px] border border-[#aaa] px-[5px] py-px rounded-[2px]">MVP</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-[5px] h-[5px] rounded-full bg-[#00ff9d] shadow-[0_0_5px_#00ff9d] inline-block" />
-          <span className="text-[#00ff9d] text-[9px]">LIVE — instaroom.vercel.app</span>
+          <span className="w-[5px] h-[5px] rounded-full bg-[#087a50] inline-block" />
+          <span className="text-[#087a50] text-[9px]">LIVE — instaroom.vercel.app</span>
         </div>
       </div>
 
@@ -81,7 +81,7 @@ export default function StudioOSMockup() {
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
         <div
-          className="w-[180px] flex-shrink-0 bg-[#1a1a1a] border-2 border-[#262626] py-2.5 overflow-hidden"
+          className="w-[180px] flex-shrink-0 bg-[#d8d8d8] border-r border-[#c6c6c6] py-2.5 overflow-hidden"
         >
           {NAV.map((item, i) => {
             const isActive = i === 4;
@@ -90,15 +90,15 @@ export default function StudioOSMockup() {
                 key={item}
                 className="py-[7px] px-[14px] text-[12px] flex items-center justify-between"
                 style={{
-                  borderLeft: `2px solid ${isActive ? "#00ff9d" : "transparent"}`,
-                  background: isActive ? "#00ff9d0d" : "transparent",
-                  color: isActive ? "#00ff9d" : "#444",
-                  textShadow: isActive ? "0 0 6px #00ff9d55" : "none",
+                  borderLeft: `2px solid ${isActive ? "#087a50" : "transparent"}`,
+                  background: isActive ? "#ffffff66" : "transparent",
+                  color: isActive ? "#087a50" : "#444",
+                  textShadow: "none",
                 }}
               >
                 <span>{item}</span>
                 {i === 4 && (
-                  <span className="text-[12px] text-[#00ff9d55] border border-[#00ff9d22] px-[4px] py-px rounded-[1px]">
+                  <span className="text-[12px] text-[#087a50] border border-[#087a5044] px-[4px] py-px rounded-[1px]">
                     KEY
                   </span>
                 )}
@@ -112,22 +112,22 @@ export default function StudioOSMockup() {
           {/* Header */}
           <div className="flex items-start justify-between mb-4">
             <div>
-              <p className="text-[8px] tracking-[0.18em] text-[#444] mb-1">
+              <p className="text-[8px] tracking-[0.18em] text-[#666] mb-1">
                 STUDIO OS / ENVIRONMENT VARIABLES
               </p>
               <div className="flex items-center gap-2.5">
-                <h3 className="text-base font-bold text-[#e0e0e0] m-0">
+                <h3 className="text-base font-bold text-[#171717] m-0">
                   The Handover
                 </h3>
                 <span
-                  className="text-[8px] text-[#00ff9d] border border-[#00ff9d33] bg-[#00ff9d0d] px-[7px] py-0.5 rounded-[2px] tracking-[0.1em] font-bold"
+                  className="text-[8px] text-[#087a50] border border-[#087a5044] bg-[#087a500d] px-[7px] py-0.5 rounded-[2px] tracking-[0.1em] font-bold"
                 >
                   ✓ READY FOR CLIENT HANDOVER
                 </span>
               </div>
             </div>
             <button
-              className="bg-transparent border border-[#333] text-[#555] text-[9px] px-3 py-[5px] rounded-[2px] font-mono cursor-default tracking-[0.1em]"
+              className="bg-transparent border border-[#aaa] text-[#444] text-[9px] px-3 py-[5px] rounded-[2px] font-mono cursor-default tracking-[0.1em]"
             >
               ↓ EXPORT ALL
             </button>
@@ -136,18 +136,18 @@ export default function StudioOSMockup() {
           {/* Status tiles */}
           <div className="grid grid-cols-3 gap-2 mb-[14px]">
             {[
-              { label: "CONNECTED", count: 5, color: "#00ff9d" },
-              { label: "NEEDS SETUP", count: 1, color: "#ffb800" },
-              { label: "MISSING", count: 1, color: "#ff4444" },
+              { label: "CONNECTED", count: 5, color: "#087a50" },
+              { label: "NEEDS SETUP", count: 1, color: "#a16207" },
+              { label: "MISSING", count: 1, color: "#b91c1c" },
             ].map((s) => (
               <div
                 key={s.label}
-                className="border border-[#2b2b2b] p-2 px-2.5 rounded-[2px]"
+                className="border border-[#d8d8d8] bg-white p-2 px-2.5 rounded-[2px]"
               >
-                <p className="text-[8px] text-[#444] tracking-[0.08em] mb-0.5">{s.label}</p>
+                <p className="text-[8px] text-[#666] tracking-[0.08em] mb-0.5">{s.label}</p>
                 <p 
                   className="text-lg font-bold m-0" 
-                  style={{ color: s.color, textShadow: `0 0 8px ${s.color}55` }}
+                  style={{ color: s.color }}
                 >
                   {s.count}
                 </p>
@@ -156,13 +156,13 @@ export default function StudioOSMockup() {
           </div>
 
           {/* Table */}
-          <div className="border border-[#2b2b2b] rounded-[2px] overflow-hidden">
+          <div className="border border-[#d8d8d8] bg-white rounded-[2px] overflow-hidden">
             {/* Header row */}
             <div
-              className="grid grid-cols-[80px_160px_1fr_100px_80px] px-3 py-1.5 bg-[#1f1f1f] border-b border-[#262626]"
+              className="grid grid-cols-[80px_160px_1fr_100px_80px] px-3 py-1.5 bg-[#d8d8d8] border-b border-[#c6c6c6]"
             >
               {["SERVICE", "VARIABLE", "VALUE", "STATUS", "ROTATED"].map((h) => (
-                <span key={h} className="text-[8px] text-[#333] tracking-[0.1em]">{h}</span>
+                <span key={h} className="text-[8px] text-[#444] tracking-[0.1em]">{h}</span>
               ))}
             </div>
 
@@ -171,7 +171,7 @@ export default function StudioOSMockup() {
                 key={v.name}
                 className="grid grid-cols-[80px_160px_1fr_100px_80px] px-3 py-[7px] items-center"
                 style={{
-                  borderBottom: i < SAMPLE_VARS.length - 1 ? "1px solid #242424" : "none",
+                  borderBottom: i < SAMPLE_VARS.length - 1 ? "1px solid #e5e5e5" : "none",
                   background:
                     v.status === "missing"
                       ? "#ff44440a"
@@ -181,7 +181,7 @@ export default function StudioOSMockup() {
                 }}
               >
                 <ServiceTag name={v.service} />
-                <code className="text-[10px] text-[#c0c0c0]">{v.name}</code>
+                <code className="text-[10px] text-[#444]">{v.name}</code>
                 <code className="text-[9px] text-[#333]">{"•".repeat(24)}</code>
                 <StatusDot status={v.status as Status} />
                 <span className="text-[9px] text-[#333]">{v.rotated}</span>

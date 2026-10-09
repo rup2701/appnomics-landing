@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#262626] bg-[#161616] pt-16 pb-6">
+    <footer className="bg-[#d8d8d8] pt-16 pb-6 text-[#171717]">
       <div className="max-w-[1340px] mx-auto px-6 md:px-10">
         {/* Logo + Tagline Row */}
-        <div className="pb-12 border-b border-[#262626]">
+        <div className="pb-12 border-b border-[#c6c6c6]">
           <Image
             src="/appnomics.svg"
             alt="Appnomics"
@@ -15,7 +15,7 @@ export default function Footer() {
             height={32}
             width={132}
           />
-          <p className="text-[13px] text-[#848484] font-sans mt-2">
+          <p className="text-[13px] text-[#444] font-sans mt-2">
             Your AI cofounder — without the equity split.
           </p>
         </div>
@@ -25,7 +25,7 @@ export default function Footer() {
           
           {/* Row 1: Studio & Core */}
           <div>
-            <h4 className="text-[14px] text-[#fff] uppercase font-sans font-medium mb-4">
+            <h4 className="text-[14px] text-[#171717] uppercase font-sans font-medium mb-4">
               Core
             </h4>
             <ul className="space-y-3">
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[15px] text-[#999] font-sans hover:text-[#e0e0e0] transition-colors no-underline"
+                    className="text-[15px] text-[#444] font-sans hover:text-[#087a50] transition-colors no-underline"
                   >
                     {item.label}
                   </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Row 2: Compare Appnomics */}
           <div>
-            <h4 className="text-[14px] text-[#fff] font-sans uppercase font-medium mb-4">
+            <h4 className="text-[14px] text-[#171717] font-sans uppercase font-medium mb-4">
               Appnomics
             </h4>
             <ul className="space-y-3">
@@ -64,7 +64,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[15px] text-[#999] font-sans hover:text-[#e0e0e0] transition-colors no-underline"
+                    className="text-[15px] text-[#444] font-sans hover:text-[#087a50] transition-colors no-underline"
                   >
                     {item.label}
                   </Link>
@@ -75,7 +75,7 @@ export default function Footer() {
 
           {/* Row 3: Solutions */}
           <div>
-            <h4 className="text-[14px] text-[#fff] uppercase font-sans font-medium mb-4">
+            <h4 className="text-[14px] text-[#171717] uppercase font-sans font-medium mb-4">
               Solutions
             </h4>
             <ul className="space-y-3">
@@ -89,7 +89,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[15px] text-[#999] font-sans hover:text-[#e0e0e0] transition-colors no-underline"
+                    className="text-[15px] text-[#444] font-sans hover:text-[#087a50] transition-colors no-underline"
                   >
                     {item.label}
                   </Link>
@@ -101,7 +101,7 @@ export default function Footer() {
           {/* Row 4: Resources & Company (combined) */}
           <div>
             <div className="mb-6">
-              <h4 className="text-[14px] uppercase text-[#fff] font-sans font-medium mb-4">
+              <h4 className="text-[14px] uppercase text-[#171717] font-sans font-medium mb-4">
                 Resources
               </h4>
               <ul className="space-y-3">
@@ -114,7 +114,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-[15px] text-[#999] font-sans hover:text-[#e0e0e0] transition-colors no-underline"
+                      className="text-[15px] text-[#444] font-sans hover:text-[#087a50] transition-colors no-underline"
                     >
                       {item.label}
                     </Link>
@@ -124,7 +124,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-[14px] text-[#fff] uppercase font-sans font-medium mb-4">
+              <h4 className="text-[14px] text-[#171717] uppercase font-sans font-medium mb-4">
                 Company
               </h4>
               <ul className="space-y-3">
@@ -139,7 +139,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-[15px] text-[#999] font-sans hover:text-[#e0e0e0] transition-colors no-underline"
+                      className="text-[15px] text-[#444] font-sans hover:text-[#087a50] transition-colors no-underline"
                     >
                       {item.label}
                     </Link>
@@ -151,16 +151,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 pt-6 border-t border-[#262626] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[13px] text-[#666] font-sans">
+        <div className="mt-8 pt-6 border-t border-[#c6c6c6] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[13px] text-[#555] font-sans">
             © 2026 Appnomics. Built in San Francisco. Made with ☕.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-[8px] text-[#444] tracking-[0.12em] font-sans uppercase">
+            <span className="text-[8px] text-[#555] tracking-[0.12em] font-sans uppercase">
               ✦ v1.0
             </span>
-            <span className="w-px h-3 bg-[#333]" />
-            <span className="text-[8px] text-[#444] font-sans">
+            <span className="w-px h-3 bg-[#aaa]" />
+            <span className="text-[8px] text-[#555] font-sans">
               Ship. Scale. Own.
             </span>
           </div>

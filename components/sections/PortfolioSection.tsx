@@ -11,7 +11,7 @@ const PROJECTS = [
     description: "On-demand virtual appointment booking for independent practitioners. Auth, scheduling, Stripe paywall, calendar sync — shipped in 6 weeks.",
     epics: 8,
     stack: ["Next.js", "Neon", "Stripe", "Resend"],
-    color: "#00ff9d",
+    color: "#087a50",
     status: "LIVE",
     char: "IR",
     caseStudy: "/"
@@ -23,7 +23,7 @@ const PROJECTS = [
     description: "AI-powered sports prediction platform with subscription tiers, live feed ingestion, and a picks leaderboard.",
     epics: 5,
     stack: ["Next.js", "Railway", "OpenAI", "Loops"],
-    color: "#00d4ff",
+    color: "#006987",
     status: "LIVE",
     char: "GP",
     caseStudy: "/gunner-wins-case"
@@ -35,7 +35,7 @@ const PROJECTS = [
     description: "Media processing pipeline with background job queue, S3-compatible storage, and a client-facing usage dashboard.",
     epics: 6,
     stack: ["Node.js", "Cloudflare R2", "Redis", "Railway"],
-    color: "#a855f7",
+    color: "#7e22ce",
     status: "BETA",
     char: "MD",
     caseStudy: "/"
@@ -47,7 +47,7 @@ const PROJECTS = [
     description: "PlaySquares is a mobile app that modernizes the classic pen-and-paper squares game with automated live scoring, instant winner notifications, and custom leaderboards.",
     epics: 16,
     stack: ["Swift", "Node.js", "Postgres", "Firebase", 'Google Cloud'],
-    color: "#ffb800",
+    color: "#a16207",
     status: "LIVE",
     char: "FF",
     caseStudy: "/"
@@ -74,13 +74,13 @@ export default function PortfolioSection() {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <section id='portfolio' className="py-24 border-t border-[#262626]">
+    <section id='portfolio' className="py-24">
       <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PORTFOLIO</SectionLabel>
-        <h2 className="text-[clamp(30px,4vw,52px)] font-bold text-[#e0e0e0] mb-2 leading-[1.15] font-sans">
+        <h2 className="text-[clamp(30px,4vw,52px)] font-normal text-[#171717] mb-2 leading-[1.15] font-sans">
           Built. Shipped. Handed over.
         </h2>
-        <p className="text-lg text-[#999] mb-14 font-sans">
+        <p className="text-lg text-[#555] mb-14 font-sans">
           A sample of MVPs we&apos;ve taken from intake to production.
         </p>
 
@@ -90,10 +90,10 @@ export default function PortfolioSection() {
               key={p.name}
               onMouseEnter={() => setHovered(p.name)}
               onMouseLeave={() => setHovered(null)}
-              className="bg-[#1b1b1b] border rounded-[2px] p-7 cursor-default transition-all duration-200 relative overflow-hidden"
+              className="bg-white border border-[#d8d8d8] rounded-[2px] p-7 cursor-default transition-all duration-200 relative overflow-hidden"
               style={{
-                borderColor: hovered === p.name ? p.color + "44" : "#2b2b2b",
-                background: hovered === p.name ? "#1e1e1e" : "#1b1b1b",
+                borderColor: hovered === p.name ? p.color + "66" : "#d8d8d8",
+                background: hovered === p.name ? "#fafafa" : "#ffffff",
               }}
             >
               {/* Subtle corner glow on hover */}
@@ -122,7 +122,7 @@ export default function PortfolioSection() {
 
                 <div className="flex-1">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
-                    <span className="text-[15px] font-bold text-[#e0e0e0] font-sans">
+                    <span className="text-[15px] font-bold text-[#171717] font-sans">
                       {p.name}
                     </span>
                     <Tag label={p.status} color={p.status === "LIVE" ? "#00ff9d" : "#ffb800"} />
@@ -132,7 +132,7 @@ export default function PortfolioSection() {
                     href={`https://${p.domain}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#444] text-[11px] no-underline font-sans hover:text-[#666] transition-colors"
+                    className="text-[#555] text-[11px] no-underline font-sans hover:text-[#171717] transition-colors"
                     onClick={(e) => e.stopPropagation()}
                   >
                     {p.domain} ↗
@@ -140,7 +140,7 @@ export default function PortfolioSection() {
                 </div>
               </div>
 
-              <p className="text-[#aaa] text-md leading-[1.65] mb-5 font-sans">
+              <p className="text-[#444] text-md leading-[1.65] mb-5 font-sans">
                 {p.description}
               </p>
 
@@ -149,20 +149,20 @@ export default function PortfolioSection() {
                   {p.stack.map((s) => (
                     <span
                       key={s}
-                      className="text-[12px] text-[#999] border border-[#2b2b2b] px-1.5 py-0.5 rounded-[2px] font-sans"
+                      className="text-[12px] text-[#444] border border-[#d8d8d8] px-1.5 py-0.5 rounded-[2px] font-sans"
                     >
                       {s}
                     </span>
                   ))}
                 </div>
-                <span className="text-[11px] text-[#999] font-sans whitespace-nowrap ml-3">
+                <span className="text-[11px] text-[#555] font-sans whitespace-nowrap ml-3">
                   {p.epics} epics
                 </span>
               </div>
 
               <Link
                 href={p.caseStudy}
-                className="text-[12px] text-[#999] font-sans font-bold hover:text-[#666] text-sm uppercase underline"
+                className="text-[12px] text-[#333] font-sans font-bold hover:text-[#087a50] text-sm uppercase underline"
               >
                 Case Study
               </Link>

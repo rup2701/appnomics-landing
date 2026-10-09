@@ -84,8 +84,8 @@ const DynamicHero = () => {
       <div className={styles.heroContent}>
         {/* Animated headline using your existing animation */}
         <h1 className={styles.heroTitle}>
-              Your AI cofounder —<br />
-              <span className="text-[#00ff9d]">without the equity split.</span>
+              From idea to production. <br />
+              <span className="text-[#087a50]">Agent-powered.</span>
         </h1>
         
         {/* Dynamic Prompt Section */}
@@ -132,7 +132,7 @@ const DynamicHero = () => {
 
                   <button
                     onClick={handleEnter}
-                    className="absolute bottom-3 right-3 text-xs text-gray-400 hover:text-white border border-gray-700 hover:border-gray-500 rounded-md px-3 py-1 transition"
+                    className="absolute bottom-3 right-3 text-xs text-[#555] hover:text-[#171717] border border-[#c6c6c6] hover:border-[#888] rounded-md px-3 py-1 transition"
                     >
                   Let&apos;s go →
                   </button>

@@ -29,17 +29,17 @@ export default function PricingSection() {
   const [selectedPlan, setSelectedPlan] = useState<"build" | "build_run">("build");
 
   return (
-    <section id='pricing' className="py-24 border-t border-[#262626]">
+    <section id='pricing' className="py-24">
       <div className="max-w-7xl mx-auto block">
         <SectionLabel centerAlign={true}>// PRICING</SectionLabel>
         <h2
-          className="text-[clamp(30px,4vw,52px)] font-extrabold text-[#e0e0e0] mb-2 leading-[1.15] font-sans text-center" 
+          className="text-[clamp(30px,4vw,52px)] font-normal text-[#171717] mb-2 leading-[1.15] font-sans text-center" 
         >
           Transparent pricing.
           <br />
-          <span className="text-[#6e6e6e] font-extrabold">Fixed pricing. No pauses.</span>
+          <span className="text-[#555] font-normal">Fixed pricing. No pauses.</span>
         </h2>
-        <p className="text-lg text-[#999] mb-14 font-sans text-center">
+        <p className="text-lg text-[#555] mb-14 font-sans text-center">
           Most apps are 5&mdash;6 epics. 6 weeks to deploy.
         </p>
 
@@ -52,15 +52,15 @@ export default function PricingSection() {
             className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
               selectedPlan === "build"
                 ? "border-[#00ff9d44] bg-[#00ff9d08]"
-                : "border-[#2b2b2b] bg-[#1b1b1b]"
+                : "border-[#d8d8d8] bg-white"
             }`}
           >
             <div className="flex items-start justify-between mb-6">
               <div>
-                <p className="text-[10px] tracking-[0.15em] text-[#fafafa] mb-1.5 font-sans text-left">
+                <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
                   PLAN 01
                 </p>
-                <h3 className="text-xl font-bold text-[#e0e0e0] font-sans text-left">
+                <h3 className="text-xl font-medium text-[#171717] font-sans text-left">
                   Build Only
                 </h3>
               </div>
@@ -68,13 +68,13 @@ export default function PricingSection() {
                 <p
                   className={`text-[28px] font-bold font-sans leading-none ${
                     selectedPlan === "build"
-                      ? "text-[#00ff9d] "
-                      : "text-[#00ff9d]"
+                      ? "text-[#087a50] "
+                      : "text-[#087a50]"
                   }`}
                 >
                   $5K
                 </p>
-                <p className="text-[11px] text-[#fafafa] font-sans">
+                <p className="text-[11px] text-[#555] font-sans">
                   per epic
                 </p>
               </div>
@@ -91,8 +91,8 @@ export default function PricingSection() {
               onClick={(e) => e.stopPropagation()}
               className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "build"
-                  ? "border-[#00ff9d44] text-[#00ff9d] bg-[#00ff9d0d]"
-                  : "border-[#333] text-[#555] bg-transparent"
+                  ? "border-[#087a5044] text-[#087a50] bg-[#087a500d]"
+                  : "border-[#bbb] text-[#555] bg-transparent"
               }`}
             >
               START BUILDING →
@@ -105,7 +105,7 @@ export default function PricingSection() {
             className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
               selectedPlan === "build_run"
                 ? "border-[#00d4ff44] bg-[#00d4ff08]"
-                : "border-[#2b2b2b] bg-[#1b1b1b]"
+                : "border-[#d8d8d8] bg-white"
             }`}
           >
             {/* Recommended badge */}
@@ -115,10 +115,10 @@ export default function PricingSection() {
 
             <div className="flex items-start justify-between mb-6">
               <div>
-                <p className="text-[10px] tracking-[0.15em] text-[#fafafa] mb-1.5 font-sans text-left">
+                <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
                   PLAN 02
                 </p>
-                <h3 className="text-xl font-bold text-[#e0e0e0] font-sans">
+                <h3 className="text-xl font-medium text-[#171717] font-sans">
                   Build + Run
                 </h3>
               </div>
@@ -126,13 +126,13 @@ export default function PricingSection() {
                 <p
                   className={`text-[32px] font-bold font-sans leading-none ${
                     selectedPlan === "build_run"
-                      ? "text-[#00d4ff]"
-                      : "text-[#00d4ff]"
+                      ? "text-[#006987]"
+                      : "text-[#006987]"
                   }`}
                 >
                   $5K
                 </p>
-                <p className="text-[11px] text-[#fafafa] font-sans">
+                <p className="text-[11px] text-[#555] font-sans">
                   per epic + 15% rev
                 </p>
               </div>
@@ -149,8 +149,8 @@ export default function PricingSection() {
               onClick={(e) => e.stopPropagation()}
               className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "build_run"
-                  ? "border-[#00d4ff44] text-[#00d4ff] bg-[#00d4ff0d]"
-                  : "border-[#333] text-[#555] bg-transparent"
+                  ? "border-[#00698744] text-[#006987] bg-[#0069870d]"
+                  : "border-[#bbb] text-[#555] bg-transparent"
               }`}
             >
               START BUILDING →
@@ -159,9 +159,9 @@ export default function PricingSection() {
         </div>
 
         {/* Fine print */}
-        <p className="mt-7 text-[11px] text-[#999] font-sans text-center">
+        <p className="mt-7 text-[11px] text-[#555] font-sans text-center">
           No credit card required to start · Discovery is free ·{" "}
-          <span className="text-[#fafafa]">We scope before you commit.</span>
+          <span className="text-[#171717]">We scope before you commit.</span>
         </p>
       </div>
     </section>

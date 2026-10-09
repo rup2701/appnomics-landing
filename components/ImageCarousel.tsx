@@ -112,7 +112,7 @@ export default function ImageCarousel() {
   // const totalImagess = 1
 
   return (
-    <section className="py-12 border-t border-[#262626] bg-[#161616] overflow-hidden">
+    <section className="py-12 bg-[#f5f5f5] overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-2">
     
 
@@ -122,7 +122,7 @@ export default function ImageCarousel() {
             <button
               onClick={() => scroll("left")}
               disabled={scrollPosition === 0}
-              className="w-10 h-10 border border-[#2b2b2b] rounded-[2px] flex items-center justify-center text-[#fff] hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-[#2b2b2b] disabled:hover:text-[#444]"
+              className="w-10 h-10 border border-[#c6c6c6] rounded-[2px] flex items-center justify-center text-[#171717] hover:border-[#00a76b88] hover:text-[#087a50] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-[#c6c6c6] disabled:hover:text-[#666]"
               aria-label="Scroll left"
             >
               ←
@@ -130,7 +130,7 @@ export default function ImageCarousel() {
             <button
               onClick={() => scroll("right")}
               disabled={scrollPosition >= maxScroll - 10}
-              className="w-10 h-10 border border-[#2b2b2b] rounded-[2px] flex items-center justify-center text-[#fff] hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-[#2b2b2b] disabled:hover:text-[#444]"
+              className="w-10 h-10 border border-[#c6c6c6] rounded-[2px] flex items-center justify-center text-[#171717] hover:border-[#00a76b88] hover:text-[#087a50] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-[#c6c6c6] disabled:hover:text-[#666]"
               aria-label="Scroll right"
             >
               →
@@ -156,11 +156,11 @@ export default function ImageCarousel() {
                 key={image.id}
                 className="flex-shrink-0 w-[280px] md:w-[380px] lg:w-[1200px]"
               >
-                <div className="border border-[#2b2b2b] rounded-[2px] overflow-hidden bg-[#161616]">
+                <div className="border border-[#d8d8d8] rounded-[2px] overflow-hidden bg-white">
                   <div
-                    className="w-full aspect-[16/10] bg-[#161616] flex items-center justify-center relative"
+                    className="w-full aspect-[16/10] bg-[#d8d8d8] flex items-center justify-center relative"
                     style={{
-                      background: `linear-gradient(135deg, #161616 0%, #1f1f1f 100%)`,
+                      background: `linear-gradient(135deg, #d8d8d8 0%, #c8c8c8 100%)`,
                     }}
                   >
                     <Image
@@ -205,8 +205,8 @@ export default function ImageCarousel() {
 
                     {/* Status indicator */}
                     <div className="absolute top-3 right-3 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#00ff9d]" />
-                      <span className="text-[8px] text-[#00ff9d] font-sans tracking-[0.08em]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#087a50]" />
+                      <span className="text-[8px] text-[#087a50] font-sans tracking-[0.08em]">
                         LIVE
                       </span>
                     </div>
@@ -234,7 +234,7 @@ export default function ImageCarousel() {
           <div
             className="absolute top-0 left-0 w-12 h-full pointer-events-none"
             style={{
-              background: "linear-gradient(to right, #161616, transparent)",
+              background: "linear-gradient(to right, #f5f5f5, transparent)",
               opacity: scrollPosition > 10 ? 0 : 1,
               transition: "opacity 0.3s",
             }}
@@ -242,7 +242,7 @@ export default function ImageCarousel() {
           <div
             className="absolute top-0 right-0 w-12 h-full pointer-events-none"
             style={{
-              background: "linear-gradient(to left, #161616, transparent)",
+              background: "linear-gradient(to left, #f5f5f5, transparent)",
               opacity: scrollPosition < maxScroll - 10 ? 0 : 1,
               transition: "opacity 0.3s",
             }}
@@ -284,14 +284,14 @@ export default function ImageCarousel() {
           <button
             onClick={() => scroll("left")}
             disabled={scrollPosition === 0}
-            className="px-6 py-2 border border-[#2b2b2b] rounded-[2px] text-[11px] text-[#444] font-sans hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            className="px-6 py-2 border border-[#c6c6c6] rounded-[2px] text-[11px] text-[#444] font-sans hover:border-[#00a76b88] hover:text-[#087a50] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
           >
             ← Previous
           </button>
           <button
             onClick={() => scroll("right")}
             disabled={scrollPosition >= maxScroll - 10}
-            className="px-6 py-2 border border-[#2b2b2b] rounded-[2px] text-[11px] text-[#444] font-sans hover:border-[#00d4ff44] hover:text-[#e0e0e0] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
+            className="px-6 py-2 border border-[#c6c6c6] rounded-[2px] text-[11px] text-[#444] font-sans hover:border-[#00a76b88] hover:text-[#087a50] transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed"
           >
             Next →
           </button>

@@ -8,8 +8,8 @@ export default function SectionLabel({ children, centerAlign }: { children: stri
       style={{
         fontSize: 12,
         letterSpacing: "0.22em",
-        color: "#fff",
-        fontFamily: "var(--font-ibm-plex-mono), monospace",
+        color: "#555",
+        fontFamily: "var(--font-geist-mono), monospace",
         marginBottom: 12,
         textAlign: textAlign
       }}
