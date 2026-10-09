@@ -30,7 +30,7 @@ const PROJECTS = [
   },
   {
     name: "MediaDance",
-    domain: "mediadance.io",
+    domain: "telehealth-marketing.vercel.app/",
     industry: "INFRASTRUCTURE",
     description: "Media processing pipeline with background job queue, S3-compatible storage, and a client-facing usage dashboard.",
     epics: 6,
@@ -49,7 +49,7 @@ const PROJECTS = [
     stack: ["Swift", "Node.js", "Postgres", "Firebase", 'Google Cloud'],
     color: "#a16207",
     status: "LIVE",
-    char: "FF",
+    char: "PS",
     caseStudy: "/"
   },
 ];
