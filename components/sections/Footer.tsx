@@ -16,7 +16,7 @@ export default function Footer() {
             width={132}
           />
           <p className="text-[13px] text-[#444] font-sans mt-2">
-            Your AI cofounder — without the equity split.
+            Ship. Scale. Own
           </p>
         </div>
 

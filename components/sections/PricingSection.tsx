@@ -51,7 +51,7 @@ export default function PricingSection() {
             onClick={() => setSelectedPlan("build")}
             className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
               selectedPlan === "build"
-                ? "border-[#00ff9d44] bg-[#00ff9d08]"
+                ? "border-[#00ff9d] bg-[#00ff9d08]"
                 : "border-[#d8d8d8] bg-white"
             }`}
           >
@@ -105,7 +105,7 @@ export default function PricingSection() {
             className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
               selectedPlan === "build_run"
                 ? "border-[#00d4ff44] bg-[#00d4ff08]"
-                : "border-[#d8d8d8] bg-white"
+                : "border-[#d8d8d8] bg-[#ebebeb]"
             }`}
           >
             {/* Recommended badge */}

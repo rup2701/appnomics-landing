@@ -1,18 +1,19 @@
 import SectionLabel from "../SectionLabel";
+import Image from "next/image";
 
 const PERSONAS = [
   {
-    icon: "🔥",
+    iconSrc: "/token.svg",
     title: "Token Bleeders",
     desc: "Burned credits on AI wrappers. No product. No progress.",
   },
   {
-    icon: "🧱",
+    iconSrc: "/context.svg",
     title: "No-Code Survivors",
     desc: "Prototype works — but it's brittle. It won't survive real users.",
   },
   {
-    icon: "💔",
+    iconSrc: "/memory.svg",
     title: "Co-Founder Refugees",
     desc: "Ghosted by devs who wanted equity. You keep 100% of your company.",
   },
@@ -49,10 +50,16 @@ export default function WhoThisIsFor() {
             {PERSONAS.map((item, i) => (
               <div
                 key={item.title}
-                className="group flex items-start gap-5 p-5 border border-[#d8d8d8] rounded-[4px] bg-white hover:border-[#00ff9d88] hover:bg-[#eeeeee] transition-all duration-200"
+                className="group flex items-start gap-5 p-5 border border-[#d8d8d8] rounded-[4px] bg-[#ebebeb] hover:border-[#00ff9d88] hover:bg-[#eeeeee] transition-all duration-200"
               >
-                <span className="flex-shrink-0 w-11 h-11 flex items-center justify-center text-lg border border-[#d8d8d8] rounded-[4px] bg-[#f5f5f5] group-hover:border-[#00ff9d88] transition-colors">
-                  {item.icon}
+                <span className="flex-shrink-0 w-11 h-11 flex items-center justify-center text-lg border border-[#b0b0ba] bg-[#d8d8d8] rounded-[4px]  group-hover:border-[#00ff9d88] transition-colors">
+                  <Image
+                    src={item.iconSrc}
+                    alt={item.title}
+                    className="w-6 h-6"
+                    height={32}
+                    width={32}
+                  />
                 </span>
                 <div className="flex-1">
                   <div className="flex items-baseline justify-between gap-3">
@@ -73,7 +80,7 @@ export default function WhoThisIsFor() {
 
           {/* What you get */}
           <div className="border border-[#c6c6c6] rounded-[4px]  overflow-hidden flex flex-col">
-            <div className="flex items-center bg-[#d8d8d8] justify-between px-6 py-4 border-b border-[#c6c6c6] bg-[#d8d8d8]">
+            <div className="flex items-center bg-[#ebebeb] justify-between px-6 py-4 border-b border-[#c6c6c6] bg-[#d8d8d8]">
               <p className="text-xs text-[#087a50] font-bold font-sans tracking-[0.18em] uppercase">
                 What you get
               </p>
