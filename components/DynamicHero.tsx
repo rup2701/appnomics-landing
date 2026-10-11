@@ -86,7 +86,7 @@ const DynamicHero = () => {
         <Image
           src="/mcp.svg"
           alt="Appnomics"
-          className="h-22 w-auto mt-1"
+          className="h-8 lg:h-20 w-auto mt-1"
           height={432}
           width={432}
           style={{ marginBottom: '2rem', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
@@ -95,6 +95,9 @@ const DynamicHero = () => {
               From idea to production. <br />
               <span className="text-[#087a50]">Agent-powered.</span>
         </h1>
+        <p className="text-base md:text-lg text-[#888] font-sans font-medium leading-[1.6] max-w-[640px] text-center mx-auto mb-8">
+          Production-ready products founders can confidently take forward — to investors, to market, or to their own engineering team.
+        </p>
         
         {/* Dynamic Prompt Section */}
         <div className={styles.promptContainer}>
@@ -190,7 +193,7 @@ const DynamicHero = () => {
           </div>
           <div className={styles.trustDivider}>•</div>
           <div className={styles.trustItem}>
-            <span className={styles.trustNumber}>80%</span>
+            <span className={styles.trustNumber}>60%</span>
             <span className={styles.trustLabel}>Still Operating</span>
           </div>
         </div>

@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#d8d8d8] pt-16 pb-6 text-[#171717]">
+    <footer className="bg-[#ebebeb] pt-16 pb-4 text-[#0a0a0a]">
       <div className="max-w-[1340px] mx-auto px-6 md:px-10">
         {/* Logo + Tagline Row */}
-        <div className="pb-12 border-b border-[#c6c6c6]">
+        <div className="pb-6 border-b border-[#c6c6c6]">
           <Image
             src="/appnomics-logo.svg"
             alt="Appnomics"
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[15px] text-[#444] font-sans hover:text-[#087a50] transition-colors no-underline"
+                    className="text-[14px] text-[#676767] font-sans hover:text-[#087a50] transition-colors no-underline"
                   >
                     {item.label}
                   </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[15px] text-[#444] font-sans hover:text-[#087a50] transition-colors no-underline"
+                    className="text-[14px] text-[#676767] font-sans hover:text-[#087a50] transition-colors no-underline"
                   >
                     {item.label}
                   </Link>
@@ -89,7 +89,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[15px] text-[#444] font-sans hover:text-[#087a50] transition-colors no-underline"
+                    className="text-[14px] text-[#676767] font-sans hover:text-[#087a50] transition-colors no-underline"
                   >
                     {item.label}
                   </Link>
@@ -114,7 +114,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-[15px] text-[#444] font-sans hover:text-[#087a50] transition-colors no-underline"
+                      className="text-[14px] text-[#676767] font-sans hover:text-[#087a50] transition-colors no-underline"
                     >
                       {item.label}
                     </Link>
@@ -139,7 +139,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-[15px] text-[#444] font-sans hover:text-[#087a50] transition-colors no-underline"
+                      className="text-[14px] text-[#676767] font-sans hover:text-[#087a50] transition-colors no-underline"
                     >
                       {item.label}
                     </Link>
@@ -152,7 +152,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-6 border-t border-[#c6c6c6] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[13px] text-[#555] font-sans">
+          <p className="text-[13px] text-[#777] font-mono">
             © 2026 Appnomics. Built in San Francisco. Made with ☕.
           </p>
           <div className="flex items-center gap-4">
@@ -160,7 +160,7 @@ export default function Footer() {
               ✦ v1.0
             </span>
             <span className="w-px h-3 bg-[#aaa]" />
-            <span className="text-[8px] text-[#555] font-sans">
+            <span className="text-[8px] text-[#555] font-mono">
               Ship. Scale. Own.
             </span>
           </div>

@@ -80,14 +80,14 @@ export default function Navbar() {
            <button
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="text-sm text-[#087a50] hover:text-[#171717] border border-[#087a50] font-bold rounded-[2px] hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
+            className="text-sm text-[#fff] hover:text-[#ebebeb] border border-[#087a50] font-bold rounded-[2px] hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
             style={{
-              background: hovered ? "#00ff9d" : "transparent",
-              color: hovered ? "#171717" : "#087a50",
+              background: hovered ? "#ebebeb" : "black",
+              color: hovered ? "#171717" : "#fff",
               boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
             }}>
-            <Link href="mailto:rupesh@appnomics.dev" className="font-sans">
-              GET STARTED
+            <Link href="mailto:rupesh@appnomics.dev" className="text-xs font-mono uppercase ">
+              Start Building
             </Link>
           </button>
         </div>
