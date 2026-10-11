@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import styles from './DynamicHero.module.scss';
 
-
+import Image from 'next/image';
 const DynamicHero = () => {
   const [currentPromptIndex, setCurrentPromptIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
@@ -83,6 +83,14 @@ const DynamicHero = () => {
     <section className={styles.heroSection}>
       <div className={styles.heroContent}>
         {/* Animated headline using your existing animation */}
+        <Image
+          src="/mcp.svg"
+          alt="Appnomics"
+          className="h-16 w-auto mt-1"
+          height={432}
+          width={432}
+          style={{ marginBottom: '1rem', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
+        />
         <h1 className={styles.heroTitle}>
               From idea to production. <br />
               <span className="text-[#087a50]">Agent-powered.</span>

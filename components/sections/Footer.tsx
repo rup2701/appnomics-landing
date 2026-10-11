@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Logo + Tagline Row */}
         <div className="pb-12 border-b border-[#c6c6c6]">
           <Image
-            src="/appnomics.svg"
+            src="/appnomics-logo.svg"
             alt="Appnomics"
             className="h-6 w-auto mt-1"
             height={32}
