@@ -70,7 +70,7 @@ export default function WhoThisIsFor() {
                       0{i + 1}
                     </span>
                   </div>
-                  <p className="text-base text-[#555] font-sans leading-[1.6] mt-1">
+                  <p className="lg:text-md text-[#888] font-sans leading-[1.6] mt-1">
                     {item.desc}
                   </p>
                 </div>
