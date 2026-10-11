@@ -2,7 +2,7 @@
 
 :root {
   --background: #f5f5f5;
-  --foreground: #171717;
+  --foreground: #020202;
 }
 
 @theme inline {
@@ -23,6 +23,7 @@ h1,
 h2 {
   font-weight: 400;
   letter-spacing: -0.07rem;
+  color: var(--foreground) !important;
 }
 
 

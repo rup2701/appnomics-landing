@@ -72,7 +72,7 @@ export default function Navbar() {
               key={item.label}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
-              className="text-[15px] text-[#333] font-medium font-sans hover:text-[#087a50] transition-colors duration-200 no-underline"
+              className="text-[13px] text-[#333] font-medium font-sans hover:text-[#087a50] transition-colors duration-200 no-underline"
             >
               {item.label}
             </a>

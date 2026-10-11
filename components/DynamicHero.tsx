@@ -86,10 +86,10 @@ const DynamicHero = () => {
         <Image
           src="/mcp.svg"
           alt="Appnomics"
-          className="h-16 w-auto mt-1"
+          className="h-22 w-auto mt-1"
           height={432}
           width={432}
-          style={{ marginBottom: '1rem', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
+          style={{ marginBottom: '2rem', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
         />
         <h1 className={styles.heroTitle}>
               From idea to production. <br />
