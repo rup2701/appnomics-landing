@@ -11,7 +11,7 @@ export default function Footer() {
           <Image
             src="/appnomics-logo.svg"
             alt="Appnomics"
-            className="h-7 w-auto mt-1"
+            className="h-6 w-auto mt-1"
             height={32}
             width={132}
           />
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           {/* Row 2: Compare Appnomics */}
-          <div>
+          {/* <div>
             <h4 className="text-[14px] text-[#171717] font-sans uppercase font-medium mb-4">
               Appnomics
             </h4>
@@ -71,7 +71,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Row 3: Solutions */}
           <div>
@@ -123,6 +123,7 @@ export default function Footer() {
               </ul>
             </div>
 
+          </div>
             <div>
               <h4 className="text-[14px] text-[#171717] uppercase font-sans font-medium mb-4">
                 Company
@@ -147,7 +148,6 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}

@@ -86,7 +86,7 @@ const DynamicHero = () => {
         <Image
           src="/mcp.svg"
           alt="Appnomics"
-          className="h-8 lg:h-20 w-auto mt-1"
+          className="h-8 lg:h-16 w-auto mt-1"
           height={432}
           width={432}
           style={{ marginBottom: '2rem', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}

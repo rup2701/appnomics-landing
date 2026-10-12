@@ -56,7 +56,7 @@ export default function Navbar() {
           <Image
             src="/appnomics-logo.svg"
             alt="Appnomics"
-            height={22}
+            height={42}
             width={102}
             className="h-5 w-auto"
           />
