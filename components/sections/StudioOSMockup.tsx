@@ -61,7 +61,7 @@ export default function StudioOSMockup() {
     >
       {/* Top bar */}
       <div
-        className="h-9 bg-[#d8d8d8] border-b border-[#c6c6c6] flex items-center justify-between px-4 flex-shrink-0"
+        className="h-9 bg-[#ebebeb] border-b border-[#c6c6c6] flex items-center justify-between px-4 flex-shrink-0"
       >
         <div className="flex items-center gap-2.5">
           <span className="text-[10px] font-bold tracking-[0.18em] text-[#087a50]">
@@ -81,7 +81,7 @@ export default function StudioOSMockup() {
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
         <div
-          className="w-[180px] flex-shrink-0 bg-[#d8d8d8] border-r border-[#c6c6c6] py-2.5 overflow-hidden"
+          className="w-[180px] flex-shrink-0 bg-[#ebebeb] border-r border-[#c6c6c6] py-2.5 overflow-hidden"
         >
           {NAV.map((item, i) => {
             const isActive = i === 4;

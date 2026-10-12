@@ -35,10 +35,10 @@ export default function CTASection() {
           href="mailto:rupesh@appnomics.dev"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          className="inline-block px-12 py-4 border border-[#087a50] rounded-[2px] text-[13px] font-bold tracking-[0.15em] font-sans no-underline transition-all duration-150 mb-5"
+          className="inline-block px-12 py-3 border border-[#087a50] rounded-[2px] text-[15px] font-bold tracking-[0.15em] font-sans no-underline transition-all duration-150 mb-5"
           style={{
-            background: hovered ? "#00ff9d" : "transparent",
-            color: hovered ? "#171717" : "#087a50",
+            background: hovered ? "#0a0a0a" : "transparent",
+            color: hovered ? "#fff" : "#087a50",
             boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
           }}
         >

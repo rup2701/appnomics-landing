@@ -153,8 +153,8 @@ export default function ProcessSection() {
         /> */}
 
         {/* callout bar */}
-        <div className="mt-12 border border-[#d8d8d8] border-l-2 border-l-[#00a76b] p-5 pl-6 rounded-r-[4px] bg-[#d8d8d8]">
-          <p className="text-sm md:text-[15px] text-[#444] font-sans leading-[1.7]">
+        <div className="mt-12 border border-[#d8d8d8] border-l-2 border-l-[#00a76b] p-5 pl-6 rounded-r-[4px] bg-[#ebebeb] font-mono">
+          <p className="text-sm md:text-[15px] text-[#444] font-sans leading-[1.5]">
             An epic is a single, fully functional feature block delivered every week. <br/>
             Most MVPs are <span className="text-[#171717]">5&mdash;6 epics</span> — that&apos;s{" "}
             <span className="text-[#171717]">5&mdash;6 weeks</span> from intake to production. Every epic is fully laid out and mapped during your free discovery session — so you see the exact roadmap before you commit a cent.

@@ -140,7 +140,7 @@ export default function WhyAppnomicsSection() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="border border-[#d8d8d8] rounded-[2px] p-4 text-center bg-[#d8d8d8]"
+              className="border border-[#d8d8d8] rounded-[2px] p-4 text-center bg-[#ebebeb]"
             >
               <p
                 className="text-[24px] font-bold font-sans"

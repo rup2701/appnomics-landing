@@ -6,9 +6,9 @@ import Link from "next/link";
 const NAV_ITEMS = [
   { label: "Process", href: "#process" },
   { label: "Studio OS", href: "#studio" },
-  { label: "Why Us", href: "#why-appnomics" },
+  // { label: "Why Us", href: "#why-appnomics" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Projects", href: "#portfolio" },
   // { label: "FAQ", href: "#faq" },
 ];
 

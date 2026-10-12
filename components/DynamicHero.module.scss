@@ -50,10 +50,10 @@
 
 // Hero Title Animation (your existing styles)
 .heroTitle {
-  font-size: clamp(2.5rem, 5vw, 4.75rem);
+  font-size: clamp(2.5rem, 5vw, 5rem);
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.07rem;
+  letter-spacing: -0.1rem;
   margin-bottom: $spacing-2xl;
   
   @media (max-width: $breakpoint-sm) {
