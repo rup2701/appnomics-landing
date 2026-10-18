@@ -91,13 +91,13 @@ const DynamicHero = () => {
           width={432}
           style={{ marginBottom: '2rem', display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
         />
-        <h1 className={styles.heroTitle}>
+        {/* <h1 className={styles.heroTitle}>
               From idea to production. <br />
               <span className="text-[#087a50]">Agent-powered.</span>
         </h1>
         <p className="text-base md:text-lg text-[#888] font-sans font-medium leading-[1.6] max-w-[640px] text-center mx-auto mb-8">
           Production-ready products founders can confidently take forward — to investors, to market, or to their own engineering team.
-        </p>
+        </p> */}
         
         {/* Dynamic Prompt Section */}
         <div className={styles.promptContainer}>

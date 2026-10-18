@@ -73,6 +73,7 @@
 
 // Prompt Container
 .promptContainer {
+  display: none;
   margin-bottom: $spacing-xl;
   animation: fadeIn 1s ease-out 0.8s both;
 }

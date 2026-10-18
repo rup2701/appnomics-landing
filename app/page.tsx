@@ -15,6 +15,7 @@ import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/Navbar';
 import WhyAppnomicsSection from '@/components/sections/WhyUs';
 import WhoThisIsFor from '@/components/sections/WhoIsThisFor';
+import HeroPrompt from '@/components/HeroPrompt';
 
 
 
@@ -40,8 +41,9 @@ export default function Home() {
   <>
     <Navbar />
     <main className="min-h-screen bg-[#f5f5f5] text-[#171717] font-sans flex flex-col">
-      <DynamicHero />
+      {/* <DynamicHero /> */}
       
+      <HeroPrompt />
       <div className="flex-grow flex flex-col justify-center px-6 py-6 md:py-8 w-full">  
         {/* 
           FIX 3: Ensure each internal section component uses 'w-full max-w-[1220px] mx-auto'
