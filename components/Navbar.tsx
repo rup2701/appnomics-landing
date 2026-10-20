@@ -37,13 +37,13 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 overflow-x-clip transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 overflow-x-clip transition-all  duration-300 ${
         isScrolled
           ? "bg-[#f5f5f5]/95 backdrop-blur-md border-b border-[#d8d8d8]"
           : "bg-transparent"
       }`}
     >
-      <div className="w-full max-w-[100vw] mx-auto px-4 sm:px-6 md:px-10 h-16 flex items-center justify-between">
+      <div className="w-full mx-auto max-w-[1240px] mx-auto px-4 sm:px-6 md:px-10 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
@@ -56,9 +56,10 @@ export default function Navbar() {
           <Image
             src="/appnomics-logo.svg"
             alt="Appnomics"
-            height={42}
+            height={36}
             width={102}
-            className="h-5 w-auto"
+            className="h-4
+             w-auto"
           />
           <span className="text-[10px] text-[#087a50] font-mono font-bold tracking-[0.12em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             / STUDIO

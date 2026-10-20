@@ -5,13 +5,13 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-[#ebebeb] pt-16 pb-4 text-[#0a0a0a]">
-      <div className="max-w-[1340px] mx-auto px-6 md:px-10">
+      <div className="max-w-[1240px] mx-auto px-6 md:px-10">
         {/* Logo + Tagline Row */}
         <div className="pb-6 border-b border-[#c6c6c6]">
           <Image
             src="/appnomics-logo.svg"
             alt="Appnomics"
-            className="h-6 w-auto mt-1"
+            className="h-5 w-auto mt-1"
             height={32}
             width={132}
           />
