@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 /**
  * Appnomics hero + three-tab prompt area.
@@ -188,9 +189,9 @@ function PlantsArt() {
 type Template = { id: string; label: string; caption: string; text: string; art: ReactNode; image?: string };
 
 const TEMPLATES: Template[] = [
-  { id: "fernhollow", label: "Fernhollow", caption: "Handmade goods", text: "A handmade ceramics store with mugs, bowls and custom engraving", art: <CeramicsArt /> },
-  { id: "boutique", label: "Boutique", caption: "Coming next", text: "A boutique clothing shop with seasonal drops and local pickup", art: <BoutiqueArt /> },
-  { id: "plants", label: "Plant shop", caption: "Coming next", text: "A plant shop selling houseplants, pots and care kits", art: <PlantsArt /> },
+  { id: "fernhollow", label: "Fernhollow", caption: "Handmade goods", text: "A handmade ceramics store with mugs, bowls and custom engraving", image: "/images/fernhollow-store-template.png", art: <CeramicsArt /> },
+  { id: "boutique", label: "Boutique", caption: "Coming next", text: "A boutique clothing shop with seasonal drops and local pickup", image: "/images/adler-template.png", art: <BoutiqueArt /> },
+  { id: "art", label: "Studio Avant", caption: "Art and portfolio", text: "A portfolio and shop for a painter", image: "/images/avant-store-template.png", art: <PlantsArt /> },
 ];
 
 /* ---------- Small pieces ---------- */
@@ -400,7 +401,7 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
         </div>
 
         {isBuilder ? (
-          <ul data-testid="templates" className="mx-auto mt-4 grid max-w-2xl grid-cols-3 gap-2 sm:gap-4">
+          <ul data-testid="templates" className="mx-auto mt-4 grid max-w-6xl grid-cols-3 gap-2 sm:gap-4">
             {TEMPLATES.map((t) => {
               const selected = template === t.id;
               return (
@@ -419,7 +420,15 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
                         selected ? "border-foreground" : "border-foreground/10 group-hover:border-foreground/40"
                       }`}
                     >
-                      {t.image ? <img src={t.image} alt="" className="h-full w-full object-cover" loading="lazy" /> : t.art}
+                      {t.image ?
+                        <Image
+                          className="h-full w-full object-cover"
+                          src={t.image}
+                          alt=""
+                          height={400}
+                          width={400}
+                        /> :
+                        t.art}
                     </span>
                     <span className="mt-2 block truncate text-sm text-foreground">{t.label}</span>
                     <span className="block truncate text-xs text-foreground/50">{t.caption}</span>
