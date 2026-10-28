@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 /**
  * Appnomics hero + three-tab prompt area.
@@ -186,12 +187,12 @@ function PlantsArt() {
   );
 }
 
-type Template = { id: string; label: string; caption: string; text: string; art: ReactNode; image?: string };
+type Template = { id: string; label: string; caption: string; text: string; art: ReactNode; image?: string, demoUrl?: string };
 
 const TEMPLATES: Template[] = [
-  { id: "fernhollow", label: "Fernhollow", caption: "Handmade goods", text: "A handmade ceramics store with mugs, bowls and custom engraving", image: "/images/fernhollow-store-template.png", art: <CeramicsArt /> },
-  { id: "boutique", label: "Boutique", caption: "Coming next", text: "A boutique clothing shop with seasonal drops and local pickup", image: "/images/adler-template.png", art: <BoutiqueArt /> },
-  { id: "art", label: "Studio Avant", caption: "Art and portfolio", text: "A portfolio and shop for a painter", image: "/images/avant-store-template.png", art: <PlantsArt /> },
+  { id: "fernhollow", label: "Fernhollow", caption: "Handmade goods", text: "A handmade ceramics store with mugs, bowls and custom engraving", image: "/images/fernhollow-store-template.png", art: <CeramicsArt />, demoUrl: "https://fernhollow.store" },
+  { id: "boutique", label: "Alder & Vale", caption: "Designer fashion", text: "A boutique clothing shop with seasonal drops and local pickup", image: "/images/alder-template.png", art: <BoutiqueArt />, demoUrl: "https://aldervale.appnomics.live"},
+  { id: "art", label: "Studio Avant", caption: "Art and portfolio", text: "A portfolio and shop for a painter", image: "/images/avant-store-template.png", art: <PlantsArt />, demoUrl: "https://studioavant.appnomics.live" },
 ];
 
 /* ---------- Small pieces ---------- */
@@ -432,6 +433,15 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
                     </span>
                     <span className="mt-2 block truncate text-sm text-foreground">{t.label}</span>
                     <span className="block truncate text-xs text-foreground/50">{t.caption}</span>
+                    <a
+                      href={t.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="underline-offset-4 hover:underline text-xs"
+                    >
+                      {t.label} ↗
+                    </a>
                   </button>
                 </li>
               );
