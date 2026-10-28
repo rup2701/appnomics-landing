@@ -191,7 +191,7 @@ type Template = { id: string; label: string; caption: string; text: string; art:
 
 const TEMPLATES: Template[] = [
   { id: "fernhollow", label: "Fernhollow", caption: "Handmade goods", text: "A handmade ceramics store with mugs, bowls and custom engraving", image: "/images/fernhollow-store-template.png", art: <CeramicsArt />, demoUrl: "https://fernhollow.store" },
-  { id: "boutique", label: "Alder & Vale", caption: "Designer fashion", text: "A boutique clothing shop with seasonal drops and local pickup", image: "/images/alder-template.png", art: <BoutiqueArt />, demoUrl: "https://aldervale.appnomics.live"},
+  { id: "boutique", label: "Alder & Vale", caption: "Designer fashion", text: "A boutique clothing shop with seasonal drops and local pickup", image: "/images/aldervale-template.png", art: <BoutiqueArt />, demoUrl: "https://aldervale.appnomics.live"},
   { id: "art", label: "Studio Avant", caption: "Art and portfolio", text: "A portfolio and shop for a painter", image: "/images/avant-store-template.png", art: <PlantsArt />, demoUrl: "https://studioavant.appnomics.live" },
 ];
 
