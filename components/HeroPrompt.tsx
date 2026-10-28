@@ -431,8 +431,8 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
                         /> :
                         t.art}
                     </span>
-                    <span className="mt-2 block truncate text-sm text-foreground">{t.label}</span>
-                    <span className="block truncate text-xs text-foreground/50">{t.caption}</span>
+                    <span className="mt-4 block truncate text-sm text-foreground">{t.caption}</span>
+                    {/* <span className="block truncate text-sm text-foreground/50">{t.caption}</span> */}
                     <a
                       href={t.demoUrl}
                       target="_blank"
