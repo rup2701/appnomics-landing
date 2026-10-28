@@ -1,12 +1,11 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 
 /**
  * Appnomics hero + three-tab prompt area.
  *
  * Tabs say what you want from us (Builder, Startup, MVP). Pills say what kind of
- * product. Only Builder + Online store is live today; everything else renders
+ * product. Builder + Online store and Website are live; everything else renders
  * disabled, and the Startup and MVP tabs send visitors to the contact page.
  *
  * Builder shows three store templates as picture cards. Each card draws its own
@@ -75,7 +74,7 @@ const PILL_ORDER: Record<TabId, PillId[]> = {
 };
 
 /** Pills that actually work, per tab. Everything else is disabled. */
-const LIVE: Record<TabId, PillId[]> = { builder: ["store"], startup: [], mvp: [] };
+const LIVE: Record<TabId, PillId[]> = { builder: ["store", "website"], startup: [], mvp: [] };
 
 const STORE_PLACEHOLDER = "Describe the store you want to launch, like a handmade ceramics shop…";
 
@@ -195,6 +194,32 @@ const TEMPLATES: Template[] = [
   { id: "art", label: "Studio Avant", caption: "Art and portfolio", text: "A portfolio and shop for a painter", image: "/images/avant-store-template.png", art: <PlantsArt />, demoUrl: "https://studioavant.appnomics.live" },
 ];
 
+const WEBSITE_TEMPLATES: Template[] = [
+  {
+    id: "website-mvp",
+    label: "Ksandra",
+    caption: "MVP",
+    demoUrl: "https://ksandra-ai.netlify.app/",
+    text: "A website for my MVP with a product overview, features, pricing and a signup form",
+    art: <div className="flex h-full flex-col justify-center gap-3 bg-emerald-50 p-5 text-emerald-950 sm:p-8"><span className="text-[10px] font-mono">YOUR PRODUCT</span><span className="text-lg leading-tight sm:text-2xl">An idea.<br />A first launch.</span><span className="h-2 w-3/4 bg-emerald-900/15" /><span className="h-6 w-1/2 rounded bg-emerald-800" /></div>,
+  },
+  {
+    id: "website-portfolio",
+    label: "Studio Avant",
+    caption: "Portfolio",
+    demoUrl: "https://studioavant.appnomics.live/",
+    text: "A personal portfolio website with selected projects, an about section and a contact form",
+    art: <div className="flex h-full flex-col justify-center gap-3 bg-sky-50 p-5 text-sky-950 sm:p-8"><span className="text-[10px] font-mono">SELECTED WORK</span><span className="text-lg leading-tight sm:text-2xl">Made with<br />purpose.</span><div className="grid grid-cols-2 gap-2"><span className="h-10 bg-sky-200" /><span className="h-10 bg-rose-200" /></div></div>,
+  },
+  {
+    id: "website-resume",
+    label: "Resume",
+    caption: "Resume",
+    text: "A professional resume website with my experience, skills, education and contact details",
+    art: <div className="flex h-full flex-col justify-center gap-3 bg-neutral-100 p-5 text-neutral-900 sm:p-8"><span className="text-[10px] font-mono">YOUR NAME</span><span className="text-lg leading-tight sm:text-2xl">Experience<br />that matters.</span><span className="h-2 w-full bg-neutral-300" /><span className="h-2 w-3/4 bg-neutral-300" /><span className="h-2 w-1/2 bg-neutral-300" /></div>,
+  },
+];
+
 /* ---------- Small pieces ---------- */
 
 function Icon({ children, className = "h-6 w-6" }: { children: ReactNode; className?: string }) {
@@ -224,9 +249,11 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
   const live = LIVE[tab];
   const isBuilder = tab === "builder";
   const storeSelected = isBuilder && pill === "store";
+  const websiteSelected = isBuilder && pill === "website";
+  const templates = websiteSelected ? WEBSITE_TEMPLATES : TEMPLATES;
 
   const shown = Array.from({ length: EXAMPLES_SHOWN }, (_, i) => FOUNDER_EXAMPLES[(round * EXAMPLES_SHOWN + i) % FOUNDER_EXAMPLES.length]);
-  const placeholder = storeSelected ? STORE_PLACEHOLDER : current.placeholder;
+  const placeholder = storeSelected ? STORE_PLACEHOLDER : websiteSelected ? "Describe the website you want to launch…" : current.placeholder;
 
   function selectTab(next: TabId, focus = false) {
     setTab(next);
@@ -252,6 +279,7 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
   function togglePill(id: PillId) {
     if (!live.includes(id)) return;
     setPill((p) => (p === id ? null : id));
+    setTemplate(null);
     setStatus("");
   }
 
@@ -269,7 +297,7 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
       return;
     }
     onSubmit?.({ tab, pill, text: value });
-    setStatus("Thanks. Store setup is opening soon.");
+    setStatus(websiteSelected ? "Thanks. Website setup is opening soon." : "Thanks. Store setup is opening soon.");
   }
 
   const contactLink = `${contactHref}${contactHref.includes("?") ? "&" : "?"}idea=${encodeURIComponent(text.trim())}`;
@@ -403,7 +431,7 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
 
         {isBuilder ? (
           <ul data-testid="templates" className="mx-auto mt-4 grid max-w-6xl grid-cols-3 gap-2 sm:gap-4">
-            {TEMPLATES.map((t) => {
+            {templates.map((t) => {
               const selected = template === t.id;
               return (
                 <li key={t.id} className="min-w-0">
@@ -433,16 +461,18 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
                     </span>
                     <span className="mt-4 block truncate text-sm text-foreground">{t.caption}</span>
                     {/* <span className="block truncate text-sm text-foreground/50">{t.caption}</span> */}
+                  </button>
+                  {t.demoUrl && (
                     <a
                       href={t.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="underline-offset-4 hover:underline text-xs"
+                      className="block text-left underline-offset-4 hover:underline text-xs"
                     >
                       {t.label} ↗
                     </a>
-                  </button>
+                  )}
                 </li>
               );
             })}
