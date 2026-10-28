@@ -213,8 +213,8 @@ const WEBSITE_TEMPLATES: Template[] = [
   },
   {
     id: "website-resume",
-    label: "Resume",
-    caption: "Resume",
+    label: "Resume / Personal site",
+    caption: "Resume / Personal site",
     text: "A professional resume website with my experience, skills, education and contact details",
     art: <div className="flex h-full flex-col justify-center gap-3 bg-neutral-100 p-5 text-neutral-900 sm:p-8"><span className="text-[10px] font-mono">YOUR NAME</span><span className="text-lg leading-tight sm:text-2xl">Experience<br />that matters.</span><span className="h-2 w-full bg-neutral-300" /><span className="h-2 w-3/4 bg-neutral-300" /><span className="h-2 w-1/2 bg-neutral-300" /></div>,
   },
