@@ -199,7 +199,7 @@ const WEBSITE_TEMPLATES: Template[] = [
     id: "website-mvp",
     label: "Ksandra",
     caption: "MVP",
-    demoUrl: "https://ksandra-ai.netlify.app/",
+    demoUrl: "https://ksandra.appnomics.live/",
     text: "A website for my MVP with a product overview, features, pricing and a signup form",
     art: <div className="flex h-full flex-col justify-center gap-3 bg-emerald-50 p-5 text-emerald-950 sm:p-8"><span className="text-[10px] font-mono">YOUR PRODUCT</span><span className="text-lg leading-tight sm:text-2xl">An idea.<br />A first launch.</span><span className="h-2 w-3/4 bg-emerald-900/15" /><span className="h-6 w-1/2 rounded bg-emerald-800" /></div>,
   },
