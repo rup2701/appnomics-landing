@@ -186,7 +186,7 @@ function PlantsArt() {
   );
 }
 
-type Template = { id: string; label: string | string[]; caption: string; text: string; art: ReactNode; image?: string, demoUrl?: string | string[] };
+type Template = { id: string; label: string | string[]; caption: string; text: string; art: ReactNode; image?: string, demoUrl?: string | string[] | null };
 
 const TEMPLATES: Template[] = [
   { id: "fernhollow", label: "Fernhollow", caption: "Handmade goods", text: "A handmade ceramics store with mugs, bowls and custom engraving", image: "/images/fernhollow-store-template.png", art: <CeramicsArt />, demoUrl: "https://fernhollow.store" },
@@ -197,8 +197,8 @@ const TEMPLATES: Template[] = [
 const WEBSITE_TEMPLATES: Template[] = [
   {
     id: "website-mvp",
-    label: ["Ksandra", "Dispatch"],
-    caption: "MVP",
+    label: ["Ksandra", "DispatchOS"],
+    caption: "Waitlist site",
     demoUrl: ["https://ksandra.appnomics.live/", "https://dispatchos-demo.appnomics.live"],
     text: "A website for my MVP with a product overview, features, pricing and a signup form",
     art: <div className="flex h-full flex-col justify-center gap-3 bg-emerald-50 p-5 text-emerald-950 sm:p-8"><span className="text-[10px] font-mono">YOUR PRODUCT</span><span className="text-lg leading-tight sm:text-2xl">An idea.<br />A first launch.</span><span className="h-2 w-3/4 bg-emerald-900/15" /><span className="h-6 w-1/2 rounded bg-emerald-800" /></div>,
@@ -206,8 +206,8 @@ const WEBSITE_TEMPLATES: Template[] = [
   {
     id: "website-portfolio",
     label: "Studio Avant",
-    caption: "Portfolio",
-    demoUrl: "https://studioavant.appnomics.live/",
+    caption: "Portfolio site",
+    demoUrl: null,
     text: "A personal portfolio website with selected projects, an about section and a contact form",
     art: <div className="flex h-full flex-col justify-center gap-3 bg-sky-50 p-5 text-sky-950 sm:p-8"><span className="text-[10px] font-mono">SELECTED WORK</span><span className="text-lg leading-tight sm:text-2xl">Made with<br />purpose.</span><div className="grid grid-cols-2 gap-2"><span className="h-10 bg-sky-200" /><span className="h-10 bg-rose-200" /></div></div>,
   },
@@ -215,6 +215,7 @@ const WEBSITE_TEMPLATES: Template[] = [
     id: "website-resume",
     label: "Resume / Personal site",
     caption: "Resume / Personal site",
+    demoUrl: null,
     text: "A professional resume website with my experience, skills, education and contact details",
     art: <div className="flex h-full flex-col justify-center gap-3 bg-neutral-100 p-5 text-neutral-900 sm:p-8"><span className="text-[10px] font-mono">YOUR NAME</span><span className="text-lg leading-tight sm:text-2xl">Experience<br />that matters.</span><span className="h-2 w-full bg-neutral-300" /><span className="h-2 w-3/4 bg-neutral-300" /><span className="h-2 w-1/2 bg-neutral-300" /></div>,
   },
@@ -459,21 +460,25 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
                         /> :
                         t.art}
                     </span>
-                    <span className="mt-4 block truncate text-sm text-foreground">{t.caption}</span>
+                    <span className="mt-4 block truncate pl-2 text-sm text-foreground">{t.caption}</span>
                     {/* <span className="block truncate text-sm text-foreground/50">{t.caption}</span> */}
                   </button>
-                  {(Array.isArray(t.demoUrl) ? t.demoUrl : t.demoUrl ? [t.demoUrl] : []).map((demoUrl, index) => (
-                    <a
-                      key={demoUrl}
-                      href={demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="block text-left underline-offset-4 hover:underline text-xs"
-                    >
-                      {(Array.isArray(t.label) ? t.label[index] : t.label) ?? t.caption} ↗
-                    </a>
-                  ))}
+                  {t.demoUrl === null ? (
+                    <span className="block pl-2 text-left text-xs text-foreground/50">Coming soon</span>
+                  ) : (
+                    (Array.isArray(t.demoUrl) ? t.demoUrl : t.demoUrl ? [t.demoUrl] : []).map((demoUrl, index) => (
+                      <a
+                        key={demoUrl}
+                        href={demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="block pl-2 text-left underline-offset-4 hover:underline text-xs"
+                      >
+                        {(Array.isArray(t.label) ? t.label[index] : t.label) ?? t.caption} ↗
+                      </a>
+                    ))
+                  )}
                 </li>
               );
             })}
