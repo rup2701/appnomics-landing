@@ -22,8 +22,8 @@ import Image from "next/image";
 import { useId, useRef, useState } from "react";
 import type { KeyboardEvent, ReactNode } from "react";
 
-export type TabId = "builder" | "startup" | "mvp";
-export type PillId = "store" | "mobile" | "website" | "saas" | "gig" | "sports" | "telehealth";
+export type TabId = "builder"  | "mvp" | "startup";
+export type PillId = "website" | "store" | "mobile" | "saas" | "gig" | "sports" | "telehealth";
 export type HeroBrief = { tab: TabId; pill: PillId | null; text: string };
 
 type Props = {
@@ -43,24 +43,25 @@ const TABS: { id: TabId; label: string; helper: string; placeholder: string }[] 
     helper: "Describe it and our agents build it, starting from a tested foundation.",
     placeholder: "Describe what you want to launch…",
   },
-  {
-    id: "startup",
-    label: "Startup",
-    helper: "From first idea to something investors take seriously. Built with you.",
-    placeholder: "Tell us about your startup idea…",
-  },
-  {
+   {
     id: "mvp",
     label: "MVP",
     helper: "A focused first version you can put in front of real users.",
     placeholder: "What should your first version do…",
   },
+  {
+    id: "startup",
+    label: "Startup",
+    helper: "From first idea to something investors take seriously. Built with you.",
+    placeholder: "Tell us about your startup idea…",
+  }
+ 
 ];
 
 const PILLS: Record<PillId, { label: string; icon: ReactNode }> = {
+  website: { label: "Website", icon: <><rect x="3" y="4.5" width="18" height="15" rx="2.5" /><path d="M3 9h18" /></> },
   store: { label: "Online store", icon: <path d="M4 9l1.5-5h13L20 9M4 9v1a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0V9M5 12v8h14v-8M10 20v-5h4v5" /> },
   mobile: { label: "Mobile app", icon: <><rect x="7" y="2.5" width="10" height="19" rx="2.5" /><path d="M11 18.5h2" /></> },
-  website: { label: "Website", icon: <><rect x="3" y="4.5" width="18" height="15" rx="2.5" /><path d="M3 9h18" /></> },
   saas: { label: "SaaS", icon: <path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5" /> },
   gig: { label: "Gig app", icon: <><rect x="3" y="7.5" width="18" height="12" rx="2" /><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5M3 13h18" /></> },
   sports: { label: "Sports app", icon: <path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M10 17h4M8.5 20h7" /> },
@@ -68,13 +69,13 @@ const PILLS: Record<PillId, { label: string; icon: ReactNode }> = {
 };
 
 const PILL_ORDER: Record<TabId, PillId[]> = {
-  builder: ["store", "mobile", "website", "saas", "gig", "sports", "telehealth"],
-  startup: ["mobile", "saas", "telehealth", "sports", "gig", "store", "website"],
+  builder: ["website", "store", "mobile", "saas", "gig", "sports", "telehealth"],
   mvp: ["mobile", "saas", "telehealth", "sports", "gig", "store", "website"],
+  startup: ["mobile", "saas", "telehealth", "sports", "gig", "store", "website"],
 };
 
 /** Pills that actually work, per tab. Everything else is disabled. */
-const LIVE: Record<TabId, PillId[]> = { builder: ["store", "website"], startup: [], mvp: [] };
+const LIVE: Record<TabId, PillId[]> = { builder: ["website", "store"], startup: [], mvp: [] };
 
 const STORE_PLACEHOLDER = "Describe the store you want to launch, like a handmade ceramics shop…";
 
@@ -197,10 +198,10 @@ const TEMPLATES: Template[] = [
 const WEBSITE_TEMPLATES: Template[] = [
   {
     id: "website-mvp",
-    label: ["Ksandra", "DispatchOS"],
+    label: ["Ksandra",  "Tidewell Ring", "DispatchOS"],
     caption: "Waitlist site",
-    demoUrl: ["https://ksandra.appnomics.live/", "https://dispatchos-waitlist.appnomics.live"],
-    text: "A website for my MVP with a product overview, features, pricing and a signup form",
+    demoUrl: ["https://ksandra.appnomics.live/","https://tidewell-ring.appnomics.live/", "https://dispatchos-waitlist.appnomics.live", ],
+    text: "A waitlist website for my MVP with a product overview, features, pricing and a signup form",
     art: <div className="flex h-full flex-col justify-center gap-3 bg-emerald-50 p-5 text-emerald-950 sm:p-8"><span className="text-[10px] font-mono">YOUR PRODUCT</span><span className="text-lg leading-tight sm:text-2xl">An idea.<br />A first launch.</span><span className="h-2 w-3/4 bg-emerald-900/15" /><span className="h-6 w-1/2 rounded bg-emerald-800" /></div>,
   },
   {
@@ -238,7 +239,7 @@ const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-
 export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props) {
   const uid = useId();
   const [tab, setTab] = useState<TabId>("builder");
-  const [pill, setPill] = useState<PillId | null>("store");
+  const [pill, setPill] = useState<PillId | null>("website");
   const [text, setText] = useState("");
   const [template, setTemplate] = useState<string | null>(null);
   const [status, setStatus] = useState("");
