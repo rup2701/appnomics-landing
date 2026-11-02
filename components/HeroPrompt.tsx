@@ -201,7 +201,7 @@ const WEBSITE_TEMPLATES: Template[] = [
     label: ["Ksandra",  "Tidewell Ring", "DispatchOS"],
     caption: "Waitlist site",
     demoUrl: ["https://ksandra.appnomics.live/","https://tidewell-ring.appnomics.live/", "https://dispatchos-waitlist.appnomics.live", ],
-    text: "A waitlist website for my MVP with a product overview, features, pricing and a signup form",
+    text: "A waitlist website for ___, with a product overview, features and a signup form.",
     art: <div className="flex h-full flex-col justify-center gap-3 bg-emerald-50 p-5 text-emerald-950 sm:p-8"><span className="text-[10px] font-mono">YOUR PRODUCT</span><span className="text-lg leading-tight sm:text-2xl">An idea.<br />A first launch.</span><span className="h-2 w-3/4 bg-emerald-900/15" /><span className="h-6 w-1/2 rounded bg-emerald-800" /></div>,
   },
   {
@@ -252,6 +252,8 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
   const isBuilder = tab === "builder";
   const storeSelected = isBuilder && pill === "store";
   const websiteSelected = isBuilder && pill === "website";
+  const isWaitlistTemplate = websiteSelected && template === "website-mvp";
+  const waitlistIdeaValid = text.trim().length >= 15 && text.length <= 1000 && !text.includes("___");
   const templates = websiteSelected ? WEBSITE_TEMPLATES : TEMPLATES;
 
   const shown = Array.from({ length: EXAMPLES_SHOWN }, (_, i) => FOUNDER_EXAMPLES[(round * EXAMPLES_SHOWN + i) % FOUNDER_EXAMPLES.length]);
@@ -293,6 +295,20 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
 
   function submit() {
     const value = text.trim();
+    if (isWaitlistTemplate) {
+      if (!waitlistIdeaValid) {
+        setStatus("Replace the blank with at least 15 characters.");
+        boxRef.current?.focus();
+        return;
+      }
+
+      const builderUrl = new URL("https://builder.appnomics.dev/");
+      builderUrl.searchParams.set("kind", "site");
+      builderUrl.searchParams.set("idea", value);
+      window.location.assign(builderUrl.toString());
+      return;
+    }
+
     if (!value) {
       setStatus("Add a sentence about your idea first.");
       boxRef.current?.focus();
@@ -350,6 +366,7 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
             ref={boxRef}
             value={text}
             rows={2}
+            maxLength={isWaitlistTemplate ? 1000 : undefined}
             placeholder={placeholder}
             onChange={(e) => {
               setText(e.target.value);
@@ -363,12 +380,22 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
             }}
             className="field-sizing-content block max-h-64 min-h-[4.5rem] w-full resize-none bg-transparent text-xl leading-snug text-foreground outline-none placeholder:text-foreground/35 sm:text-2xl"
           />
+          {isWaitlistTemplate && (
+            <p className="mt-2 text-right text-xs text-foreground/50">
+              {text.length}/1,000 characters · minimum 15
+            </p>
+          )}
           <div className="mt-4 flex items-center justify-between gap-4">
             <p role="status" aria-live="polite" className="min-h-5 text-sm text-foreground/60">
               {status}
             </p>
             {isBuilder ? (
-              <button type="button" onClick={submit} className={buttonClass}>
+              <button
+                type="button"
+                onClick={submit}
+                disabled={isWaitlistTemplate && !waitlistIdeaValid}
+                className={`${buttonClass} disabled:cursor-not-allowed disabled:opacity-40`}
+              >
                 Let’s go <span aria-hidden="true">&nbsp;→</span>
               </button>
             ) : (
