@@ -13,7 +13,7 @@ import StudioOSSection from '@/components/sections/StudioOSSection';
 import FAQSection from '@/components/sections/FAQSection';
 import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/Navbar';
-import WhyAppnomicsSection from '@/components/sections/WhyUs';
+import ProductProofSection from '@/components/sections/ProductProofSection';
 import WhoThisIsFor from '@/components/sections/WhoIsThisFor';
 import HeroPrompt from '@/components/HeroPrompt';
 import type { TabId } from '@/components/HeroPrompt';
@@ -56,7 +56,7 @@ export default function Home() {
           <WhoThisIsFor />   
           <ProcessSection />
           <StudioOSSection />
-          <WhyAppnomicsSection />
+          <ProductProofSection />
           <PortfolioSection />
           <FAQSection />
           <CTASection />
