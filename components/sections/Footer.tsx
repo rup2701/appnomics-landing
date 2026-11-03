@@ -26,7 +26,7 @@ export default function Footer() {
             <h4 className="text-[14px] text-[#171717] font-sans font-medium mb-4">
               Core
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1">
               {[
                 { label: "Overview", href: "#" },
                 { label: "The 6-Week Epic", href: "/#process" },
@@ -37,7 +37,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[13px] text-[#676767] font-sans hover:text-[#087a50] transition-colors no-underline"
+                    className="text-[13px] text-[#555] font-sans hover:text-[#087a50] transition-colors no-underline"
                   >
                     {item.label}
                   </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
             <h4 className="text-[14px] text-[#171717] font-sans font-medium mb-4">
               Solutions
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1">
               {[
                 { label: "MVP from Idea", href: "#" },
                 { label: "No-Code to Production", href: "#" },
@@ -62,7 +62,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[13px] text-[#676767] font-sans hover:text-[#087a50] transition-colors no-underline"
+                    className="text-[13px] text-[#555] font-sans hover:text-[#087a50] transition-colors no-underline"
                   >
                     {item.label}
                   </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
             <h4 className="text-[14px] text-[#171717] font-sans font-medium mb-4">
               Resources
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1">
               {[
                 { label: "Templates", href: "#" },
                 { label: "Gallery", href: "#" },
@@ -88,7 +88,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[13px] text-[#676767] font-sans hover:text-[#087a50] transition-colors no-underline"
+                    className="text-[13px] text-[#555] font-sans hover:text-[#087a50] transition-colors no-underline"
                   >
                     {item.label}
                   </Link>
@@ -102,7 +102,7 @@ export default function Footer() {
             <h4 className="text-[14px] text-[#171717] font-sans font-medium mb-4">
               Company
             </h4>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1">
               {[
                 { label: "About", href: "#" },
                 { label: "Support", href: "#" },
@@ -113,7 +113,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-[13px] text-[#676767] font-sans hover:text-[#087a50] transition-colors no-underline"
+                    className="text-[13px] text-[#555] font-sans hover:text-[#087a50] transition-colors no-underline"
                   >
                     {item.label}
                   </Link>
