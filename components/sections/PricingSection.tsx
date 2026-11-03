@@ -1,7 +1,6 @@
 // ── Pricing Section ────────────────────────────────────────────────────────
 
 import { useState } from "react";
-import SectionLabel from "../SectionLabel";
 import CheckLine from "../CheckLine";
 import type { TabId } from "../HeroPrompt";
 
@@ -44,7 +43,6 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
   return (
     <section id='pricing' className="py-24">
       <div className="max-w-7xl mx-auto block">
-        <SectionLabel centerAlign={true}>{"// PRICING"}</SectionLabel>
         <h2
           className="text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans text-center"
         >

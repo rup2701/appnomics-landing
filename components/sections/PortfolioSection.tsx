@@ -1,5 +1,4 @@
 import { useState } from "react";
-import SectionLabel from "../SectionLabel";
 import Link from "next/link";
 
 // ── Portfolio data ─────────────────────────────────────────────────────────
@@ -76,7 +75,6 @@ export default function PortfolioSection() {
   return (
     <section id='portfolio' className="py-24">
       <div className="max-w-[1100px] mx-auto">
-        <SectionLabel>// PORTFOLIO</SectionLabel>
         <h2 className="text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans">
           Built. Shipped. Handed over.
         </h2>
