@@ -31,7 +31,7 @@ export default function Footer() {
                 { label: "Overview", href: "#" },
                 { label: "The 6-Week Epic", href: "/#process" },
                 { label: "Pricing", href: "/#pricing" },
-                { label: "Studio OS", href: "/#studio" },
+                { label: "Appnomics Cloud", href: "/#studio" },
                 { label: "Book a Discovery Call", href: "/#intake" },
               ].map((item) => (
                 <li key={item.label}>
