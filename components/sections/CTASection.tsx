@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 
 export default function CTASection() {
   const [hovered, setHovered] = useState(false);
@@ -26,8 +27,8 @@ export default function CTASection() {
           Start with your idea. Get your 6-week epic breakdown in 24 hours — zero risk, zero lock-in.
         </p>
 
-        <a
-          href="#hero-prompt"
+        <Link
+          href="https://builder.appnomics.dev"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           className="inline-block px-12 py-3 border border-[#087a50] rounded-[2px] text-[15px] font-bold tracking-[0.15em] font-sans no-underline transition-all duration-150 mb-5"
@@ -38,7 +39,7 @@ export default function CTASection() {
           }}
         >
           START BUILDING →
-        </a>
+        </Link>
 
         <p className="text-[11px] text-[#666] font-sans">
           No credit card required · Free to start

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import CheckLine from "../CheckLine";
 import type { TabId } from "../HeroPrompt";
+import Link from "next/link";
 
 // ── Pricing ────────────────────────────────────────────────────────────────
 const BUILD_FEATURES = [
@@ -26,10 +27,12 @@ const BUILD_RUN_FEATURES = [
 ];
 
 const BUILDER_FEATURES = [
-  "AI-powered builds",
-  "Included usage credits",
-  "Create and iterate",
-  "Deploy your projects",
+  "2 site builds per month",
+  "Live site in about 45 minutes",
+  "Chat with Scout to shape your site",
+  "Published and hosted for you",
+  "Owner sign-in and a launch checklist",
+  "Email support",
 ];
 
 export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: TabId) => void }) {
@@ -94,13 +97,9 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
               ))}
             </div>
 
-            <a
-              href="#hero-prompt"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                choosePlan("builder");
-              }}
+            <Link
+              href="https://builder.appnomics.dev"
+˝
               className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "builder"
                   ? "border-[#087a5044] text-[#087a50] bg-[#087a500d]"
@@ -108,7 +107,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
               }`}
             >
               START BUILDING →
-            </a>
+            </Link>
           </div>
 
           {/* Build Only */}

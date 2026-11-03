@@ -87,7 +87,7 @@ export default function Navbar() {
               color: hovered ? "#171717" : "#fff",
               boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
             }}>
-            <Link href="mailto:rupesh@appnomics.dev" className="text-xs font-mono uppercase ">
+            <Link href="https://builder.appnomics.dev" className="text-xs font-mono uppercase ">
               Start Building
             </Link>
           </button>
