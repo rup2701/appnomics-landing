@@ -99,7 +99,6 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
 
             <Link
               href="https://builder.appnomics.dev"
-˝
               className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "builder"
                   ? "border-[#087a5044] text-[#087a50] bg-[#087a500d]"
