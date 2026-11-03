@@ -4,12 +4,9 @@ import Link from "next/link";
 
 // ── Navigation ─────────────────────────────────────────────────────────────
 const NAV_ITEMS = [
-  { label: "Process", href: "#process" },
-  { label: "Studio OS", href: "#studio" },
-  // { label: "Why Us", href: "#why-appnomics" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Projects", href: "#portfolio" },
-  // { label: "FAQ", href: "#faq" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Appnomics Cloud", href: "/#studio" },
+  { label: "Projects", href: "/#portfolio" },
 ];
 
 export default function Navbar() {
@@ -26,13 +23,14 @@ export default function Navbar() {
   }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const target = document.querySelector(href);
+    setIsMobileMenuOpen(false);
+    if (window.location.pathname !== "/" || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const target = document.querySelector(href.slice(1));
     if (target) {
+      e.preventDefault();
       const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80;
       window.scrollTo({ top: offsetTop, behavior: "smooth" });
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -69,28 +67,28 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
               className="text-[13px] text-[#333] font-medium font-sans hover:text-[#087a50] transition-colors duration-200 no-underline"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-           <button
+          <Link
+            href="/#hero-prompt"
+            onClick={(e) => handleNavClick(e, "/#hero-prompt")}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="text-sm text-[#fff] hover:text-[#ebebeb] border border-[#087a50] font-bold rounded-[2px] hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
+            className="text-xs font-mono uppercase no-underline text-[#fff] hover:text-[#ebebeb] border border-[#087a50] font-bold rounded-[2px] hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
             style={{
               background: hovered ? "#ebebeb" : "black",
               color: hovered ? "#171717" : "#fff",
               boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
             }}>
-            <Link href="https://builder.appnomics.dev" className="text-xs font-mono uppercase ">
-              Start Building
-            </Link>
-          </button>
+            Start Building
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -125,28 +123,28 @@ export default function Navbar() {
       >
         <div className="bg-[#f5f5f5] border-t border-[#d8d8d8] px-4 sm:px-6 md:px-10 py-6 flex flex-col gap-4">
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
               className="text-[13px] text-[#444] font-sans hover:text-[#087a50] transition-colors duration-200 no-underline py-1"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-            <button
+          <Link
+            href="https://builder.appnomics.dev"
+            onClick={() => setIsMobileMenuOpen(false)}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="text-sm text-[#087a50] hover:text-[#171717] border border-[#087a50] font-bold rounded-[2px] hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
+            className="text-sm text-center no-underline text-[#087a50] hover:text-[#171717] border border-[#087a50] font-bold rounded-[2px] hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
             style={{
               background: hovered ? "#00ff9d" : "transparent",
               color: hovered ? "#171717" : "#087a50",
               boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
             }}>
-            <Link href="mailto:rupesh@appnomics.dev">
-              Get Started
-            </Link>
-          </button>
+            Start Building
+          </Link>
         </div>
       </div>
     </nav>
