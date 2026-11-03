@@ -124,15 +124,15 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
           >
             <div className="flex items-start justify-between mb-6">
               <div>
+                <span className="inline-block text-[10px] tracking-[0.12em] text-[#555] bg-[#dcdcdc] rounded-full py-1 px-2.5 mb-3 font-sans">
+                  ENGINEERING PARTNER
+                </span>
                 <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
                   PLAN 02
                 </p>
                 <h3 className="text-xl font-medium text-[#171717] font-sans text-left">
                   Build Only
                 </h3>
-                <span className="inline-block text-[10px] tracking-[0.08em] text-[#555] bg-[#f0f0f0] rounded-full py-1 px-2.5 mt-2 font-sans">
-                  ENGINEERING PARTNER
-                </span>
               </div>
               <div className="text-right">
                 <p
@@ -189,15 +189,15 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
 
             <div className="flex items-start justify-between mb-6">
               <div>
+                <span className="inline-block text-[10px] tracking-[0.12em] text-[#555] bg-[#dcdcdc] rounded-full py-1 px-2.5 mb-3 font-sans">
+                  CUSTOM
+                </span>
                 <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
                   PLAN 03
                 </p>
                 <h3 className="text-xl font-medium text-[#171717] font-sans">
                   Build + Run
                 </h3>
-                <span className="inline-block text-[10px] tracking-[0.08em] text-[#555] bg-[#f0f0f0] rounded-full py-1 px-2.5 mt-2 font-sans">
-                  ENGINEERING PARTNER
-                </span>
               </div>
               <div className="text-right">
                 <p
