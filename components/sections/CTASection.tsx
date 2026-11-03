@@ -22,7 +22,7 @@ export default function CTASection() {
           // GET STARTED
         </SectionLabel>
 
-        <h2 className="text-[clamp(28px,3.5vw,44px)] font-normal text-[#171717] mb-4 leading-[1.1] font-sans">
+        <h2 className="text-[42px] font-medium tracking-tight text-[#171717] mb-4 leading-[1.1] font-sans">
           Start building today.
         
         </h2>

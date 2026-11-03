@@ -19,10 +19,15 @@ body {
   overflow-x: clip;
 }
 
-h1,
-h2 {
+h1 {
   font-weight: 400;
   letter-spacing: -0.07rem;
+  color: var(--foreground) !important;
+}
+
+h2 {
+  font-weight: 500;
+  letter-spacing: -0.025em;
   color: var(--foreground) !important;
 }
 

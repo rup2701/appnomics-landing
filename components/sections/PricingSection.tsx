@@ -46,7 +46,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
       <div className="max-w-7xl mx-auto block">
         <SectionLabel centerAlign={true}>{"// PRICING"}</SectionLabel>
         <h2
-          className="text-[clamp(30px,4vw,52px)] font-normal text-[#171717] mb-2 leading-[1.15] font-sans text-center" 
+          className="text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans text-center"
         >
           Plans for every way you build.
         </h2>

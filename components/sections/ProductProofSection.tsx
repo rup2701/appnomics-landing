@@ -7,7 +7,7 @@ export default function ProductProofSection() {
         <SectionLabel centerAlign={true}>{"// BUILT FROM EXPERIENCE"}</SectionLabel>
 
         <div className="mb-12 text-center">
-          <h2 className="mb-3 font-sans text-[clamp(30px,4vw,52px)] font-normal leading-[1.15] text-[#171717]">
+          <h2 className="mb-3 font-sans text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
             From business intent to live product.
           </h2>
           <p className="mx-auto max-w-[680px] font-sans text-lg text-[#555]">

@@ -62,7 +62,7 @@ export default function ProcessSection() {
     <section id='process' className="py-24">
       <div className="max-w-[1100px] mx-auto">
         <SectionLabel>// PROCESS</SectionLabel>
-        <h2 className="text-[clamp(30px,4vw,52px)] font-normal text-[#171717] mb-2 leading-[1.15] font-sans">
+        <h2 className="text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans">
           One epic per week.
           <br />
           <span className="text-[#171717]">Guaranteed launch.</span>

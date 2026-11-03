@@ -35,7 +35,7 @@ export default function WhoThisIsFor() {
         <SectionLabel>// WHO THIS IS FOR</SectionLabel>
 
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
-          <h2 className="text-[clamp(30px,4.5vw,52px)] font-normal text-[#171717] leading-[1.1] font-sans">
+          <h2 className="text-[42px] font-medium tracking-tight text-[#171717] leading-[1.1] font-sans">
             Who is this for.
           </h2>
           <p className="text-base md:text-lg text-[#555] font-sans leading-[1.6] max-w-[440px]">

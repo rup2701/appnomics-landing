@@ -40,7 +40,7 @@ export default function FAQSection() {
         {/* <SectionLabel centerAlign={true}>// FAQ</SectionLabel> */}
         
         <div className="text-center">
-          <h2 className="text-[clamp(28px,3.5vw,44px)] font-normal text-[#171717] mb-2 leading-[1.15] font-sans">
+          <h2 className="text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans">
             FAQ
             <br />
             {/* <span className="text-[#6e6e6e]">We&apos;ve got answers.</span> */}
