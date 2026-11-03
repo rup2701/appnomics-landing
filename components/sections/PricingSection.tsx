@@ -3,6 +3,7 @@
 import { useState } from "react";
 import SectionLabel from "../SectionLabel";
 import CheckLine from "../CheckLine";
+import type { TabId } from "../HeroPrompt";
 
 // ── Pricing ────────────────────────────────────────────────────────────────
 const BUILD_FEATURES = [
@@ -25,31 +26,97 @@ const BUILD_RUN_FEATURES = [
   "15% of revenue, no upfront extras",
 ];
 
-export default function PricingSection() {
-  const [selectedPlan, setSelectedPlan] = useState<"build" | "build_run">("build");
+const BUILDER_FEATURES = [
+  "AI-powered builds",
+  "Included usage credits",
+  "Create and iterate",
+  "Deploy your projects",
+];
+
+export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: TabId) => void }) {
+  const [selectedPlan, setSelectedPlan] = useState<"builder" | "build" | "build_run">("build");
+
+  function choosePlan(tab: TabId) {
+    onChoosePlan(tab);
+    document.getElementById("hero-prompt")?.scrollIntoView({ behavior: "smooth" });
+  }
 
   return (
     <section id='pricing' className="py-24">
       <div className="max-w-7xl mx-auto block">
-        <SectionLabel centerAlign={true}>// PRICING</SectionLabel>
+        <SectionLabel centerAlign={true}>{"// PRICING"}</SectionLabel>
         <h2
           className="text-[clamp(30px,4vw,52px)] font-normal text-[#171717] mb-2 leading-[1.15] font-sans text-center" 
         >
-          Transparent pricing.
-          <br />
-          <span className="text-[#555] font-normal">Fixed pricing. No pauses.</span>
+          Plans for every way you build.
         </h2>
         <p className="text-lg text-[#555] mb-14 font-sans text-center">
-          Most apps are 5&mdash;6 epics. 6 weeks to deploy.
+          Build it yourself with Builder, or partner with us to ship and run your product.
         </p>
 
         <div
-          className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[860px] mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 max-w-6xl mx-auto"
         >
+          {/* Builder */}
+          <div
+            onClick={() => setSelectedPlan("builder")}
+            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
+              selectedPlan === "builder"
+                ? "border-[#00ff9d] bg-[#00ff9d08]"
+                : "border-[#d8d8d8] bg-white"
+            }`}
+          >
+            <div className="flex items-start justify-between mb-6">
+              <div>
+                <span className="inline-block text-[10px] tracking-[0.12em] text-[#087a50] bg-[#087a500d] rounded-full py-1 px-2.5 mb-3 font-sans">
+                  SELF-SERVE
+                </span>
+                <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
+                  PLAN 01
+                </p>
+                <h3 className="text-xl font-medium text-[#171717] font-sans text-left">
+                  Builder
+                </h3>
+              </div>
+              <div className="text-right">
+                <p className="text-[28px] font-bold font-sans leading-none text-[#087a50]">
+                  $20
+                </p>
+                <p className="text-[11px] text-[#555] font-sans">per month</p>
+              </div>
+            </div>
+
+            <p className="text-sm text-[#555] mb-6 font-sans">
+              Build websites and applications yourself with AI.
+            </p>
+
+            <div className="mb-6 flex-1">
+              {BUILDER_FEATURES.map((f) => (
+                <CheckLine key={f} text={f} />
+              ))}
+            </div>
+
+            <a
+              href="#hero-prompt"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                choosePlan("builder");
+              }}
+              className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
+                selectedPlan === "builder"
+                  ? "border-[#087a5044] text-[#087a50] bg-[#087a500d]"
+                  : "border-[#bbb] text-[#555] bg-transparent"
+              }`}
+            >
+              START BUILDING →
+            </a>
+          </div>
+
           {/* Build Only */}
           <div
             onClick={() => setSelectedPlan("build")}
-            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
+            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
               selectedPlan === "build"
                 ? "border-[#00ff9d] bg-[#00ff9d08]"
                 : "border-[#d8d8d8] bg-white"
@@ -58,11 +125,14 @@ export default function PricingSection() {
             <div className="flex items-start justify-between mb-6">
               <div>
                 <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
-                  PLAN 01
+                  PLAN 02
                 </p>
                 <h3 className="text-xl font-medium text-[#171717] font-sans text-left">
                   Build Only
                 </h3>
+                <span className="inline-block text-[10px] tracking-[0.08em] text-[#555] bg-[#f0f0f0] rounded-full py-1 px-2.5 mt-2 font-sans">
+                  ENGINEERING PARTNER
+                </span>
               </div>
               <div className="text-right">
                 <p
@@ -80,15 +150,19 @@ export default function PricingSection() {
               </div>
             </div>
 
-            <div className="mb-6 text-[#fff]">
+            <div className="mb-6 flex-1 text-[#fff]">
               {BUILD_FEATURES.map((f) => (
                 <CheckLine key={f} text={f} />
               ))}
             </div>
 
             <a
-              href="#intake"
-              onClick={(e) => e.stopPropagation()}
+              href="#hero-prompt"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                choosePlan("mvp");
+              }}
               className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "build"
                   ? "border-[#087a5044] text-[#087a50] bg-[#087a500d]"
@@ -102,7 +176,7 @@ export default function PricingSection() {
           {/* Build + Run */}
           <div
             onClick={() => setSelectedPlan("build_run")}
-            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative ${
+            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
               selectedPlan === "build_run"
                 ? "border-[#00d4ff44] bg-[#00d4ff08]"
                 : "border-[#d8d8d8] bg-[#ebebeb]"
@@ -116,11 +190,14 @@ export default function PricingSection() {
             <div className="flex items-start justify-between mb-6">
               <div>
                 <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
-                  PLAN 02
+                  PLAN 03
                 </p>
                 <h3 className="text-xl font-medium text-[#171717] font-sans">
                   Build + Run
                 </h3>
+                <span className="inline-block text-[10px] tracking-[0.08em] text-[#555] bg-[#f0f0f0] rounded-full py-1 px-2.5 mt-2 font-sans">
+                  ENGINEERING PARTNER
+                </span>
               </div>
               <div className="text-right">
                 <p
@@ -138,15 +215,19 @@ export default function PricingSection() {
               </div>
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 flex-1">
               {BUILD_RUN_FEATURES.map((f) => (
                 <CheckLine key={f} text={f} />
               ))}
             </div>
 
             <a
-              href="#intake"
-              onClick={(e) => e.stopPropagation()}
+              href="#hero-prompt"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                choosePlan("startup");
+              }}
               className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "build_run"
                   ? "border-[#00698744] text-[#006987] bg-[#0069870d]"

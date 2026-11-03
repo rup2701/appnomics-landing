@@ -32,7 +32,7 @@ export default function CTASection() {
         </p>
 
         <a
-          href="mailto:rupesh@appnomics.dev"
+          href="#hero-prompt"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           className="inline-block px-12 py-3 border border-[#087a50] rounded-[2px] text-[15px] font-bold tracking-[0.15em] font-sans no-underline transition-all duration-150 mb-5"

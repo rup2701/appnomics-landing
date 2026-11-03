@@ -28,6 +28,8 @@ export type HeroBrief = { tab: TabId; pill: PillId | null; text: string };
 
 type Props = {
   onSubmit?: (brief: HeroBrief) => void;
+  selectedTab?: TabId;
+  onTabChange?: (tab: TabId) => void;
   /** Where Startup and MVP visitors go. The idea is appended as ?idea=… */
   contactHref?: string;
 };
@@ -236,9 +238,15 @@ const focusRing = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-
 
 /* ---------- Component ---------- */
 
-export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props) {
+export default function HeroPrompt({
+  onSubmit,
+  selectedTab,
+  onTabChange,
+  contactHref = "/contact",
+}: Props) {
   const uid = useId();
-  const [tab, setTab] = useState<TabId>("builder");
+  const [internalTab, setInternalTab] = useState<TabId>("builder");
+  const tab = selectedTab ?? internalTab;
   const [pill, setPill] = useState<PillId | null>("website");
   const [text, setText] = useState("");
   const [template, setTemplate] = useState<string | null>(null);
@@ -260,7 +268,8 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
   const placeholder = storeSelected ? STORE_PLACEHOLDER : websiteSelected ? "Describe the website you want to launch…" : current.placeholder;
 
   function selectTab(next: TabId, focus = false) {
-    setTab(next);
+    setInternalTab(next);
+    onTabChange?.(next);
     setPill(LIVE[next][0] ?? null);
     setTemplate(null);
     setStatus("");
@@ -322,7 +331,7 @@ export default function HeroPrompt({ onSubmit, contactHref = "/contact" }: Props
   const buttonClass = `inline-flex shrink-0 items-center rounded-xl border border-foreground/25 bg-transparent px-4 py-2 text-sm text-foreground transition-colors hover:bg-foreground hover:text-background ${focusRing}`;
 
   return (
-    <section aria-labelledby={`${uid}-title`} className="mx-auto w-full max-w-3xl px-4 pb-16 pt-32 text-center sm:pt-40">
+    <section id="hero-prompt" aria-labelledby={`${uid}-title`} className="mx-auto w-full max-w-3xl px-4 pb-16 pt-32 text-center sm:pt-40">
       <h1 id={`${uid}-title`} className="text-balance text-3xl leading-[1.04] sm:text-5xl">
         {HEADLINE}
       </h1>

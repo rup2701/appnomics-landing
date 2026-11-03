@@ -4,14 +4,14 @@ export default function WhyAppnomicsSection() {
   return (
     <section id='why-appnomics' className="py-24">
       <div className="max-w-[1100px] mx-auto px-2">
-        <SectionLabel centerAlign={true}>// WHY APPNOMICS</SectionLabel>
+        <SectionLabel centerAlign={true}>{"// WHY APPNOMICS"}</SectionLabel>
 
         <div className="text-center mb-14">
           <h2 className="text-[clamp(30px,4vw,52px)] font-normal text-[#171717] mb-2 leading-[1.15] font-sans">
-            Experience you can&apos;t prompt.
+            Prompt with confidence. Or let us handle it.
           </h2>
           <p className="text-lg text-[#555] font-sans max-w-[600px] mx-auto">
-            AI writes code. We ship products. Here&apos;s what that actually means.
+            Build it yourself with our AI Builder, or partner with our team to ship and run your product.
           </p>
         </div>
 

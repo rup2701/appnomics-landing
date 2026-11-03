@@ -16,11 +16,13 @@ import Navbar from '@/components/Navbar';
 import WhyAppnomicsSection from '@/components/sections/WhyUs';
 import WhoThisIsFor from '@/components/sections/WhoIsThisFor';
 import HeroPrompt from '@/components/HeroPrompt';
+import type { TabId } from '@/components/HeroPrompt';
 
 
 
 export default function Home() {
   const [idea, setIdea] = useState('');
+  const [heroTab, setHeroTab] = useState<TabId>('builder');
   const router = useRouter();
   const [hovered, setHovered] = useState(false);
 
@@ -43,18 +45,18 @@ export default function Home() {
     <main className="min-h-screen bg-[#f5f5f5] text-[#171717] font-sans flex flex-col">
       {/* <DynamicHero /> */}
       
-      <HeroPrompt />
+      <HeroPrompt selectedTab={heroTab} onTabChange={setHeroTab} />
       <div className="flex-grow flex flex-col justify-center px-6 py-6 md:py-8 w-full">  
         {/* 
           FIX 3: Ensure each internal section component uses 'w-full max-w-[1220px] mx-auto'
           inside their own files, or wrap them like this if you can't edit them:
         */}
         <div className="w-full max-w-[1220px] mx-auto">
+          <PricingSection onChoosePlan={setHeroTab} />
           <WhoThisIsFor />   
           <ProcessSection />
           <StudioOSSection />
           <WhyAppnomicsSection />
-          <PricingSection />
           <PortfolioSection />
           <FAQSection />
           <CTASection />
