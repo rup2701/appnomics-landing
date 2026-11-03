@@ -35,7 +35,7 @@ export default function StudioOSSection() {
 
         {/* Studio OS Dashboard mockup */}
         <div
-          className="border border-[#c6c6c6] rounded-[4px] overflow-hidden h-[560px] shadow-[0_0_60px_#00ff9d0a,0_24px_48px_#00000022] mt-14"
+          className="border border-[#c6c6c6] rounded-[20px] overflow-hidden h-[560px] shadow-[0_0_60px_#00ff9d0a,0_24px_48px_#00000022] mt-14"
         >
           <StudioOSMockup />
         </div>

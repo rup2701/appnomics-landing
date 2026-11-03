@@ -61,7 +61,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
           {/* Builder */}
           <div
             onClick={() => setSelectedPlan("builder")}
-            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
+            className={`border rounded-[20px] p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
               selectedPlan === "builder"
                 ? "border-[#00ff9d] bg-[#00ff9d08]"
                 : "border-[#d8d8d8] bg-white"
@@ -99,7 +99,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
 
             <Link
               href="https://builder.appnomics.dev"
-              className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
+              className={`block text-center py-[11px] px-0 border rounded-lg text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "builder"
                   ? "border-[#087a5044] text-[#087a50] bg-[#087a500d]"
                   : "border-[#bbb] text-[#555] bg-transparent"
@@ -112,7 +112,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
           {/* Build Only */}
           <div
             onClick={() => setSelectedPlan("build")}
-            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
+            className={`border rounded-[20px] p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
               selectedPlan === "build"
                 ? "border-[#00ff9d] bg-[#00ff9d08]"
                 : "border-[#d8d8d8] bg-white"
@@ -159,7 +159,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
                 e.stopPropagation();
                 choosePlan("mvp");
               }}
-              className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
+              className={`block text-center py-[11px] px-0 border rounded-lg text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "build"
                   ? "border-[#087a5044] text-[#087a50] bg-[#087a500d]"
                   : "border-[#bbb] text-[#555] bg-transparent"
@@ -172,7 +172,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
           {/* Build + Run */}
           <div
             onClick={() => setSelectedPlan("build_run")}
-            className={`border rounded-sm p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
+            className={`border rounded-[20px] p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
               selectedPlan === "build_run"
                 ? "border-[#00d4ff44] bg-[#00d4ff08]"
                 : "border-[#d8d8d8] bg-[#ebebeb]"
@@ -224,7 +224,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
                 e.stopPropagation();
                 choosePlan("startup");
               }}
-              className={`block text-center py-[11px] px-0 border rounded-sm text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
+              className={`block text-center py-[11px] px-0 border rounded-lg text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
                 selectedPlan === "build_run"
                   ? "border-[#00698744] text-[#006987] bg-[#0069870d]"
                   : "border-[#bbb] text-[#555] bg-transparent"

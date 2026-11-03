@@ -55,7 +55,7 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className="border border-[#d8d8d8] rounded-[2px] overflow-hidden transition-all duration-200"
+                className="border border-[#d8d8d8] rounded-xl overflow-hidden transition-all duration-200"
                 style={{
                   background: isOpen ? "#eaf5ef" : "#ffffff",
                   borderColor: isOpen ? "#00a76b66" : "#d8d8d8",
@@ -106,7 +106,7 @@ export default function FAQSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 text-center border border-[#d8d8d8] rounded-[2px] p-6 bg-[#eaf5ef]">
+        <div className="mt-12 text-center border border-[#d8d8d8] rounded-[20px] p-6 bg-[#eaf5ef]">
           <p className="text-xs text-[#444] font-sans leading-[1.7]">
             Still have questions?{" "}
             <a

@@ -47,7 +47,7 @@ export default function WhoThisIsFor() {
             {PERSONAS.map((item, i) => (
               <div
                 key={item.title}
-                className="group flex items-start gap-5 p-5 border border-[#d8d8d8] rounded-[4px] bg-[#ebebeb] hover:border-[#00ff9d88] hover:bg-[#eeeeee] transition-all duration-200"
+                className="group flex items-start gap-5 p-5 border border-[#d8d8d8] rounded-[20px] bg-[#ebebeb] hover:border-[#00ff9d88] hover:bg-[#eeeeee] transition-all duration-200"
               >
                 <span className="flex-shrink-0 w-11 h-11 flex items-center justify-center text-lg border border-[#b0b0ba] bg-[#d8d8d8] rounded-[4px]  group-hover:border-[#00ff9d88] transition-colors">
                   <Image
@@ -76,7 +76,7 @@ export default function WhoThisIsFor() {
           </div>
 
           {/* What you get */}
-          <div className="border border-[#c6c6c6] rounded-[4px]  overflow-hidden flex flex-col">
+          <div className="border border-[#c6c6c6] rounded-[20px] overflow-hidden flex flex-col">
             <div className="flex items-center bg-[#ebebeb] justify-between px-6 py-4 border-b border-[#c6c6c6] bg-[#d8d8d8]">
               <p className="text-xs text-[#087a50] font-bold font-sans tracking-[0.18em] uppercase">
                 What you get

@@ -102,7 +102,7 @@ export default function ProcessSection() {
 
                   {/* Content */}
                   <div
-                    className={`flex-1 border rounded-[4px] px-5 py-4 transition-all duration-200 ${
+                    className={`flex-1 border rounded-[20px] px-5 py-4 transition-all duration-200 ${
                       isActive
                         ? "border-[#00a76b66] bg-[#e7eee9]"
                         : "border-transparent group-hover:border-[#d8d8d8] group-hover:bg-white"
@@ -151,7 +151,7 @@ export default function ProcessSection() {
         /> */}
 
         {/* callout bar */}
-        <div className="mt-12 border border-[#d8d8d8] border-l-2 border-l-[#00a76b] p-5 pl-6 rounded-r-[4px] bg-[#ebebeb] font-mono">
+        <div className="mt-12 border border-[#d8d8d8] border-l-2 border-l-[#00a76b] p-5 pl-6 rounded-[20px] bg-[#ebebeb] font-mono">
           <p className="text-sm md:text-[15px] text-[#444] font-sans leading-[1.5]">
             An epic is a single, fully functional feature block delivered every week. <br/>
             Most MVPs are <span className="text-[#171717]">5&mdash;6 epics</span> — that&apos;s{" "}

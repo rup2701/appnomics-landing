@@ -81,7 +81,7 @@ export default function Navbar() {
             onClick={(e) => handleNavClick(e, "/#hero-prompt")}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="text-xs font-mono uppercase no-underline text-[#fff] hover:text-[#ebebeb] border border-[#087a50] font-bold rounded-[2px] hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
+            className="text-xs font-mono uppercase no-underline text-[#fff] hover:text-[#ebebeb] border border-[#087a50] font-bold rounded-lg hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
             style={{
               background: hovered ? "#ebebeb" : "black",
               color: hovered ? "#171717" : "#fff",
@@ -137,7 +137,7 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(false)}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="text-sm text-center no-underline text-[#087a50] hover:text-[#171717] border border-[#087a50] font-bold rounded-[2px] hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
+            className="text-sm text-center no-underline text-[#087a50] hover:text-[#171717] border border-[#087a50] font-bold rounded-lg hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
             style={{
               background: hovered ? "#00ff9d" : "transparent",
               color: hovered ? "#171717" : "#087a50",

@@ -12,7 +12,7 @@ export default function ProductProofSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-          <article className="flex flex-col rounded-xl border border-[#d8d8d8] bg-white p-5">
+          <article className="flex flex-col rounded-[20px] border border-[#d8d8d8] bg-white p-5">
             <p className="mb-3 font-sans text-[10px] font-semibold tracking-[0.14em] text-[#087a50]">YOUR AI BUILDING PARTNER</p>
             <h3 className="font-sans text-xl font-medium text-[#171717]">Meet Scout</h3>
             <div aria-hidden="true" className="my-5 flex min-h-40 flex-1 flex-col justify-center gap-3 rounded-lg bg-[#f3f8f5] p-4">
@@ -30,7 +30,7 @@ export default function ProductProofSection() {
             </p>
           </article>
 
-          <article className="flex flex-col rounded-xl border border-[#d8d8d8] bg-[#eaf5ef] p-5">
+          <article className="flex flex-col rounded-[20px] border border-[#d8d8d8] bg-[#eaf5ef] p-5">
             <p className="mb-3 font-sans text-[10px] font-semibold tracking-[0.14em] text-[#087a50]">SHARED PRODUCT FOUNDATION</p>
             <h3 className="font-sans text-xl font-medium text-[#171717]">Built once. Reused intelligently.</h3>
             <div aria-hidden="true" className="my-5 flex min-h-40 flex-1 flex-col items-center justify-center">
@@ -48,7 +48,7 @@ export default function ProductProofSection() {
             </p>
           </article>
 
-          <article className="flex flex-col rounded-xl border border-[#d8d8d8] bg-[#f0eeee] p-5">
+          <article className="flex flex-col rounded-[20px] border border-[#d8d8d8] bg-[#f0eeee] p-5">
             <p className="mb-3 font-sans text-[10px] font-semibold tracking-[0.14em] text-[#087a50]">PROVEN IN REAL PRODUCTS</p>
             <h3 className="font-sans text-xl font-medium text-[#171717]">AI that moves work forward.</h3>
             <div aria-hidden="true" className="my-5 flex min-h-40 flex-1 flex-col items-center justify-center gap-2">
@@ -66,7 +66,7 @@ export default function ProductProofSection() {
             </p>
           </article>
 
-          <article className="flex flex-col rounded-xl border border-[#d8d8d8] bg-[#f5f1eb] p-5">
+          <article className="flex flex-col rounded-[20px] border border-[#d8d8d8] bg-[#f5f1eb] p-5">
             <p className="mb-3 font-sans text-[10px] font-semibold tracking-[0.14em] text-[#087a50]">HEALTHCARE + FINTECH</p>
             <h3 className="font-sans text-xl font-medium text-[#171717]">Built with care for sensitive data.</h3>
             <div aria-hidden="true" className="my-5 flex min-h-40 flex-1 flex-col items-center justify-center gap-4">
