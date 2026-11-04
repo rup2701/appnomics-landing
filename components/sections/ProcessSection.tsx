@@ -58,7 +58,7 @@ export default function ProcessSection() {
   const [activeStep, setActiveStep] = useState<string | null>("00");
 
   return (
-    <section id='process' className="py-24">
+    <section id='process' className="py-32">
       <div className="max-w-[1100px] mx-auto">
         <h2 className="text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans">
           One epic per week.

@@ -29,7 +29,7 @@ const DELIVERABLES = [
 
 export default function WhoThisIsFor() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-20 md:py-32">
       <div className="max-w-[1100px] mx-auto px-1 md:px-0">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <h2 className="text-[42px] font-medium tracking-tight text-[#171717] leading-[1.1] font-sans">

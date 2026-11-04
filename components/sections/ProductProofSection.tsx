@@ -1,6 +1,6 @@
 export default function ProductProofSection() {
   return (
-    <section id="product-proof" className="py-24">
+    <section id="product-proof" className="py-32">
       <div className="mx-auto max-w-[1100px] px-2">
         <div className="mb-12 text-center">
           <h2 className="mb-3 font-sans text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">

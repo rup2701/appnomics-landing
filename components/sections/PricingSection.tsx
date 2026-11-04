@@ -44,7 +44,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
   }
 
   return (
-    <section id='pricing' className="py-24">
+    <section id='pricing' className="py-32">
       <div className="max-w-7xl mx-auto block">
         <h2
           className="text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans text-center"

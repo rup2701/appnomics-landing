@@ -2,7 +2,7 @@ import StudioOSMockup from "./StudioOSMockup";
 
 export default function StudioOSSection() {
   return (
-    <section id="studio" className="hidden md:block py-24">
+    <section id="studio" className="hidden md:block py-32">
       <div className="max-w-[1100px] mx-auto px-10">
 
         {/* Centered headline section */}
