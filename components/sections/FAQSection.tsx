@@ -110,7 +110,7 @@ export default function FAQSection() {
           <p className="text-xs text-[#444] font-sans leading-[1.7]">
             Still have questions?{" "}
             <a
-              href="#intake"
+              href="mailto:info@appnomics.dev"
               className="text-[#087a50] hover:text-[#065f3e] no-underline border-b border-[#087a5066] hover:border-[#087a50] transition-colors"
             >
               Reach out to us
