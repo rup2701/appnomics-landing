@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -48,6 +50,7 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-2 no-underline group"
           onClick={(e) => {
+            if (window.location.pathname !== "/" || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}

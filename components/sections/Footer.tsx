@@ -78,7 +78,7 @@ export default function Footer() {
             <ul className="space-y-1">
               {[
                 { label: "Templates", href: "#" },
-                { label: "Gallery", href: "#" },
+                { label: "Gallery", href: "/gallery" },
                 { label: "Blog", href: "#" },
                 { label: "The MVP Playbook", href: "#" },
                 { label: "AI Code-Gen Migration Guide", href: "#" },
