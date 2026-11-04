@@ -31,7 +31,7 @@ export default function Footer() {
                 { label: "Overview", href: "#" },
                 { label: "Pricing", href: "/#pricing" },
                 { label: "Appnomics Cloud", href: "/#studio" },
-                { label: "Book a Discovery Call", href: "/#intake" },
+                { label: "Book a Discovery Call", href: "mailto:rupesh@appnomics.dev" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
@@ -103,8 +103,8 @@ export default function Footer() {
             </h4>
             <ul className="space-y-1">
               {[
-                { label: "About", href: "#" },
-                { label: "Support", href: "#" },
+                { label: "About", href: "/about" },
+                { label: "Support", href: "mailto:support@appnomics.dev" },
                 { label: "FAQ", href: "/#faq" },
                 { label: "Privacy Policy", href: "#" },
                 { label: "Terms of Service", href: "#" },
