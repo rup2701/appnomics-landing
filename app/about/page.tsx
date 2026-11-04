@@ -132,24 +132,23 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main className="min-h-screen bg-[#f5f5f5] text-[#171717]">
-        <section className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#edf3ef] px-6 py-32 sm:py-36">
+        <section className="relative isolate flex min-h-[80vh] items-center overflow-hidden bg-[#171717] px-6 py-32 sm:py-36">
           <Image
             src="/images/background-hero.jpg"
             alt=""
             fill
             priority
             sizes="100vw"
-            className="-z-10 object-cover object-center"
+            className="-z-10 object-cover object-center opacity-40"
           />
-          <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[#edf3ef]/80" />
           <div className="relative mx-auto max-w-[1100px]">
-            <p className="mb-5 font-mono text-xs tracking-[0.18em] text-[#087a50]">
+            <p className="mb-5 font-mono text-xs tracking-[0.18em] text-[#6ee7b7]">
               APPNOMICS · BUILDING SINCE 2013
             </p>
-            <h1 className="max-w-4xl text-[clamp(42px,7vw,76px)] leading-[1.04] tracking-tight">
+            <h1 className="max-w-4xl text-[#ded5ca]! text-[clamp(42px,7vw,76px)] leading-[1.04] tracking-tight">
               A decade of product craft. Built for the AGI era.
             </h1>
-            <p className="mt-7 max-w-3xl text-lg leading-relaxed text-[#555] sm:text-xl">
+            <p className="mt-7 max-w-3xl text-[#ded5ca]! text-lg leading-relaxed sm:text-xl">
               We’ve spent more than a decade taking products from zero to one.
               Now we’re bringing that experience into a new way to build—with
               AI Builder, agentic workflows, and people in the loop where
@@ -158,13 +157,13 @@ export default function AboutPage() {
             <div className="mt-9 flex flex-wrap gap-3">
               <a
                 href="https://builder.appnomics.dev"
-                className="rounded-lg bg-[#171717] px-6 py-3 text-sm font-medium text-white no-underline transition-colors hover:bg-[#087a50]"
+                className="rounded-lg bg-[#ded5ca] px-6 py-3 text-sm font-medium text-[#171717] no-underline transition-colors hover:bg-white"
               >
                 Explore Builder <span aria-hidden="true">→</span>
               </a>
               <a
                 href="mailto:rupesh@appnomics.dev"
-                className="rounded-lg bg-white px-6 py-3 text-sm font-medium text-[#171717] no-underline transition-colors hover:text-[#087a50]"
+                className="rounded-lg border border-[#ded5ca]/50 bg-transparent px-6 py-3 text-sm font-medium text-[#ded5ca] no-underline transition-colors hover:border-[#ded5ca] hover:bg-white/10"
               >
                 Talk about your product
               </a>
