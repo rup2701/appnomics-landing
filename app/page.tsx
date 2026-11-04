@@ -44,7 +44,9 @@ export default function Home() {
     <main className="min-h-screen bg-[#f5f5f5] text-[#171717] font-sans flex flex-col">
       {/* <DynamicHero /> */}
       
-      <HeroPrompt selectedTab={heroTab} onTabChange={setHeroTab} />
+      <div className="w-full bg-[#edf3ef]">
+        <HeroPrompt selectedTab={heroTab} onTabChange={setHeroTab} />
+      </div>
       <div className="flex-grow flex flex-col justify-center px-6 py-6 md:py-8 w-full">  
         {/* 
           FIX 3: Ensure each internal section component uses 'w-full max-w-[1220px] mx-auto'

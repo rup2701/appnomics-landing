@@ -35,7 +35,7 @@ export default function WhoThisIsFor() {
           {PERSONAS.map((item, i) => (
             <div
               key={item.title}
-              className="group flex flex-col items-start gap-5 rounded-[20px] border border-[#d8d8d8] bg-[#ebebeb] p-6 transition-all duration-200 hover:border-[#00ff9d88] hover:bg-[#eeeeee]"
+              className="group flex flex-col items-start gap-5 rounded-[20px] bg-[#ebebeb] p-6 transition-all duration-200 hover:bg-[#eeeeee]"
             >
               <div className="flex w-full items-center justify-between">
                 <span className="flex h-11 w-11 items-center justify-center rounded-[4px] border border-[#b0b0ba] bg-[#d8d8d8] text-lg transition-colors group-hover:border-[#00ff9d88]">

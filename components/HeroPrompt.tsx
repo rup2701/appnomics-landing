@@ -331,7 +331,7 @@ export default function HeroPrompt({
   const buttonClass = `inline-flex shrink-0 items-center rounded-xl border border-foreground/25 bg-transparent px-4 py-2 text-sm text-foreground transition-colors hover:bg-foreground hover:text-background ${focusRing}`;
 
   return (
-    <section id="hero-prompt" aria-labelledby={`${uid}-title`} className="mx-auto w-full max-w-3xl px-4 pb-16 pt-32 text-center sm:pt-40">
+    <section id="hero-prompt" aria-labelledby={`${uid}-title`} className="mx-auto w-full max-w-3xl px-4 pb-24 pt-32 text-center sm:pb-32 sm:pt-40">
       <h1 id={`${uid}-title`} className="text-balance text-3xl leading-[1.04] sm:text-5xl">
         {HEADLINE}
       </h1>

@@ -88,9 +88,8 @@ export default function PortfolioSection() {
               key={p.name}
               onMouseEnter={() => setHovered(p.name)}
               onMouseLeave={() => setHovered(null)}
-              className="bg-white border border-[#d8d8d8] rounded-[20px] p-7 cursor-default transition-all duration-200 relative overflow-hidden"
+              className="bg-white rounded-[20px] p-7 cursor-default transition-all duration-200 relative overflow-hidden"
               style={{
-                borderColor: hovered === p.name ? p.color + "66" : "#d8d8d8",
                 background: hovered === p.name ? "#fafafa" : "#ffffff",
               }}
             >
