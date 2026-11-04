@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Appnomics — Build your MVP. Keep 100% equity.",
-  description: "Ship your MVP in 6 weeks with Appnomics. $5K/epic. Full code ownership. Studio OS handover. No lock-in. Built for founders burned by AI tokens and no-code ceilings.",
+  title: "AI App and MVP Builder | Appnomics",
+  description: "Build apps and websites with Appnomics Builder and Scout, or partner with our engineers to launch a production-ready MVP. Explore live examples and own your code.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
