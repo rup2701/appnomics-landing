@@ -112,7 +112,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
           {/* Build Only */}
           <div
             onClick={() => setSelectedPlan("build")}
-            className={`border rounded-[20px] p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
+            className={`border rounded-[20px] p-8 cursor-pointer bg-white  transition-all duration-150 relative flex flex-col ${
               selectedPlan === "build"
                 ? "border-[#00ff9d] bg-[#00ff9d08]"
                 : "border-[#d8d8d8] bg-white"
@@ -120,7 +120,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
           >
             <div className="flex items-start justify-between mb-6">
               <div>
-                <span className="inline-block text-[10px] tracking-[0.12em] text-[#555] bg-[#dcdcdc] rounded-full py-1 px-2.5 mb-3 font-sans">
+                <span className="inline-block text-[10px] tracking-[0.12em] text-[#555] bg-[#fff] rounded-full py-1 px-2.5 mb-3 font-sans">
                   ENGINEERING PARTNER
                 </span>
                 <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
@@ -172,7 +172,7 @@ export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: T
           {/* Build + Run */}
           <div
             onClick={() => setSelectedPlan("build_run")}
-            className={`border rounded-[20px] p-8 cursor-pointer transition-all duration-150 relative flex flex-col ${
+            className={`border rounded-[20px] p-8 cursor-pointer bg-white transition-all duration-150 relative flex flex-col ${
               selectedPlan === "build_run"
                 ? "border-[#00d4ff44] bg-[#00d4ff08]"
                 : "border-[#d8d8d8] bg-[#ebebeb]"
