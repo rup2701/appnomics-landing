@@ -7,7 +7,7 @@ const NAV_ITEMS = [
   { label: "Pricing", href: "/#pricing" },
   { label: "Cloud", href: "/#studio" },
   { label: "Appnomics Platform", href: "/#product-proof" },
-  { label: "Projects", href: "/#portfolio" },
+  { label: "Case Studies", href: "/#portfolio" },
 ];
 
 export default function Navbar() {
