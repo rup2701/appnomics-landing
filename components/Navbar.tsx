@@ -56,7 +56,7 @@ export default function Navbar() {
             alt="Appnomics"
             height={36}
             width={102}
-            className="h-4
+            className="h-5
              w-auto"
           />
           <span className="text-[10px] text-[#087a50] font-mono font-bold tracking-[0.12em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
