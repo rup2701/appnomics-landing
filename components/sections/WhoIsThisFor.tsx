@@ -18,15 +18,6 @@ const PERSONAS = [
   },
 ];
 
-const DELIVERABLES = [
-  "1 epic/week · $5K/epic",
-  "Full code ownership",
-  "Studio OS handover",
-  "No equity split",
-  "No token limits",
-  "No pauses",
-];
-
 export default function WhoThisIsFor() {
   return (
     <section className="py-20 md:py-32">
@@ -40,63 +31,36 @@ export default function WhoThisIsFor() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {/* Personas */}
-          <div className="flex flex-col gap-4">
-
-            {PERSONAS.map((item, i) => (
-              <div
-                key={item.title}
-                className="group flex items-start gap-5 p-5 border border-[#d8d8d8] rounded-[20px] bg-[#ebebeb] hover:border-[#00ff9d88] hover:bg-[#eeeeee] transition-all duration-200"
-              >
-                <span className="flex-shrink-0 w-11 h-11 flex items-center justify-center text-lg border border-[#b0b0ba] bg-[#d8d8d8] rounded-[4px]  group-hover:border-[#00ff9d88] transition-colors">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+          {PERSONAS.map((item, i) => (
+            <div
+              key={item.title}
+              className="group flex flex-col items-start gap-5 rounded-[20px] border border-[#d8d8d8] bg-[#ebebeb] p-6 transition-all duration-200 hover:border-[#00ff9d88] hover:bg-[#eeeeee]"
+            >
+              <div className="flex w-full items-center justify-between">
+                <span className="flex h-11 w-11 items-center justify-center rounded-[4px] border border-[#b0b0ba] bg-[#d8d8d8] text-lg transition-colors group-hover:border-[#00ff9d88]">
                   <Image
                     src={item.iconSrc}
-                    alt={item.title}
-                    className="w-6 h-6"
+                    alt=""
+                    className="h-6 w-6"
                     height={32}
                     width={32}
                   />
                 </span>
-                <div className="flex-1">
-                  <div className="flex items-baseline justify-between gap-3">
-                    <h4 className="text-lg font-medium text-[#171717] font-sans">
-                      {item.title}
-                    </h4>
-                    <span className="text-[11px] text-[#666] font-mono tracking-[0.15em]">
-                      0{i + 1}
-                    </span>
-                  </div>
-                  <p className="lg:text-md text-[#888] font-sans leading-[1.6] mt-1">
-                    {item.desc}
-                  </p>
-                </div>
+                <span className="font-mono text-[11px] tracking-[0.15em] text-[#666]">
+                  0{i + 1}
+                </span>
               </div>
-            ))}
-          </div>
-
-          {/* What you get */}
-          <div className="border border-[#c6c6c6] rounded-[20px] overflow-hidden flex flex-col">
-            <div className="flex items-center bg-[#ebebeb] justify-between px-6 py-4 border-b border-[#c6c6c6] bg-[#d8d8d8]">
-              <p className="text-xs text-[#087a50] font-bold font-sans tracking-[0.18em] uppercase">
-                What you get
-              </p>
-              <span className="w-2 h-2 rounded-full bg-[#00ff9d] shadow-[0_0_8px_#00ff9d99]" />
+              <div>
+                <h3 className="font-sans text-lg font-medium text-[#171717]">
+                  {item.title}
+                </h3>
+                <p className="mt-1 font-sans leading-[1.6] text-[#555]">
+                  {item.desc}
+                </p>
+              </div>
             </div>
-            <ul className="flex-1 flex flex-col justify-center divide-y divide-[#c6c6c6] px-6">
-              {DELIVERABLES.map((item) => (
-                <li
-                  key={item}
-                  className="text-[15px] text-[#171717] font-sans flex items-center gap-3 py-[15px]"
-                >
-                  <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center text-[11px] text-[#087a50] border border-[#087a5044] bg-[#087a500d] rounded-[2px]">
-                    ✓
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          ))}
         </div>
       </div>
     </section>
