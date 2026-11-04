@@ -81,8 +81,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/#hero-prompt"
-            onClick={(e) => handleNavClick(e, "/#hero-prompt")}
+            href="https://builder.appnomics.dev/signin"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             className="text-xs font-mono uppercase no-underline text-[#fff] hover:text-[#ebebeb] border border-[#087a50] font-bold rounded-lg hover:border-[#171717] px-4 py-1.5 transition-all duration-150"
