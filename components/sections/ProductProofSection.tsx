@@ -26,9 +26,9 @@ export default function ProductProofSection() {
           <h2 className="mb-3 font-sans text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
             The Appnomics platform.
           </h2>
-          <p className="mx-auto max-w-[680px] font-sans text-lg text-[#555]">
+          {/* <p className="mx-auto max-w-[680px] font-sans text-lg text-[#555]">
             Builder and our product work share the code and capabilities shaped by shipping real apps.
-          </p>
+          </p> */}
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">

@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import DynamicHero from '@/components/DynamicHero';
 import PricingSection from '@/components/sections/PricingSection';
-import ProcessSection from '@/components/sections/ProcessSection';
 import PortfolioSection from '@/components/sections/PortfolioSection';
 import CTASection from '@/components/sections/CTASection';
 import StudioOSSection from '@/components/sections/StudioOSSection';
@@ -54,8 +53,7 @@ export default function Home() {
         <div className="w-full max-w-[1220px] mx-auto">
           <PricingSection onChoosePlan={setHeroTab} />
           <WhoThisIsFor />   
-          <ProcessSection />
-          <StudioOSSection />
+          <StudioOSSection />  
           <ProductProofSection />
           <PortfolioSection />
           <FAQSection />

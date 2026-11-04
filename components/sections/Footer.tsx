@@ -29,7 +29,6 @@ export default function Footer() {
             <ul className="space-y-1">
               {[
                 { label: "Overview", href: "#" },
-                { label: "The 6-Week Epic", href: "/#process" },
                 { label: "Pricing", href: "/#pricing" },
                 { label: "Appnomics Cloud", href: "/#studio" },
                 { label: "Book a Discovery Call", href: "/#intake" },
