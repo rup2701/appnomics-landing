@@ -3,8 +3,28 @@ export default function ProductProofSection() {
     <section id="product-proof" className="py-32">
       <div className="mx-auto max-w-[1100px] px-2">
         <div className="mb-12 text-center">
+          <svg
+            aria-hidden="true"
+            className="mx-auto mb-4 h-[60px] w-[60px] text-[#b42318]"
+            viewBox="0 0 60 60"
+            fill="none"
+          >
+            <path
+              d="m30 8 20 11v22L30 52 10 41V19L30 8Z"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+            <path
+              d="m10 19 20 12 20-12M30 31v21M20 13.5l20 11v8"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
           <h2 className="mb-3 font-sans text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
-            From business intent to live product.
+            The Appnomics platform.
           </h2>
           <p className="mx-auto max-w-[680px] font-sans text-lg text-[#555]">
             Builder and our product work share the code and capabilities shaped by shipping real apps.
