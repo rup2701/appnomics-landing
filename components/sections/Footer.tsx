@@ -77,12 +77,13 @@ export default function Footer() {
             </h4>
             <ul className="space-y-1">
               {[
+                { label: "Docs", href: "/docs/builder" },
                 { label: "Templates", href: "#" },
                 { label: "Gallery", href: "/gallery" },
                 { label: "Blog", href: "#" },
                 { label: "The MVP Playbook", href: "#" },
                 { label: "AI Code-Gen Migration Guide", href: "#" },
-                { label: "Studio OS Walkthrough", href: "#" },
+                // { label: "Studio OS Walkthrough", href: "#" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
