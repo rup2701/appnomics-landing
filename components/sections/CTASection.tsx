@@ -7,24 +7,40 @@ export default function CTASection() {
   return (
     <section
       id="intake"
-      className="py-[120px] pb-[100px] text-center relative overflow-hidden"
+      className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden py-[120px] text-center"
+      style={{ background: "linear-gradient(115deg, #dce9e1 0%, #f5f5f5 52%, #e8eee9 100%)" }}
     >
-      {/* Background glow */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] pointer-events-none"
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-70"
         style={{
-          background: "radial-gradient(ellipse, #00ff9d08 0%, transparent 70%)",
+          backgroundImage: "radial-gradient(circle, rgba(8, 122, 80, 0.2) 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+          maskImage: "linear-gradient(to right, transparent, black 14%, black 86%, transparent)",
         }}
       />
 
-      <div className="relative max-w-[640px] mx-auto px-2">
+      <div className="relative mx-auto max-w-[640px] px-6">
+        <svg
+          className="mx-auto mb-5 block h-12 w-12"
+          viewBox="0 0 48 48"
+          role="img"
+          aria-label="Scout"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="48" height="48" rx="16" fill="#171717" />
+          <g transform="translate(10 10) scale(1.1667)" fill="none" stroke="#F5F5F5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M15.5 8.5l-2 5-5 2 2-5z" />
+          </g>
+        </svg>
         <h2 className="text-[42px] font-medium tracking-tight text-[#171717] mb-4 leading-[1.1] font-sans">
           Start building today.
         
         </h2>
 
         <p className="text-lg text-[#555] mb-12 leading-[1.7] font-sans">
-          Start with your idea. Get your 6-week epic breakdown in 24 hours — zero risk, zero lock-in.
+          Bring an idea. Scout helps shape it, and Builder helps turn it into a product.
         </p>
 
         <Link

@@ -1,7 +1,7 @@
 export default function ProductProofSection() {
   return (
     <section id="product-proof" className="py-32">
-      <div className="mx-auto max-w-[1100px] px-2">
+      <div className="mx-auto max-w-[1340px] px-2">
         <div className="mb-12 text-center">
           <svg
             aria-hidden="true"

@@ -47,7 +47,7 @@ export default function Home() {
       <div className="w-full bg-[#edf3ef]">
         <HeroPrompt selectedTab={heroTab} onTabChange={setHeroTab} />
       </div>
-      <div className="flex-grow flex flex-col justify-center px-6 py-6 md:py-8 w-full">  
+      <div className="flex-grow flex flex-col justify-center px-6 pt-6 pb-0 md:pt-8 w-full">  
         {/* 
           FIX 3: Ensure each internal section component uses 'w-full max-w-[1220px] mx-auto'
           inside their own files, or wrap them like this if you can't edit them:
