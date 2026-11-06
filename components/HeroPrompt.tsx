@@ -207,6 +207,20 @@ const WEBSITE_TEMPLATES: Template[] = [
     art: <div className="flex h-full flex-col justify-center gap-3 bg-emerald-50 p-5 text-emerald-950 sm:p-8"><span className="text-[10px] font-mono">YOUR PRODUCT</span><span className="text-lg leading-tight sm:text-2xl">An idea.<br />A first launch.</span><span className="h-2 w-3/4 bg-emerald-900/15" /><span className="h-6 w-1/2 rounded bg-emerald-800" /></div>,
   },
   {
+    id: "website-saas",
+    label: "Ledgerline",
+    caption: "SaaS site",
+    text: "A product website for ___, with pricing, how it works and a sign-up box.",
+    demoUrl: "https://ledgerline.appnomics.live",
+    art: (
+      <div className="flex h-full flex-col justify-center gap-3 bg-indigo-50 p-5 text-indigo-950 sm:p-8">
+        <span className="font-mono text-[10px]">YOUR PRODUCT</span>
+        <span className="text-lg leading-tight sm:text-2xl">Get started<br />in minutes.</span>
+        <span className="h-6 w-3/4 rounded-full bg-white" />
+      </div>
+    ),
+  },
+  {
     id: "website-portfolio",
     label: "Studio Avant",
     caption: "Portfolio site",
