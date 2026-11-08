@@ -110,7 +110,7 @@ export default function PricingSection() {
                 {tier.description}
               </p>
 
-              <div className="mb-6 flex-1">
+              <div className="mb-3 flex-1">
                 <CheckLine text="14-day free trial" />
                 <CheckLine text={tier.projects} />
                 <CheckLine text={SCOUT_FEATURE} />
@@ -154,13 +154,13 @@ export default function PricingSection() {
               </p>
             </div>
 
-            <div className="mb-6 flex-1">
+            <div className="mb-2 flex-1">
               {BUILD_FEATURES.map((feature) => (
                 <CheckLine key={feature} text={feature} />
               ))}
             </div>
 
-            <p className="mb-6 rounded-xl bg-[#e8eee9] p-4 font-sans text-sm leading-relaxed text-[#444]">
+            <p className="mb-3 rounded-xl bg-[#e8eee9] px-4 py-2 font-sans text-sm leading-relaxed text-[#444]">
               An epic is one scoped feature or product slice, typically delivered in about a week.
             </p>
 
