@@ -145,7 +145,7 @@ const DynamicHero = () => {
                     onClick={handleEnter}
                     className="absolute bottom-3 right-3 text-xs text-[#555] hover:text-[#171717] border border-[#c6c6c6] hover:border-[#888] rounded-md px-3 py-1 transition"
                     >
-                  Let&apos;s go →
+                  Let&apos;s go
                   </button>
                 </div>
             )}
@@ -174,7 +174,6 @@ const DynamicHero = () => {
               <Link href="/auth">
                 <span className={styles.sparkle}>✨</span>
                 Start Building
-                <span className={styles.arrow}>→</span>
               </Link>
             </button>
           </div>

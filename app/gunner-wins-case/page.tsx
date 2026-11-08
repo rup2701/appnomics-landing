@@ -160,7 +160,7 @@ export default function GunnerPicksCaseStudy() {
               href="/#intake"
               className="inline-block px-8 py-3 border border-[#087a50] rounded-[2px] text-[12px] font-bold text-[#087a50] font-sans no-underline hover:bg-[#087a50] hover:text-white transition-all duration-200"
             >
-              START BUILDING →
+              START BUILDING
             </a>
           </div>
         </div>

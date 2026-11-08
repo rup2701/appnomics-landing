@@ -419,11 +419,11 @@ export default function HeroPrompt({
                 disabled={isWaitlistTemplate && !waitlistIdeaValid}
                 className={`${buttonClass} disabled:cursor-not-allowed disabled:opacity-40`}
               >
-                Let’s go <span aria-hidden="true">&nbsp;→</span>
+                Let’s go
               </button>
             ) : (
               <a href={contactLink} className={buttonClass}>
-                Talk to us <span aria-hidden="true">&nbsp;→</span>
+                Talk to us
               </a>
             )}
           </div>

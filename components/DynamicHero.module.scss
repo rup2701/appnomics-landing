@@ -292,10 +292,6 @@
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
     
-    .arrow {
-      transform: translateX(4px);
-    }
-    
     .sparkle {
       animation: sparkleRotate 1s ease;
     }
@@ -305,10 +301,6 @@
     font-size: 1.2rem;
   }
   
-  .arrow {
-    transition: transform 0.3s ease;
-    font-size: 1.2rem;
-  }
 }
 
 @keyframes sparkleRotate {

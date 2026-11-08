@@ -100,7 +100,7 @@ function AuthPageInner() {
               type="submit"
               className="w-full bg-[#171717] text-white rounded-full py-3 font-medium hover:bg-[#333] transition"
             >
-              {isSignUp ? 'Let\'s go →' : 'Sign in →'}
+              {isSignUp ? 'Let\'s go' : 'Sign in'}
             </button>
           </form>
 

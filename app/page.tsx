@@ -53,7 +53,7 @@ export default function Home() {
           inside their own files, or wrap them like this if you can't edit them:
         */}
         <div className="w-full max-w-[1340px] mx-auto">
-          <PricingSection onChoosePlan={setHeroTab} />
+          <PricingSection />
           <WhoThisIsFor />   
           <StudioOSSection />  
           <ProductProofSection />

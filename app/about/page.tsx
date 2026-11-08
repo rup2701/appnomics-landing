@@ -159,7 +159,7 @@ export default function AboutPage() {
                 href="https://builder.appnomics.dev"
                 className="rounded-lg bg-[#ded5ca] px-6 py-3 text-sm font-medium text-[#171717] no-underline transition-colors hover:bg-white"
               >
-                Explore Builder <span aria-hidden="true">→</span>
+                Explore Builder
               </a>
               <a
                 href="mailto:rupesh@appnomics.dev"
@@ -183,7 +183,7 @@ export default function AboutPage() {
             </div>
             <div className="space-y-5 text-base leading-relaxed text-[#555] sm:text-lg">
               <p>
-                AI changes the economics of making software. It doesn’t remove
+                AI changes the economics of making software. It doesn&apos;t remove
                 the need to understand the people using it, make sound product
                 decisions, or design an experience that feels right.
               </p>

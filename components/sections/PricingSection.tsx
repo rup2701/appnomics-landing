@@ -1,5 +1,4 @@
 import CheckLine from "../CheckLine";
-import type { TabId } from "../HeroPrompt";
 import Link from "next/link";
 
 const BUILD_FEATURES = [
@@ -38,16 +37,7 @@ const BUILDER_TIERS = [
 
 const SCOUT_FEATURE = "Unlimited conversational turns";
 
-export default function PricingSection({
-  onChoosePlan,
-}: {
-  onChoosePlan: (tab: TabId) => void;
-}) {
-  function chooseBuildPlan() {
-    onChoosePlan("mvp");
-    document.getElementById("hero-prompt")?.scrollIntoView({ behavior: "smooth" });
-  }
-
+export default function PricingSection() {
   return (
     <section id="pricing" className="py-32">
       <div className="mx-auto block max-w-[1240px] px-2">
@@ -77,7 +67,7 @@ export default function PricingSection({
           Plans for every way you build.
         </h2>
         <p className="mb-14 text-center font-sans text-lg text-[#555]">
-          Build and iterate yourself with Builder, or partner with us to ship your product.
+          Build and iterate yourself with our AI Builder, or partner with us to ship your product.
         </p>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -132,7 +122,7 @@ export default function PricingSection({
                 href="https://builder.appnomics.dev"
                 className="block rounded-lg border border-[#087a5044] bg-[#087a500d] px-4 py-[11px] text-center font-sans text-xs font-bold tracking-[0.12em] text-[#087a50] no-underline transition-colors hover:bg-[#087a501a]"
               >
-                START BUILDING <span aria-hidden="true">→</span>
+                START BUILDING
               </Link>
             </article>
           ))}
@@ -160,7 +150,7 @@ export default function PricingSection({
                 </span>
               </div>
               <p className="mt-3 max-w-[32ch] font-sans text-sm leading-relaxed text-[#555]">
-                Production-ready full-stack MVP with complete handover or optional ongoing run support.
+                Production-ready full-stack MVP with optional ongoing run support (15% rev share).
               </p>
             </div>
 
@@ -170,13 +160,16 @@ export default function PricingSection({
               ))}
             </div>
 
-            <button
-              type="button"
-              onClick={chooseBuildPlan}
+            <p className="mb-6 rounded-xl bg-[#e8eee9] p-4 font-sans text-sm leading-relaxed text-[#444]">
+              An epic is one scoped feature or product slice, typically delivered in about a week.
+            </p>
+
+            <a
+              href="mailto:rupesh@appnomics.dev"
               className="block w-full rounded-lg border border-[#087a5044] bg-[#087a500d] px-4 py-[11px] text-center font-sans text-xs font-bold tracking-[0.12em] text-[#087a50] transition-colors hover:bg-[#087a501a]"
             >
-              START BUILDING <span aria-hidden="true">→</span>
-            </button>
+              BOOK A CALL
+            </a>
           </article>
         </div>
 

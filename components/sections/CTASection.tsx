@@ -54,7 +54,7 @@ export default function CTASection() {
             boxShadow: hovered ? "0 0 32px #00ff9d44" : "0 0 12px #00ff9d22",
           }}
         >
-          START BUILDING →
+          START BUILDING
         </Link>
 
         <p className="text-[11px] text-[#666] font-sans">
