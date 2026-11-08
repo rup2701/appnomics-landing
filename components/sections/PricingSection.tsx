@@ -70,7 +70,7 @@ export default function PricingSection({
                   <span className="mb-3 inline-block rounded-full bg-[#087a500d] px-2.5 py-1 font-sans text-[10px] tracking-[0.12em] text-[#087a50]">
                     SELF-SERVE
                   </span>
-                  <h3 className="text-left font-sans text-xl font-medium text-[#171717]">
+                  <h3 className="text-left font-sans text-xl font-semibold text-[#171717]">
                     {tier.name}
                   </h3>
                   <p className="mt-1 font-sans text-[10px] tracking-[0.1em] text-[#555]">
@@ -78,17 +78,17 @@ export default function PricingSection({
                   </p>
                 </div>
                 <div
-                  className="mt-4 flex items-baseline gap-2 whitespace-nowrap font-sans"
+                  className="mt-4 flex items-baseline gap-4 whitespace-nowrap font-sans"
                   aria-label={`${tier.monthlyPrice} per month or ${tier.annualPrice} per year`}
                 >
                   <span className="text-[30px] font-medium leading-none text-[#087a50]">
                     {tier.monthlyPrice}
-                    <span className="ml-0.5 text-sm font-medium">/mo</span>
+                    <span className="ml-0.5 text-sm font-medium">mo</span>
                   </span>
                   <span aria-hidden="true" className="text-lg text-[#999]">/</span>
                   <span className="text-[30px] font-medium leading-none text-[#006987]">
                     {tier.annualPrice}
-                    <span className="ml-0.5 text-sm font-medium">/yr</span>
+                    <span className="ml-0.5 text-sm font-medium">yr</span>
                   </span>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function PricingSection({
                 <span className="mb-3 inline-block rounded-full bg-[#f0f0f0] px-2.5 py-1 font-sans text-[10px] tracking-[0.12em] text-[#555]">
                   ENGINEERING PARTNER
                 </span>
-                <h3 className="text-left font-sans text-xl font-medium text-[#171717]">
+                <h3 className="text-left font-sans text-xl font-semibold text-[#171717]">
                   Build
                 </h3>
                 <p className="mt-1 font-sans text-[10px] tracking-[0.1em] text-[#555]">
