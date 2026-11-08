@@ -7,6 +7,7 @@ import Link from "next/link";
 // ── Navigation ─────────────────────────────────────────────────────────────
 const NAV_ITEMS = [
   { label: "Pricing", href: "/#pricing" },
+  { label: "Docs", href: "/docs/builder" },
   { label: "Cloud", href: "/#studio" },
   { label: "Appnomics Platform", href: "/#product-proof" },
   { label: "Case Studies", href: "/#portfolio" },
