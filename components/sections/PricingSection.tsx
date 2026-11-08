@@ -51,6 +51,28 @@ export default function PricingSection({
   return (
     <section id="pricing" className="py-32">
       <div className="mx-auto block max-w-[1240px] px-2">
+        <svg
+          aria-hidden="true"
+          className="mx-auto mb-4 h-[60px] w-[72px] text-[#b42318]"
+          viewBox="0 0 60 60"
+          preserveAspectRatio="none"
+          fill="none"
+        >
+          <path
+            d="M15 9h30v42l-5-3-5 3-5-3-5 3-5-3-5 3V9Z"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M22 21h16M22 29h16m-16 8h7m5 3 3 3 6-7"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
         <h2 className="mb-2 text-center font-sans text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
           Plans for every way you build.
         </h2>
