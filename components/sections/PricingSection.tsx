@@ -62,7 +62,9 @@ export default function PricingSection({
           {BUILDER_TIERS.map((tier) => (
             <article
               key={tier.name}
-              className="flex flex-col rounded-[20px] bg-white p-7 sm:p-8"
+              className={`flex flex-col rounded-[20px] p-7 sm:p-8 ${
+                tier.name === "Pro Builder" ? "bg-[#d8eee2]" : "bg-[#fafafa]"
+              }`}
             >
               <div className="mb-5">
                 <div>
@@ -113,7 +115,7 @@ export default function PricingSection({
             </article>
           ))}
 
-          <article className="flex flex-col rounded-[20px] bg-white p-7 sm:p-8">
+          <article className="flex flex-col rounded-[20px] bg-[#fafafa] p-7 sm:p-8">
             <div className="mb-5">
               <div>
                 <span className="mb-3 inline-block rounded-full bg-[#f0f0f0] px-2.5 py-1 font-sans text-[10px] tracking-[0.12em] text-[#555]">
