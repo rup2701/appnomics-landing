@@ -3,7 +3,6 @@ import type { TabId } from "../HeroPrompt";
 import Link from "next/link";
 
 const BUILD_FEATURES = [
-  "Full-stack MVP, production-ready",
   "1 epic per week (avg)",
   "Studio OS dashboard access",
   "Weekly async progress updates",
@@ -51,7 +50,7 @@ export default function PricingSection({
 
   return (
     <section id="pricing" className="py-32">
-      <div className="mx-auto block max-w-[1340px] px-2">
+      <div className="mx-auto block max-w-[1240px] px-2">
         <h2 className="mb-2 text-center font-sans text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
           Plans for every way you build.
         </h2>
@@ -136,6 +135,9 @@ export default function PricingSection({
                   per epic
                 </span>
               </div>
+              <p className="mt-3 max-w-[32ch] font-sans text-sm leading-relaxed text-[#555]">
+                Production-ready full-stack MVP with complete handover or optional ongoing run support.
+              </p>
             </div>
 
             <div className="mb-6 flex-1">
