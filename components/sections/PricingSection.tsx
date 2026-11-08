@@ -1,11 +1,7 @@
-// ── Pricing Section ────────────────────────────────────────────────────────
-
-import { useState } from "react";
 import CheckLine from "../CheckLine";
 import type { TabId } from "../HeroPrompt";
 import Link from "next/link";
 
-// ── Pricing ────────────────────────────────────────────────────────────────
 const BUILD_FEATURES = [
   "Full-stack MVP, production-ready",
   "1 epic per week (avg)",
@@ -16,216 +12,150 @@ const BUILD_FEATURES = [
   "90-day QA warranty on delivered epics",
 ];
 
-const BUILD_RUN_FEATURES = [
-  "Everything in Build Only",
-  "Ongoing maintenance & monitoring",
-  "Bug fixes & security patches",
-  "Feature velocity retainer",
-  "Monthly usage & revenue reports",
-  "Priority epic queue",
-  "15% of revenue, no upfront extras",
+const BUILDER_TIERS = [
+  {
+    name: "Builder",
+    audience: "STARTER PROFESSIONAL",
+    monthlyPrice: "$49",
+    annualPrice: "$449",
+    projects: "1 active live project / workspace",
+    deployment: "Standard preview & deploy queue",
+    checks: "Standard automated checks (lint, types, tests)",
+    description:
+      "A focused workspace to build and iterate on one product with Scout.",
+  },
+  {
+    name: "Pro",
+    audience: "HEAVY ITERATION & MULTI-APP",
+    monthlyPrice: "$79",
+    annualPrice: "$899",
+    projects: "Up to 3 active projects / workspaces",
+    deployment: "Priority worker queue (skips general line)",
+    checks: "Enhanced checks + deeper diagnostic logging",
+    description:
+      "More room for multiple products, with priority builds and deeper diagnostics.",
+  },
 ];
 
-const BUILDER_FEATURES = [
-  "2 site builds per month",
-  "Live site in about 45 minutes",
-  "Chat with Scout to shape your site",
-  "Published and hosted for you",
-  "Owner sign-in and a launch checklist",
-  "Email support",
-];
+const SCOUT_FEATURE = "Unlimited conversational turns";
 
-export default function PricingSection({ onChoosePlan }: { onChoosePlan: (tab: TabId) => void }) {
-  const [selectedPlan, setSelectedPlan] = useState<"builder" | "build" | "build_run">("build");
-
-  function choosePlan(tab: TabId) {
-    onChoosePlan(tab);
+export default function PricingSection({
+  onChoosePlan,
+}: {
+  onChoosePlan: (tab: TabId) => void;
+}) {
+  function chooseBuildPlan() {
+    onChoosePlan("mvp");
     document.getElementById("hero-prompt")?.scrollIntoView({ behavior: "smooth" });
   }
 
   return (
-    <section id='pricing' className="py-32">
-      <div className="max-w-7xl mx-auto block">
-        <h2
-          className="text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans text-center"
-        >
+    <section id="pricing" className="py-32">
+      <div className="mx-auto block max-w-[1340px] px-2">
+        <h2 className="mb-2 text-center font-sans text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
           Plans for every way you build.
         </h2>
-        <p className="text-lg text-[#555] mb-14 font-sans text-center">
-          Build it yourself with Builder, or partner with us to ship and run your product.
+        <p className="mb-14 text-center font-sans text-lg text-[#555]">
+          Build and iterate yourself with Builder, or partner with us to ship your product.
         </p>
 
-        <div
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 max-w-6xl mx-auto"
-        >
-          {/* Builder */}
-          <div
-            onClick={() => setSelectedPlan("builder")}
-            className="rounded-[20px] bg-white p-8 cursor-pointer transition-all duration-150 relative flex flex-col"
-          >
-            <div className="flex items-start justify-between mb-6">
-              <div>
-                <span className="inline-block text-[10px] tracking-[0.12em] text-[#087a50] bg-[#087a500d] rounded-full py-1 px-2.5 mb-3 font-sans">
-                  SELF-SERVE
-                </span>
-                <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
-                  PLAN 01
-                </p>
-                <h3 className="text-xl font-medium text-[#171717] font-sans text-left">
-                  Builder
-                </h3>
-              </div>
-              <div className="text-right">
-                <p className="text-[28px] font-bold font-sans leading-none text-[#087a50]">
-                  $20
-                </p>
-                <p className="text-[11px] text-[#555] font-sans">per month</p>
-              </div>
-            </div>
-
-            <p className="text-sm text-[#555] mb-6 font-sans">
-              Build websites and applications yourself with AI.
-            </p>
-
-            <div className="mb-6 flex-1">
-              {BUILDER_FEATURES.map((f) => (
-                <CheckLine key={f} text={f} />
-              ))}
-            </div>
-
-            <Link
-              href="https://builder.appnomics.dev"
-              className={`block text-center py-[11px] px-0 border rounded-lg text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
-                selectedPlan === "builder"
-                  ? "border-[#087a5044] text-[#087a50] bg-[#087a500d]"
-                  : "border-[#bbb] text-[#555] bg-transparent"
-              }`}
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {BUILDER_TIERS.map((tier) => (
+            <article
+              key={tier.name}
+              className="flex flex-col rounded-[20px] bg-white p-7 sm:p-8"
             >
-              START BUILDING →
-            </Link>
-          </div>
+              <div className="mb-5">
+                <div>
+                  <span className="mb-3 inline-block rounded-full bg-[#087a500d] px-2.5 py-1 font-sans text-[10px] tracking-[0.12em] text-[#087a50]">
+                    SELF-SERVE
+                  </span>
+                  <h3 className="text-left font-sans text-xl font-medium text-[#171717]">
+                    {tier.name}
+                  </h3>
+                  <p className="mt-1 font-sans text-[10px] tracking-[0.1em] text-[#555]">
+                    {tier.audience}
+                  </p>
+                </div>
+                <div
+                  className="mt-4 flex items-baseline gap-2 whitespace-nowrap font-sans"
+                  aria-label={`${tier.monthlyPrice} per month or ${tier.annualPrice} per year`}
+                >
+                  <span className="text-[30px] font-medium leading-none text-[#087a50]">
+                    {tier.monthlyPrice}
+                    <span className="ml-0.5 text-sm font-medium">/mo</span>
+                  </span>
+                  <span aria-hidden="true" className="text-lg text-[#999]">/</span>
+                  <span className="text-[30px] font-medium leading-none text-[#006987]">
+                    {tier.annualPrice}
+                    <span className="ml-0.5 text-sm font-medium">/yr</span>
+                  </span>
+                </div>
+              </div>
 
-          {/* Build Only */}
-          <div
-            onClick={() => setSelectedPlan("build")}
-            className="rounded-[20px] bg-white p-8 cursor-pointer transition-all duration-150 relative flex flex-col"
-          >
-            <div className="flex items-start justify-between mb-6">
+              <p className="mb-6 font-sans text-sm text-[#555]">
+                {tier.description}
+              </p>
+
+              <div className="mb-6 flex-1">
+                <CheckLine text="14-day free trial" />
+                <CheckLine text={tier.projects} />
+                <CheckLine text={SCOUT_FEATURE} />
+                <CheckLine text={tier.deployment} />
+                <CheckLine text={tier.checks} />
+              </div>
+
+              <Link
+                href="https://builder.appnomics.dev"
+                className="block rounded-lg border border-[#087a5044] bg-[#087a500d] px-4 py-[11px] text-center font-sans text-xs font-bold tracking-[0.12em] text-[#087a50] no-underline transition-colors hover:bg-[#087a501a]"
+              >
+                START BUILDING <span aria-hidden="true">→</span>
+              </Link>
+            </article>
+          ))}
+
+          <article className="flex flex-col rounded-[20px] bg-white p-7 sm:p-8">
+            <div className="mb-5">
               <div>
-                <span className="inline-block text-[10px] tracking-[0.12em] text-[#555] bg-[#f0f0f0] rounded-full py-1 px-2.5 mb-3 font-sans">
+                <span className="mb-3 inline-block rounded-full bg-[#f0f0f0] px-2.5 py-1 font-sans text-[10px] tracking-[0.12em] text-[#555]">
                   ENGINEERING PARTNER
                 </span>
-                <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
-                  PLAN 02
-                </p>
-                <h3 className="text-xl font-medium text-[#171717] font-sans text-left">
-                  Build Only
+                <h3 className="text-left font-sans text-xl font-medium text-[#171717]">
+                  Build
                 </h3>
+                <p className="mt-1 font-sans text-[10px] tracking-[0.1em] text-[#555]">
+                  FIXED PRICE PER EPIC
+                </p>
               </div>
-              <div className="text-right">
-                <p
-                  className={`text-[28px] font-bold font-sans leading-none ${
-                    selectedPlan === "build"
-                      ? "text-[#087a50] "
-                      : "text-[#087a50]"
-                  }`}
-                >
+              <div className="mt-4 flex items-baseline gap-2 whitespace-nowrap font-sans">
+                <span className="text-[30px] font-medium leading-none text-[#087a50]">
                   $5K
-                </p>
-                <p className="text-[11px] text-[#555] font-sans">
-                  per epic
-                </p>
-              </div>
-            </div>
-
-            <div className="mb-6 flex-1 text-[#fff]">
-              {BUILD_FEATURES.map((f) => (
-                <CheckLine key={f} text={f} />
-              ))}
-            </div>
-
-            <a
-              href="#hero-prompt"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                choosePlan("mvp");
-              }}
-              className={`block text-center py-[11px] px-0 border rounded-lg text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
-                selectedPlan === "build"
-                  ? "border-[#087a5044] text-[#087a50] bg-[#087a500d]"
-                  : "border-[#bbb] text-[#555] bg-transparent"
-              }`}
-            >
-              START BUILDING →
-            </a>
-          </div>
-
-          {/* Build + Run */}
-          <div
-            onClick={() => setSelectedPlan("build_run")}
-            className="rounded-[20px] bg-white p-8 cursor-pointer transition-all duration-150 relative flex flex-col"
-          >
-            {/* Recommended badge */}
-            <div className="absolute -top-px right-5 bg-[#00d4ff] text-[#0a0a0a] text-[9px] font-bold tracking-[0.15em] py-[3px] px-2.5 font-sans">
-              POPULAR
-            </div>
-
-            <div className="flex items-start justify-between mb-6">
-              <div>
-                <span className="inline-block text-[10px] tracking-[0.12em] text-[#555] bg-[#dcdcdc] rounded-full py-1 px-2.5 mb-3 font-sans">
-                  CUSTOM
                 </span>
-                <p className="text-[10px] tracking-[0.15em] text-[#555] mb-1.5 font-sans text-left">
-                  PLAN 03
-                </p>
-                <h3 className="text-xl font-medium text-[#171717] font-sans">
-                  Build + Run
-                </h3>
-              </div>
-              <div className="text-right">
-                <p
-                  className={`text-[32px] font-bold font-sans leading-none ${
-                    selectedPlan === "build_run"
-                      ? "text-[#006987]"
-                      : "text-[#006987]"
-                  }`}
-                >
-                  $5K
-                </p>
-                <p className="text-[11px] text-[#555] font-sans">
-                  per epic + 15% rev
-                </p>
+                <span aria-hidden="true" className="text-lg text-[#999]">/</span>
+                <span className="font-sans text-sm font-medium text-[#555]">
+                  per epic
+                </span>
               </div>
             </div>
 
             <div className="mb-6 flex-1">
-              {BUILD_RUN_FEATURES.map((f) => (
-                <CheckLine key={f} text={f} />
+              {BUILD_FEATURES.map((feature) => (
+                <CheckLine key={feature} text={feature} />
               ))}
             </div>
 
-            <a
-              href="#hero-prompt"
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                choosePlan("startup");
-              }}
-              className={`block text-center py-[11px] px-0 border rounded-lg text-xs font-bold tracking-[0.12em] font-sans no-underline transition-all duration-150 ${
-                selectedPlan === "build_run"
-                  ? "border-[#00698744] text-[#006987] bg-[#0069870d]"
-                  : "border-[#bbb] text-[#555] bg-transparent"
-              }`}
+            <button
+              type="button"
+              onClick={chooseBuildPlan}
+              className="block w-full rounded-lg border border-[#087a5044] bg-[#087a500d] px-4 py-[11px] text-center font-sans text-xs font-bold tracking-[0.12em] text-[#087a50] transition-colors hover:bg-[#087a501a]"
             >
-              START BUILDING →
-            </a>
-          </div>
+              START BUILDING <span aria-hidden="true">→</span>
+            </button>
+          </article>
         </div>
 
-        {/* Fine print */}
-        <p className="mt-7 text-[11px] text-[#555] font-sans text-center">
-          No credit card required to start · Discovery is free ·{" "}
+        <p className="mt-7 text-center font-sans text-[11px] text-[#555]">
+          Annual plans are billed upfront · Annual pricing saves about 20% · Discovery is free ·{" "}
           <span className="text-[#171717]">We scope before you commit.</span>
         </p>
       </div>
