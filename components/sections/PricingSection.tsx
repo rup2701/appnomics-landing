@@ -24,7 +24,7 @@ const BUILDER_TIERS = [
       "A focused workspace to build and iterate on one product with Scout.",
   },
   {
-    name: "Pro",
+    name: "Pro Builder",
     audience: "HEAVY ITERATION & MULTI-APP",
     monthlyPrice: "$79",
     annualPrice: "$899",
