@@ -274,8 +274,8 @@ export default function HeroPrompt({
   const isBuilder = tab === "builder";
   const storeSelected = isBuilder && pill === "store";
   const websiteSelected = isBuilder && pill === "website";
-  const isWaitlistTemplate = websiteSelected && template === "website-mvp";
-  const waitlistIdeaValid = text.trim().length >= 15 && text.length <= 1000 && !text.includes("___");
+  const isSupportedSiteTemplate = websiteSelected && (template === "website-mvp" || template === "website-saas");
+  const siteIdeaValid = text.trim().length >= 15 && text.length <= 1000 && !text.includes("___");
   const templates = websiteSelected ? WEBSITE_TEMPLATES : TEMPLATES;
 
   const shown = Array.from({ length: EXAMPLES_SHOWN }, (_, i) => FOUNDER_EXAMPLES[(round * EXAMPLES_SHOWN + i) % FOUNDER_EXAMPLES.length]);
@@ -318,15 +318,18 @@ export default function HeroPrompt({
 
   function submit() {
     const value = text.trim();
-    if (isWaitlistTemplate) {
-      if (!waitlistIdeaValid) {
+    if (isSupportedSiteTemplate) {
+      if (!siteIdeaValid) {
         setStatus("Replace the blank with at least 15 characters.");
         boxRef.current?.focus();
         return;
       }
 
       const builderUrl = new URL("https://builder.appnomics.dev/");
+      // const builderUrl = new URL("http://localhost:3001/");
+
       builderUrl.searchParams.set("kind", "site");
+      builderUrl.searchParams.set("pack", template === "website-saas" ? "showcase" : "waitlist");
       builderUrl.searchParams.set("idea", value);
       window.location.assign(builderUrl.toString());
       return;
@@ -389,7 +392,7 @@ export default function HeroPrompt({
             ref={boxRef}
             value={text}
             rows={2}
-            maxLength={isWaitlistTemplate ? 1000 : undefined}
+            maxLength={isSupportedSiteTemplate ? 1000 : undefined}
             placeholder={placeholder}
             onChange={(e) => {
               setText(e.target.value);
@@ -403,7 +406,7 @@ export default function HeroPrompt({
             }}
             className="field-sizing-content block max-h-64 min-h-[4.5rem] w-full resize-none bg-transparent text-xl leading-snug text-foreground outline-none placeholder:text-foreground/35 sm:text-2xl"
           />
-          {isWaitlistTemplate && (
+          {isSupportedSiteTemplate && (
             <p className="mt-2 text-right text-xs text-foreground/50">
               {text.length}/1,000 characters · minimum 15
             </p>
@@ -416,7 +419,7 @@ export default function HeroPrompt({
               <button
                 type="button"
                 onClick={submit}
-                disabled={isWaitlistTemplate && !waitlistIdeaValid}
+                disabled={isSupportedSiteTemplate && !siteIdeaValid}
                 className={`${buttonClass} disabled:cursor-not-allowed disabled:opacity-40`}
               >
                 Let’s go
