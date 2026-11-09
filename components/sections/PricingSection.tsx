@@ -75,7 +75,7 @@ export default function PricingSection() {
             <article
               key={tier.name}
               className={`flex flex-col rounded-[20px] p-7 sm:p-8 ${
-                tier.name === "Pro Builder" ? "bg-[#d8eee2]" : "bg-[#fafafa]"
+                tier.name === "Pro Builder" ? "bg-[#ebebeb]" : "bg-[#fafafa]"
               }`}
             >
               <div className="mb-5">
