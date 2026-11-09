@@ -83,7 +83,7 @@ export default function PricingSection() {
                   <span className="mb-3 inline-block rounded-full bg-[#087a500d] px-2.5 py-1 font-sans text-[10px] tracking-[0.12em] text-[#087a50]">
                     SELF-SERVE
                   </span>
-                  <h3 className="text-left font-sans text-xl font-semibold text-[#171717]">
+                  <h3 className="text-left font-sans text-2xl font-semibold text-[#171717]">
                     {tier.name}
                   </h3>
                   <p className="mt-1 font-sans text-[10px] tracking-[0.1em] text-[#555]">
@@ -133,7 +133,7 @@ export default function PricingSection() {
                 <span className="mb-3 inline-block rounded-full bg-[#f0f0f0] px-2.5 py-1 font-sans text-[10px] tracking-[0.12em] text-[#555]">
                   ENGINEERING PARTNER
                 </span>
-                <h3 className="text-left font-sans text-xl font-semibold text-[#171717]">
+                <h3 className="text-left font-sans text-2xl font-semibold text-[#171717]">
                   Build
                 </h3>
                 <p className="mt-1 font-sans text-[10px] tracking-[0.1em] text-[#555]">
