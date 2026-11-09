@@ -208,10 +208,10 @@ const WEBSITE_TEMPLATES: Template[] = [
   },
   {
     id: "website-saas",
-    label: "Ledgerline",
-    caption: "SaaS site",
+    label: ["Ledgerline", "DispatchOS"],
+    caption: "Product showcase",
     text: "A product website for ___, with pricing, how it works and a sign-up box.",
-    demoUrl: "https://ledgerline.appnomics.live",
+    demoUrl: ["https://ledgerline.appnomics.live", "https://dispatchos-9901.appnomics.live/"],
     art: (
       <div className="flex h-full flex-col justify-center gap-3 bg-indigo-50 p-5 text-indigo-950 sm:p-8">
         <span className="font-mono text-[10px]">YOUR PRODUCT</span>
