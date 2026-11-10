@@ -12,8 +12,8 @@ export default function Footer() {
             <Image
               src="/appnomics-logo.svg"
               alt="Appnomics"
-              className="h-7 w-auto mt-1"
-              height={32}
+              className="h-8 w-auto mt-1"
+              height={44}
               width={132}
             />
             <p className="text-[13px] text-[#444] font-sans mt-2">
