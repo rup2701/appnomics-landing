@@ -105,7 +105,7 @@ export default function Footer() {
             <ul className="space-y-1">
               {[
                 { label: "About", href: "/about" },
-                { label: "Support", href: "mailto:support@appnomics.dev" },
+                { label: "Contact us", href: "mailto:rupesh@appnomics.dev" },
                 { label: "FAQ", href: "/#faq" },
                 { label: "Privacy Policy", href: "#" },
                 { label: "Terms of Service", href: "#" },
