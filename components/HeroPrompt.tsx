@@ -221,6 +221,20 @@ const WEBSITE_TEMPLATES: Template[] = [
     ),
   },
   {
+    id: "website-restaurant",
+    label: "CurryLeaf",
+    caption: "Restaurant site",
+    text: "A website for my restaurant, with the menu, our story, a gallery and ways to book or order.",
+    demoUrl: "https://curryleaf.appnomics.live",
+    art: (
+      <div className="flex h-full flex-col justify-center gap-3 bg-orange-50 p-5 text-orange-950 sm:p-8">
+        <span className="font-mono text-[10px]">YOUR RESTAURANT</span>
+        <span className="text-lg leading-tight sm:text-2xl">Good food,<br />well told.</span>
+        <span className="h-6 w-1/2 rounded bg-orange-700" />
+      </div>
+    ),
+  },
+  {
     id: "website-portfolio",
     label: "Studio Avant",
     caption: "Portfolio site",
