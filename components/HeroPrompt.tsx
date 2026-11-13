@@ -288,7 +288,7 @@ export default function HeroPrompt({
   const isBuilder = tab === "builder";
   const storeSelected = isBuilder && pill === "store";
   const websiteSelected = isBuilder && pill === "website";
-  const isSupportedSiteTemplate = websiteSelected && (template === "website-mvp" || template === "website-saas");
+  const isSupportedSiteTemplate = websiteSelected && (template === "website-mvp" || template === "website-saas" || template === "website-restaurant");
   const siteIdeaValid = text.trim().length >= 15 && text.length <= 1000 && !text.includes("___");
   const templates = websiteSelected ? WEBSITE_TEMPLATES : TEMPLATES;
 
@@ -343,7 +343,8 @@ export default function HeroPrompt({
       // const builderUrl = new URL("http://localhost:3001/");
 
       builderUrl.searchParams.set("kind", "site");
-      builderUrl.searchParams.set("pack", template === "website-saas" ? "showcase" : "waitlist");
+      builderUrl.searchParams.set("pack",template === "website-saas" ? "showcase" : template === "website-restaurant" ? "local" : "waitlist",
+);
       builderUrl.searchParams.set("idea", value);
       window.location.assign(builderUrl.toString());
       return;
@@ -436,7 +437,7 @@ export default function HeroPrompt({
                 disabled={isSupportedSiteTemplate && !siteIdeaValid}
                 className={`${buttonClass} disabled:cursor-not-allowed disabled:opacity-40`}
               >
-                Let’s go
+                Let&apos;s go
               </button>
             ) : (
               <a href={contactLink} className={buttonClass}>
