@@ -23,7 +23,7 @@ export default function WhoThisIsFor() {
     <section className="py-20 md:py-32">
       <div className="max-w-[1100px] mx-auto px-1 md:px-0">
         <div className="mb-12 flex flex-col items-start gap-4">
-          <h2 className="text-[42px] font-medium tracking-tight text-[#171717] leading-[1.1] font-sans">
+          <h2 className="text-[32px] sm:text-[42px] font-medium tracking-tight text-[#171717] leading-[1.1] font-sans">
             Who is this for.
           </h2>
           <p className="text-base md:text-lg text-[#555] font-sans leading-[1.6] max-w-[640px]">

@@ -23,7 +23,7 @@ export default function ProductProofSection() {
               strokeLinejoin="round"
             />
           </svg>
-          <h2 className="mb-3 font-sans text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
+          <h2 className="mb-3 font-sans text-[32px] sm:text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
             The Appnomics platform.
           </h2>
           {/* <p className="mx-auto max-w-[680px] font-sans text-lg text-[#555]">

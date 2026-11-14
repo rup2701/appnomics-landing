@@ -63,7 +63,7 @@ export default function PricingSection() {
             strokeLinejoin="round"
           />
         </svg>
-        <h2 className="mb-2 text-center font-sans text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
+        <h2 className="mb-2 text-center font-sans text-[32px] sm:text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
           Plans for every way you build.
         </h2>
         <p className="mb-14 text-center font-sans text-lg text-[#555]">

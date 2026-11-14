@@ -22,7 +22,7 @@ export default function StudioOSSection() {
             />
           </svg>
           <h2
-            className="text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans"
+            className="text-[32px] sm:text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans"
           >
             Appnomics Cloud
           </h2>

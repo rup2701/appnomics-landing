@@ -75,7 +75,7 @@ export default function PortfolioSection() {
   return (
     <section id='portfolio' className="py-32">
       <div className="max-w-[1100px] mx-auto">
-        <h2 className="text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans">
+        <h2 className="text-[32px] sm:text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans">
           Built. Shipped. Handed over.
         </h2>
         <p className="text-lg text-[#555] mb-14 font-sans">

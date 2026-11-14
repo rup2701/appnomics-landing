@@ -177,7 +177,7 @@ export default function AboutPage() {
               <p className="mb-4 font-mono text-xs tracking-[0.16em] text-[#087a50]">
                 THE SHIFT
               </p>
-              <h2 className="text-[36px] font-medium leading-tight tracking-tight sm:text-[42px]">
+              <h2 className="text-[32px] font-medium leading-tight tracking-tight sm:text-[42px]">
                 When code gets easier, craft matters more.
               </h2>
             </div>
@@ -208,7 +208,7 @@ export default function AboutPage() {
               <p className="mb-4 font-mono text-xs tracking-[0.16em] text-[#087a50]">
                 WHAT WE’RE BUILDING
               </p>
-              <h2 className="text-[36px] font-medium leading-tight tracking-tight sm:text-[42px]">
+              <h2 className="text-[32px] font-medium leading-tight tracking-tight sm:text-[42px]">
                 One platform. More than one way to build.
               </h2>
             </div>
@@ -250,7 +250,7 @@ export default function AboutPage() {
               <p className="mb-4 font-mono text-xs tracking-[0.16em] text-[#087a50]">
                 WHAT GUIDES THE WORK
               </p>
-              <h2 className="text-[36px] font-medium leading-tight tracking-tight sm:text-[42px]">
+              <h2 className="text-[32px] font-medium leading-tight tracking-tight sm:text-[42px]">
                 Automation with intention. Craft at every layer.
               </h2>
             </div>
@@ -281,7 +281,7 @@ export default function AboutPage() {
               <p className="mb-4 font-mono text-xs tracking-[0.16em] text-[#087a50]">
                 BUILT IN THE REAL WORLD
               </p>
-              <h2 className="text-[36px] font-medium leading-tight tracking-tight sm:text-[42px]">
+              <h2 className="text-[32px] font-medium leading-tight tracking-tight sm:text-[42px]">
                 Product craft comes from shipping.
               </h2>
               <p className="mt-4 leading-relaxed text-[#555]">
@@ -330,7 +330,7 @@ export default function AboutPage() {
             <p className="mb-4 font-mono text-xs tracking-[0.16em] text-[#087a50]">
               THE NEXT CHAPTER
             </p>
-            <h2 className="text-[36px] font-medium leading-tight tracking-tight sm:text-[48px]">
+            <h2 className="text-[32px] font-medium leading-tight tracking-tight sm:text-[48px]">
               Build what matters. Bring the craft with you.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-[#555]">

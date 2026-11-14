@@ -207,7 +207,7 @@ export default function Gallery() {
         </div>
       )}
       <section aria-labelledby="gallery-cta-title" className="mt-20 rounded-[20px] bg-[#ffdd66] px-6 py-14 text-center sm:px-12 sm:py-16">
-        <h2 id="gallery-cta-title" className="text-[36px] font-medium leading-tight tracking-tight sm:text-[42px]">
+        <h2 id="gallery-cta-title" className="text-[32px] font-medium leading-tight tracking-tight sm:text-[42px]">
           Your idea could be next.
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#555]">
