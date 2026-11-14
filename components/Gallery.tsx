@@ -17,6 +17,7 @@ type GalleryApp = {
   liveUrl?: string;
   image?: string;
   idea?: string;
+  sitePack?: "waitlist" | "showcase" | "local";
 };
 
 const APPS: GalleryApp[] = [
@@ -55,6 +56,13 @@ const APPS: GalleryApp[] = [
     description: "The waitlist site for DispatchOS, built with Builder.",
     liveUrl: "https://dispatchos-waitlist.appnomics.live",
     idea: "A waitlist website for my product, with a product overview, features and a signup form.",
+  },
+  {
+    name: "CurryLeaf", path: "Builder", categories: ["Website"], tags: ["Restaurant"],
+    description: "A restaurant website with a menu, the restaurant's story, a gallery, and ways to book or order.",
+    liveUrl: "https://curryleaf.appnomics.live",
+    idea: "A website for my restaurant, with the menu, our story, a gallery and ways to book or order.",
+    sitePack: "local",
   },
   {
     name: "InstaRoom", path: "MVP", categories: ["SaaS", "Telehealth"], tags: ["Healthcare"],
@@ -97,7 +105,7 @@ export default function Gallery() {
   return (
     <div className="mx-auto max-w-[1100px] px-6 pb-32 pt-32 font-sans">
       <header className="mb-12 text-center">
-        <h1 className="mb-4 text-[clamp(36px,5vw,56px)] leading-tight">See what&apos;s possible.</h1>
+        <h1 className="mb-4 text-[clamp(36px,5vw,56px)] leading-tight">Anything&apos;s possible.</h1>
         <p className="mx-auto max-w-2xl text-lg text-[#555]">
           Explore apps built with Builder and products shipped with our engineering team.
           Find inspiration, try a live example, or start with a proven idea.
@@ -184,7 +192,7 @@ export default function Gallery() {
                 <p className="mb-6 flex-1 text-sm leading-relaxed text-[#555]">{app.description}</p>
                 <div className="flex flex-wrap gap-x-4 gap-y-3 text-sm">
                   {app.liveUrl && <a href={app.liveUrl} target="_blank" rel="noreferrer" className="text-[#555] underline underline-offset-4">View live {app.name === "PlaySquares" ? "site" : "app"} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>}
-                  {app.idea && <a href={`https://builder.appnomics.dev/?${app.categories.includes("Online store") ? "" : "kind=site&"}idea=${encodeURIComponent(app.idea)}`}
+                  {app.idea && <a href={`https://builder.appnomics.dev/?${app.categories.includes("Online store") ? "" : "kind=site&"}${app.sitePack ? `pack=${app.sitePack}&` : ""}idea=${encodeURIComponent(app.idea)}`}
                     className="text-[#087a50] underline underline-offset-4">Start with this idea <span aria-hidden="true">→</span></a>}
                 </div>
               </div>
@@ -198,6 +206,28 @@ export default function Gallery() {
           <button type="button" onClick={reset} className="rounded-lg bg-[#171717] px-5 py-2 text-sm text-white">Reset gallery</button>
         </div>
       )}
+      <section aria-labelledby="gallery-cta-title" className="mt-20 rounded-[20px] bg-[#ffdd66] px-6 py-14 text-center sm:px-12 sm:py-16">
+        <h2 id="gallery-cta-title" className="text-[36px] font-medium leading-tight tracking-tight sm:text-[42px]">
+          Your idea could be next.
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[#555]">
+          Start a conversation with Scout and turn your idea into something live.
+        </p>
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a
+            href="https://builder.appnomics.dev"
+            className="w-full rounded-lg bg-[#171717] px-6 py-3 text-sm font-medium text-white no-underline transition-colors hover:bg-[#087a50] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#087a50] sm:w-auto"
+          >
+            Start building
+          </a>
+          <a
+            href="mailto:rupesh@appnomics.dev"
+            className="w-full rounded-lg border border-[#bbb] px-6 py-3 text-sm font-medium text-[#171717] no-underline transition-colors hover:border-[#087a50] hover:text-[#087a50] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#087a50] sm:w-auto"
+          >
+            Talk about your product
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
