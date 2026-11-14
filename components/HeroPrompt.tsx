@@ -500,11 +500,16 @@ export default function HeroPrompt({
         </div>
 
         {isBuilder ? (
-          <ul data-testid="templates" className="mx-auto mt-4 grid max-w-6xl grid-cols-3 gap-2 sm:gap-4">
+          <ul
+            data-testid="templates"
+            aria-label="Starter templates"
+            tabIndex={0}
+            className={`mx-auto mt-4 flex max-w-6xl snap-x snap-mandatory gap-4 overflow-x-auto p-1 pb-4 sm:grid sm:grid-cols-3 sm:overflow-visible sm:p-0 ${focusRing}`}
+          >
             {templates.map((t) => {
               const selected = template === t.id;
               return (
-                <li key={t.id} className="min-w-0">
+                <li key={t.id} className="w-[min(260px,85%)] min-w-0 shrink-0 snap-start sm:w-auto">
                   <button
                     type="button"
                     aria-pressed={selected}
@@ -529,7 +534,7 @@ export default function HeroPrompt({
                         /> :
                         t.art}
                     </span>
-                    <span className="mt-4 block truncate pl-2 text-sm text-foreground">{t.caption}</span>
+                    <span className="mt-4 block pl-2 text-sm text-foreground sm:truncate">{t.caption}</span>
                     {/* <span className="block truncate text-sm text-foreground/50">{t.caption}</span> */}
                   </button>
                   {t.demoUrl === null ? (
