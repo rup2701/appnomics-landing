@@ -501,6 +501,7 @@ export default function HeroPrompt({
 
         {isBuilder ? (
           <ul
+            key={pill}
             data-testid="templates"
             aria-label="Starter templates"
             tabIndex={0}
