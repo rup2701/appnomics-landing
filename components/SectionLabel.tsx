@@ -9,7 +9,7 @@ export default function SectionLabel({ children, centerAlign }: { children: stri
         fontSize: 12,
         letterSpacing: "0.22em",
         color: "#555",
-        fontFamily: "var(--font-geist-mono), monospace",
+        fontFamily: "var(--font-jetbrains-mono), monospace",
         marginBottom: 12,
         textAlign: textAlign
       }}
