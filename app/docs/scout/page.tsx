@@ -50,6 +50,7 @@ export default function ScoutPage() {
             <li><strong>Invent proof.</strong> Prices, quotes, logos, user counts, and security or compliance claims appear only if you provide them. Unconfirmed claims are flagged for your review.</li>
             <li><strong>Verify your claims.</strong> The page is for a product that exists; what you tell Scout is its starting point.</li>
             <li><strong>Open links or fetch images.</strong> Paste the text from a link. Images start as designed placeholders you can replace later.</li>
+            <li><strong>Edit a live restaurant site from the chat.</strong> Scout plans the page with you and builds it; after launch, restaurant menus are changed in the owner area.</li>
             <li><strong>Change anything but the public page.</strong> Requests about owner sign-in, sign-ups, the database or payments get a short explanation and no change card.</li>
           </ul>
         </div>

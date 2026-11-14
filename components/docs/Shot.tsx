@@ -12,6 +12,14 @@ export const SHOTS = {
   preview: { file: "07-design-preview.png", alt: "A design preview with before and after pictures and the Approve and publish, Ask for changes and Remove this change buttons", available: false },
   publishing: { file: "08-making-permanent.png", alt: "The card after approval, saying checks passed and the change is being made permanent, with a second request waiting behind it", available: false },
   live: { file: "09-live-change-undo.png", alt: "A live change with the Open your live site link and the red Undo this change button", available: false },
+  restaurantPlan: { file: "10-restaurant-plan-card.png", alt: "Scout's plan card for a restaurant site, listing the sections, with empty ones marked as placeholders", available: false },
+  restaurantReady: { file: "11-restaurant-ready-card.png", alt: "The ready card for a restaurant site with the live address and the Check these before you share it list", available: false },
+  restaurantPlaceholders: { file: "12-restaurant-placeholders.png", alt: "A new restaurant site showing coming soon blocks, Dish 1 to Dish 4 cards and Photo tiles", available: false },
+  menuAttach: { file: "13-menu-file-attach.png", alt: "The Builder chat after a menu spreadsheet was attached, with Scout's summary of the sections and dishes it found", available: false },
+  ownerLogin: { file: "14-owner-sign-in.png", alt: "The owner sign-in page of a restaurant site", available: false },
+  ownerMenu: { file: "15-owner-menu-editor.png", alt: "The owner area menu editor with sections, dishes, prices, Hide boxes and Up and Down links", available: false },
+  ownerUpload: { file: "16-owner-upload-preview.png", alt: "The owner area spreadsheet upload showing the preview and the Replace my menu button", available: false },
+  ownerRequests: { file: "17-owner-table-requests.png", alt: "The owner area list of table requests with their status", available: false },
 } as const;
 
 export type ShotKey = keyof typeof SHOTS;

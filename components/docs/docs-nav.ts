@@ -15,8 +15,16 @@ export const DOCS_NAV: NavSection[] = [
     items: [
       { label: "Waitlist site", href: "/docs/recipes/waitlist-site" },
       { label: "Product showcase", href: "/docs/recipes/product-showcase" },
+      { label: "Restaurant site", href: "/docs/recipes/restaurant-site" },
       { label: "Online store", href: "/docs/recipes/online-store" },
       { label: "Creator app", href: "/docs/recipes/creator-app", soon: true },
+    ],
+  },
+  {
+    title: "After launch",
+    items: [
+      { label: "Restaurant owner area", href: "/docs/after-launch/owner-area" },
+      { label: "Menu from a spreadsheet", href: "/docs/after-launch/menu-spreadsheet" },
     ],
   },
   {

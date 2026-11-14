@@ -93,7 +93,7 @@ export default function BuilderGuidePage() {
           <li><strong>Five changes per site.</strong> Failed, cancelled, or removed changes do not count. Neither do rounds of &quot;Ask for changes.&quot;</li>
           <li><strong>One change at a time.</strong> While a change is being made, wait for its preview. Once you approve it, you can ask for the next change while the first one is checked and made permanent. A preview waiting on your approval must be approved, revised, or removed before you start another change.</li>
           <li><strong>Sample content.</strong> New sites include sign-ups labelled as samples. Delete them in the owner area before using the site for real. Images start as designed placeholders.</li>
-          <li><strong>Page changes only.</strong> Owner sign-in, the sign-up form&apos;s behavior, and the database cannot be changed through chat.</li>
+          <li><strong>Page changes only.</strong> Owner sign-in, the sign-up form&apos;s behavior, and the database cannot be changed through chat. Changing a live restaurant site from the chat is not ready yet; restaurant menus are edited in the owner area.</li>
           <li><strong>Build time.</strong> First builds take about 20 to 30 minutes in our tests; allow up to 45.</li>
         </ul>
         <div className="mt-8 rounded-[20px] bg-white p-6 sm:p-8">
@@ -123,6 +123,7 @@ export default function BuilderGuidePage() {
           { label: "Previews and undo", href: "/docs/scout/changes", text: "How a change goes from your request to your live site." },
           { label: "Waitlist site", href: "/docs/recipes/waitlist-site", text: "Test an idea with a sign-up page." },
           { label: "Product showcase", href: "/docs/recipes/product-showcase", text: "A website for a product that exists." },
+          { label: "Restaurant site", href: "/docs/recipes/restaurant-site", text: "A website and owner area for a restaurant." },
         ]}
       />
     </DocPage>
