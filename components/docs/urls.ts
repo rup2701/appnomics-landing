@@ -10,7 +10,8 @@
  */
 export const DOCS_ON_SUBDOMAIN = process.env.NEXT_PUBLIC_DOCS_ON_SUBDOMAIN === "1";
 export const DOCS_HOST = "docs.appnomics.dev";
-export const SITE_ORIGIN = "https://appnomics.dev";
+// www is the main domain on Vercel; appnomics.dev redirects there.
+export const SITE_ORIGIN = "https://www.appnomics.dev";
 const DOCS_ORIGIN = `https://${DOCS_HOST}`;
 
 /** A link to a docs page, used inside the docs. */

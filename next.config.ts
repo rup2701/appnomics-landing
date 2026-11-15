@@ -17,13 +17,14 @@ const nextConfig: NextConfig = {
     if (!DOCS_ON_SUBDOMAIN) return [];
     return [
       // The docs host has no home page of its own: start at the first docs page.
+      // Temporary, so a docs home page can be added later.
       { source: "/", has: onDocsHost, destination: "/builder", permanent: false },
       // docs.appnomics.dev/docs/builder is the same page as docs.appnomics.dev/builder.
-      { source: "/docs/:path*", has: onDocsHost, destination: "/:path*", permanent: false },
-      // Old links on the main site go to the docs host.
+      { source: "/docs/:path*", has: onDocsHost, destination: "/:path*", permanent: true },
+      // Old links on the main site go to the docs host, for good.
       ...MAIN_HOSTS.flatMap((host) => [
-        { source: "/docs", has: [{ type: "host" as const, value: host }], destination: `https://${DOCS_HOST}/builder`, permanent: false },
-        { source: "/docs/:path+", has: [{ type: "host" as const, value: host }], destination: `https://${DOCS_HOST}/:path+`, permanent: false },
+        { source: "/docs", has: [{ type: "host" as const, value: host }], destination: `https://${DOCS_HOST}/builder`, permanent: true },
+        { source: "/docs/:path+", has: [{ type: "host" as const, value: host }], destination: `https://${DOCS_HOST}/:path+`, permanent: true },
       ]),
     ];
   },
