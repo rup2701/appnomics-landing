@@ -93,8 +93,8 @@ export default function ChangesPage() {
 
       <Related
         items={[
-          { label: "Writing good requests", href: "/docs/scout/requests", text: "Examples of requests Scout can act on." },
-          { label: "How the builder works", href: "/docs/builder", text: "Beta limits and how to report a problem." },
+          { label: "Writing good requests", href: "/scout/requests", text: "Examples of requests Scout can act on." },
+          { label: "How the builder works", href: "/builder", text: "Beta limits and how to report a problem." },
         ]}
       />
     </DocPage>

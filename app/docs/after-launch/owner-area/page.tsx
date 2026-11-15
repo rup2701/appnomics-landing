@@ -82,8 +82,8 @@ export default function OwnerAreaPage() {
 
       <Related
         items={[
-          { label: "Menu from a spreadsheet", href: "/docs/after-launch/menu-spreadsheet", text: "Columns, rules, replace and add." },
-          { label: "Restaurant site", href: "/docs/recipes/restaurant-site", text: "How the site is built and what to expect." },
+          { label: "Menu from a spreadsheet", href: "/after-launch/menu-spreadsheet", text: "Columns, rules, replace and add." },
+          { label: "Restaurant site", href: "/recipes/restaurant-site", text: "How the site is built and what to expect." },
         ]}
       />
     </DocPage>

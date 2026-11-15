@@ -90,8 +90,8 @@ export default function ProductShowcasePage() {
 
       <Related
         items={[
-          { label: "Waitlist site", href: "/docs/recipes/waitlist-site", text: "Collect sign-ups to test an idea." },
-          { label: "Previews and undo", href: "/docs/scout/changes", text: "How changes to the live site work." },
+          { label: "Waitlist site", href: "/recipes/waitlist-site", text: "Collect sign-ups to test an idea." },
+          { label: "Previews and undo", href: "/scout/changes", text: "How changes to the live site work." },
         ]}
       />
     </DocPage>

@@ -58,8 +58,8 @@ export default function ScoutPage() {
 
       <Related
         items={[
-          { label: "Writing good requests", href: "/docs/scout/requests", text: "Examples of requests Scout can act on." },
-          { label: "Previews and undo", href: "/docs/scout/changes", text: "How a change reaches your live site." },
+          { label: "Writing good requests", href: "/scout/requests", text: "Examples of requests Scout can act on." },
+          { label: "Previews and undo", href: "/scout/changes", text: "How a change reaches your live site." },
         ]}
       />
     </DocPage>

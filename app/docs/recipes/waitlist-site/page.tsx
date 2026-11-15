@@ -78,8 +78,8 @@ export default function WaitlistSitePage() {
 
       <Related
         items={[
-          { label: "Product showcase", href: "/docs/recipes/product-showcase", text: "A site for a product that already exists." },
-          { label: "Writing good requests", href: "/docs/scout/requests", text: "Plain-words requests that Scout can act on." },
+          { label: "Product showcase", href: "/recipes/product-showcase", text: "A site for a product that already exists." },
+          { label: "Writing good requests", href: "/scout/requests", text: "Plain-words requests that Scout can act on." },
         ]}
       />
     </DocPage>

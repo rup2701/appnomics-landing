@@ -58,8 +58,8 @@ export default function CreatorAppPage() {
 
       <Related
         items={[
-          { label: "Engineering partner", href: "/docs/plans/engineering-partner", text: "Fixed price per epic, with a full handover." },
-          { label: "Product showcase", href: "/docs/recipes/product-showcase", text: "A marketing site you can build today." },
+          { label: "Engineering partner", href: "/plans/engineering-partner", text: "Fixed price per epic, with a full handover." },
+          { label: "Product showcase", href: "/recipes/product-showcase", text: "A marketing site you can build today." },
         ]}
       />
     </DocPage>

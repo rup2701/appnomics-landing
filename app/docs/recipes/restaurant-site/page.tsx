@@ -116,10 +116,10 @@ export default function RestaurantSitePage() {
 
       <Related
         items={[
-          { label: "Restaurant owner area", href: "/docs/after-launch/owner-area", text: "Sign in, edit your menu and answer table requests." },
-          { label: "Menu from a spreadsheet", href: "/docs/after-launch/menu-spreadsheet", text: "The columns, the rules and how replace and add work." },
-          { label: "Writing good requests", href: "/docs/scout/requests", text: "Plain-words requests that Scout can act on." },
-          { label: "How the builder works", href: "/docs/builder", text: "The steps from first question to live site." },
+          { label: "Restaurant owner area", href: "/after-launch/owner-area", text: "Sign in, edit your menu and answer table requests." },
+          { label: "Menu from a spreadsheet", href: "/after-launch/menu-spreadsheet", text: "The columns, the rules and how replace and add work." },
+          { label: "Writing good requests", href: "/scout/requests", text: "Plain-words requests that Scout can act on." },
+          { label: "How the builder works", href: "/builder", text: "The steps from first question to live site." },
         ]}
       />
     </DocPage>

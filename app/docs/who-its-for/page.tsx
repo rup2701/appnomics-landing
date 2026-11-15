@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DocPage, Related } from "@/components/docs/DocPage";
+import { docsHref } from "@/components/docs/urls";
 
 export const metadata: Metadata = {
   title: "Who Builder is for | Appnomics Docs",
@@ -36,11 +37,11 @@ export default function WhoItsForPage() {
         <h2>Which recipe to start with</h2>
         <div className="mt-2 space-y-4">
           {[
-            { title: "You have an idea and want to see if people care", text: "Start with a waitlist site. It collects sign-ups so you can see interest before you build more.", href: "/docs/recipes/waitlist-site" },
-            { title: "You have a product and need a website for it", text: "Start with a product showcase: features, pricing, how it works and an FAQ.", href: "/docs/recipes/product-showcase" },
-            { title: "You sell things", text: "Start with an online store.", href: "/docs/recipes/online-store" },
+            { title: "You have an idea and want to see if people care", text: "Start with a waitlist site. It collects sign-ups so you can see interest before you build more.", href: "/recipes/waitlist-site" },
+            { title: "You have a product and need a website for it", text: "Start with a product showcase: features, pricing, how it works and an FAQ.", href: "/recipes/product-showcase" },
+            { title: "You sell things", text: "Start with an online store.", href: "/recipes/online-store" },
           ].map((row) => (
-            <a key={row.title} href={row.href} className="block rounded-[20px] bg-white p-6 no-underline transition-colors hover:bg-[#edf3ef]">
+            <a key={row.title} href={docsHref(row.href)} className="block rounded-[20px] bg-white p-6 no-underline transition-colors hover:bg-[#edf3ef]">
               <h3>{row.title}</h3>
               <p>{row.text}</p>
             </a>
@@ -58,8 +59,8 @@ export default function WhoItsForPage() {
 
       <Related
         items={[
-          { label: "How the builder works", href: "/docs/builder", text: "The four steps from first question to live site." },
-          { label: "Engineering partner", href: "/docs/plans/engineering-partner", text: "A custom build, delivered one epic at a time." },
+          { label: "How the builder works", href: "/builder", text: "The four steps from first question to live site." },
+          { label: "Engineering partner", href: "/plans/engineering-partner", text: "A custom build, delivered one epic at a time." },
         ]}
       />
     </DocPage>

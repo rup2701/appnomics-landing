@@ -3,17 +3,20 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { docsUrl, siteHref } from "@/components/docs/urls";
 
 // ── Navigation ─────────────────────────────────────────────────────────────
 const NAV_ITEMS = [
   { label: "Pricing", href: "/#pricing" },
-  { label: "Docs", href: "/docs/builder" },
+  { label: "Docs", href: docsUrl("/builder") },
   { label: "Cloud", href: "/#studio" },
   { label: "Platform", href: "/#product-proof" },
   { label: "Case Studies", href: "/#portfolio" },
 ];
 
-export default function Navbar() {
+/** docs: shown on a docs page, which may be on its own subdomain, so links back to the main site are made full. */
+export default function Navbar({ docs = false }: { docs?: boolean }) {
+  const navItems = docs ? NAV_ITEMS.map((item) => ({ ...item, href: siteHref(item.href) })) : NAV_ITEMS;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
@@ -48,7 +51,7 @@ export default function Navbar() {
       <div className="w-full mx-auto max-w-[1320px] px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link
-          href="/"
+          href={docs ? siteHref("/") : "/"}
           className="flex items-center gap-2 no-underline group"
           onClick={(e) => {
             if (window.location.pathname !== "/" || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -71,7 +74,7 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          {NAV_ITEMS.map((item) => (
+          {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
@@ -126,7 +129,7 @@ export default function Navbar() {
         }`}
       >
         <div className="bg-[#f5f5f5] border-t border-[#d8d8d8] px-6 py-6 flex flex-col gap-4">
-          {NAV_ITEMS.map((item) => (
+          {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}

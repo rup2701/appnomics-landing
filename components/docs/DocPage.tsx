@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { DocsPager } from "./DocsFooter";
+import { docsHref } from "./urls";
 
 export type TocItem = { id: string; label: string };
 
@@ -67,7 +68,7 @@ export function Related({ items }: { items: { label: string; href: string; text:
       <h2>Related</h2>
       <div className="grid gap-4 sm:grid-cols-2">
         {items.map((item) => (
-          <Link key={item.href} href={item.href} className="block rounded-[20px] bg-white p-6 no-underline transition-colors hover:bg-[#edf3ef]">
+          <Link key={item.href} href={docsHref(item.href)} className="block rounded-[20px] bg-white p-6 no-underline transition-colors hover:bg-[#edf3ef]">
             <p className="text-lg font-medium text-[#171717]">{item.label} <span aria-hidden="true">&rarr;</span></p>
             <p className="mt-2 text-sm">{item.text}</p>
           </Link>

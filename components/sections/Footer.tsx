@@ -1,6 +1,7 @@
 // components/Footer.tsx
 import Link from "next/link";
 import Image from "next/image";
+import { docsUrl } from "@/components/docs/urls";
 
 export default function Footer() {
   return (
@@ -79,7 +80,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-1">
               {[
-                { label: "Docs", href: "/docs/builder" },
+                { label: "Docs", href: docsUrl("/builder") },
                 { label: "Templates", href: "#" },
                 { label: "Gallery", href: "/gallery" },
                 { label: "Blog", href: "#" },

@@ -49,8 +49,8 @@ export default function OnlineStorePage() {
 
       <Related
         items={[
-          { label: "How the builder works", href: "/docs/builder", text: "From first question to live site." },
-          { label: "Engineering partner", href: "/docs/plans/engineering-partner", text: "For a store that needs custom features." },
+          { label: "How the builder works", href: "/builder", text: "From first question to live site." },
+          { label: "Engineering partner", href: "/plans/engineering-partner", text: "For a store that needs custom features." },
         ]}
       />
     </DocPage>

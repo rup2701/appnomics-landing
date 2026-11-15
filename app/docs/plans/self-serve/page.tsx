@@ -78,8 +78,8 @@ export default function SelfServePlansPage() {
 
       <Related
         items={[
-          { label: "Engineering partner", href: "/docs/plans/engineering-partner", text: "A custom build at a fixed price per epic." },
-          { label: "How the builder works", href: "/docs/builder", text: "What Builder does, and its beta limits." },
+          { label: "Engineering partner", href: "/plans/engineering-partner", text: "A custom build at a fixed price per epic." },
+          { label: "How the builder works", href: "/builder", text: "What Builder does, and its beta limits." },
         ]}
       />
     </DocPage>

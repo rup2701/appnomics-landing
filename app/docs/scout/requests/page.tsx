@@ -77,8 +77,8 @@ export default function RequestsPage() {
 
       <Related
         items={[
-          { label: "Previews and undo", href: "/docs/scout/changes", text: "What happens after you confirm a request." },
-          { label: "Meet Scout", href: "/docs/scout", text: "What Scout does and does not do." },
+          { label: "Previews and undo", href: "/scout/changes", text: "What happens after you confirm a request." },
+          { label: "Meet Scout", href: "/scout", text: "What Scout does and does not do." },
         ]}
       />
     </DocPage>

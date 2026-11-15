@@ -46,7 +46,7 @@ export default function MenuSpreadsheetPage() {
           </table>
         </div>
         <p className="mt-6">
-          <a className="text-[#087a50] underline underline-offset-4 hover:no-underline" href="/docs/sample-menu.csv" download>Download a sample menu</a> (invented dishes, to show the shape).
+          <a className="text-[#087a50] underline underline-offset-4 hover:no-underline" href="/sample-menu.csv" download>Download a sample menu</a> (invented dishes, to show the shape).
         </p>
         <p>Type prices as text, the way you want them shown. If you leave a price empty, the dish shows without one; Scout never fills one in.</p>
       </section>
@@ -105,8 +105,8 @@ export default function MenuSpreadsheetPage() {
 
       <Related
         items={[
-          { label: "Restaurant owner area", href: "/docs/after-launch/owner-area", text: "Sign in, edit dishes and see table requests." },
-          { label: "Restaurant site", href: "/docs/recipes/restaurant-site", text: "How the site is built and what to expect." },
+          { label: "Restaurant owner area", href: "/after-launch/owner-area", text: "Sign in, edit dishes and see table requests." },
+          { label: "Restaurant site", href: "/recipes/restaurant-site", text: "How the site is built and what to expect." },
         ]}
       />
     </DocPage>

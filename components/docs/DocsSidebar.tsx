@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { DOCS_NAV } from "./docs-nav";
+import { docsHref, docsPage } from "./urls";
 
 function NavList({ pathname }: { pathname: string }) {
   return (
@@ -12,11 +13,11 @@ function NavList({ pathname }: { pathname: string }) {
           <p className="mb-3 font-sans text-xs font-semibold tracking-tight text-[#333]">{section.title}</p>
           <ul className="space-y-1">
             {section.items.map((item) => {
-              const active = pathname === item.href;
+              const active = docsPage(pathname) === item.href;
               return (
                 <li key={item.href}>
                   <Link
-                    href={item.href}
+                    href={docsHref(item.href)}
                     aria-current={active ? "page" : undefined}
                     className={`flex items-center justify-between gap-2 rounded-lg py-2 pl-0 pr-3 text-sm no-underline transition-colors ${
                       active ? "bg-[#edf3ef] font-medium text-[#087a50]" : "text-[#555] hover:bg-white hover:text-[#171717]"
