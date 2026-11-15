@@ -59,18 +59,18 @@ export default function AppnomicsCloud() {
         <div className="mt-14 grid gap-8 lg:grid-cols-[4fr_6fr] lg:gap-16 lg:overflow-hidden lg:rounded-[26px] lg:bg-white lg:p-8 lg:py-12 lg:pr-0">
           <div className="divide-y divide-[#d8d8d8] lg:self-center lg:pl-3">
             {FEATURES.map((feature) => (
-              <div key={feature.title} className="flex items-center gap-4 py-5 first:pt-0 last:pb-0">
+              <div key={feature.title} className="flex items-center gap-4 py-4 first:pt-0 last:pb-0">
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 shrink-0 text-[#087a50]">
                   {feature.icon}
                 </svg>
                 <div>
                   <h3 className="text-lg font-medium text-[#171717]">{feature.title}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-[#555]">{feature.description}</p>
+                  <p className="mt-1 text-base leading-relaxed text-[#555]">{feature.description}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="h-[480px] min-w-0 overflow-x-auto rounded-[20px] rounded-l-lg shadow-[0_0_60px_#00ff9d0a,0_24px_48px_#00000022] lg:rounded-r-none" tabIndex={0} role="region" aria-label="Appnomics Cloud dashboard preview">
+          <div className="h-[480px] min-w-0 overflow-hidden rounded-[20px] rounded-l-lg shadow-[0_0_60px_#00ff9d0a,0_24px_48px_#00000022] lg:rounded-r-none" aria-label="Appnomics Cloud dashboard preview">
             <div className="h-full min-w-[760px]">
               <StudioOSMockup />
             </div>
