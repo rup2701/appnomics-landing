@@ -8,7 +8,7 @@ import DynamicHero from '@/components/DynamicHero';
 import PricingSection from '@/components/sections/PricingSection';
 import PortfolioSection from '@/components/sections/PortfolioSection';
 import CTASection from '@/components/sections/CTASection';
-import StudioOSSection from '@/components/sections/StudioOSSection';
+import AppnomicsCloud from '@/components/sections/AppnomicsCloud';
 import FAQSection from '@/components/sections/FAQSection';
 import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/Navbar';
@@ -55,7 +55,7 @@ export default function Home() {
         <div className="w-full max-w-[1340px] mx-auto">
           <PricingSection />
           <WhoThisIsFor />   
-          <StudioOSSection />  
+          <AppnomicsCloud />  
           <ProductProofSection />
           <PortfolioSection />
           <FAQSection />
