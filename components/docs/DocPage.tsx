@@ -36,7 +36,7 @@ export function DocPage({
             </p>
           ) : null}
         </header>
-        <article className="mt-12 min-w-0 space-y-16 text-base leading-7 text-[#555] [&_h2]:mb-6 [&_h2]:text-[28px] [&_h2]:leading-tight [&_h2]:tracking-tight sm:[&_h2]:text-[36px] [&_h3]:mb-3 [&_h3]:text-lg [&_h3]:font-medium [&_h3]:text-[#171717] [&_p+p]:mt-4 [&_strong]:font-medium [&_strong]:text-[#171717]">
+        <article className="mt-12 min-w-0 space-y-16 text-[15px] leading-[26px] text-[#404040] [&_h2]:mb-6 [&_h2]:text-[28px] [&_h2]:leading-tight [&_h2]:tracking-tight sm:[&_h2]:text-[36px] [&_h3]:mb-3 [&_h3]:text-lg [&_h3]:font-medium [&_h3]:text-[#171717] [&_p+p]:mt-4 [&_strong]:font-medium [&_strong]:text-[#171717]">
           {children}
         </article>
       </div>
