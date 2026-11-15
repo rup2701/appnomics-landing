@@ -45,7 +45,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="w-full mx-auto max-w-[1240px] mx-auto px-4 sm:px-6 md:px-10 h-16 flex items-center justify-between">
+      <div className="w-full mx-auto max-w-[1320px] px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="/"
@@ -125,7 +125,7 @@ export default function Navbar() {
           isMobileMenuOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="bg-[#f5f5f5] border-t border-[#d8d8d8] px-4 sm:px-6 md:px-10 py-6 flex flex-col gap-4">
+        <div className="bg-[#f5f5f5] border-t border-[#d8d8d8] px-6 py-6 flex flex-col gap-4">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.label}
