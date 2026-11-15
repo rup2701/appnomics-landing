@@ -1,4 +1,4 @@
-// Read-only visual mockup of the Studio OS handover view — used inside the landing page
+// Read-only visual mockup of the Appnomics Cloud handover view — used inside the landing page
 
 const SAMPLE_VARS = [
   { service: "Neon", name: "DATABASE_URL", status: "connected", rotated: "2026-08-01" },
@@ -65,7 +65,7 @@ export default function StudioOSMockup() {
       >
         <div className="flex items-center gap-2.5">
           <span className="text-[10px] font-bold tracking-[0.18em] text-[#087a50]">
-            STUDIO OS
+            APPNOMICS CLOUD
           </span>
           <span className="text-[#777]">|</span>
           <span className="text-[#171717] text-[13px]">instaroom</span>
@@ -113,7 +113,7 @@ export default function StudioOSMockup() {
           <div className="flex items-start justify-between mb-4">
             <div>
               <p className="text-[8px] tracking-[0.18em] text-[#666] mb-1">
-                STUDIO OS / ENVIRONMENT VARIABLES
+                ENVIRONMENT VARIABLES
               </p>
               <div className="flex items-center gap-2.5">
                 <h3 className="text-base font-bold text-[#171717] m-0">
