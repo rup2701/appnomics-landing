@@ -12,7 +12,7 @@ import AppnomicsCloud from '@/components/sections/AppnomicsCloud';
 import FAQSection from '@/components/sections/FAQSection';
 import Footer from '@/components/sections/Footer';
 import Navbar from '@/components/Navbar';
-import ProductProofSection from '@/components/sections/ProductProofSection';
+import AppnomicsPlatfom from '@/components/sections/AppnomicsPlatfom';
 import WhoThisIsFor from '@/components/sections/WhoIsThisFor';
 import HeroPrompt from '@/components/HeroPrompt';
 import type { TabId } from '@/components/HeroPrompt';
@@ -56,7 +56,7 @@ export default function Home() {
           <PricingSection />
           <WhoThisIsFor />   
           <AppnomicsCloud />  
-          <ProductProofSection />
+          <AppnomicsPlatfom />
           <PortfolioSection />
           <FAQSection />
           <CTASection />

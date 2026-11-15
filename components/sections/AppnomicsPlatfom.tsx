@@ -1,4 +1,4 @@
-export default function ProductProofSection() {
+export default function AppnomicsPlatfom() {
   return (
     <section id="product-proof" className="py-32">
       <div className="mx-auto max-w-[1340px] px-2">
@@ -45,7 +45,7 @@ export default function ProductProofSection() {
                 <span>IDEA</span><span className="h-px flex-1 bg-[#b8cfc0] mx-1" /><span>BUILD</span><span className="h-px flex-1 bg-[#b8cfc0] mx-1" /><span>LIVE</span>
               </div>
             </div>
-            <p className="font-sans text-sm leading-relaxed text-[#555]">
+            <p className="font-sans text-base leading-relaxed text-[#555]">
               Scout turns business intent into a build plan, then helps take the app from idea to live.
             </p>
           </article>
@@ -63,7 +63,7 @@ export default function ProductProofSection() {
                 REUSABLE CODE + PRODUCT PATTERNS
               </div>
             </div>
-            <p className="font-sans text-sm leading-relaxed text-[#555]">
+            <p className="font-sans text-base leading-relaxed text-[#555]">
               The code and capabilities we build for zero-to-one products also strengthen Builder&apos;s foundation.
             </p>
           </article>
@@ -81,7 +81,7 @@ export default function ProductProofSection() {
               <span className="text-xs text-[#999]">↓</span>
               <div className="w-full rounded-lg border border-[#ddd] bg-white px-3 py-2 font-mono text-[9px] tracking-wide text-[#555]">USEFUL OUTCOME</div>
             </div>
-            <p className="font-sans text-sm leading-relaxed text-[#555]">
+            <p className="font-sans text-base leading-relaxed text-[#555]">
               We&apos;ve implemented AI features and end-to-end workflows in two of our apps.
             </p>
           </article>
@@ -99,7 +99,7 @@ export default function ProductProofSection() {
                 <span className="rounded-full border border-[#d9cdbd] bg-white px-2.5 py-1 font-mono text-[9px] tracking-wide text-[#555]">SOC 2 CONTROLS</span>
               </div>
             </div>
-            <p className="font-sans text-sm leading-relaxed text-[#555]">
+            <p className="font-sans text-base leading-relaxed text-[#555]">
               Healthcare and fintech product experience, including implementation of relevant safeguards and SOC 2 controls.
             </p>
           </article>
