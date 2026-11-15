@@ -56,7 +56,7 @@ export default function AppnomicsCloud() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-[4fr_6fr] lg:gap-16 lg:overflow-hidden lg:rounded-[26px] lg:bg-white lg:p-8 lg:pr-0">
+        <div className="mt-14 grid gap-8 lg:grid-cols-[4fr_6fr] lg:gap-16 lg:overflow-hidden lg:rounded-[26px] lg:bg-white lg:p-8 lg:py-12 lg:pr-0">
           <div className="divide-y divide-[#d8d8d8] lg:self-center lg:pl-3">
             {FEATURES.map((feature) => (
               <div key={feature.title} className="flex items-center gap-4 py-5 first:pt-0 last:pb-0">
