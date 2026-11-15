@@ -9,7 +9,7 @@ function NavList({ pathname }: { pathname: string }) {
     <ul className="space-y-7">
       {DOCS_NAV.map((section) => (
         <li key={section.title}>
-          <p className="mb-3 font-mono text-xs tracking-[0.12em] text-[#555]">{section.title.toUpperCase()}</p>
+          <p className="mb-3 font-sans text-xs font-semibold tracking-tight text-[#333]">{section.title}</p>
           <ul className="space-y-1">
             {section.items.map((item) => {
               const active = pathname === item.href;
@@ -18,11 +18,14 @@ function NavList({ pathname }: { pathname: string }) {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm no-underline transition-colors ${
+                    className={`flex items-center justify-between gap-2 rounded-lg py-2 pl-0 pr-3 text-sm no-underline transition-colors ${
                       active ? "bg-[#edf3ef] font-medium text-[#087a50]" : "text-[#555] hover:bg-white hover:text-[#171717]"
                     }`}
                   >
-                    <span>{item.label}</span>
+                    <span className="flex items-center gap-2.5">
+                      <item.icon aria-hidden="true" className="size-4 shrink-0" strokeWidth={1.75} />
+                      <span>{item.label}</span>
+                    </span>
                     {item.soon ? <span className="rounded-full bg-white px-2 py-0.5 text-[11px] text-[#555]">Soon</span> : null}
                   </Link>
                 </li>
