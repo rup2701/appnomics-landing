@@ -68,7 +68,7 @@ export function Related({ items }: { items: { label: string; href: string; text:
       <h2>Related</h2>
       <div className="grid gap-4 sm:grid-cols-2">
         {items.map((item) => (
-          <Link key={item.href} href={docsHref(item.href)} className="block rounded-[20px] bg-white p-6 no-underline transition-colors hover:bg-[#edf3ef]">
+          <Link key={item.href} href={docsHref(item.href)} className="block rounded-[20px] bg-[#e8eee9] p-6 no-underline transition-colors hover:bg-[#edf3ef]">
             <p className="text-lg font-medium text-[#171717]">{item.label} <span aria-hidden="true">&rarr;</span></p>
             <p className="mt-2 text-sm">{item.text}</p>
           </Link>
@@ -89,7 +89,7 @@ export function Callout({ title, children }: { title: string; children: ReactNod
 
 export function Prompt({ children }: { children: ReactNode }) {
   return (
-    <div className="rounded-[20px] bg-white p-6 sm:p-8">
+    <div className="rounded-[20px] bg-[#e8eee9] p-6 sm:p-8">
       <p className="mb-3 font-mono text-xs tracking-[0.1em] text-[#087a50]">PASTE THIS</p>
       <p className="text-lg leading-relaxed text-[#171717]">{children}</p>
     </div>

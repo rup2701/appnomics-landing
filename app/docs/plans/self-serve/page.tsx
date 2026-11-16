@@ -46,7 +46,7 @@ export default function SelfServePlansPage() {
         <h2>The plans</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {PLANS.map((plan) => (
-            <div key={plan.name} className={`rounded-[20px] p-6 sm:p-8 ${plan.highlight ? "bg-[#edf3ef]" : "bg-white"}`}>
+            <div key={plan.name} className={`rounded-[20px] p-6 sm:p-8 ${plan.highlight ? "bg-[#edf3ef]" : "bg-[#e8eee9]"}`}>
               <p className="font-mono text-xs tracking-[0.12em] text-[#087a50]">SELF-SERVE</p>
               <h3 className="mt-3 text-2xl!">{plan.name}</h3>
               <p className="mt-1 font-mono text-xs tracking-[0.1em]">{plan.tagline}</p>

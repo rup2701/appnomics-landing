@@ -20,7 +20,7 @@ export function DocsPager() {
   return (
     <nav aria-label="More docs" className="mt-16 grid gap-4 border-t border-black/10 pt-8 sm:grid-cols-2">
       {prev ? (
-        <Link href={docsHref(prev.href)} className="group block rounded-[16px] bg-white p-5 no-underline transition-colors hover:bg-[#edf3ef]">
+        <Link href={docsHref(prev.href)} className="group block rounded-[16px] bg-[#e8eee9] p-5 no-underline transition-colors hover:bg-[#edf3ef]">
           <p className="flex items-center gap-1.5 text-xs text-[#555]">
             <ArrowLeft aria-hidden="true" className="size-3.5" /> Previous
           </p>
@@ -30,7 +30,7 @@ export function DocsPager() {
         <span className="hidden sm:block" />
       )}
       {next ? (
-        <Link href={docsHref(next.href)} className="group block rounded-[16px] bg-white p-5 text-right no-underline transition-colors hover:bg-[#edf3ef]">
+        <Link href={docsHref(next.href)} className="group block rounded-[16px] bg-[#e8eee9] p-5 text-right no-underline transition-colors hover:bg-[#edf3ef]">
           <p className="flex items-center justify-end gap-1.5 text-xs text-[#555]">
             Next <ArrowRight aria-hidden="true" className="size-3.5" />
           </p>

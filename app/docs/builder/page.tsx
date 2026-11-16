@@ -73,7 +73,7 @@ export default function BuilderGuidePage() {
             },
           ] satisfies { title: string; text: string; shot: ShotKey; caption: string }[]).map((step, index) => (
             <li key={step.title}>
-              <div className="flex gap-4 rounded-[20px] bg-white p-6 sm:gap-6">
+              <div className="flex gap-4 rounded-[20px] bg-[#e8eee9] p-6 sm:gap-6">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#edf3ef] font-mono text-sm text-[#087a50]" aria-hidden="true">
                   {index + 1}
                 </span>
@@ -101,7 +101,7 @@ export default function BuilderGuidePage() {
           <li><strong>Page changes only.</strong> Owner sign-in, the sign-up form&apos;s behavior, and the database cannot be changed through chat. Changing a live restaurant site from the chat is not ready yet; restaurant menus are edited in the owner area.</li>
           <li><strong>Build time.</strong> First builds take about 20 to 30 minutes in our tests; allow up to 45.</li>
         </ul>
-        <div className="mt-8 rounded-[20px] bg-white p-6 sm:p-8">
+        <div className="mt-8 rounded-[20px] bg-[#e8eee9] p-6 sm:p-8">
           <h3>What we have tested</h3>
           <p>
             We have built and changed real sites end to end, including small edits, design previews, removing a change, and undoing a published one. Most testing is on a small number of sites, so expect rough edges, especially with unusual products. The &quot;Ask for changes&quot; step on a preview has had the least testing, and so have the automatic fix and the failure messages after approval.

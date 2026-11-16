@@ -25,7 +25,7 @@ export default function EngineeringPartnerPage() {
     >
       <section id="what">
         <h2>What it is</h2>
-        <div className="rounded-[20px] bg-white p-6 sm:p-8">
+        <div className="rounded-[20px] bg-[#e8eee9] p-6 sm:p-8">
           <p className="font-mono text-xs tracking-[0.12em] text-[#555]">ENGINEERING PARTNER</p>
           <h3 className="mt-3 text-2xl!">Build</h3>
           <p className="mt-1 font-mono text-xs tracking-[0.1em]">FIXED PRICE PER EPIC</p>

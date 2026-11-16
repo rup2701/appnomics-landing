@@ -33,7 +33,7 @@ export default function ScoutPage() {
 
       <section id="does">
         <h2>What Scout does</h2>
-        <div className="rounded-[20px] bg-white p-6 sm:p-8">
+        <div className="rounded-[20px] bg-[#e8eee9] p-6 sm:p-8">
           <ul className="list-disc space-y-3 pl-5">
             <li>Asks one question at a time, in plain words, and keeps your own words wherever it can.</li>
             <li>Drafts your headline, three short feature phrases, how-it-works steps, and closing line. You approve or edit each one.</li>

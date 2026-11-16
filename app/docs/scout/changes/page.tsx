@@ -37,13 +37,13 @@ export default function ChangesPage() {
       <section id="size">
         <h2>Small and design changes</h2>
         <div className="grid gap-4 sm:grid-cols-2">
-          <div className="rounded-[20px] bg-white p-6">
+          <div className="rounded-[20px] bg-[#e8eee9] p-6">
             <h3>Small wording changes</h3>
             <p>A headline, button label, subtitle, or price text.</p>
             <p>After you confirm the plan, the change is made, checked and goes live without a preview. You can undo it afterwards.</p>
             <p className="text-sm"><strong>Typical time:</strong> about 2 minutes, in the background.</p>
           </div>
-          <div className="rounded-[20px] bg-white p-6">
+          <div className="rounded-[20px] bg-[#e8eee9] p-6">
             <h3>Design changes</h3>
             <p>Colors, spacing, layout, adding or removing sections, or changes in several places.</p>
             <p>You get a preview first. Approve and publish, ask for changes, or remove the change.</p>

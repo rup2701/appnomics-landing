@@ -28,7 +28,7 @@ export default function MenuSpreadsheetPage() {
       <section id="columns">
         <h2>The columns</h2>
         <p>The first row holds the column names. Use these four, in any order. Only Dish is required.</p>
-        <div className="mt-6 overflow-x-auto rounded-[20px] bg-white p-2">
+        <div className="mt-6 overflow-x-auto rounded-[20px] bg-[#e8eee9] p-2">
           <table className="w-full text-left text-sm">
             <thead>
               <tr className="text-[#171717]">
@@ -63,11 +63,11 @@ export default function MenuSpreadsheetPage() {
         <h2>In the owner area</h2>
         <p>Open Menu in the owner area, choose a file, pick how it should apply, then press Read the file. You see a preview first, and nothing changes until you confirm.</p>
         <div className="mt-6 space-y-4">
-          <div className="rounded-[20px] bg-white p-6">
+          <div className="rounded-[20px] bg-[#e8eee9] p-6">
             <h3>Replace my menu</h3>
             <p>The default. The file becomes your whole menu: dishes not in the file are removed. Use this when your spreadsheet is the complete menu.</p>
           </div>
-          <div className="rounded-[20px] bg-white p-6">
+          <div className="rounded-[20px] bg-[#e8eee9] p-6">
             <h3>Only add what is missing</h3>
             <p>Only dishes that are not already on your menu are added, matched by section and dish name, ignoring capital letters. Nothing existing is changed or removed. Use this to add a new section or a few new dishes.</p>
           </div>

@@ -47,7 +47,7 @@ export default function RequestsPage() {
               result: "Scout plans a design change and shows before and after pictures.",
             },
           ].map((example) => (
-            <div key={example.request} className="rounded-[20px] bg-white p-6 sm:p-8">
+            <div key={example.request} className="rounded-[20px] bg-[#e8eee9] p-6 sm:p-8">
               <p className="mb-3 font-mono text-xs tracking-[0.1em] text-[#087a50]">YOU ASK</p>
               <blockquote className="text-lg leading-relaxed text-[#171717]">&quot;{example.request}&quot;</blockquote>
               <p className="mt-4 text-sm">{example.result}</p>

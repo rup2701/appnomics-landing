@@ -41,7 +41,7 @@ export default function WhoItsForPage() {
             { title: "You have a product and need a website for it", text: "Start with a product showcase: features, pricing, how it works and an FAQ.", href: "/recipes/product-showcase" },
             { title: "You sell things", text: "Start with an online store.", href: "/recipes/online-store" },
           ].map((row) => (
-            <a key={row.title} href={docsHref(row.href)} className="block rounded-[20px] bg-white p-6 no-underline transition-colors hover:bg-[#edf3ef]">
+            <a key={row.title} href={docsHref(row.href)} className="block rounded-[20px] bg-[#e8eee9] p-6 no-underline transition-colors hover:bg-[#edf3ef]">
               <h3>{row.title}</h3>
               <p>{row.text}</p>
             </a>
