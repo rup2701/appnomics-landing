@@ -1,5 +1,5 @@
 /**
- * Screenshots live in public/docs/builder/. Set available to true once the file is there;
+ * Screenshots live in public/screenshots/builder/, not under public/docs: on the live docs host every /docs path is redirected to drop /docs (next.config.ts), which would break the images. Set available to true once the file is there;
  * until then the slot renders nothing, so the page ships without broken images.
  */
 export const SHOTS = {
@@ -8,7 +8,7 @@ export const SHOTS = {
   brief: { file: "03-brief-panel.png", alt: "The brief in the side panel, with drafted wording and unconfirmed claims flagged", available: true },
   build: { file: "04-build-in-progress.png", alt: "The build in progress", available: true },
   ready: { file: "05-ready-card.png", alt: "The ready card with the live address and the Check these before you share it list", available: true },
-  change: { file: "06-change-plan.png", alt: "Scout's plan for a change, with a title, bullet points and the Make this change button", available: true},
+  change: { file: "06-change-plan.png", alt: "Scout's plan for a change, with a title, bullet points and the Make this change button", available: true },
   preview: { file: "07-design-preview.png", alt: "A design preview with before and after pictures and the Approve and publish, Ask for changes and Remove this change buttons", available: true },
   publishing: { file: "08-making-permanent.png", alt: "The card after approval, saying checks passed and the change is being made permanent, with a second request waiting behind it", available: true },
   live: { file: "09-live-change-undo.png", alt: "A live change with the Open your live site link and the red Undo this change button", available: true },
@@ -30,7 +30,7 @@ export default function Shot({ id, caption, className = "" }: { id: ShotKey; cap
   return (
     <figure className={className}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={`/docs/builder/${shot.file}`} alt={shot.alt} loading="lazy" className="h-auto w-full rounded-[16px] border border-black/10 bg-white" />
+      <img src={`/screenshots/builder/${shot.file}`} alt={shot.alt} loading="lazy" className="h-auto w-full rounded-[16px] border border-black/10 bg-white" />
       {caption ? <figcaption className="mt-3 text-sm text-[#555]">{caption}</figcaption> : null}
     </figure>
   );
