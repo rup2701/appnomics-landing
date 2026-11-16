@@ -29,6 +29,14 @@ export const DOCS_NAV: NavSection[] = [
     ],
   },
   {
+    title: "Scout",
+    items: [
+      { label: "Meet Scout", href: "/scout", icon: Bot },
+      { label: "Writing good requests", href: "/scout/requests", icon: PenLine },
+      { label: "Previews and undo", href: "/scout/changes", icon: Undo2 },
+    ],
+  },
+  {
     title: "Recipes",
     items: [
       { label: "Waitlist site", href: "/recipes/waitlist-site", icon: Mail },
@@ -43,14 +51,6 @@ export const DOCS_NAV: NavSection[] = [
     items: [
       { label: "Restaurant owner area", href: "/after-launch/owner-area", icon: LayoutDashboard },
       { label: "Menu from a spreadsheet", href: "/after-launch/menu-spreadsheet", icon: FileSpreadsheet },
-    ],
-  },
-  {
-    title: "Scout",
-    items: [
-      { label: "Meet Scout", href: "/scout", icon: Bot },
-      { label: "Writing good requests", href: "/scout/requests", icon: PenLine },
-      { label: "Previews and undo", href: "/scout/changes", icon: Undo2 },
     ],
   },
   {

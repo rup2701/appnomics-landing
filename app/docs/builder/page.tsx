@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DocPage, Related } from "@/components/docs/DocPage";
-import Shot from "@/components/docs/Shot";
+import Shot, { type ShotKey } from "@/components/docs/Shot";
 
 export const metadata: Metadata = {
   title: "How the Appnomics Builder Works | Appnomics Docs",
@@ -45,42 +45,47 @@ export default function BuilderGuidePage() {
         <p>
           A first build takes about 20 to 30 minutes in our tests, so allow up to 45. You can close the tab while it runs; Scout keeps going.
         </p>
-        <ol className="mt-7 space-y-4">
-          {[
+        <ol className="mt-7 space-y-8">
+          {([
             {
               title: "Interview",
               text: 'Scout asks about your product, who it is for, what you want visitors to do, and the look you want. Answer in your own words. Say "use your best guess" for any question you would rather skip.',
+              shot: "plan",
+              caption: "The interview, with the page plan to switch sections on or off.",
             },
             {
               title: "Brief",
               text: "Read the brief in the panel next to the chat. Drafted wording and unconfirmed claims are flagged. Approve it or change a line.",
+              shot: "brief",
+              caption: "The brief, with drafted wording and unconfirmed claims flagged.",
             },
             {
               title: "Build",
               text: 'Click "Build my site". Builder writes the site, checks that it works, and polishes the design.',
+              shot: "build",
+              caption: "The build in progress. You can close the tab.",
             },
             {
               title: "Live",
               text: 'Get your live site address, owner sign-in, and a list titled "Check these before you share it": drafted wording, unconfirmed claims, and placeholder images.',
+              shot: "ready",
+              caption: "Your live address and the list to check before you share it.",
             },
-          ].map((step, index) => (
-            <li key={step.title} className="flex gap-4 rounded-[20px] bg-white p-6 sm:gap-6">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#edf3ef] font-mono text-sm text-[#087a50]" aria-hidden="true">
-                {index + 1}
-              </span>
-              <div>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
+          ] satisfies { title: string; text: string; shot: ShotKey; caption: string }[]).map((step, index) => (
+            <li key={step.title}>
+              <div className="flex gap-4 rounded-[20px] bg-white p-6 sm:gap-6">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#edf3ef] font-mono text-sm text-[#087a50]" aria-hidden="true">
+                  {index + 1}
+                </span>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.text}</p>
+                </div>
               </div>
+              <Shot id={step.shot} caption={step.caption} className="mt-4" />
             </li>
           ))}
         </ol>
-        <div className="mt-7 grid gap-6 sm:grid-cols-2">
-          <Shot id="plan" caption="The interview, with the page plan to switch sections on or off." />
-          <Shot id="brief" caption="The brief, with drafted wording and unconfirmed claims flagged." />
-          <Shot id="build" caption="The build in progress. You can close the tab." />
-          <Shot id="ready" caption="Your live address and the list to check before you share it." />
-        </div>
         <p className="mt-6 text-sm">
           During testing, new sites display a short &quot;This site is a demonstration&quot; notice at the top of the page.
         </p>
