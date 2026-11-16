@@ -222,7 +222,7 @@ const WEBSITE_TEMPLATES: Template[] = [
   },
   {
     id: "website-restaurant",
-    label: "CurryLeaf",
+    label: "Curryleaf",
     caption: "Restaurant site",
     text: "A website for my restaurant, with the menu, our story, a gallery and ways to book or order.",
     demoUrl: "https://curryleaf.appnomics.live",
