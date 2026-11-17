@@ -11,7 +11,7 @@ function NavList({ pathname }: { pathname: string }) {
       {DOCS_NAV.map((section) => (
         <li key={section.title}>
           <p className="mb-3 font-sans text-xs font-semibold tracking-tight text-[#333]">{section.title}</p>
-          <ul className="space-y-1">
+          <ul>
             {section.items.map((item) => {
               const active = docsPage(pathname) === item.href;
               return (
