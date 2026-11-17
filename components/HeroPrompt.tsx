@@ -484,7 +484,7 @@ export default function HeroPrompt({
 
         {/* Templates */}
         <div className="mt-10 flex items-center justify-center gap-2 text-sm text-foreground/60">
-          <span>Start with a template</span>
+          <span className="text-foreground">Start with a template</span>
           {!isBuilder && (
             <button
               type="button"
@@ -535,7 +535,7 @@ export default function HeroPrompt({
                         /> :
                         t.art}
                     </span>
-                    <span className="mt-4 block pl-2 text-sm text-foreground sm:truncate">{t.caption}</span>
+                    <span className="mt-4 block pl-2 text-sm font-semibold text-[#333] sm:truncate">{t.caption}</span>
                     {/* <span className="block truncate text-sm text-foreground/50">{t.caption}</span> */}
                   </button>
                   {t.demoUrl === null ? (
@@ -548,7 +548,7 @@ export default function HeroPrompt({
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="block pl-2 text-left underline-offset-4 hover:underline text-xs"
+                        className="block pl-2 text-left text-xs text-foreground/60 underline-offset-4 hover:underline"
                       >
                         {(Array.isArray(t.label) ? t.label[index] : t.label) ?? t.caption} ↗
                       </a>
