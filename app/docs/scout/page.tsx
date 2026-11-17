@@ -20,7 +20,7 @@ export default function ScoutPage() {
       badge="Builder beta"
       title="Meet Scout."
       lead="Scout is the AI guide you talk to. It asks about your product, suggests wording and makes every change to your site."
-      updated="2026-11-08"
+      updated="2026-11-16"
       toc={TOC}
     >
       <section id="overview">
@@ -49,7 +49,7 @@ export default function ScoutPage() {
           <ul className="list-disc space-y-3 pl-5">
             <li><strong>Invent proof.</strong> Prices, quotes, logos, user counts, and security or compliance claims appear only if you provide them. Unconfirmed claims are flagged for your review.</li>
             <li><strong>Verify your claims.</strong> The page is for a product that exists; what you tell Scout is its starting point.</li>
-            <li><strong>Open links or fetch images.</strong> Paste the text from a link. Images start as designed placeholders you can replace later.</li>
+            <li><strong>Open links or fetch images.</strong> Paste the text from a link, and attach images you want to use. Without supplied images, the site uses designed placeholders you can replace later.</li>
             <li><strong>Edit a live restaurant site from the chat.</strong> Scout plans the page with you and builds it; after launch, restaurant menus are changed in the owner area.</li>
             <li><strong>Change anything but the public page.</strong> Requests about owner sign-in, sign-ups, the database or payments get a short explanation and no change card.</li>
           </ul>
@@ -58,6 +58,7 @@ export default function ScoutPage() {
 
       <Related
         items={[
+          { label: "Attaching files", href: "/scout/attachments", text: "Supply images for your site or a menu spreadsheet." },
           { label: "Writing good requests", href: "/scout/requests", text: "Examples of requests Scout can act on." },
           { label: "Previews and undo", href: "/scout/changes", text: "How a change reaches your live site." },
         ]}

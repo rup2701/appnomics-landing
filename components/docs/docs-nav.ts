@@ -6,6 +6,7 @@ import {
   Handshake,
   LayoutDashboard,
   Mail,
+  Paperclip,
   Palette,
   PenLine,
   ShoppingBag,
@@ -32,6 +33,7 @@ export const DOCS_NAV: NavSection[] = [
     title: "Scout",
     items: [
       { label: "Meet Scout", href: "/scout", icon: Bot },
+      { label: "Attaching files", href: "/scout/attachments", icon: Paperclip },
       { label: "Writing good requests", href: "/scout/requests", icon: PenLine },
       { label: "Previews and undo", href: "/scout/changes", icon: Undo2 },
     ],
