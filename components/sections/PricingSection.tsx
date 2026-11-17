@@ -1,12 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import CheckLine from "../CheckLine";
 import Link from "next/link";
 
 const BUILD_FEATURES = [
   "1 epic per week (avg)",
-  "Studio OS dashboard access",
+  "Cloud dashboard access",
   "Weekly async progress updates",
   "Full codebase + repo ownership",
-  "The Handover package on completion",
   "90-day QA warranty on delivered epics",
 ];
 
@@ -20,7 +22,7 @@ const BUILDER_TIERS = [
     deployment: "Standard preview & deploy queue",
     checks: "Standard automated checks (lint, types, tests)",
     description:
-      "A focused workspace to build and iterate on one product with Scout.",
+      "A focused workspace to build and iterate on one product with Scout. Ideal for creators and small businesses building one product.",
   },
   {
     name: "Pro Builder",
@@ -31,13 +33,15 @@ const BUILDER_TIERS = [
     deployment: "Priority worker queue (skips general line)",
     checks: "Enhanced checks + deeper diagnostic logging",
     description:
-      "More room for multiple products, with priority builds and deeper diagnostics.",
+      "More room for multiple products, with priority builds and bigger models support. Ideal for agencies, freelancers, and founders.",
   },
 ];
 
 const SCOUT_FEATURE = "Unlimited conversational turns";
 
 export default function PricingSection() {
+  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
+
   return (
     <section id="pricing" className="py-32">
       <div className="mx-auto block max-w-[1240px] px-2">
@@ -66,9 +70,34 @@ export default function PricingSection() {
         <h2 className="mb-2 text-center font-sans text-[32px] sm:text-[42px] font-medium leading-[1.15] tracking-tight text-[#171717]">
           Plans for every way you build.
         </h2>
-        <p className="mb-14 text-center font-sans text-lg text-[#555]">
+        <p className="mb-8 text-center font-sans text-lg text-[#555]">
           Build and iterate yourself with our AI Builder, or partner with us to ship your product.
         </p>
+
+        <fieldset className="mb-10 flex justify-center">
+          <legend className="sr-only">Self-serve billing period</legend>
+          <div className="inline-flex rounded-full bg-[#e8eee9] p-1 font-sans text-sm">
+            {(["monthly", "yearly"] as const).map((period) => (
+              <label
+                key={period}
+                className={`cursor-pointer rounded-full px-4 py-2 transition-colors has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[#087a50] ${
+                  billingPeriod === period ? "bg-white font-medium text-[#171717] shadow-sm" : "text-[#555]"
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="billing-period"
+                  value={period}
+                  checked={billingPeriod === period}
+                  onChange={() => setBillingPeriod(period)}
+                  className="sr-only"
+                />
+                {period === "monthly" ? "Monthly" : "Yearly"}
+                {period === "yearly" && <span className="ml-1.5 text-[#087a50]">Save ~20%</span>}
+              </label>
+            ))}
+          </div>
+        </fieldset>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
           {BUILDER_TIERS.map((tier) => (
@@ -83,30 +112,22 @@ export default function PricingSection() {
                   <span className="mb-3 inline-block rounded-full bg-[#087a500d] px-2.5 py-1 font-sans text-[10px] tracking-[0.12em] text-[#087a50]">
                     SELF-SERVE
                   </span>
-                  <h3 className="text-left font-sans text-2xl font-semibold text-[#171717]">
-                    {tier.name}
-                  </h3>
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                    <h3 className="text-left font-sans text-2xl font-semibold text-[#171717]">
+                      {tier.name}
+                    </h3>
+                    <span className="whitespace-nowrap font-sans text-[36px] font-medium leading-none text-[#087a50]">
+                      {billingPeriod === "monthly" ? tier.monthlyPrice : tier.annualPrice}
+                      <span className="ml-0.5 text-sm font-medium">{billingPeriod === "monthly" ? "/mo" : "/yr"}</span>
+                    </span>
+                  </div>
                   <p className="mt-1 font-sans text-[10px] tracking-[0.1em] text-[#555]">
                     {tier.audience}
                   </p>
                 </div>
-                <div
-                  className="mt-4 flex items-baseline gap-4 whitespace-nowrap font-sans"
-                  aria-label={`${tier.monthlyPrice} per month or ${tier.annualPrice} per year`}
-                >
-                  <span className="text-[30px] font-medium leading-none text-[#087a50]">
-                    {tier.monthlyPrice}
-                    <span className="ml-0.5 text-sm font-medium">mo</span>
-                  </span>
-                  <span aria-hidden="true" className="text-lg text-[#999]">/</span>
-                  <span className="text-[30px] font-medium leading-none text-[#006987]">
-                    {tier.annualPrice}
-                    <span className="ml-0.5 text-sm font-medium">yr</span>
-                  </span>
-                </div>
               </div>
 
-              <p className="mb-6 font-sans text-sm text-[#555]">
+              <p className="mb-6 py-3 font-sans text-md text-[#555]">
                 {tier.description}
               </p>
 
@@ -133,26 +154,23 @@ export default function PricingSection() {
                 <span className="mb-3 inline-block rounded-full bg-[#f0f0f0] px-2.5 py-1 font-sans text-[10px] tracking-[0.12em] text-[#555]">
                   ENGINEERING PARTNER
                 </span>
-                <h3 className="text-left font-sans text-2xl font-semibold text-[#171717]">
-                  Build
-                </h3>
+                <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                  <h3 className="text-left font-sans text-2xl font-semibold text-[#171717]">
+                    Build
+                  </h3>
+                  <span className="whitespace-nowrap font-sans text-[36px] font-medium leading-none text-[#087a50]">
+                    $5K<span className="ml-1 text-sm font-medium">/ epic</span>
+                  </span>
+                </div>
                 <p className="mt-1 font-sans text-[10px] tracking-[0.1em] text-[#555]">
                   FIXED PRICE PER EPIC
                 </p>
               </div>
-              <div className="mt-4 flex items-baseline gap-2 whitespace-nowrap font-sans">
-                <span className="text-[30px] font-medium leading-none text-[#087a50]">
-                  $5K
-                </span>
-                <span aria-hidden="true" className="text-lg text-[#999]">/</span>
-                <span className="font-sans text-sm font-medium text-[#555]">
-                  per epic
-                </span>
-              </div>
-              <p className="mt-3 max-w-[32ch] font-sans text-sm leading-relaxed text-[#555]">
-                Production-ready full-stack MVP with optional ongoing run support (15% rev share).
-              </p>
             </div>
+
+            <p className="mb-6 max-w-[32ch] py-3 font-sans text-md leading-relaxed text-[#555]">
+              Production-ready full-stack MVP with optional ongoing run support (15% rev share).
+            </p>
 
             <div className="mb-2 flex-1">
               {BUILD_FEATURES.map((feature) => (
@@ -174,7 +192,8 @@ export default function PricingSection() {
         </div>
 
         <p className="mt-7 text-center font-sans text-[11px] text-[#555]">
-          Annual plans are billed upfront · Annual pricing saves about 20% · Discovery is free ·{" "}
+          {billingPeriod === "yearly" && "Annual plans are billed upfront · "}
+          Discovery is free ·{" "}
           <span className="text-[#171717]">We scope before you commit.</span>
         </p>
       </div>
