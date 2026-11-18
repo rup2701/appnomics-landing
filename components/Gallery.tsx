@@ -40,7 +40,7 @@ const APPS: GalleryApp[] = [
     idea: "A portfolio and shop for a painter",
   },
   {
-    name: "SureBetz", path: "Builder", categories: ["Website", "SaaS"], tags: ["Sports", "Product showcase"],
+    name: "SureBetz", path: "Builder", categories: ["SaaS"], tags: ["Sports", "Marketing"],
     description: "A sports picks subscription website with daily picks for major American leagues in season.",
     liveUrl: "https://sbetz.appnomics.live",
     idea: "A product website for a sports picks subscription, with features, pricing and how it works.",
