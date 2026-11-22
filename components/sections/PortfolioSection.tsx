@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Link from "next/link";
 
 // ── Portfolio data ─────────────────────────────────────────────────────────
 const PROJECTS = [
@@ -28,16 +27,16 @@ const PROJECTS = [
     caseStudy: "/dispatchos-case"
   },
   {
-    name: "MediaDance",
-    domain: "telehealth-marketing.vercel.app/",
-    industry: "INFRASTRUCTURE",
-    description: "Media processing pipeline with background job queue, S3-compatible storage, and a client-facing usage dashboard.",
-    epics: 6,
-    stack: ["Node.js", "Cloudflare R2", "Redis", "Railway"],
+    name: "EZLinks",
+    domain: "ezlinks.netlify.app",
+    industry: "DEVELOPER TOOLS",
+    description: "A deep-linking platform that handles the plumbing for links to your app.",
+    epics: 16,
+    stack: ["Node.js", "Next.js", "Google Cloud Run", "Postgres", "Firebase"],
     color: "#7e22ce",
-    status: "BETA",
-    char: "MD",
-    caseStudy: "/"
+    status: "LIVE",
+    char: "EZ",
+    caseStudy: null
   },
   {
     name: "PlaySquares",
@@ -141,7 +140,7 @@ export default function PortfolioSection() {
                 {p.description}
               </p>
 
-              <div className="flex items-center justify-between mb-5">
+              {(p.stack.length > 0 || p.epics !== null) && <div className="flex items-center justify-between mb-5">
                 <div className="flex gap-2 flex-wrap">
                   {p.stack.map((s) => (
                     <span
@@ -152,17 +151,10 @@ export default function PortfolioSection() {
                     </span>
                   ))}
                 </div>
-                <span className="text-[11px] text-[#555] font-sans whitespace-nowrap ml-3">
+                {p.epics !== null && <span className="text-[11px] text-[#555] font-sans whitespace-nowrap ml-3">
                   {p.epics} epics
-                </span>
-              </div>
-
-              <Link
-                href={p.caseStudy}
-                className="text-[12px] text-[#333] font-sans font-bold hover:text-[#087a50] text-sm uppercase underline"
-              >
-                Case Study
-              </Link>
+                </span>}
+              </div>}
 
             </div>
           ))}
