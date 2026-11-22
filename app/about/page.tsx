@@ -3,11 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/sections/Footer";
+import { SITE_ORIGIN } from "@/components/docs/urls";
 
+const title = "About Appnomics | Product Craft for the AGI Era";
+const description = "Since 2013, Appnomics has built products from zero to one. We bring that product craft into the AGI era with Builder, agentic workflows, Appnomics Cloud, and human expertise.";
+const url = `${SITE_ORIGIN}/about`;
 export const metadata: Metadata = {
-  title: "About Appnomics | Product Craft for the AGI Era",
-  description:
-    "Since 2013, Appnomics has built products from zero to one. We bring that product craft into the AGI era with Builder, agentic workflows, Appnomics Cloud, and human expertise.",
+  title,
+  description,
+  alternates: { canonical: url },
+  openGraph: { title, description, url, type: "website" },
 };
 
 const PRINCIPLES = [

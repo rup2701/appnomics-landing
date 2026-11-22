@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { DocPage, Related } from "@/components/docs/DocPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/plans/engineering-partner", {
   title: "Engineering partner | Appnomics Docs",
   description: "Build: a production-ready full-stack MVP from Appnomics at a fixed price per epic, with full code ownership and a handover package.",
-};
+});
 
 const TOC = [
   { id: "what", label: "What it is" },

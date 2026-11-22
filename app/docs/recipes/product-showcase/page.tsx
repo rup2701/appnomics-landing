@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { Callout, DocPage, Prompt, Related } from "@/components/docs/DocPage";
 import Shot from "@/components/docs/Shot";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/recipes/product-showcase", {
   title: "Product showcase | Appnomics Docs",
   description: "A product website with features, pricing, how it works and an FAQ, built from a short conversation with Scout.",
-};
+});
 
 const TOC = [
   { id: "best-for", label: "Best for" },

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { Callout, DocPage, Prompt, Related } from "@/components/docs/DocPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/recipes/waitlist-site", {
   title: "Waitlist site | Appnomics Docs",
   description: "Test whether an idea has legs with a one-page waitlist site, built from a short conversation with Scout.",
-};
+});
 
 const TOC = [
   { id: "best-for", label: "Best for" },

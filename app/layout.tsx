@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Sora } from "next/font/google";
 import "./globals.css";
+import { SITE_ORIGIN } from "@/components/docs/urls";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,6 +19,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_ORIGIN),
   title: "AI App and MVP Builder | Appnomics",
   description: "Build apps and websites with Appnomics Builder and Scout, or partner with our engineers to launch a production-ready MVP. Explore live examples and own your code.",
 };

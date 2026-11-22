@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { Callout, DocPage, Related } from "@/components/docs/DocPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/scout/requests", {
   title: "Writing good requests | Appnomics Docs",
   description: "How to ask Scout for changes to your live site, with examples of requests and what Scout does with them.",
-};
+});
 
 const TOC = [
   { id: "how", label: "The basics" },

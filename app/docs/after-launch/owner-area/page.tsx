@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { Callout, DocPage, Related } from "@/components/docs/DocPage";
 import Shot from "@/components/docs/Shot";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/after-launch/owner-area", {
   title: "Restaurant owner area | Appnomics Docs",
   description: "Sign in to your restaurant's owner area to edit the menu, upload a spreadsheet and answer table requests.",
-};
+});
 
 const TOC = [
   { id: "sign-in", label: "Signing in" },

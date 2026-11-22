@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { Callout, DocPage, Prompt, Related } from "@/components/docs/DocPage";
 import Shot from "@/components/docs/Shot";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/recipes/restaurant-site", {
   title: "Restaurant site | Appnomics Docs",
   description: "A website for a restaurant with a home page, a menu page and a story page, built from a conversation with Scout, with an owner area for your menu and table requests.",
-};
+});
 
 const TOC = [
   { id: "best-for", label: "Best for" },

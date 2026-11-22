@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { Callout, DocPage, Related } from "@/components/docs/DocPage";
 import Shot from "@/components/docs/Shot";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/after-launch/menu-spreadsheet", {
   title: "Menu from a spreadsheet | Appnomics Docs",
   description: "Put your whole restaurant menu in from a csv or Excel file, before the build or later in the owner area.",
-};
+});
 
 const TOC = [
   { id: "columns", label: "The columns" },

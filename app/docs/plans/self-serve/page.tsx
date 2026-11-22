@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { Callout, DocPage, Related } from "@/components/docs/DocPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/plans/self-serve", {
   title: "Self-serve plans | Appnomics Docs",
   description: "Builder and Pro Builder: the self-serve plans for the Appnomics Builder.",
-};
+});
 
 const TOC = [
   { id: "plans", label: "The plans" },

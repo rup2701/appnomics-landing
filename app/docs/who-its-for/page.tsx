@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { DocPage, Related } from "@/components/docs/DocPage";
 import { docsHref } from "@/components/docs/urls";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/who-its-for", {
   title: "Who Builder is for | Appnomics Docs",
   description: "Who the Appnomics Builder suits today, which recipe to start with, and when to talk to us about a custom build.",
-};
+});
 
 const TOC = [
   { id: "start-ups", label: "Start-ups and MVPs" },

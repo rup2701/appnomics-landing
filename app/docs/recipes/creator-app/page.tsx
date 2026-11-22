@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { Callout, DocPage, Related } from "@/components/docs/DocPage";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/recipes/creator-app", {
   title: "Creator and membership app (coming soon) | Appnomics Docs",
   description: "A marketing site, a dashboard and a web app for creators who sell memberships. Coming soon to Appnomics Builder.",
-};
+});
 
 const TOC = [
   { id: "what", label: "What it will be" },

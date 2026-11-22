@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { DocPage, Related } from "@/components/docs/DocPage";
 import Shot, { type ShotKey } from "@/components/docs/Shot";
+import JsonLd from "@/components/JsonLd";
+import { docsUrl, SITE_ORIGIN } from "@/components/docs/urls";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/builder", {
   title: "How the Appnomics Builder Works | Appnomics Docs",
   description: "Meet Scout, build a product website, review your brief and change the live site by chat. How the Appnomics Builder beta works.",
-};
+});
 
 const TOC = [
   { id: "overview", label: "What Builder does" },
@@ -14,6 +17,33 @@ const TOC = [
   { id: "feedback", label: "Report a problem" },
   { id: "related", label: "Related" },
 ];
+
+const STEPS = [
+  {
+    title: "Interview",
+    text: 'Scout asks about your product, who it is for, what you want visitors to do, and the look you want. Answer in your own words. Say "use your best guess" for any question you would rather skip.',
+    shot: "plan",
+    caption: "The interview, with the page plan to switch sections on or off.",
+  },
+  {
+    title: "Brief",
+    text: "Read the brief in the panel next to the chat. Drafted wording and unconfirmed claims are flagged. Approve it or change a line.",
+    shot: "brief",
+    caption: "The brief, with drafted wording and unconfirmed claims flagged.",
+  },
+  {
+    title: "Build",
+    text: 'Click "Build my site". Builder writes the site, checks that it works, and polishes the design.',
+    shot: "build",
+    caption: "The build in progress. You can close the tab.",
+  },
+  {
+    title: "Live",
+    text: 'Get your live site address, owner sign-in, and a list titled "Check these before you share it": drafted wording, unconfirmed claims, and placeholder images.',
+    shot: "ready",
+    caption: "Your live address and the list to check before you share it.",
+  },
+] satisfies { title: string; text: string; shot: ShotKey; caption: string }[];
 
 export default function BuilderGuidePage() {
   return (
@@ -24,6 +54,18 @@ export default function BuilderGuidePage() {
       updated="2026-11-08"
       toc={TOC}
     >
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: "Your first build",
+        url: `${new URL(docsUrl("/builder"), SITE_ORIGIN)}#first-build`,
+        step: STEPS.map((step, index) => ({
+          "@type": "HowToStep",
+          position: index + 1,
+          name: step.title,
+          text: step.text,
+        })),
+      }} />
       <section id="overview">
         <h2>What Builder does</h2>
         <p>
@@ -46,32 +88,7 @@ export default function BuilderGuidePage() {
           A first build takes about 20 to 30 minutes in our tests, so allow up to 45. You can close the tab while it runs; Scout keeps going.
         </p>
         <ol className="mt-7 space-y-8">
-          {([
-            {
-              title: "Interview",
-              text: 'Scout asks about your product, who it is for, what you want visitors to do, and the look you want. Answer in your own words. Say "use your best guess" for any question you would rather skip.',
-              shot: "plan",
-              caption: "The interview, with the page plan to switch sections on or off.",
-            },
-            {
-              title: "Brief",
-              text: "Read the brief in the panel next to the chat. Drafted wording and unconfirmed claims are flagged. Approve it or change a line.",
-              shot: "brief",
-              caption: "The brief, with drafted wording and unconfirmed claims flagged.",
-            },
-            {
-              title: "Build",
-              text: 'Click "Build my site". Builder writes the site, checks that it works, and polishes the design.',
-              shot: "build",
-              caption: "The build in progress. You can close the tab.",
-            },
-            {
-              title: "Live",
-              text: 'Get your live site address, owner sign-in, and a list titled "Check these before you share it": drafted wording, unconfirmed claims, and placeholder images.',
-              shot: "ready",
-              caption: "Your live address and the list to check before you share it.",
-            },
-          ] satisfies { title: string; text: string; shot: ShotKey; caption: string }[]).map((step, index) => (
+          {STEPS.map((step, index) => (
             <li key={step.title}>
               <div className="flex gap-4 rounded-[20px] bg-[#e8eee9] p-6 sm:gap-6">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#edf3ef] font-mono text-sm text-[#087a50]" aria-hidden="true">

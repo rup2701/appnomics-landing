@@ -1,70 +1,31 @@
-'use client';
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { SITE_ORIGIN } from "@/components/docs/urls";
+import HomePage from "./HomePage";
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
-import DynamicHero from '@/components/DynamicHero';
-import PricingSection from '@/components/sections/PricingSection';
-import PortfolioSection from '@/components/sections/PortfolioSection';
-import CTASection from '@/components/sections/CTASection';
-import AppnomicsCloud from '@/components/sections/AppnomicsCloud';
-import FAQSection from '@/components/sections/FAQSection';
-import Footer from '@/components/sections/Footer';
-import Navbar from '@/components/Navbar';
-import AppnomicsPlatfom from '@/components/sections/AppnomicsPlatfom';
-import WhoThisIsFor from '@/components/sections/WhoIsThisFor';
-import HeroPrompt from '@/components/HeroPrompt';
-import type { TabId } from '@/components/HeroPrompt';
+const title = "AI App and MVP Builder | Appnomics";
+const description = "Build apps and websites with Appnomics Builder and Scout, or partner with our engineers to launch a production-ready MVP. Explore live examples and own your code.";
 
+export const metadata: Metadata = {
+  title,
+  description,
+  alternates: { canonical: SITE_ORIGIN },
+  openGraph: { title, description, url: SITE_ORIGIN, type: "website" },
+};
 
-
-export default function Home() {
-  const [idea, setIdea] = useState('');
-  const [heroTab, setHeroTab] = useState<TabId>('builder');
-  const router = useRouter();
-  const [hovered, setHovered] = useState(false);
-
-  const handleEnter = () => {
-    if (!idea.trim()) return;
-    console.log('Idea saved:', idea);
-    router.push('/auth');
-  };
-
-  // const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-  //   if (e.key === 'Enter' && !e.shiftKey) {
-  //     e.preventDefault();
-  //     handleEnter();
-  //   }
-  // };
-
+export default function Page() {
   return (
-  <>
-    <Navbar />
-    <main className="min-h-screen bg-[#f5f5f5] text-[#171717] font-sans flex flex-col">
-      {/* <DynamicHero /> */}
-      
-      <div className="w-full bg-[#edf3ef]">
-        <HeroPrompt selectedTab={heroTab} onTabChange={setHeroTab} />
-      </div>
-      <div className="flex-grow flex flex-col justify-center px-6 pt-6 pb-0 md:pt-8 w-full">  
-        {/* 
-          FIX 3: Ensure each internal section component uses 'w-full max-w-[1220px] mx-auto'
-          inside their own files, or wrap them like this if you can't edit them:
-        */}
-        <div className="w-full max-w-[1340px] mx-auto">
-          <PricingSection />
-          <WhoThisIsFor />   
-          <AppnomicsCloud />  
-          <AppnomicsPlatfom />
-          <PortfolioSection />
-          <FAQSection />
-          <CTASection />
-        </div>
-      </div>
-    </main>
-    <Footer />
-  </>
-);
-
+    <>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: "Appnomics Builder",
+        url: "https://builder.appnomics.dev",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        description: "Build and iterate on products with Scout.",
+      }} />
+      <HomePage />
+    </>
+  );
 }

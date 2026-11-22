@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { DocPage, Related } from "@/components/docs/DocPage";
 import { docsHref } from "@/components/docs/urls";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/scout/attachments", {
   title: "Attaching files | Appnomics Docs",
   description: "Supply images for your site or attach a menu spreadsheet in Scout.",
-};
+});
 
 const TOC = [
   { id: "images", label: "Images for your site" },

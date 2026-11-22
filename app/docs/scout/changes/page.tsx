@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { DocPage, Related } from "@/components/docs/DocPage";
 import Shot from "@/components/docs/Shot";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/scout/changes", {
   title: "Previews and undo | Appnomics Docs",
   description: "How a change you ask Scout for reaches your live site: the plan, the preview, the checks after approval and undo.",
-};
+});
 
 const TOC = [
   { id: "plan", label: "The plan" },

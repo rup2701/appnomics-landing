@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { docsMetadata } from "@/components/docs/metadata";
 import { DocPage, Related } from "@/components/docs/DocPage";
 import Shot from "@/components/docs/Shot";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = docsMetadata("/scout", {
   title: "Meet Scout | Appnomics Docs",
   description: "Scout is the AI guide in Appnomics Builder. What it does, and what it will not do.",
-};
+});
 
 const TOC = [
   { id: "overview", label: "What Scout is" },
