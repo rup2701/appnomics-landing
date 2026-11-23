@@ -7,8 +7,8 @@ const PROJECTS = [
     name: "InstaRoom",
     domain: "getinstaroom.com",
     industry: "TELEHEALTH",
-    description: "On-demand virtual appointment booking for independent practitioners. Auth, scheduling, Stripe paywall, calendar sync — shipped in 6 weeks.",
-    epics: 8,
+    description: "On-demand virtual appointment booking for independent practitioners. Auth, scheduling, Stripe paywall, calendar sync — shipped in 12 weeks.",
+    epics: 12,
     stack: ["Next.js", "Neon", "Stripe", "Resend", "GenAI", "Node.js", "ML"],
     color: "#087a50",
   },
@@ -69,10 +69,10 @@ export default function PortfolioSection() {
             </div>
             <div className="flex min-h-64 items-center justify-center p-8 sm:p-12">
               <Image
-                src="/images/instaroom.png"
+                src="/images/instaroom.jpg"
                 alt="InstaRoom website and virtual room dashboard"
-                width={3054}
-                height={1996}
+                width={725}
+                height={403}
                 sizes="(min-width: 768px) 500px, 100vw"
                 className="h-auto w-full rounded-[16px] shadow-sm"
               />
