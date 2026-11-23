@@ -9,7 +9,7 @@ const PROJECTS = [
     industry: "TELEHEALTH",
     description: "On-demand virtual appointment booking for independent practitioners. Auth, scheduling, Stripe paywall, calendar sync — shipped in 6 weeks.",
     epics: 8,
-    stack: ["Next.js", "Neon", "Stripe", "Resend"],
+    stack: ["Next.js", "Neon", "Stripe", "Resend", "GenAI", "Node.js", "ML"],
     color: "#087a50",
   },
   {
