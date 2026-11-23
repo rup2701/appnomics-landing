@@ -1,4 +1,5 @@
-import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 // ── Portfolio data ─────────────────────────────────────────────────────────
 const PROJECTS = [
@@ -10,9 +11,6 @@ const PROJECTS = [
     epics: 8,
     stack: ["Next.js", "Neon", "Stripe", "Resend"],
     color: "#087a50",
-    status: "LIVE",
-    char: "IR",
-    caseStudy: "/"
   },
   {
     name: "DispatchOS",
@@ -22,9 +20,6 @@ const PROJECTS = [
     epics: 5,
     stack: ["Next.js", "Railway", "Gemini AI", "Vercel"],
     color: "#006987",
-    status: "LIVE",
-    char: "DI",
-    caseStudy: "/dispatchos-case"
   },
   {
     name: "EZLinks",
@@ -34,9 +29,6 @@ const PROJECTS = [
     epics: 16,
     stack: ["Node.js", "Next.js", "Google Cloud Run", "Postgres", "Firebase"],
     color: "#7e22ce",
-    status: "LIVE",
-    char: "EZ",
-    caseStudy: null
   },
   {
     name: "PlaySquares",
@@ -46,118 +38,67 @@ const PROJECTS = [
     epics: 16,
     stack: ["Swift", "Node.js", "Postgres", "Firebase", 'Google Cloud'],
     color: "#a16207",
-    status: "LIVE",
-    char: "PS",
-    caseStudy: "/"
   },
 ];
 
-// ── Utility ────────────────────────────────────────────────────────────────
-function Tag({ label, color }: { label: string; color: string }) {
-  return (
-    <span
-      className="text-[10px] font-bold tracking-[0.12em] px-[7px] py-0.5 rounded-[2px] font-sans whitespace-nowrap"
-      style={{
-        color,
-        border: `1px solid ${color}33`,
-        background: `${color}0d`,
-      }}
-    >
-      {label}
-    </span>
-  );
-}
-
 export default function PortfolioSection() {
-  const [hovered, setHovered] = useState<string | null>(null);
-
   return (
     <section id='portfolio' className="py-32">
-      <div className="max-w-[1100px] mx-auto">
-        <h2 className="text-[32px] sm:text-[42px] font-medium tracking-tight text-[#171717] mb-2 leading-[1.15] font-sans">
-          Built. Shipped. Handed over.
-        </h2>
-        <p className="text-lg text-[#555] mb-14 font-sans">
-          A sample of MVPs we&apos;ve taken from intake to production.
-        </p>
+      <div className="mx-auto max-w-[1340px] px-2">
+          <h2 className="mb-2 font-sans text-[32px] font-medium leading-[1.15] tracking-tight text-[#171717] sm:text-[42px]">
+            Built. Shipped. Handed over.
+          </h2>
+          <p className="mb-10 font-sans text-lg text-[#555]">
+            A sample of MVPs we&apos;ve taken from intake to production.
+          </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {PROJECTS.map((p) => (
-            <div
-              key={p.name}
-              onMouseEnter={() => setHovered(p.name)}
-              onMouseLeave={() => setHovered(null)}
-              className="bg-white rounded-[20px] p-7 cursor-default transition-all duration-200 relative overflow-hidden"
-              style={{
-                background: hovered === p.name ? "#fafafa" : "#ffffff",
-              }}
-            >
-              {/* Subtle corner glow on hover */}
-              {hovered === p.name && (
-                <div
-                  className="absolute top-0 right-0 w-[120px] h-[120px] pointer-events-none"
-                  style={{
-                    background: `radial-gradient(circle at top right, ${p.color}18 0%, transparent 70%)`,
-                  }}
-                />
-              )}
-
-              <div className="flex items-start justify-between gap-4 mb-4">
-                {/* Avatar */}
-                <div
-                  className="w-11 h-11 rounded-[2px] flex items-center justify-center text-[13px] font-bold flex-shrink-0 font-sans transition-shadow duration-200"
-                  style={{
-                    background: `${p.color}14`,
-                    border: `1px solid ${p.color}33`,
-                    color: p.color,
-                    boxShadow: hovered === p.name ? `0 0 16px ${p.color}22` : "none",
-                  }}
-                >
-                  {p.char}
-                </div>
-
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 flex-wrap mb-1">
-                    <span className="text-[15px] font-bold text-[#171717] font-sans">
-                      {p.name}
-                    </span>
-                    <Tag label={p.status} color={p.status === "LIVE" ? "#00ff9d" : "#ffb800"} />
-                    <Tag label={p.industry} color={p.color} />
-                  </div>
-                  <a
-                    href={`https://${p.domain}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[#555] text-[11px] no-underline font-sans hover:text-[#171717] transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    {p.domain} ↗
-                  </a>
-                </div>
+          <article className="grid overflow-hidden rounded-[24px] bg-white md:grid-cols-2">
+            <div className="flex flex-col items-start p-7 sm:p-10">
+              <p className="mb-5 font-mono text-xs tracking-[0.12em] text-[#087a50]">FEATURED PROJECT · {PROJECTS[0].industry}</p>
+              <h3 className="mb-3 font-sans text-3xl font-medium tracking-tight text-[#171717]">{PROJECTS[0].name}</h3>
+              <p className="max-w-md font-sans text-base leading-relaxed text-[#555]">{PROJECTS[0].description}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {PROJECTS[0].stack.map((item) => (
+                  <span key={item} className="rounded-full bg-[#f5f5f5] px-3 py-1 font-sans text-xs text-[#555]">{item}</span>
+                ))}
+                <span className="rounded-full bg-[#edf3ef] px-3 py-1 font-sans text-xs text-[#087a50]">{PROJECTS[0].epics} epics</span>
               </div>
-
-              <p className="text-[#444] text-md leading-[1.65] mb-5 font-sans">
-                {p.description}
-              </p>
-
-              {(p.stack.length > 0 || p.epics !== null) && <div className="flex items-center justify-between mb-5">
-                <div className="flex gap-2 flex-wrap">
-                  {p.stack.map((s) => (
-                    <span
-                      key={s}
-                      className="text-[12px] text-[#444] border border-[#d8d8d8] px-1.5 py-0.5 rounded-[2px] font-sans"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-                {p.epics !== null && <span className="text-[11px] text-[#555] font-sans whitespace-nowrap ml-3">
-                  {p.epics} epics
-                </span>}
-              </div>}
-
+              <a href={`https://${PROJECTS[0].domain}`} target="_blank" rel="noreferrer" className="mt-8 font-sans text-sm font-medium text-[#087a50] underline underline-offset-4">
+                Visit {PROJECTS[0].name} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span>
+              </a>
             </div>
-          ))}
+            <div className="flex min-h-64 items-center justify-center p-8 sm:p-12">
+              <Image
+                src="/images/instaroom.png"
+                alt="InstaRoom website and virtual room dashboard"
+                width={3054}
+                height={1996}
+                sizes="(min-width: 768px) 500px, 100vw"
+                className="h-auto w-full rounded-[16px] shadow-sm"
+              />
+            </div>
+          </article>
+
+          <div className="mt-5 grid gap-5 md:grid-cols-3">
+            {PROJECTS.slice(1).map((project, index) => (
+              <article key={project.name} className={`flex flex-col rounded-[20px] p-7 ${["bg-[#eaf5ef]", "bg-[#f0eeee]", "bg-[#f5f1eb]"][index]}`}>
+                <p className="mb-4 font-mono text-[10px] tracking-[0.12em]" style={{ color: project.color }}>{project.industry}</p>
+                <h3 className="mb-3 font-sans text-xl font-medium text-[#171717]">{project.name}</h3>
+                <p className="flex-1 font-sans text-sm leading-relaxed text-[#555]">{project.description}</p>
+                <p className="mt-5 font-sans text-xs leading-relaxed text-[#777]">
+                  {project.stack.join(" · ")} · {project.epics} epics
+                </p>
+                <a href={`https://${project.domain}`} target="_blank" rel="noreferrer" className="mt-5 self-start font-sans text-sm font-medium text-[#087a50] underline underline-offset-4">
+                  Visit {project.name} <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span>
+                </a>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link href="/gallery" className="font-sans text-sm font-medium text-[#087a50] underline underline-offset-4">
+              Explore the gallery <span aria-hidden="true">→</span>
+            </Link>
         </div>
       </div>
     </section>
