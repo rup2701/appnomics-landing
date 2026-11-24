@@ -84,6 +84,7 @@ export const APPS: GalleryApp[] = [
   {
     name: "MediaDance", path: "MVP", categories: ["SaaS"], tags: ["Infrastructure", "Beta"],
     description: "A media processing pipeline with background jobs, storage and a client-facing usage dashboard.",
+    liveUrl: "https://telehealth-marketing.vercel.app/",
   },
   {
     name: "PlaySquares", path: "Startup", categories: ["Mobile app", "Sports app"], tags: ["SportsTech"],
