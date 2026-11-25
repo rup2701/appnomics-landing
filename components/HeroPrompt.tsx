@@ -5,8 +5,11 @@ import Image from "next/image";
  * Appnomics hero + three-tab prompt area.
  *
  * Tabs say what you want from us (Builder, Startup, MVP). Pills say what kind of
- * product. Builder + Online store and Website are live; everything else renders
- * disabled, and the Startup and MVP tabs send visitors to the contact page.
+ * product. Builder + Website, Online store, Mobile app and SaaS are live; everything
+ * else renders disabled, and the Startup and MVP tabs send visitors to the contact page.
+ * Mobile app and SaaS list the launch page cards (also under Website) and a Coming soon
+ * card for the app itself. Same as the Builder Home tab (appnomics-builder
+ * src/components/app/home-pills.ts); keep them in step.
  *
  * Builder shows three store templates as picture cards. Each card draws its own
  * illustration, so there are no image files to host. To use a real screenshot
@@ -77,9 +80,17 @@ const PILL_ORDER: Record<TabId, PillId[]> = {
 };
 
 /** Pills that actually work, per tab. Everything else is disabled. */
-const LIVE: Record<TabId, PillId[]> = { builder: ["website", "store"], startup: [], mvp: [] };
+const LIVE: Record<TabId, PillId[]> = { builder: ["website", "store", "mobile", "saas"], startup: [], mvp: [] };
 
 const STORE_PLACEHOLDER = "Describe the store you want to launch, like a handmade ceramics shop…";
+
+/** Placeholders for the Builder pills, the same as the Builder Home tab. */
+const PILL_PLACEHOLDER: Partial<Record<PillId, string>> = {
+  website: "Describe the website you want to launch…",
+  store: STORE_PLACEHOLDER,
+  mobile: "Describe the app you are launching. We build its launch page first…",
+  saas: "Describe your product. We build its launch page first…",
+};
 
 type Example = { label: string; text: string };
 
@@ -189,7 +200,7 @@ function PlantsArt() {
   );
 }
 
-type Template = { id: string; label: string | string[]; caption: string; text: string; art: ReactNode; image?: string, demoUrl?: string | string[] | null };
+type Template = { id: string; label: string | string[]; caption: string; text: string; art: ReactNode; image?: string, demoUrl?: string | string[] | null; /** Not available yet: greyed and not clickable. */ soon?: boolean };
 
 const TEMPLATES: Template[] = [
   { id: "fernhollow", label: "Fernhollow", caption: "Handmade goods", text: "A handmade ceramics store with mugs, bowls and custom engraving", image: "/images/fernhollow-store-template.png", art: <CeramicsArt />, demoUrl: "https://fernhollow.store" },
@@ -252,6 +263,66 @@ const WEBSITE_TEMPLATES: Template[] = [
   },
 ];
 
+/** The app itself, for the Mobile app and SaaS pills. Coming soon: no date and no form. */
+const APP_TEMPLATES: Template[] = [
+  {
+    id: "mobile-app",
+    label: "Simple mobile app",
+    caption: "Simple mobile app",
+    text: "",
+    demoUrl: null,
+    soon: true,
+    art: (
+      <div className="flex h-full items-center justify-center bg-violet-50 p-5 sm:p-8">
+        <div className="flex h-full max-h-40 w-20 flex-col gap-2 rounded-2xl border-4 border-violet-900/80 bg-white p-2">
+          <span className="h-2 w-3/4 bg-violet-200" /><span className="h-8 rounded bg-violet-100" /><span className="h-8 rounded bg-violet-100" /><span className="mt-auto h-3 rounded bg-violet-800" />
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "saas-app",
+    label: "SaaS app with sign-in and checkout",
+    caption: "SaaS app with sign-in and checkout",
+    text: "",
+    demoUrl: null,
+    soon: true,
+    art: (
+      <div className="flex h-full flex-col justify-center gap-3 bg-teal-50 p-5 text-teal-950 sm:p-8">
+        <span className="font-mono text-[10px]">SIGN IN</span>
+        <span className="h-6 w-3/4 rounded bg-white" /><span className="h-6 w-3/4 rounded bg-white" />
+        <span className="h-6 w-1/2 rounded bg-teal-800" />
+      </div>
+    ),
+  },
+];
+
+/** Every card by id, so a pill lists cards by id and one card can sit under more than one pill without a copy. */
+const TEMPLATES_BY_ID: Record<string, Template> = Object.fromEntries([...TEMPLATES, ...WEBSITE_TEMPLATES, ...APP_TEMPLATES].map((t) => [t.id, t]));
+
+type PillGroup = { heading?: string; items: { id: string; line?: string }[] };
+const WAITLIST_LINE = "A launch page with a dashboard to read your sign-ups.";
+const SHOWCASE_LINE = "A launch page with your pricing and a button to your own payment link.";
+
+/** The cards under each Builder pill, by id. */
+const PILL_GROUPS: Partial<Record<PillId, PillGroup[]>> = {
+  website: [{ items: [{ id: "website-mvp", line: WAITLIST_LINE }, { id: "website-saas" }, { id: "website-restaurant" }, { id: "website-portfolio" }, { id: "website-resume" }] }],
+  store: [{ items: TEMPLATES.map((t) => ({ id: t.id })) }],
+  mobile: [
+    { heading: "Launch page", items: [{ id: "website-mvp", line: WAITLIST_LINE }, { id: "website-saas", line: SHOWCASE_LINE }] },
+    { heading: "The app itself", items: [{ id: "mobile-app" }] },
+  ],
+  saas: [
+    { heading: "Launch page", items: [{ id: "website-saas", line: SHOWCASE_LINE }, { id: "website-mvp", line: WAITLIST_LINE }] },
+    { heading: "The app itself", items: [{ id: "saas-app" }] },
+  ],
+};
+
+/** A typed prompt with no card clicked uses this card, through the same Builder link as a click. */
+const DEFAULT_TEMPLATE: Partial<Record<PillId, string>> = { mobile: "website-mvp", saas: "website-saas" };
+const SITE_PILLS: PillId[] = ["website", "mobile", "saas"];
+const BUILDER_TEMPLATES = ["website-mvp", "website-saas", "website-restaurant"];
+
 /* ---------- Small pieces ---------- */
 
 function Icon({ children, className = "h-6 w-6" }: { children: ReactNode; className?: string }) {
@@ -286,14 +357,18 @@ export default function HeroPrompt({
   const current = TABS.find((t) => t.id === tab)!;
   const live = LIVE[tab];
   const isBuilder = tab === "builder";
-  const storeSelected = isBuilder && pill === "store";
-  const websiteSelected = isBuilder && pill === "website";
-  const isSupportedSiteTemplate = websiteSelected && (template === "website-mvp" || template === "website-saas" || template === "website-restaurant");
+  const siteSelected = isBuilder && pill !== null && SITE_PILLS.includes(pill);
+  // Mobile app and SaaS: a typed prompt with no card clicked goes through the default card's link.
+  const chosen = template ?? (isBuilder && pill ? DEFAULT_TEMPLATE[pill] ?? null : null);
+  const isSupportedSiteTemplate = siteSelected && chosen !== null && BUILDER_TEMPLATES.includes(chosen);
   const siteIdeaValid = text.trim().length >= 15 && text.length <= 1000 && !text.includes("___");
-  const templates = websiteSelected ? WEBSITE_TEMPLATES : TEMPLATES;
+  const groups = (PILL_GROUPS[pill ?? "store"] ?? PILL_GROUPS.store!).map((g) => ({
+    heading: g.heading,
+    items: g.items.flatMap(({ id, line }) => (TEMPLATES_BY_ID[id] ? [{ ...TEMPLATES_BY_ID[id], line }] : [])),
+  }));
 
   const shown = Array.from({ length: EXAMPLES_SHOWN }, (_, i) => FOUNDER_EXAMPLES[(round * EXAMPLES_SHOWN + i) % FOUNDER_EXAMPLES.length]);
-  const placeholder = storeSelected ? STORE_PLACEHOLDER : websiteSelected ? "Describe the website you want to launch…" : current.placeholder;
+  const placeholder = (isBuilder && pill ? PILL_PLACEHOLDER[pill] : undefined) ?? current.placeholder;
 
   function selectTab(next: TabId, focus = false) {
     setInternalTab(next);
@@ -343,8 +418,7 @@ export default function HeroPrompt({
       // const builderUrl = new URL("http://localhost:3001/");
 
       builderUrl.searchParams.set("kind", "site");
-      builderUrl.searchParams.set("pack",template === "website-saas" ? "showcase" : template === "website-restaurant" ? "local" : "waitlist",
-);
+      builderUrl.searchParams.set("pack", chosen === "website-saas" ? "showcase" : chosen === "website-restaurant" ? "local" : "waitlist");
       builderUrl.searchParams.set("idea", value);
       window.location.assign(builderUrl.toString());
       return;
@@ -356,7 +430,7 @@ export default function HeroPrompt({
       return;
     }
     onSubmit?.({ tab, pill, text: value });
-    setStatus(websiteSelected ? "Thanks. Website setup is opening soon." : "Thanks. Store setup is opening soon.");
+    setStatus(siteSelected ? "Thanks. Website setup is opening soon." : "Thanks. Store setup is opening soon.");
   }
 
   const contactLink = `${contactHref}${contactHref.includes("?") ? "&" : "?"}idea=${encodeURIComponent(text.trim())}`;
@@ -500,64 +574,70 @@ export default function HeroPrompt({
         </div>
 
         {isBuilder ? (
-          <ul
-            key={pill}
-            data-testid="templates"
-            aria-label="Starter templates"
-            tabIndex={0}
-            className={`mx-auto mt-4 flex max-w-6xl snap-x snap-mandatory gap-4 overflow-x-auto p-1 pb-4 sm:grid sm:grid-cols-3 sm:overflow-visible sm:p-0 ${focusRing}`}
-          >
-            {templates.map((t) => {
-              const selected = template === t.id;
-              return (
-                <li key={t.id} className="w-[min(260px,85%)] min-w-0 shrink-0 snap-start sm:w-auto">
-                  <button
-                    type="button"
-                    aria-pressed={selected}
-                    onClick={() => {
-                      setTemplate(t.id);
-                      fillPrompt(t.text);
-                    }}
-                    className={`group block w-full rounded-2xl text-left ${focusRing}`}
-                  >
-                    <span
-                      className={`block aspect-[4/3] overflow-hidden rounded-2xl border bg-white transition-colors ${
-                        selected ? "border-foreground" : "border-foreground/10 group-hover:border-foreground/40"
-                      }`}
-                    >
-                      {t.image ?
-                        <Image
-                          className="h-full w-full object-cover"
-                          src={t.image}
-                          alt=""
-                          height={400}
-                          width={400}
-                        /> :
-                        t.art}
-                    </span>
-                    <span className="mt-4 block pl-2 text-sm font-semibold text-[#333] sm:truncate">{t.caption}</span>
-                    {/* <span className="block truncate text-sm text-foreground/50">{t.caption}</span> */}
-                  </button>
-                  {t.demoUrl === null ? (
-                    <span className="block pl-2 text-left text-xs text-foreground/50">Coming soon</span>
-                  ) : (
-                    (Array.isArray(t.demoUrl) ? t.demoUrl : t.demoUrl ? [t.demoUrl] : []).map((demoUrl, index) => (
-                      <a
-                        key={demoUrl}
-                        href={demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="block pl-2 text-left text-xs text-foreground/60 underline-offset-4 hover:underline"
-                      >
-                        {(Array.isArray(t.label) ? t.label[index] : t.label) ?? t.caption} ↗
-                      </a>
-                    ))
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+          <div key={pill} data-testid="templates" className="mx-auto max-w-6xl">
+            {groups.map((g, gi) => (
+              <div key={g.heading ?? gi} className={gi > 0 ? "mt-8" : ""}>
+                {g.heading && <h2 className="mt-4 text-left text-sm font-semibold text-foreground">{g.heading}</h2>}
+                <ul
+                  aria-label={g.heading ?? "Starter templates"}
+                  tabIndex={0}
+                  className={`mx-auto mt-4 flex snap-x snap-mandatory gap-4 overflow-x-auto p-1 pb-4 sm:grid sm:grid-cols-3 sm:overflow-visible sm:p-0 ${focusRing}`}
+                >
+                  {g.items.map((t) => {
+                    const selected = template === t.id;
+                    return (
+                      <li key={t.id} className="w-[min(260px,85%)] min-w-0 shrink-0 snap-start sm:w-auto">
+                        <button
+                          type="button"
+                          aria-pressed={selected}
+                          disabled={t.soon}
+                          onClick={() => {
+                            setTemplate(t.id);
+                            fillPrompt(t.text);
+                          }}
+                          className={`group block w-full rounded-2xl text-left disabled:cursor-not-allowed ${focusRing}`}
+                        >
+                          <span
+                            className={`block aspect-[4/3] overflow-hidden rounded-2xl border bg-white transition-colors ${t.soon ? "opacity-60" : ""} ${
+                              selected ? "border-foreground" : "border-foreground/10 group-hover:border-foreground/40"
+                            }`}
+                          >
+                            {t.image ?
+                              <Image
+                                className="h-full w-full object-cover"
+                                src={t.image}
+                                alt=""
+                                height={400}
+                                width={400}
+                              /> :
+                              t.art}
+                          </span>
+                          <span className="mt-4 block pl-2 text-sm font-semibold text-[#333] sm:truncate">{t.caption}</span>
+                        </button>
+                        {t.line && <span className="mt-1 block pl-2 text-left text-xs text-foreground/60">{t.line}</span>}
+                        {t.demoUrl === null ? (
+                          <span className="block pl-2 text-left text-xs text-foreground/50">Coming soon</span>
+                        ) : (
+                          (Array.isArray(t.demoUrl) ? t.demoUrl : t.demoUrl ? [t.demoUrl] : []).map((demoUrl, index) => (
+                            <a
+                              key={demoUrl}
+                              href={demoUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="block pl-2 text-left text-xs text-foreground/60 underline-offset-4 hover:underline"
+                            >
+                              {(Array.isArray(t.label) ? t.label[index] : t.label) ?? t.caption} ↗
+                            </a>
+                          ))
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
+          </div>
         ) : (
           <ul data-testid="chips" className="mt-3 flex flex-wrap justify-center gap-2">
             {shown.map((ex) => (
