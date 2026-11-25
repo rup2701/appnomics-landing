@@ -310,11 +310,11 @@ const PILL_GROUPS: Partial<Record<PillId, PillGroup[]>> = {
   store: [{ items: TEMPLATES.map((t) => ({ id: t.id })) }],
   mobile: [
     { heading: "Launch page", items: [{ id: "website-mvp", line: WAITLIST_LINE }, { id: "website-saas", line: SHOWCASE_LINE }] },
-    { heading: "The app itself", items: [{ id: "mobile-app" }] },
+    { heading: "Mobile App", items: [{ id: "mobile-app" }] },
   ],
   saas: [
     { heading: "Launch page", items: [{ id: "website-saas", line: SHOWCASE_LINE }, { id: "website-mvp", line: WAITLIST_LINE }] },
-    { heading: "The app itself", items: [{ id: "saas-app" }] },
+    { heading: "Web App", items: [{ id: "saas-app" }] },
   ],
 };
 
@@ -625,7 +625,7 @@ export default function HeroPrompt({
                               target="_blank"
                               rel="noopener noreferrer"
                               onClick={(e) => e.stopPropagation()}
-                              className="block pl-2 text-left text-xs text-foreground/60 underline-offset-4 hover:underline"
+                              className="block pl-2 text-left text-xs text-foreground/60 underline-offset-4 first-of-type:mt-3 hover:underline"
                             >
                               {(Array.isArray(t.label) ? t.label[index] : t.label) ?? t.caption} ↗
                             </a>
