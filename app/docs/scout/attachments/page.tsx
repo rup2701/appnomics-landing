@@ -33,7 +33,7 @@ export default function AttachmentsPage() {
       <section id="spreadsheets">
         <h2>Menu spreadsheets</h2>
         <p>
-          For a restaurant site, you can attach a menu spreadsheet in the chat before the build. See <a className="text-[#087a50] underline underline-offset-4 hover:no-underline" href={docsHref("/after-launch/menu-spreadsheet")}>Menu from a spreadsheet</a> for the columns and limits.
+          For a restaurant site, you can attach a menu spreadsheet in the chat before the build. See <a className="text-[#087a50] underline underline-offset-4 hover:no-underline" href={docsHref("/recipes/restaurant-site#menu-spreadsheet")}>Menu from a spreadsheet</a> for the columns and limits.
         </p>
       </section>
 

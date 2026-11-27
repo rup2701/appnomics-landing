@@ -66,7 +66,7 @@ export default function EngineeringPartnerPage() {
       <Related
         items={[
           { label: "Self-serve plans", href: "/plans/self-serve", text: "Build and change your own sites with Scout." },
-          { label: "Creator and membership app", href: "/recipes/creator-app", text: "Our first app recipe, coming soon." },
+          { label: "Creator and membership app", href: "/recipes/creator-app", text: "Our first app, coming soon." },
         ]}
       />
     </DocPage>

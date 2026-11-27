@@ -12,10 +12,22 @@ const DOCS_HOST = "docs.appnomics.dev";
 const onDocsHost = [{ type: "host" as const, value: DOCS_HOST }];
 const MAIN_HOSTS = ["appnomics.dev", "www.appnomics.dev"];
 
+/**
+ * Docs pages that moved, from their old path (without /docs) to the new one. Old links and bookmarks keep working.
+ * Nov 2026: the restaurant owner area and menu spreadsheet pages became sections of the restaurant use case, and
+ * Previews and undo became Making changes under Post-launch.
+ */
+const MOVED_DOCS: [from: string, to: string][] = [
+  ["/after-launch/owner-area", "/recipes/restaurant-site#owner-area"],
+  ["/after-launch/menu-spreadsheet", "/recipes/restaurant-site#menu-spreadsheet"],
+  ["/scout/changes", "/post-launch/changes"],
+];
+
 const nextConfig: NextConfig = {
   async redirects() {
-    if (!DOCS_ON_SUBDOMAIN) return [];
+    if (!DOCS_ON_SUBDOMAIN) return MOVED_DOCS.map(([from, to]) => ({ source: `/docs${from}`, destination: `/docs${to}`, permanent: true }));
     return [
+      ...MOVED_DOCS.map(([from, to]) => ({ source: from, has: onDocsHost, destination: to, permanent: true })),
       // The docs host has no home page of its own: start at the first docs page.
       // Temporary, so a docs home page can be added later.
       { source: "/", has: onDocsHost, destination: "/builder", permanent: false },

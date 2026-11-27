@@ -5,12 +5,12 @@ import { docsHref } from "@/components/docs/urls";
 
 export const metadata: Metadata = docsMetadata("/who-its-for", {
   title: "Who Builder is for | Appnomics Docs",
-  description: "Who the Appnomics Builder suits today, which recipe to start with, and when to talk to us about a custom build.",
+  description: "Who the Appnomics Builder suits today, which use case to start with, and when to talk to us about a custom build.",
 });
 
 const TOC = [
   { id: "start-ups", label: "Start-ups and MVPs" },
-  { id: "pick", label: "Which recipe to start with" },
+  { id: "pick", label: "Which use case to start with" },
   { id: "not-yet", label: "Not a fit yet" },
   { id: "related", label: "Related" },
 ];
@@ -35,7 +35,7 @@ export default function WhoItsForPage() {
       </section>
 
       <section id="pick">
-        <h2>Which recipe to start with</h2>
+        <h2>Which use case to start with</h2>
         <div className="mt-2 space-y-4">
           {[
             { title: "You have an idea and want to see if people care", text: "Start with a waitlist site. It collects sign-ups so you can see interest before you build more.", href: "/recipes/waitlist-site" },

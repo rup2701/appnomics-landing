@@ -61,7 +61,7 @@ export default function ScoutPage() {
         items={[
           { label: "Attaching files", href: "/scout/attachments", text: "Supply images for your site or a menu spreadsheet." },
           { label: "Writing good requests", href: "/scout/requests", text: "Examples of requests Scout can act on." },
-          { label: "Previews and undo", href: "/scout/changes", text: "How a change reaches your live site." },
+          { label: "Making changes", href: "/post-launch/changes", text: "How a change reaches your live site." },
         ]}
       />
     </DocPage>
