@@ -3,8 +3,8 @@ import { docsMetadata } from "@/components/docs/metadata";
 import { DocPage, Related } from "@/components/docs/DocPage";
 import Shot from "@/components/docs/Shot";
 
-export const metadata: Metadata = docsMetadata("/scout/changes", {
-  title: "Previews and undo | Appnomics Docs",
+export const metadata: Metadata = docsMetadata("/post-launch/changes", {
+  title: "Making changes | Appnomics Docs",
   description: "How a change you ask Scout for reaches your live site: the plan, the preview, the checks after approval and undo.",
 });
 
@@ -21,10 +21,10 @@ const TOC = [
 export default function ChangesPage() {
   return (
     <DocPage
-      badge="Scout"
-      title="Previews and undo."
+      badge="Post-launch"
+      title="Making changes."
       lead="You see the result first. After you approve it, the change is checked and made permanent in the background, and you can keep working."
-      updated="2026-11-08"
+      updated="2026-11-26"
       toc={TOC}
     >
       <section id="plan">

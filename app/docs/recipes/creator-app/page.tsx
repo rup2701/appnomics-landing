@@ -19,14 +19,14 @@ export default function CreatorAppPage() {
     <DocPage
       badge="Coming soon"
       title="Creator and membership app."
-      lead="Our first app recipe: a marketing site, a dashboard and a web app for creators who sell paid memberships."
+      lead="Our first app: a marketing site, a dashboard and a web app for creators who sell paid memberships."
       updated="2026-11-08"
       toc={TOC}
     >
       <section id="what">
         <h2>What it will be</h2>
         <p>
-          The first app recipe will be built around a creator who sells paid memberships, such as a subscription for picks, lessons or private content. It brings three parts together:
+          The first app will be built around a creator who sells paid memberships, such as a subscription for picks, lessons or private content. It brings three parts together:
         </p>
         <ul className="mt-4 list-disc space-y-3 pl-5">
           <li><strong>A marketing site</strong> that explains the offer.</li>
@@ -38,7 +38,7 @@ export default function CreatorAppPage() {
       <section id="not-ready">
         <h2>What is not ready</h2>
         <p>
-          Member sign-in and payments are not available in Builder yet, so this recipe cannot be built from a conversation today. We will open it once those parts are ready.
+          Member sign-in and payments are not available in Builder yet, so this app cannot be built from a conversation today. We will open it once those parts are ready.
         </p>
       </section>
 

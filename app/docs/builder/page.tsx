@@ -142,7 +142,7 @@ export default function BuilderGuidePage() {
       <Related
         items={[
           { label: "Meet Scout", href: "/scout", text: "What Scout does, and what it will not do." },
-          { label: "Previews and undo", href: "/scout/changes", text: "How a change goes from your request to your live site." },
+          { label: "Making changes", href: "/post-launch/changes", text: "How a change goes from your request to your live site." },
           { label: "Waitlist site", href: "/recipes/waitlist-site", text: "Test an idea with a sign-up page." },
           { label: "Product showcase", href: "/recipes/product-showcase", text: "A website for a product that exists." },
           { label: "Restaurant site", href: "/recipes/restaurant-site", text: "A website and owner area for a restaurant." },

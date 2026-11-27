@@ -17,7 +17,7 @@ const TOC = [
 export default function OnlineStorePage() {
   return (
     <DocPage
-      badge="Recipe"
+      badge="Use case"
       title="Online store."
       lead="Describe the shop you want to launch, and our agents build it, starting from a tested foundation."
       updated="2026-11-08"

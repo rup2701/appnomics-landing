@@ -21,7 +21,7 @@ const TOC = [
 export default function ProductShowcasePage() {
   return (
     <DocPage
-      badge="Recipe · opening soon"
+      badge="Use case · opening soon"
       title="Product showcase."
       lead="A website for a product that exists: what it does, how it works, what it costs and answers to common questions."
       updated="2026-11-08"
@@ -69,7 +69,7 @@ export default function ProductShowcasePage() {
         </p>
         <div className="mt-6">
           <Callout title="Then refine it">
-            <p>Ask Scout for changes in plain words, for example a different background colour on one card. See Previews and undo.</p>
+            <p>Ask Scout for changes in plain words, for example a different background colour on one card. See Making changes.</p>
           </Callout>
         </div>
       </section>
@@ -84,7 +84,7 @@ export default function ProductShowcasePage() {
       <section id="troubleshooting">
         <h2>Troubleshooting</h2>
         <ul className="list-disc space-y-3 pl-5">
-          <li><strong>You get the waitlist interview instead.</strong> This recipe is opening in stages. If Scout opens with &quot;test whether your idea has legs,&quot; you are in the waitlist recipe.</li>
+          <li><strong>You get the waitlist interview instead.</strong> This use case is opening in stages. If Scout opens with &quot;test whether your idea has legs,&quot; you are in the waitlist interview.</li>
           <li><strong>Placeholder text and sample pricing.</strong> They are there so the page looks complete. Replace them with your own through Scout before you share the site.</li>
         </ul>
       </section>
@@ -92,7 +92,7 @@ export default function ProductShowcasePage() {
       <Related
         items={[
           { label: "Waitlist site", href: "/recipes/waitlist-site", text: "Collect sign-ups to test an idea." },
-          { label: "Previews and undo", href: "/scout/changes", text: "How changes to the live site work." },
+          { label: "Making changes", href: "/post-launch/changes", text: "How changes to the live site work." },
         ]}
       />
     </DocPage>

@@ -1,10 +1,10 @@
 import {
+  Archive,
+  BadgeCheck,
   Bot,
   CreditCard,
-  FileSpreadsheet,
   Hammer,
   Handshake,
-  LayoutDashboard,
   Mail,
   Paperclip,
   Palette,
@@ -35,11 +35,10 @@ export const DOCS_NAV: NavSection[] = [
       { label: "Meet Scout", href: "/scout", icon: Bot },
       { label: "Attaching files", href: "/scout/attachments", icon: Paperclip },
       { label: "Writing good requests", href: "/scout/requests", icon: PenLine },
-      { label: "Previews and undo", href: "/scout/changes", icon: Undo2 },
     ],
   },
   {
-    title: "Recipes",
+    title: "Use cases",
     items: [
       { label: "Waitlist site", href: "/recipes/waitlist-site", icon: Mail },
       { label: "Product showcase", href: "/recipes/product-showcase", icon: Sparkles },
@@ -49,10 +48,11 @@ export const DOCS_NAV: NavSection[] = [
     ],
   },
   {
-    title: "After Launch",
+    title: "Post-launch",
     items: [
-      { label: "Restaurant owner area", href: "/after-launch/owner-area", icon: LayoutDashboard },
-      { label: "Menu from a spreadsheet", href: "/after-launch/menu-spreadsheet", icon: FileSpreadsheet },
+      { label: "Your ready card", href: "/post-launch/ready-card", icon: BadgeCheck },
+      { label: "Making changes", href: "/post-launch/changes", icon: Undo2 },
+      { label: "Archive and restore", href: "/post-launch/archive", icon: Archive },
     ],
   },
   {
